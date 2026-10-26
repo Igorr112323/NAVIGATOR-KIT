@@ -1,6 +1,6 @@
 # Готовый ответ в чат
 
-Ночная сессия завершена. Ветка `arena/ec9fddc1-navigator-kit`, коммит `pending`, PR: PR будет создан после push.
+Ночная сессия завершена. Ветка `arena/ec9fddc1-navigator-kit`, коммит `591dbbfcac77844ed44d96b9843d84b762c2116c`, PR: https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1.
 
 **Сделано:** 120 синтетических DXF → реестр CSV/JSON, формы 1/2, 16 инцидентов комплектности, 4 групп дублей, rollback с проверкой SHA-256, порядок печати на 120 листов, XML/XSD-маппинг, C# каркас, 12 PNG 1600×1200, HTML-дашборд и ZIP.
 
