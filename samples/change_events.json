@@ -1,0 +1,56 @@
+[
+  {
+    "change_id": "1",
+    "operation": "changed",
+    "list_marker": "-",
+    "document": "ИИ-2026-001",
+    "signature": "",
+    "date": "",
+    "note": "Изменение без замены листа"
+  },
+  {
+    "change_id": "2",
+    "operation": "replaced",
+    "list_marker": "Зам.",
+    "document": "ИИ-2026-002",
+    "signature": "",
+    "date": "",
+    "note": "Лист выпущен взамен заменённого"
+  },
+  {
+    "change_id": "3",
+    "operation": "added",
+    "list_marker": "Нов.",
+    "document": "ИИ-2026-003",
+    "signature": "",
+    "date": "",
+    "note": "Лист введён вновь"
+  },
+  {
+    "change_id": "4",
+    "operation": "annulled",
+    "list_marker": "-",
+    "document": "ИИ-2026-004",
+    "signature": "",
+    "date": "",
+    "note": "Аннулирование оформляется отдельно; не писать «Аннулир.» в графу «Лист»"
+  },
+  {
+    "change_id": "5",
+    "operation": "all_replaced",
+    "list_marker": "Все",
+    "document": "ИИ-2026-005",
+    "signature": "",
+    "date": "",
+    "note": "Рукописный способ, только первый лист"
+  },
+  {
+    "change_id": "6",
+    "operation": "added",
+    "list_marker": "Нов.",
+    "document": "ИИ-2026-006",
+    "signature": "",
+    "date": "",
+    "note": "Ещё один новый лист"
+  }
+]

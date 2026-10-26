@@ -1,0 +1,30 @@
+{
+  "format": "navigator-kit.environment/v1",
+  "capturedAt": "2026-10-26T21:54:45+00:00",
+  "os": "Linux-6.1.158+-x86_64-with-glibc2.36",
+  "python": "3.11.2",
+  "architecture": "x86_64",
+  "tools": {
+    "dotnet": "MISSING",
+    "mono": "MISSING",
+    "msbuild": "MISSING",
+    "csc": "MISSING",
+    "python3": "/usr/bin/python3",
+    "node": "/usr/local/bin/node",
+    "npm": "/usr/local/bin/npm",
+    "git": "/usr/bin/git",
+    "gh": "/usr/bin/gh",
+    "convert": "/usr/bin/convert"
+  },
+  "pythonModulesInCurrentInterpreter": {
+    "PIL": true,
+    "ezdxf": true,
+    "xmlschema": false
+  },
+  "nanocad26Installed": false,
+  "multiCadSdk26Installed": false,
+  "visualStudioInstalled": false,
+  "licenseFound": false,
+  "briefingFound": true,
+  "note": "briefing.md is a reconstruction, not the original contest brief."
+}

@@ -1,0 +1,17 @@
+﻿issue_id;code;severity;mark;sheet_no;file;field;message;suggestion
+ISS-0001;EMPTY_STAMP_FIELD;ERROR;КР;12;samples/synthetic_sets/КР/КР_012.dxf;sheet_name;Пустая обязательная графа штампа «sheet_name».;Заполнить атрибут блока основной надписи и повторить сканирование.
+ISS-0002;INVALID_FORMAT;ERROR;КР;20;samples/synthetic_sets/КР/КР_020.dxf;format;Обозначение формата «B4» не найдено среди основных/производных форматов.;Проверить обозначение и размеры рамки по ГОСТ 2.301-68.
+ISS-0003;INVALID_FORMAT;ERROR;ОВ;18;samples/synthetic_sets/ОВ/ОВ_018.dxf;format;Обозначение формата «A6» не найдено среди основных/производных форматов.;Проверить обозначение и размеры рамки по ГОСТ 2.301-68.
+ISS-0004;EMPTY_STAMP_FIELD;ERROR;ОВ;;samples/synthetic_sets/ОВ/ОВ_033.dxf;sheet_no;Пустая обязательная графа штампа «sheet_no».;Заполнить атрибут блока основной надписи и повторить сканирование.
+ISS-0005;DUPLICATE_SHEET_NUMBER;ERROR;АР;15;"samples/synthetic_sets/АР/АР_015.dxf; samples/synthetic_sets/АР/АР_016.dxf";sheet_no;Номер листа 15 используется 2 разами.;Утвердить minimal patch или полный сдвиг нумерации.
+ISS-0006;DUPLICATE_SHEET_NUMBER;ERROR;АР;27;"samples/synthetic_sets/АР/АР_027.dxf; samples/synthetic_sets/АР/АР_028.dxf";sheet_no;Номер листа 27 используется 2 разами.;Утвердить minimal patch или полный сдвиг нумерации.
+ISS-0007;DUPLICATE_SHEET_NUMBER;ERROR;КР;7;"samples/synthetic_sets/КР/КР_007.dxf; samples/synthetic_sets/КР/КР_008.dxf";sheet_no;Номер листа 7 используется 2 разами.;Утвердить minimal patch или полный сдвиг нумерации.
+ISS-0008;DUPLICATE_SHEET_NUMBER;ERROR;ОВ;21;"samples/synthetic_sets/ОВ/ОВ_021.dxf; samples/synthetic_sets/ОВ/ОВ_022.dxf";sheet_no;Номер листа 21 используется 2 разами.;Утвердить minimal patch или полный сдвиг нумерации.
+ISS-0009;SEQUENCE_GAP;WARN;АР;;;sheet_no;Нарушена последовательность номеров листов.;Отсутствуют номера: 16, 28
+ISS-0010;SEQUENCE_GAP;WARN;КР;;;sheet_no;Нарушена последовательность номеров листов.;Отсутствуют номера: 8
+ISS-0011;SEQUENCE_GAP;WARN;ОВ;;;sheet_no;Нарушена последовательность номеров листов.;Отсутствуют номера: 22, 33
+ISS-0012;IN_REGISTRY_NO_FILE;ERROR;АР;41;samples/synthetic_sets/АР/АР_041.dxf;file;Есть запись в эталонном реестре, но физический лист отсутствует.;Найти файл или удалить запись после согласования с ГИПом.
+ISS-0013;FILE_NOT_IN_REGISTRY;ERROR;АР;40;samples/synthetic_sets/АР/АР_040.dxf;file;Файл листа отсутствует в эталонном реестре.;Добавить лист в реестр/ведомость или исключить из комплекта.
+ISS-0014;DOC_IN_REGISTRY_NO_FILE;ERROR;;;samples/reference_docs/MISSING_certificate.txt;file;Документ есть в ведомости ф.2, но файл отсутствует.;Вложить документ или скорректировать ведомость.
+ISS-0015;DOC_IN_REGISTRY_NO_FILE;ERROR;;;samples/reference_docs/MISSING_reference.txt;file;Документ есть в ведомости ф.2, но файл отсутствует.;Вложить документ или скорректировать ведомость.
+ISS-0016;DOC_FILE_NOT_IN_REGISTRY;WARN;;;samples/reference_docs/EXTRA_not_registered.txt;file;Файл в папке документов не внесён в ведомость ф.2.;Добавить в раздел «Ссылочные» или «Прилагаемые документы».

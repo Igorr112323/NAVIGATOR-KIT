@@ -1,0 +1,65 @@
+{
+  "format": "navigator-kit.api-experiment/v1",
+  "generatedAt": "2026-10-26T21:54:45+00:00",
+  "nanoCADExecuted": false,
+  "environment": "Linux sandbox; no Windows, nanoCAD 26, SDK, or license",
+  "screenshots": "Only labelled diagnostic mockups were produced; no real nanoCAD screenshots.",
+  "experiments": [
+    {
+      "id": "A1",
+      "subject": "SHEETSET/.dst",
+      "result": "DOCUMENTED",
+      "status": "PARTIAL",
+      "finding": "Sheet set composition stored in .dst; no public API spec found.",
+      "source": "https://online-help.platform.nanodev.ru/NC21_Help/html/IDT_SheetSets.htm?rhtocid=_19"
+    },
+    {
+      "id": "A2",
+      "subject": "Insert Sheet List Table",
+      "result": "DOCUMENTED",
+      "status": "PARTIAL",
+      "finding": "Table insertion exists, but older help references GOST R 21.1101-2013; 2026 form 1 unverified.",
+      "source": "https://pt.nanocad.com/learning/online-help/nanocad-platform/actions-on-sheet-set-and-its-elements/"
+    },
+    {
+      "id": "A3",
+      "subject": "DATAEXTRACTION from multiple files",
+      "result": "FORUM_REPORT_ONLY",
+      "status": "NEGATIVE",
+      "finding": "2025 forum answer: not available out of the box on plain platform; custom API code suggested.",
+      "source": "https://forum.nanocad.ru/t/izvlechenie-dannyh-iz-neskolkih-fajlov/841"
+    },
+    {
+      "id": "A4",
+      "subject": "GetSheets()",
+      "result": "HISTORICAL_FORUM_EXAMPLE",
+      "status": "HYPOTHESIS",
+      "finding": "Found in 2015 MultiCAD.NET example; SDK 26 signature not verified.",
+      "source": "https://forum.nanocad.ru/index.php?/topic/6426-kak-vstavit-blok-iz-drugogo-dokumenta-ispolzuya-multicad/"
+    },
+    {
+      "id": "A5",
+      "subject": "GetSheetSets()",
+      "result": "NOT_FOUND",
+      "status": "HYPOTHESIS",
+      "finding": "No public nanoCAD/MultiCAD documentation found; do not call without SDK reflection.",
+      "source": "https://forum.nanocad.ru/"
+    },
+    {
+      "id": "A6",
+      "subject": "Direct .dst generation",
+      "result": "NOT_IMPLEMENTED",
+      "status": "HYPOTHESIS",
+      "finding": "No open format spec; nanoCAD 26 sheet order is linked to layout tabs.",
+      "source": "https://download.nanodev.ru/products/nanocad_platform/26.0/Instructions/Whats_new_platforma_26.pdf"
+    },
+    {
+      "id": "A7",
+      "subject": "Batch print task export",
+      "result": "NEUTRAL_JSON_ONLY",
+      "status": "HYPOTHESIS",
+      "finding": "print_order.json is a handoff manifest, not a nanoCAD plot job or .dst.",
+      "source": "https://download.nanodev.ru/products/nanocad_platform/26.0/Instructions/Whats_new_platforma_26.pdf"
+    }
+  ]
+}

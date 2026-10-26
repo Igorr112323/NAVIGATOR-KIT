@@ -1,0 +1,967 @@
+{
+  "format": "navigator-kit.fixture-manifest/v1",
+  "count": 120,
+  "files": [
+    {
+      "file": "samples/synthetic_sets/АР/АР_001.dxf",
+      "mark": "АР",
+      "sequence": 1,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "1",
+      "sha256": "aec36ef6a7621a21ae6826fa076d8eb4c2c4aab4c9ec99150372b4b5898f564b"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_002.dxf",
+      "mark": "АР",
+      "sequence": 2,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "2",
+      "sha256": "b99363a09b70fc3d4211939044c6baf78c4a4aa944716e6fefa376f94ab78726"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_003.dxf",
+      "mark": "АР",
+      "sequence": 3,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "3",
+      "sha256": "d0af969ef5ea50f5ccd94d69ad454b223e922e8fc6b7ce91a3de2d73a0b8da28"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_004.dxf",
+      "mark": "АР",
+      "sequence": 4,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "4",
+      "sha256": "10491bdab44e1947be1bb55c70fba6774460916b6ef1741760fbd701b3b79847"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_005.dxf",
+      "mark": "АР",
+      "sequence": 5,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "5",
+      "sha256": "66d02f45e98feb592cea0991f74fe2b9e32ca20506e1dc0c15e148387d159ae8"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_006.dxf",
+      "mark": "АР",
+      "sequence": 6,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "6",
+      "sha256": "ea3459475d0e7e6cf35eff353174e8f3f98672a0bc7f6db31e727624b363a8d4"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_007.dxf",
+      "mark": "АР",
+      "sequence": 7,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "7",
+      "sha256": "c69cd3d94246598d3d1d6c053f321274c022cf941cf0abac227bdfb5abb11f9f"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_008.dxf",
+      "mark": "АР",
+      "sequence": 8,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "8",
+      "sha256": "46d757b0e11e6c2224f4bce4d60fb07821b115d524aef1a298ead6be9e544e7c"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_009.dxf",
+      "mark": "АР",
+      "sequence": 9,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "9",
+      "sha256": "e6cd6e05e2b1dead3abba0e4117e21aed7774048e42210fa46518fa74343c99b"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_010.dxf",
+      "mark": "АР",
+      "sequence": 10,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "10",
+      "sha256": "854a4de810c4e1c2c08519761dfee3bde17f9515b4033fb513c8aab2f69cca16"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_011.dxf",
+      "mark": "АР",
+      "sequence": 11,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "11",
+      "sha256": "84709b33c353291e4ad72a11c1cb2428d515b28ea0ce0ca54d3682c6bb121d6e"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_012.dxf",
+      "mark": "АР",
+      "sequence": 12,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "12",
+      "sha256": "ea0c7bdfa8d50374aabb0bc2cd8bb124daf21e6de773b42a9062fff893941932"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_013.dxf",
+      "mark": "АР",
+      "sequence": 13,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "13",
+      "sha256": "0fce5a4ac5ab8d7786029812f8444ec40443179cfdd60f2c0e54f74ec0ee9811"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_014.dxf",
+      "mark": "АР",
+      "sequence": 14,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "14",
+      "sha256": "d10999600d240d1408756d40b447b3eacc3effedb36b060be5a10b61ee5b4e1a"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_015.dxf",
+      "mark": "АР",
+      "sequence": 15,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "15",
+      "sha256": "437b2a97eee911415cee6fa751d33b93cfd1eb68aa66b98cd22e6d7f681fba17"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_016.dxf",
+      "mark": "АР",
+      "sequence": 16,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "15",
+      "sha256": "37583fe5bd168b12d39c99f4d650d900d32908323aebf386919c80eea48cf920"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_017.dxf",
+      "mark": "АР",
+      "sequence": 17,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "17",
+      "sha256": "087dc6d81cc28885cbf2a9918e82d1bf53b07f06be9dd03c03405250e5f60700"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_018.dxf",
+      "mark": "АР",
+      "sequence": 18,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "18",
+      "sha256": "3fe34d8cf2384e2c4b790d3ae63841daaa4b7e6e48bde1859cc5813bb22432f7"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_019.dxf",
+      "mark": "АР",
+      "sequence": 19,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "19",
+      "sha256": "503965139a53bde17274d4c88d34af4f22d5cd601aa66eb2dae404f96a79a71c"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_020.dxf",
+      "mark": "АР",
+      "sequence": 20,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "20",
+      "sha256": "577a9b79920d0c6aa7c2f3dbc088cdcee7fdb6aa27fc7d2346d4698deaf12f6a"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_021.dxf",
+      "mark": "АР",
+      "sequence": 21,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "21",
+      "sha256": "cd0ac4808647138e60b21911b5521146ef2a30211f65f8a0fa05e20ab202e9c4"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_022.dxf",
+      "mark": "АР",
+      "sequence": 22,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "22",
+      "sha256": "57d085ee95a5a85bd1b9c939f7529c556dd2e90014f6506e1ba1fbe04864351f"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_023.dxf",
+      "mark": "АР",
+      "sequence": 23,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "23",
+      "sha256": "d468d9f483bad13eed0956796c67a3faea1c55913bba6bc800698439093ea595"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_024.dxf",
+      "mark": "АР",
+      "sequence": 24,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "24",
+      "sha256": "b7c1cbec61d2d8d7c84d99457dcdb948864f9e9cb3ab07e54033a4b6e37c6f92"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_025.dxf",
+      "mark": "АР",
+      "sequence": 25,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "25",
+      "sha256": "374adabbeff605645b304e8fc9defb0cb53be116fffbf0744f650b8e4a85dbe4"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_026.dxf",
+      "mark": "АР",
+      "sequence": 26,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "26",
+      "sha256": "18ef7c6b7e59a80387543c2b39bd24fd64102e5ddc4afd90a41204993acbecba"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_027.dxf",
+      "mark": "АР",
+      "sequence": 27,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "27",
+      "sha256": "ef765fb6a21803c4060a195ecf94a35aaa1abea3f44c609254585f788fce3540"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_028.dxf",
+      "mark": "АР",
+      "sequence": 28,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "27",
+      "sha256": "0e337374149de20d35e54469fafe45c4b17968db3e839cf16cb5a3842df2c7b2"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_029.dxf",
+      "mark": "АР",
+      "sequence": 29,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "29",
+      "sha256": "a4652acc88143ebfa746d66f347204acebc544c555083550a82ac583a0abd1ef"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_030.dxf",
+      "mark": "АР",
+      "sequence": 30,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "30",
+      "sha256": "aeeb524230365f78395575cde521a83d2ec7a8d8eb74ce516129d71eb70823bd"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_031.dxf",
+      "mark": "АР",
+      "sequence": 31,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "31",
+      "sha256": "7528930490b352d8eefaae12318fe5fd2be92af43e74f60784fdcb76495ca492"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_032.dxf",
+      "mark": "АР",
+      "sequence": 32,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "32",
+      "sha256": "38294f5ff90399811c32870fc3e6017061831f6080c256e21148252b9acfebc0"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_033.dxf",
+      "mark": "АР",
+      "sequence": 33,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "33",
+      "sha256": "2604e83297ac166e6c75fdf55e742fc2dc5b18ef1e42aad18c4aab36f4dc0dd6"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_034.dxf",
+      "mark": "АР",
+      "sequence": 34,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "34",
+      "sha256": "ee51e1831c5732f34e6f8ffff3d070f02841c2e84d30ad81bcdb24bced9b444d"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_035.dxf",
+      "mark": "АР",
+      "sequence": 35,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "35",
+      "sha256": "dfbcbe5c7fa47e25c017fadfbc628c31d4ba17989a9f46c9075f34238d7d2ea4"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_036.dxf",
+      "mark": "АР",
+      "sequence": 36,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "36",
+      "sha256": "9ad8f75cf6ba0a1dc04cf9cea3d09a43e5607357e8aba7d99cd5800001e689f0"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_037.dxf",
+      "mark": "АР",
+      "sequence": 37,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "37",
+      "sha256": "67db73f0ec98155d45dbbd38f36565801e87d0e16b9372a9d97882ddf9c4fa85"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_038.dxf",
+      "mark": "АР",
+      "sequence": 38,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "38",
+      "sha256": "8c3c3834c5cbaffae834e700952c1ba9f55de64ae9d12b711d2f765c7370f259"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_039.dxf",
+      "mark": "АР",
+      "sequence": 39,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "39",
+      "sha256": "6cc7edfb187934fd4c68d4e9128de67f3df3e56c7d6e9335fa1a66916f3ade59"
+    },
+    {
+      "file": "samples/synthetic_sets/АР/АР_040.dxf",
+      "mark": "АР",
+      "sequence": 40,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "40",
+      "sha256": "a0dc2e8015d085db114ea2367be336e9a8f669b3596aa779088e0230fac7ec8b"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_001.dxf",
+      "mark": "КР",
+      "sequence": 1,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "1",
+      "sha256": "51101e2a2966b688a39157f7d48a5b7cc64f2a0e407fbe1ea89044b20ff828fe"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_002.dxf",
+      "mark": "КР",
+      "sequence": 2,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "2",
+      "sha256": "886fe2124f627b299c7a8cb80a26db1cad28335cdcb9bf64af11ccc9e5afc977"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_003.dxf",
+      "mark": "КР",
+      "sequence": 3,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "3",
+      "sha256": "57c4dbd5b23915a06de7ec0a66e4276c56cbdf04ed4a0d6b9016dcd2ae8f8a7a"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_004.dxf",
+      "mark": "КР",
+      "sequence": 4,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "4",
+      "sha256": "7c475c0799d121d712808dc4639c32b2d3b76aec22bb783adb058919c59d466b"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_005.dxf",
+      "mark": "КР",
+      "sequence": 5,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "5",
+      "sha256": "fa509386ea6eec6d2e7b681b91e0b04a402ccb3799b33be1d5a913ecc5498f82"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_006.dxf",
+      "mark": "КР",
+      "sequence": 6,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "6",
+      "sha256": "7fa0002698dbae2308849841a283c851cb4baa61c1b7a1346820482e2ff3b68e"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_007.dxf",
+      "mark": "КР",
+      "sequence": 7,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "7",
+      "sha256": "4d0b8a9bb22f78548a04f99874b06344257856286f01d5d70e2bb1b70c0b10d7"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_008.dxf",
+      "mark": "КР",
+      "sequence": 8,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "7",
+      "sha256": "28a5e7f601c234851cbc12cabfeb2f15d2e74ec11e49c028de057c24f8a35dde"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_009.dxf",
+      "mark": "КР",
+      "sequence": 9,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "9",
+      "sha256": "c585f523776489e6569679856bc73f82d6b187404a48cfbe1e7ce1410210a219"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_010.dxf",
+      "mark": "КР",
+      "sequence": 10,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "10",
+      "sha256": "4369669e34367880f514d7280ccbd640e808f7fcf52e279e4c2c794d2c8a105e"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_011.dxf",
+      "mark": "КР",
+      "sequence": 11,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "11",
+      "sha256": "a24f575efd8461d6a84d86168f23900a0431020efcc20af58766b9a62a2bc9f5"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_012.dxf",
+      "mark": "КР",
+      "sequence": 12,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "12",
+      "sha256": "b92e9b92fdbb811232f0b20881aef4d87364a46e1b8fad0710b6c995074b3074"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_013.dxf",
+      "mark": "КР",
+      "sequence": 13,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "13",
+      "sha256": "31fe760de00d634d76035ea9a987e2e3c2fdbd56e92091c2327e48d97e9cc2f5"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_014.dxf",
+      "mark": "КР",
+      "sequence": 14,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "14",
+      "sha256": "de5d84ebb3dc9bc50fd576ca5df263ad061bcd972eb86a09ef3c9b8a9c2b7762"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_015.dxf",
+      "mark": "КР",
+      "sequence": 15,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "15",
+      "sha256": "3b4126c19b330174228889dce9058f6bb4a9e4817e237bf022bb26f4f8e6cb9a"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_016.dxf",
+      "mark": "КР",
+      "sequence": 16,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "16",
+      "sha256": "16a277d41ce41554dd1f28ef9b00b42432698bf4cedd592285a42ef8d9f8d2f9"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_017.dxf",
+      "mark": "КР",
+      "sequence": 17,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "17",
+      "sha256": "006ad264327c6aee3bb86993d8971af91b040c7393d0fc42d249ae8092a00cb3"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_018.dxf",
+      "mark": "КР",
+      "sequence": 18,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "18",
+      "sha256": "fd6bb13b7704ef513a23c7733314d0935f3849b51c449bff802fe8f6f6c20041"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_019.dxf",
+      "mark": "КР",
+      "sequence": 19,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "19",
+      "sha256": "21fffe41e59aae3f99826b369618db141abf1941ff92ec38f05dca4dd37a1625"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_020.dxf",
+      "mark": "КР",
+      "sequence": 20,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "20",
+      "sha256": "e90cdc373fc8817335628455e39e571e4e3f2e68381efd6a848e29d9d7823bda"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_021.dxf",
+      "mark": "КР",
+      "sequence": 21,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "21",
+      "sha256": "46f9aaad072fbd11b11d0898b82b98b4e2c5f3d84940d869da2a6d51bc87624f"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_022.dxf",
+      "mark": "КР",
+      "sequence": 22,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "22",
+      "sha256": "2073619e7ea35e3c84cef3200837f61126f5870d6747d36974055c7c11c3ec1f"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_023.dxf",
+      "mark": "КР",
+      "sequence": 23,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "23",
+      "sha256": "1a7a8fc98e64e8a261a18a263d590f47f7d902d0cb8ff95263eeba6bd8862996"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_024.dxf",
+      "mark": "КР",
+      "sequence": 24,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "24",
+      "sha256": "faf2fdec0d2d8cc983879d7a38cac87709e9cac03594738fc68865fd2abb8683"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_025.dxf",
+      "mark": "КР",
+      "sequence": 25,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "25",
+      "sha256": "609d0d3e24d8c66dba80f0f3c786bc06f2654b5bdb0c99407a8a77261f96732d"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_026.dxf",
+      "mark": "КР",
+      "sequence": 26,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "26",
+      "sha256": "29f03bd78b07f7853432a2eec9f5d330729e4d484dc20ac83704e85f1ba8ab9c"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_027.dxf",
+      "mark": "КР",
+      "sequence": 27,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "27",
+      "sha256": "f69cb55201f9c91300ac1ef46c9df84cdb01f7a8f476d361f9e494c4dd7e5530"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_028.dxf",
+      "mark": "КР",
+      "sequence": 28,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "28",
+      "sha256": "0df7dca09024aab5805f0160d0f99bef3e4a9c0500d93c6f0635abd098dfc360"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_029.dxf",
+      "mark": "КР",
+      "sequence": 29,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "29",
+      "sha256": "d6d34b8aa62b9ac1e95c83473350c077492e26f228e04b4420c970ab508cd230"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_030.dxf",
+      "mark": "КР",
+      "sequence": 30,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "30",
+      "sha256": "0d6d29c605fa941a0e7fe2320e8d60eb3d9390d83e8b710948dce97f40a011a9"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_031.dxf",
+      "mark": "КР",
+      "sequence": 31,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "31",
+      "sha256": "80389bb00fd059361eef2970e4c106f811de8d27d598697164def82c84acb5af"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_032.dxf",
+      "mark": "КР",
+      "sequence": 32,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "32",
+      "sha256": "febec20bdc3497b666bf6c98332e640536d0a7d465a1379701d671c73c58c530"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_033.dxf",
+      "mark": "КР",
+      "sequence": 33,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "33",
+      "sha256": "752fa7ecad67931d02b8cfa627cbc9786660d6e27d9ee163b98dcd2f88e7025e"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_034.dxf",
+      "mark": "КР",
+      "sequence": 34,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "34",
+      "sha256": "af71d51b31564e0e90f49c66fbf27c4b7d23ee4c35ae59ff8a5a28b80ae6a645"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_035.dxf",
+      "mark": "КР",
+      "sequence": 35,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "35",
+      "sha256": "c741d7c025218bdc6405061141eda2b5a221689ac8d962495f2bf27b33fd2276"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_036.dxf",
+      "mark": "КР",
+      "sequence": 36,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "36",
+      "sha256": "a8b5843b5e5c77d6e8d54b6c17ec7697db26bcabe4d385d19c7b9fa572858d43"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_037.dxf",
+      "mark": "КР",
+      "sequence": 37,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "37",
+      "sha256": "8411a020074647390bbc28257b3579708cd15738cc431fe4b03001c2940992c1"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_038.dxf",
+      "mark": "КР",
+      "sequence": 38,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "38",
+      "sha256": "8aa76309bf6154950fb24d9ea4823cf8bcee4687bd31928a4bd8ee3d49f8bb63"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_039.dxf",
+      "mark": "КР",
+      "sequence": 39,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "39",
+      "sha256": "ed95afaac4bee9302a67a4022ce5d6ac58d843ac084b001b250b6720d5f17fc5"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_040.dxf",
+      "mark": "КР",
+      "sequence": 40,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "40",
+      "sha256": "0d039136d64c9b14b31c61975bfa5fe3850b379f58929e1798d80f826102d8df"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_001.dxf",
+      "mark": "ОВ",
+      "sequence": 1,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "1",
+      "sha256": "e72319540185b55a91ffc2c9fb75fd7fa4104d7f146889bffb7c509915b67b72"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_002.dxf",
+      "mark": "ОВ",
+      "sequence": 2,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "2",
+      "sha256": "161e86ac81bee5c30bac06f5930d58b64c94de1d800a8fa23a8ec313de556109"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_003.dxf",
+      "mark": "ОВ",
+      "sequence": 3,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "3",
+      "sha256": "c9b39a449d952983dc5743c881bf96640cfebed8d441e9d110ac57b6453d1206"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_004.dxf",
+      "mark": "ОВ",
+      "sequence": 4,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "4",
+      "sha256": "0293951e0cddb57ff7bf6f0024c2589d363783bc52903caed79a3147b984981f"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_005.dxf",
+      "mark": "ОВ",
+      "sequence": 5,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "5",
+      "sha256": "bddcb69940093c04cd110aa1eae86ac12cbc58784c4fbed7136c4f4d4e00cab5"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_006.dxf",
+      "mark": "ОВ",
+      "sequence": 6,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "6",
+      "sha256": "9616344429a2d91137e1bb6fa02e45597ff4f70d9f2b369b4d92056c5c5f34ca"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_007.dxf",
+      "mark": "ОВ",
+      "sequence": 7,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "7",
+      "sha256": "b0b68ee082b55c59904a19c1089150c9fe53da7d223d08aa70d42460bf170d69"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_008.dxf",
+      "mark": "ОВ",
+      "sequence": 8,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "8",
+      "sha256": "e30a17d3ce8d0dd828c600f6004df9da81979ef281c7fcf9dcfb82d4cc62930f"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_009.dxf",
+      "mark": "ОВ",
+      "sequence": 9,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "9",
+      "sha256": "d4e4c6ac0ca4b2894a33e15889b435e892aeadee27454bf79b0f56aa1ecfa46f"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_010.dxf",
+      "mark": "ОВ",
+      "sequence": 10,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "10",
+      "sha256": "e6d4d1462d63b9945fb74d7b42a15c3734e9a96100bf002b37dac26fc26a1171"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_011.dxf",
+      "mark": "ОВ",
+      "sequence": 11,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "11",
+      "sha256": "3a9eb4d3dc5d2615885052df5e8ccaca971f09fdb6466ade2ff8d897c4d976c7"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_012.dxf",
+      "mark": "ОВ",
+      "sequence": 12,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "12",
+      "sha256": "280229004aa9be6acbfd238d1ce6fd6cad2d1b343e1788460663c0faae04ccd8"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_013.dxf",
+      "mark": "ОВ",
+      "sequence": 13,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "13",
+      "sha256": "d1da600682df0b904d5499bfdc082779ce2ef5164e6e146441955a515b206a19"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_014.dxf",
+      "mark": "ОВ",
+      "sequence": 14,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "14",
+      "sha256": "a8326f0206bdcb5c1beb3f12ea55f19c05fb7373079d4a8d630dbfd0830c221d"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_015.dxf",
+      "mark": "ОВ",
+      "sequence": 15,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "15",
+      "sha256": "c9cf1ce3169c2b6cc09d840d66c51866f7ac9509593248ee810190c6177201c7"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_016.dxf",
+      "mark": "ОВ",
+      "sequence": 16,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "16",
+      "sha256": "3101150adc1940d441fe48102e29087d9867fed11712ca56734326b638ce5e7c"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_017.dxf",
+      "mark": "ОВ",
+      "sequence": 17,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "17",
+      "sha256": "4878152c6bd883f3c31705671339d69933af1c2574244e1a35acc6dd96938ae9"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_018.dxf",
+      "mark": "ОВ",
+      "sequence": 18,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "18",
+      "sha256": "c9eabdf496a2bcffcacbf7f6ecf41002f00225baac4c475488978722bc913ec0"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_019.dxf",
+      "mark": "ОВ",
+      "sequence": 19,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "19",
+      "sha256": "57271f2627cb6a2adb4acd1c9d143e8822e2dd6e7811a8ba88e5f5f31069efcb"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_020.dxf",
+      "mark": "ОВ",
+      "sequence": 20,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "20",
+      "sha256": "f1053bad9172af6f8b18b58d0b8e4fb0ece799a78ea4357fd887c70fb9ef9c17"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_021.dxf",
+      "mark": "ОВ",
+      "sequence": 21,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "21",
+      "sha256": "d30aa4c60f587bdf6dfd1c0eba55fb5cd7fb0715f9133a09f4371fe11d59f2e3"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_022.dxf",
+      "mark": "ОВ",
+      "sequence": 22,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "21",
+      "sha256": "cb18137f926f2b58f59f29a38b4f21d7b289a0a54d3c58730127c723ffaa28a5"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_023.dxf",
+      "mark": "ОВ",
+      "sequence": 23,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "23",
+      "sha256": "b1aed76e6d20918a972b37638bd8147c38c53a9ae10a5f1bc5875480d6e66892"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_024.dxf",
+      "mark": "ОВ",
+      "sequence": 24,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "24",
+      "sha256": "2c5a687738245c032749f4dd11c06c51e1134728fe54e1a1e6c55f55e139f351"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_025.dxf",
+      "mark": "ОВ",
+      "sequence": 25,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "25",
+      "sha256": "a58ac57e2c8e8aeb0fb8a91d3a993f433857f74f508e9f5a19a33460e99d27a6"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_026.dxf",
+      "mark": "ОВ",
+      "sequence": 26,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "26",
+      "sha256": "dff800c95e83b5d4be76b7b205ac89235f02329f3ad3198f21168ff6ebce373f"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_027.dxf",
+      "mark": "ОВ",
+      "sequence": 27,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "27",
+      "sha256": "7e1ca2b5d410ea19d68ef55d4cd43b70dec211881046dfa17cd6949ca6f56b9e"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_028.dxf",
+      "mark": "ОВ",
+      "sequence": 28,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "28",
+      "sha256": "2133fc10f8557c4ebd2ddb1e79d3faa65e9e8b07b7ad49b94a28e85dabaa5d52"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_029.dxf",
+      "mark": "ОВ",
+      "sequence": 29,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "29",
+      "sha256": "3dd8844302f04367020c4a025123281a2f4e95d0f8f5dc17e770e154ae917f68"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_030.dxf",
+      "mark": "ОВ",
+      "sequence": 30,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "30",
+      "sha256": "67ecc0817fe3306ffd934687284c5ee6a59741e120443f72f55ff4ce7ca6fc1a"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_031.dxf",
+      "mark": "ОВ",
+      "sequence": 31,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "31",
+      "sha256": "d823aec96fca16357aa609d3f9511e1d9cbb232cf9477efcee3d6e1013cf0eb3"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_032.dxf",
+      "mark": "ОВ",
+      "sequence": 32,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "32",
+      "sha256": "a802da9a007e559b029a005cc9a13fbad9a421fe97837d9c5d67743472f0f9c6"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_033.dxf",
+      "mark": "ОВ",
+      "sequence": 33,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "",
+      "sha256": "6b369096d507e5887f09b4543f57b03e15afffdbed4690c4ea5ea030ba6b4231"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_034.dxf",
+      "mark": "ОВ",
+      "sequence": 34,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "34",
+      "sha256": "937ae9c4502c17229ed8fe93ed70cc77f3db3d58983fdff354d4ec46e715b2b9"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_035.dxf",
+      "mark": "ОВ",
+      "sequence": 35,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "35",
+      "sha256": "675d438e084c7cc2cedef8657a9eee361dec2b4c25ac8058e354707350f5fade"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_036.dxf",
+      "mark": "ОВ",
+      "sequence": 36,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "36",
+      "sha256": "279cb640dd35b0dca7032b5fe08874588aff00a52ce7d97077a947cbe8b534b9"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_037.dxf",
+      "mark": "ОВ",
+      "sequence": 37,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "37",
+      "sha256": "5a37c70a0f5aa9657a1d0d9705fdf7580f4d37d1457312dbb0899bf7f19bedcb"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_038.dxf",
+      "mark": "ОВ",
+      "sequence": 38,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "38",
+      "sha256": "dce1da40bca1ed0c16df4c625acbb707ec20eba0b8fcb7e57eed59baae2e949e"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_039.dxf",
+      "mark": "ОВ",
+      "sequence": 39,
+      "profile": "SPDS_FORM3_CLASSIC",
+      "sheet_no": "39",
+      "sha256": "3d73a9bdbd21baee0131fa468675eb175695438dcc05e4d15ab4a7eb54e87623"
+    },
+    {
+      "file": "samples/synthetic_sets/ОВ/ОВ_040.dxf",
+      "mark": "ОВ",
+      "sequence": 40,
+      "profile": "SPDS_FORM3_ALT",
+      "sheet_no": "40",
+      "sha256": "1bfe45ce60c33cbb9ce6dd36b0c7e1cc9cdd3a0a4d165c85299f85b3431842b2"
+    }
+  ],
+  "warning": "Synthetic DXF, not customer DWG."
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="stampMapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="metadata">
+          <xs:complexType><xs:sequence>
+            <xs:element name="project" type="xs:string"/>
+            <xs:element name="purpose" type="xs:string"/>
+            <xs:element name="warning" type="xs:string"/>
+            <xs:element name="source" type="xs:string"/>
+          </xs:sequence></xs:complexType>
+        </xs:element>
+        <xs:element name="templates">
+          <xs:complexType><xs:sequence>
+            <xs:element name="template" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="attribute" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:attribute name="tag" type="xs:string" use="required"/>
+                      <xs:attribute name="field" type="xs:string" use="required"/>
+                      <xs:attribute name="required" type="xs:boolean" use="required"/>
+                      <xs:attribute name="example" type="xs:string" use="optional"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:string" use="required"/>
+                <xs:attribute name="blockName" type="xs:string" use="required"/>
+                <xs:attribute name="description" type="xs:string" use="optional"/>
+                <xs:attribute name="status" type="xs:string" use="optional"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence></xs:complexType>
+        </xs:element>
+        <xs:element name="formatRules">
+          <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+              <xs:element name="basicFormat">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" use="required"/>
+                  <xs:attribute name="shortSide" type="xs:positiveInteger" use="required"/>
+                  <xs:attribute name="longSide" type="xs:positiveInteger" use="required"/>
+                  <xs:attribute name="optional" type="xs:boolean" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="derivedMultiplicity">
+                <xs:complexType>
+                  <xs:attribute name="base" type="xs:string" use="required"/>
+                  <xs:attribute name="value" type="xs:positiveInteger" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="standard" type="xs:string" use="required"/>
+            <xs:attribute name="status" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="changeTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="column" minOccurs="5" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" use="required"/>
+                  <xs:attribute name="description" type="xs:string" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="allowedListMarker" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType><xs:attribute name="value" type="xs:string" use="required"/></xs:complexType>
+              </xs:element>
+              <xs:element name="note" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="standard" type="xs:string" use="required"/>
+            <xs:attribute name="spdsStandard" type="xs:string" use="required"/>
+            <xs:attribute name="status" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="required"/>
+      <xs:attribute name="normativeProfile" type="xs:string" use="required"/>
+      <xs:attribute name="legacyProfile" type="xs:string" use="optional"/>
+      <xs:attribute name="generatedAt" type="xs:string" use="optional"/>
+      <xs:attribute name="status" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

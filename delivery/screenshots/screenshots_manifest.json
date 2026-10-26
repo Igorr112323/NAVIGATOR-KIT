@@ -1,0 +1,133 @@
+{
+  "format": "navigator-kit.screenshots/v1",
+  "generatedAt": "2026-10-26T21:54:48+00:00",
+  "nanoCADExecuted": false,
+  "disclaimer": "All PNGs are explicitly labelled synthetic diagnostic mockups, not nanoCAD screenshots.",
+  "minResolution": {
+    "width": 1600,
+    "height": 1200
+  },
+  "count": 12,
+  "images": [
+    {
+      "file": "delivery/screenshots/screenshot_01_environment.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Окружение",
+      "source": "environment.json",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "49e5873cedc14e387cc56fac7df64d42c13533130b6c9cf50203c9e6c065602b"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_02_poc_scan.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "POC-сканер",
+      "source": "sheets_registry.csv",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "c38de569f3b45f3ce2be0e27cc99e8b2272baadc4e9fdc1a84107094e0127db6"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_03_api_attempt.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "API-эксперимент",
+      "source": "api_experiment_results.json",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "f039a3f8edd13b4ee385b7c3629f32a1039b2369aa223d47de00f1f316e9b6a3"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_04_xml_profile.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "XML-маппинг",
+      "source": "stamp_mapping.xml",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "6412db57e099ba60af1261f69cc019da693e6c33ff9299cbcd351c150b0538c2"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_05_form1.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Форма 1",
+      "source": "form1_AR.csv",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "092af5e836c131559a95528744b65e9886f743544c000b932239136904ae7e17"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_06_form2.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Форма 2",
+      "source": "form2_vedomost.csv",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "4960fb435bb673f1f36b35563717391db7d7e8952633eb8648772faacb424d47"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_07_completeness.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Контроль комплектности",
+      "source": "completeness_report.csv",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "4f9eadc62efaf424f1cbf19713c4df7a6c7d438873666d3bb60e10d487bc38a8"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_08_numbering.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Нумерация",
+      "source": "duplicate_report.csv",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "82133ccff796d17f15bb18f144f50eb49bb8cfb06d9c846f510b5d66c14ca305"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_09_stamp_rollback.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Обратимая правка",
+      "source": "stamp_patch_report.json",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "9f46d91459bc7d9ac53b804f42b6f18bdd8ceba6c892089bc99872aa436c3585"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_10_change_table.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Таблица изменений",
+      "source": "change_table_template.csv",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "428321fcfa3255a25a928a9055c16518394e81311ccd609c860c6c55358e56c4"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_11_print_order.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Порядок печати",
+      "source": "print_order.csv",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "9004df6e9410cd4caf62385aff86fa51e584507509d86043a527fbeebbb25389"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_12_architecture.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Архитектура",
+      "source": "architecture summary",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "sha256": "10c0d8698faaed1fcf0b4e01916bf4403374584c5e881d3c6c273019018331bd"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "format": "navigator-kit.print-profile/v1",
+  "target": "manual-sheetsethandoff",
+  "dst_export": false,
+  "status": "HYPOTHESIS-VERIFY-WITH-NANOCAD-26",
+  "copies": 1,
+  "notes": "Не является файлом задания nanoCAD. Порядок нужно сверить с вкладками layouts и SHEETSET."
+}

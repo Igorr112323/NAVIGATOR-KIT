@@ -1,0 +1,47 @@
+{
+  "format": "navigator-kit.stamp-transaction/v1",
+  "generatedAt": "2026-10-26T21:54:45+00:00",
+  "dryRunRequested": true,
+  "appliedToIsolatedCopy": true,
+  "originalFilesModified": false,
+  "rollbackVerified": true,
+  "applyVerified": true,
+  "carrier": "synthetic DXF text fixtures",
+  "dwgWriteStatus": "ГИПОТЕЗА/ПРОВЕРИТЬ — требуется MultiCAD .NET adapter на реальных DWG",
+  "patches": [
+    {
+      "patch_id": "PATCH-01",
+      "file": "samples/synthetic_sets/АР/АР_016.dxf",
+      "workspace_copy": "stamp_workspace/АР_016.dxf",
+      "backup": "stamp_workspace/АР_016.dxf.bak",
+      "tag": "SHEET",
+      "expected_old": "15",
+      "actual_old": "15",
+      "new": "16",
+      "before_sha256": "37583fe5bd168b12d39c99f4d650d900d32908323aebf386919c80eea48cf920",
+      "after_sha256": "eb9ec769377cc3119e4d9f56f71db53cee1a62dfa3f92ddac5d4026b4ec074c7",
+      "rollback_sha256": "37583fe5bd168b12d39c99f4d650d900d32908323aebf386919c80eea48cf920",
+      "backup_sha256": "37583fe5bd168b12d39c99f4d650d900d32908323aebf386919c80eea48cf920",
+      "apply_verified": true,
+      "rollback_verified": true,
+      "original_modified": false
+    },
+    {
+      "patch_id": "PATCH-02",
+      "file": "samples/synthetic_sets/КР/КР_008.dxf",
+      "workspace_copy": "stamp_workspace/КР_008.dxf",
+      "backup": "stamp_workspace/КР_008.dxf.bak",
+      "tag": "LIST",
+      "expected_old": "7",
+      "actual_old": "7",
+      "new": "8",
+      "before_sha256": "28a5e7f601c234851cbc12cabfeb2f15d2e74ec11e49c028de057c24f8a35dde",
+      "after_sha256": "11958b7af73f9684c6748c76d8c880122c627772ab3c3261031f5160512f13ef",
+      "rollback_sha256": "28a5e7f601c234851cbc12cabfeb2f15d2e74ec11e49c028de057c24f8a35dde",
+      "backup_sha256": "28a5e7f601c234851cbc12cabfeb2f15d2e74ec11e49c028de057c24f8a35dde",
+      "apply_verified": true,
+      "rollback_verified": true,
+      "original_modified": false
+    }
+  ]
+}

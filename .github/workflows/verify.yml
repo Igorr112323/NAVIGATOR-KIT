@@ -1,0 +1,25 @@
+name: Verify night delivery
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install tooling
+        run: python -m pip install -r requirements.txt
+      - name: Regenerate fixtures
+        run: python tools/generate_fixtures.py
+      - name: Run reference pipeline
+        run: python tools/navigator_kit.py all
+      - name: Render screenshots
+        run: python tools/render_screenshots.py
+      - name: Build dashboard and delivery bundle
+        run: python tools/finalize_delivery.py
+      - name: Verify delivery
+        run: python tools/verify_delivery.py --check-only

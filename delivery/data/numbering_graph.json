@@ -1,0 +1,20 @@
+{
+  "format": "navigator-kit.numbering-graph/v1",
+  "generatedAt": "2026-10-26T21:54:45+00:00",
+  "nodes": {
+    "files": 120,
+    "marks": 3,
+    "uniqueSheetNumbers": 116,
+    "stamps": 120,
+    "form1Rows": 120,
+    "printOrderItems": 120
+  },
+  "edges": {
+    "file_to_sheet": 120,
+    "sheet_to_stamp": 120,
+    "stamp_to_form1": 120,
+    "form1_to_print_order": 120
+  },
+  "duplicateGroups": 4,
+  "status": "VERIFIED_LOCALLY_ON_SYNTHETIC_DXF"
+}

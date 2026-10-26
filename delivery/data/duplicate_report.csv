@@ -1,0 +1,5 @@
+﻿mark;sheet_no;count;keeper;files;to_change;recommendation
+АР;15;2;samples/synthetic_sets/АР/АР_015.dxf;"samples/synthetic_sets/АР/АР_015.dxf; samples/synthetic_sets/АР/АР_016.dxf";samples/synthetic_sets/АР/АР_016.dxf;"Утвердить full_shift; minimal patch оставляет разрывы в последовательности."
+АР;27;2;samples/synthetic_sets/АР/АР_027.dxf;"samples/synthetic_sets/АР/АР_027.dxf; samples/synthetic_sets/АР/АР_028.dxf";samples/synthetic_sets/АР/АР_028.dxf;"Утвердить full_shift; minimal patch оставляет разрывы в последовательности."
+КР;7;2;samples/synthetic_sets/КР/КР_007.dxf;"samples/synthetic_sets/КР/КР_007.dxf; samples/synthetic_sets/КР/КР_008.dxf";samples/synthetic_sets/КР/КР_008.dxf;"Утвердить full_shift; minimal patch оставляет разрывы в последовательности."
+ОВ;21;2;samples/synthetic_sets/ОВ/ОВ_021.dxf;"samples/synthetic_sets/ОВ/ОВ_021.dxf; samples/synthetic_sets/ОВ/ОВ_022.dxf";samples/synthetic_sets/ОВ/ОВ_022.dxf;"Утвердить full_shift; minimal patch оставляет разрывы в последовательности."

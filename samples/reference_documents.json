@@ -1,0 +1,56 @@
+{
+  "format": "navigator-kit.reference-documents/v1",
+  "documents": [
+    {
+      "section": "Ссылочные документы",
+      "designation": "ГОСТ Р 21.101-2026",
+      "name": "Основные требования к проектной и рабочей документации",
+      "file": "samples/reference_docs/GOST_note.txt",
+      "version": "2026-04-01",
+      "note": ""
+    },
+    {
+      "section": "Прилагаемые документы",
+      "designation": "2345-12-ТП-А",
+      "name": "Описание эталонного шаблона СПДС A",
+      "file": "samples/reference_docs/Template_A.txt",
+      "version": "1",
+      "note": ""
+    },
+    {
+      "section": "Прилагаемые документы",
+      "designation": "2345-12-ТП-Б",
+      "name": "Описание эталонного шаблона СПДС B",
+      "file": "samples/reference_docs/Template_B.txt",
+      "version": "1",
+      "note": ""
+    },
+    {
+      "section": "Прилагаемые документы",
+      "designation": "2345-12-ПРОФИЛЬ",
+      "name": "Профиль печати",
+      "file": "samples/reference_docs/Plot_profile.txt",
+      "version": "1",
+      "note": ""
+    },
+    {
+      "section": "Прилагаемые документы",
+      "designation": "2345-12-СЕРТ",
+      "name": "Сертификат (тестовая отсутствующая заглушка)",
+      "file": "samples/reference_docs/MISSING_certificate.txt",
+      "version": "1",
+      "note": "Проверка: запись есть, файл отсутствует"
+    },
+    {
+      "section": "Ссылочные документы",
+      "designation": "СП 000.00000-00",
+      "name": "Отсутствующий ссылочный документ",
+      "file": "samples/reference_docs/MISSING_reference.txt",
+      "version": "1",
+      "note": "Проверка: запись есть, файл отсутствует"
+    }
+  ],
+  "physical_extra_files": [
+    "samples/reference_docs/EXTRA_not_registered.txt"
+  ]
+}

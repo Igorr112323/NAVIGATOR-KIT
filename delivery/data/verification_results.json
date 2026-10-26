@@ -1,0 +1,161 @@
+{
+  "format": "navigator-kit.verification-results/v1",
+  "sessionId": "night-session-20261026",
+  "status": "PASS",
+  "requiredChecks": 25,
+  "optionalChecks": 0,
+  "failedRequiredChecks": 0,
+  "warnings": [],
+  "checks": [
+    {
+      "name": "required_files_present",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "missing=none"
+    },
+    {
+      "name": "json_documents_parse",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "parsed=11; errors=[]"
+    },
+    {
+      "name": "xml_documents_parse",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "parsed=3; errors=[]"
+    },
+    {
+      "name": "xml_xsd_validation",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "invalid=none"
+    },
+    {
+      "name": "sheet_count_120",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "syntheticDxfFiles=120"
+    },
+    {
+      "name": "registry_rows_120",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "rows=120"
+    },
+    {
+      "name": "form1_rows_120",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "rows=120"
+    },
+    {
+      "name": "form2_sections_present",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "rows=8"
+    },
+    {
+      "name": "completeness_issues_present",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "issues=16"
+    },
+    {
+      "name": "duplicates_detected",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "groups=4"
+    },
+    {
+      "name": "numbering_plan_120",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "rows=120"
+    },
+    {
+      "name": "print_order_120",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "rows=120"
+    },
+    {
+      "name": "print_order_consistency",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "form1 order == print order"
+    },
+    {
+      "name": "stamp_rollback_verified",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "before == rollback SHA-256"
+    },
+    {
+      "name": "active_standard_2026",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "ГОСТ Р 21.101-2026 (с 2026-04-01)"
+    },
+    {
+      "name": "active_change_standard_2023",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "ГОСТ Р 2.503-2023 (с 2024-03-01)"
+    },
+    {
+      "name": "nanocad_not_executed_is_explicit",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "nanoCADExecuted=false"
+    },
+    {
+      "name": "get_sheet_sets_marked_hypothesis",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "GetSheetSets() status=HYPOTHESIS"
+    },
+    {
+      "name": "screenshot_count_at_least_5",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "count=12"
+    },
+    {
+      "name": "screenshot_resolution_and_files",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "all PNGs >= 1600x1200 and match manifest"
+    },
+    {
+      "name": "screenshots_are_not_fake_cad",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "all labelled synthetic diagnostic mockups"
+    },
+    {
+      "name": "csharp_gost_todo_comments",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "files=4"
+    },
+    {
+      "name": "csharp_tree_sitter_syntax",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "files=13; errors=[]"
+    },
+    {
+      "name": "night_log_has_start_end",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "lines=20"
+    },
+    {
+      "name": "no_obvious_secrets",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "hits=none"
+    }
+  ]
+}

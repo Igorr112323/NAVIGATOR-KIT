@@ -1,0 +1,23 @@
+<Project>
+  <!-- ГИПОТЕЗА/ПРОВЕРИТЬ.
+       Скопируйте в NanoCadSdkReferences.props и замените пути/имена на фактические DLL SDK 26.
+       Эти имена встречаются в публичных примерах более ранних версий; для 26 они НЕ подтверждены. -->
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);NANOCAD_SDK</DefineConstants>
+    <NANOCAD_SDK_PATH Condition="'$(NANOCAD_SDK_PATH)' == ''">C:\Program Files\Nanosoft\nanoCAD x64 26\SDK</NANOCAD_SDK_PATH>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mapimgd">
+      <HintPath>$(NANOCAD_SDK_PATH)\bin\mapimgd.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="hostmgd">
+      <HintPath>$(NANOCAD_SDK_PATH)\bin\hostmgd.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="hostdbmgd">
+      <HintPath>$(NANOCAD_SDK_PATH)\bin\hostdbmgd.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
