@@ -2,7 +2,7 @@
   "format": "navigator-kit.verification-results/v1",
   "sessionId": "night-session-20261026",
   "status": "PASS",
-  "requiredChecks": 25,
+  "requiredChecks": 30,
   "optionalChecks": 0,
   "failedRequiredChecks": 0,
   "warnings": [],
@@ -156,6 +156,36 @@
       "ok": true,
       "severity": "REQUIRED",
       "detail": "hits=none"
+    },
+    {
+      "name": "bundle_required_files_present",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "missing=none"
+    },
+    {
+      "name": "verification_results_present",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "path=delivery/data/verification_results.json"
+    },
+    {
+      "name": "bundle_files_present",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "manifest=True; checksums=True; zip=True"
+    },
+    {
+      "name": "manifest_checksums_match",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "bad=none"
+    },
+    {
+      "name": "zip_integrity",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "bad_member=None; pngs=12; bytes=2511960"
     }
   ]
 }

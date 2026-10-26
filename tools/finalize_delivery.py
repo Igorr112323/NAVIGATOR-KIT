@@ -267,7 +267,9 @@ def main() -> int:
     ap.add_argument("--branch", default="arena/ec9fddc1-navigator-kit")
     args = ap.parse_args()
 
-    verification = run_checks(require_bundle=False)
+    # On the first bootstrap run the manifest does not exist yet; on later
+    # refreshes include bundle checks so the report reflects the final state.
+    verification = run_checks(require_bundle=MANIFEST.is_file())
     RESULTS.write_text(json.dumps(verification, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if verification["status"] != "PASS":
         print(json.dumps(verification, ensure_ascii=False, indent=2))

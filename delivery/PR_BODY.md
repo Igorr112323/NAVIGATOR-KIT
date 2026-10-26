@@ -22,4 +22,4 @@
 4. **P1:** проверить Tables API и SHEETSET/`.dst`, синхронизировать порядок layouts.
 5. **P2:** GIF-демо ≤3 МБ, senior review, устранение всех `ГИПОТЕЗА/ПРОВЕРИТЬ`.
 
-Верификация: `PASS`, required checks: 25, failed: 0.
+Верификация: `PASS`, required checks: 30, failed: 0.
