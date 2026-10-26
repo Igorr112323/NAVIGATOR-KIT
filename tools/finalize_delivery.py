@@ -267,28 +267,44 @@ def main() -> int:
     ap.add_argument("--branch", default="arena/ec9fddc1-navigator-kit")
     args = ap.parse_args()
 
-    # On the first bootstrap run the manifest does not exist yet; on later
-    # refreshes include bundle checks so the report reflects the final state.
-    verification = run_checks(require_bundle=MANIFEST.is_file())
-    RESULTS.write_text(json.dumps(verification, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    if verification["status"] != "PASS":
-        print(json.dumps(verification, ensure_ascii=False, indent=2))
-        return 1
     summary = read_json(DATA / "summary.json")
     standards = read_json(DATA / "standards_status.json")
-    write_text(DELIVERY / "README_night-session.md",
-               build_readme(summary, verification, args.commit, args.pr_url, args.branch))
-    write_text(DELIVERY / "PR_BODY.md", build_pr_body(summary, verification))
-    write_text(DELIVERY / "CHAT_REPLY.md",
-               build_chat_reply(summary, verification, args.commit, args.pr_url, args.branch))
-    write_text(DELIVERY / "index.html",
-               build_dashboard(summary, verification, standards, args.commit, args.pr_url))
+
+    def write_text_artifacts(state: dict) -> None:
+        write_text(DELIVERY / "README_night-session.md",
+                   build_readme(summary, state, args.commit, args.pr_url, args.branch))
+        write_text(DELIVERY / "PR_BODY.md", build_pr_body(summary, state))
+        write_text(DELIVERY / "CHAT_REPLY.md",
+                   build_chat_reply(summary, state, args.commit, args.pr_url, args.branch))
+        write_text(DELIVERY / "index.html",
+                   build_dashboard(summary, state, standards, args.commit, args.pr_url))
+
+    # Phase A: validate freshly regenerated source artifacts. Do NOT validate a
+    # stale manifest here — CI regenerates timestamped logs/screenshots first.
+    core = run_checks(require_bundle=False)
+    RESULTS.write_text(json.dumps(core, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if core["status"] != "PASS":
+        print(json.dumps(core, ensure_ascii=False, indent=2))
+        return 1
+    write_text_artifacts(core)
+    build_manifest()
+    build_zip()
+
+    # Phase B: now that a fresh bundle exists, compute the complete verification
+    # state and regenerate text/manifest/zip one final time.
+    final = run_checks(require_bundle=True)
+    RESULTS.write_text(json.dumps(final, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if final["status"] != "PASS":
+        print(json.dumps(final, ensure_ascii=False, indent=2))
+        return 1
+    write_text_artifacts(final)
     build_manifest()
     build_zip()
     print(json.dumps({
         "status": "PASS", "report": "delivery/README_night-session.md",
         "dashboard": "delivery/index.html", "manifestFiles": read_json(MANIFEST)["fileCount"],
         "zipBytes": BUNDLE.stat().st_size, "commit": args.commit, "prUrl": args.pr_url,
+        "requiredChecks": final["requiredChecks"],
     }, ensure_ascii=False, indent=2))
     return 0
 

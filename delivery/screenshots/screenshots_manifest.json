@@ -1,6 +1,6 @@
 {
   "format": "navigator-kit.screenshots/v1",
-  "generatedAt": "2026-10-26T21:54:48+00:00",
+  "generatedAt": "2026-10-26T22:04:41+00:00",
   "nanoCADExecuted": false,
   "disclaimer": "All PNGs are explicitly labelled synthetic diagnostic mockups, not nanoCAD screenshots.",
   "minResolution": {
@@ -97,7 +97,7 @@
       "source": "stamp_patch_report.json",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "9f46d91459bc7d9ac53b804f42b6f18bdd8ceba6c892089bc99872aa436c3585"
+      "sha256": "08278b6b458f3dd96dfbd9428bbc21c19403a8b916c24897df634c97f08f591b"
     },
     {
       "file": "delivery/screenshots/screenshot_10_change_table.png",

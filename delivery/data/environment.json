@@ -1,6 +1,6 @@
 {
   "format": "navigator-kit.environment/v1",
-  "capturedAt": "2026-10-26T21:54:45+00:00",
+  "capturedAt": "2026-10-26T22:04:38+00:00",
   "os": "Linux-6.1.158+-x86_64-with-glibc2.36",
   "python": "3.11.2",
   "architecture": "x86_64",
@@ -19,7 +19,7 @@
   "pythonModulesInCurrentInterpreter": {
     "PIL": true,
     "ezdxf": true,
-    "xmlschema": false
+    "xmlschema": true
   },
   "nanocad26Installed": false,
   "multiCadSdk26Installed": false,
