@@ -39,7 +39,7 @@ DERIVED_MULTIPLICITIES = {
     "A0": {2, 3}, "A1": {3, 4}, "A2": {3, 4, 5},
     "A3": {3, 4, 5, 6, 7}, "A4": {3, 4, 5, 6, 7, 8, 9},
 }
-SESSION_ID = "night-session-20261026"
+SESSION_ID = "night-session-20261027"
 LOG_LINES: list[str] = []
 
 
@@ -89,7 +89,7 @@ def read_json(path: Path):
 def write_csv(path: Path, rows: list[dict], fieldnames: list[str]) -> None:
     ensure_parent(path)
     with path.open("w", encoding="utf-8-sig", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fieldnames, delimiter=";", extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=fieldnames, delimiter=";", extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         for row in rows:
             w.writerow({k: row.get(k, "") for k in fieldnames})
@@ -694,7 +694,8 @@ def build_print_order(sheets: list[dict], form1_rows: list[dict], samples_dir: P
 def capture_environment(output_dir: Path) -> dict:
     tools = {name: (shutil.which(name) or "MISSING") for name in
              ["dotnet", "mono", "msbuild", "csc", "python3", "node", "npm", "git", "gh", "convert"]}
-    modules = {name: bool(importlib.util.find_spec(name)) for name in ["PIL", "ezdxf", "xmlschema"]}
+    modules = {name: bool(importlib.util.find_spec(name)) for name in
+               ["PIL", "ezdxf", "xmlschema", "docx", "lxml", "pandas", "matplotlib"]}
     env = {
         "format": "navigator-kit.environment/v1",
         "capturedAt": utcnow(),
@@ -708,7 +709,8 @@ def capture_environment(output_dir: Path) -> dict:
         "visualStudioInstalled": False,
         "licenseFound": False,
         "briefingFound": (ROOT / "briefing.md").is_file(),
-        "note": "briefing.md is a reconstruction, not the original contest brief.",
+        "windowsVmWorkflowPrepared": (ROOT / ".github/workflows/windows-build.yml").is_file(),
+        "note": "briefing.md is a reconstruction, not the original contest brief; second session verified 2026-10-27.",
     }
     write_json(output_dir / "environment.json", env)
     return env
@@ -753,8 +755,17 @@ def write_api_experiment(output_dir: Path) -> dict:
 
 def write_standards_status(output_dir: Path) -> dict:
     data = {
-        "format": "navigator-kit.standards-status/v1",
+        "format": "navigator-kit.standards-status/v2",
         "checkedAt": utcnow(),
+        "checkedAtDate": "2026-10-27",
+        "officialRegistry": {
+            "spds2026": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
+            "spds2020Replaced": "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
+            "changes2023": "https://protect.gost.ru/document.aspx?control=7&id=256448",
+            "changes2013Revoked": "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
+            "appendixB": "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
+            "formats": "https://www.spds.ru/info/standarts/2.301-68.html",
+        },
         "active": {
             "spds": "ГОСТ Р 21.101-2026 (с 2026-04-01)",
             "forms": "Приложение Б (обязательное)",
@@ -772,6 +783,7 @@ def write_standards_status(output_dir: Path) -> dict:
         ],
         "sources": [
             "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
+            "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
             "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
             "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
             "https://protect.gost.ru/document.aspx?control=7&id=256448",
@@ -823,7 +835,8 @@ def write_night_log(summary: dict, issues: list[dict], stamp_report: dict) -> No
     lines = [
         f"# Ночной лог — {SESSION_ID}", "",
         "Все временные метки — UTC, реальное время sandbox. План на 8–10 ч находится в `docs/session-plan.md`; "
-        "фактическая сессия сжата в автоматизированный проход, без симуляции девяти часов.", "",
+        "фактическая сессия сжата в автоматизированный проход, без симуляции девяти часов. "
+        "Вторая сессия продолжает PR #1 от 2026-10-26: ветка синхронизирована с `origin/arena/ec9fddc1-navigator-kit` до `bc47b35`.", "",
         "## Хронология", "",
     ]
     for line in LOG_LINES:

@@ -67,11 +67,21 @@ def run_checks(require_bundle: bool = True) -> dict:
         "delivery/data/numbering_plan.csv", "delivery/data/stamp_patch_report.json",
         "delivery/data/change_table_template.csv", "delivery/data/print_order.json",
         "logs/night-session.log", "delivery/logs/night-session.log",
+        "logs/night-session-2.log", "delivery/logs/night-session-2.log",
+        "docs/normative-audit.md", "docs/windows-vm-build.md",
+        ".github/workflows/windows-build.yml", "requirements-analysis.txt",
+        "delivery/completeness_report.md", "delivery/changes_table.md",
+        "delivery/next_steps.md", "delivery/numbering_patch.py",
+        "delivery/night-session-2.md",
+        "delivery/data/wo1_template.csv", "delivery/data/wo2_template.csv",
+        "delivery/data/wo1_template.docx", "delivery/data/completeness_chart.png",
+        "delivery/data/completeness_chart.json", "delivery/data/normative_audit.json",
+        "delivery/data/session2_summary.json", "delivery/data/pr_labels.json",
     ]
     bundle_files = [
         "delivery/README_night-session.md", "delivery/index.html", "delivery/PR_BODY.md",
         "delivery/CHAT_REPLY.md", "delivery/night-log.md",
-        "delivery/data/verification_results.json",
+        "delivery/data/verification_results.json", "delivery/night-session-2.md",
     ]
     missing = [p for p in core_files if not (ROOT / p).is_file()]
     check("required_files_present", not missing, "missing=" + (", ".join(missing) or "none"))
@@ -197,10 +207,96 @@ def run_checks(require_bundle: bool = True) -> dict:
             check("zip_integrity", bad_member is None and len(pngs) >= 5 and any("README_night-session.md" in n for n in names),
                   f"bad_member={bad_member}; pngs={len(pngs)}; bytes={BUNDLE.stat().st_size}")
 
+    # --- Second-session continuation checks ---
+    registry = standards.get("officialRegistry", {})
+    registry_ok = all(
+        registry.get(key, "").startswith("https://protect.gost.ru/") or
+        registry.get(key, "").startswith("https://base.garant.ru/") or
+        registry.get(key, "").startswith("https://www.spds.ru/")
+        for key in ("spds2026", "spds2020Replaced", "appendixB", "changes2023", "changes2013Revoked", "formats")
+    )
+    check("official_standard_registry_links", registry_ok and standards.get("checkedAtDate") == "2026-10-27",
+          f"checkedAtDate={standards.get('checkedAtDate')}; links={len(registry)}")
+
+    mapping_fields_ok = []
+    for xml_path in sorted((DELIVERY / "xml").glob("*.xml")):
+        root = ET.parse(xml_path).getroot()
+        fields = {a.attrib.get("field", "") for a in root.findall("./keyAttributes/attributeBinding")}
+        mapping_fields_ok.append({"sheet_no", "format"}.issubset(fields))
+    check("xml_key_attributes_sheet_and_format", all(mapping_fields_ok) and len(mapping_fields_ok) == 3,
+          f"files={len(mapping_fields_ok)}; ok={sum(mapping_fields_ok)}")
+
+    docx_path = DATA / "wo1_template.docx"
+    docx_ok = False
+    if docx_path.is_file():
+        with zipfile.ZipFile(docx_path) as zf:
+            docx_ok = "[Content_Types].xml" in zf.namelist() and zf.testzip() is None
+    check("wo1_docx_is_valid_package", docx_ok, f"path={docx_path.relative_to(ROOT)}")
+
+    wo1_rows = csv_rows(DATA / "wo1_template.csv") if (DATA / "wo1_template.csv").is_file() else []
+    wo2_rows = csv_rows(DATA / "wo2_template.csv") if (DATA / "wo2_template.csv").is_file() else []
+    check("wo_template_row_counts", len(wo1_rows) == 120 and len(wo2_rows) >= 6,
+          f"form1={len(wo1_rows)}; form2={len(wo2_rows)}")
+
+    completeness_md = (DELIVERY / "completeness_report.md").read_text(encoding="utf-8")
+    check("completeness_report_honest_counts",
+          "16" in completeness_md and "4 группы дублей" in completeness_md and "нельзя утверждать" in completeness_md,
+          "16 incidents / 4 duplicate groups / no false 'all missing files' claim")
+
+    patch_src = (DELIVERY / "numbering_patch.py").read_text(encoding="utf-8")
+    try:
+        compile(patch_src, "delivery/numbering_patch.py", "exec")
+        patch_ok = "minimal_patch" in patch_src and "full_shift" in patch_src
+    except SyntaxError:
+        patch_ok = False
+    check("numbering_patch_script_valid", patch_ok, "minimal_patch + full_shift + Python syntax OK")
+
+    changes_md = (DELIVERY / "changes_table.md").read_text(encoding="utf-8")
+    check("changes_table_normative_and_operational_separated",
+          all(s in changes_md for s in ("Изм.", "№ докум.", "Номер листа", "Тип изменений", "не заменяет")),
+          "GOST 5-column table and non-GOST PM table are distinct")
+
+    next_md = (DELIVERY / "next_steps.md").read_text(encoding="utf-8")
+    check("next_steps_priorities", all(s in next_md for s in ("P0", "P1", "P2")), "P0/P1/P2 tasks present")
+
+    chart_meta = read_json(DATA / "completeness_chart.json")
+    check("completeness_chart_watermarked",
+          "nanoCAD НЕ запускался" in chart_meta.get("watermark", "") and chart_meta.get("nanoCADScreenshot") is False,
+          f"generatedBy={chart_meta.get('generatedBy')}")
+
+    check("screenshots_corner_watermark",
+          all(i.get("cornerWatermark") is True and "nanoCAD НЕ запускался" in i.get("persistentWatermark", "") for i in images),
+          "all images have persistent bottom-right watermark metadata")
+
+    check("session2_log_start_end",
+          "SESSION_2_START" in log_text and "SESSION_2_END" in log_text,
+          "logs/night-session.log contains second-session boundaries")
+
+    wf_path = ROOT / ".github/workflows/windows-build.yml"
+    wf_text = wf_path.read_text(encoding="utf-8") if wf_path.is_file() else ""
+    check("windows_vm_workflow_prepared",
+          "windows-latest" in wf_text and "workflow_dispatch" in wf_text and "NANOCAD_SDK_PATH" in wf_text,
+          "manual Windows build with optional SDK path")
+
+    labels = read_json(DATA / "pr_labels.json")["requestedLabels"]
+    check("pr_labels_requested", labels == ["good first issue", "night-session"], f"labels={labels}")
+
+    session2 = read_json(DATA / "session2_summary.json")
+    check("session2_summary_complete",
+          len(session2["tasks"]) == 11 and session2["nanoCADExecuted"] is False and
+          session2["requestedLabels"] == ["good first issue", "night-session"],
+          f"tasks={len(session2['tasks'])}; nanoCADExecuted={session2['nanoCADExecuted']}")
+
+    audit = read_json(DATA / "normative_audit.json")
+    check("normative_audit_classifies_legacy",
+          audit["checkedAtDate"] == "2026-10-27" and
+          all(key in audit["oldReferenceOccurrences"] for key in ("GOST-R-21.101-2020", "GOST-2.503-2013")),
+          f"occurrences={audit['oldReferenceOccurrences']}")
+
     required_failed = [c for c in checks if c["severity"] == "REQUIRED" and not c["ok"]]
     return {
         "format": "navigator-kit.verification-results/v1",
-        "sessionId": "night-session-20261026",
+        "sessionId": "night-session-20261027",
         "status": "PASS" if not required_failed else "FAIL",
         "requiredChecks": sum(1 for c in checks if c["severity"] == "REQUIRED"),
         "optionalChecks": sum(1 for c in checks if c["severity"] == "OPTIONAL"),

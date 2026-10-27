@@ -1,7 +1,10 @@
 {
-  "format": "navigator-kit.screenshots/v1",
-  "generatedAt": "2026-10-26T22:04:41+00:00",
+  "format": "navigator-kit.screenshots/v2",
+  "sessionId": "night-session-20261027",
+  "generatedAt": "2026-10-27T03:23:47+00:00",
   "nanoCADExecuted": false,
+  "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+  "cornerWatermark": true,
   "disclaimer": "All PNGs are explicitly labelled synthetic diagnostic mockups, not nanoCAD screenshots.",
   "minResolution": {
     "width": 1600,
@@ -17,7 +20,9 @@
       "source": "environment.json",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "49e5873cedc14e387cc56fac7df64d42c13533130b6c9cf50203c9e6c065602b"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "aa999fbfdcd2f21df0b161c25cf0932315c68976f7ca812e847d398632fc6eaa"
     },
     {
       "file": "delivery/screenshots/screenshot_02_poc_scan.png",
@@ -27,7 +32,9 @@
       "source": "sheets_registry.csv",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "c38de569f3b45f3ce2be0e27cc99e8b2272baadc4e9fdc1a84107094e0127db6"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "f020e3df51ff3bddd679fd90665f100ed4ef3bc881f06cb69f1daae3d14953a0"
     },
     {
       "file": "delivery/screenshots/screenshot_03_api_attempt.png",
@@ -37,7 +44,9 @@
       "source": "api_experiment_results.json",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "f039a3f8edd13b4ee385b7c3629f32a1039b2369aa223d47de00f1f316e9b6a3"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "8a09dbf2020ab0c4173419a855d28b1654907f872415dca16faa8a29e66fce48"
     },
     {
       "file": "delivery/screenshots/screenshot_04_xml_profile.png",
@@ -47,7 +56,9 @@
       "source": "stamp_mapping.xml",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "6412db57e099ba60af1261f69cc019da693e6c33ff9299cbcd351c150b0538c2"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "80b00f57ffa1b329185357deef95d4650ded825863158ef4ef4458dd1875cbd0"
     },
     {
       "file": "delivery/screenshots/screenshot_05_form1.png",
@@ -57,7 +68,9 @@
       "source": "form1_AR.csv",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "092af5e836c131559a95528744b65e9886f743544c000b932239136904ae7e17"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "f036416a243c292d8a4fcb4a936d603ce94a8dc3b4fa6ee2ab53886edd37762b"
     },
     {
       "file": "delivery/screenshots/screenshot_06_form2.png",
@@ -67,7 +80,9 @@
       "source": "form2_vedomost.csv",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "4960fb435bb673f1f36b35563717391db7d7e8952633eb8648772faacb424d47"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "2ec5fa12c8cea7abc39c733ca20bd3e4f469f3e937200effeb596e25b04c583e"
     },
     {
       "file": "delivery/screenshots/screenshot_07_completeness.png",
@@ -77,7 +92,9 @@
       "source": "completeness_report.csv",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "4f9eadc62efaf424f1cbf19713c4df7a6c7d438873666d3bb60e10d487bc38a8"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "c56acdc8e5452eb9be6f7e98c1a523cb9e83079e298659c63879838523c72789"
     },
     {
       "file": "delivery/screenshots/screenshot_08_numbering.png",
@@ -87,7 +104,9 @@
       "source": "duplicate_report.csv",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "82133ccff796d17f15bb18f144f50eb49bb8cfb06d9c846f510b5d66c14ca305"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "222ba247b51cf164dcd072fff63ce17d9a9573543d41a9ee314ea85c488eaf05"
     },
     {
       "file": "delivery/screenshots/screenshot_09_stamp_rollback.png",
@@ -97,7 +116,9 @@
       "source": "stamp_patch_report.json",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "08278b6b458f3dd96dfbd9428bbc21c19403a8b916c24897df634c97f08f591b"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "8cf7f53b7e766ac5afca0265a345fd55ac7b86a18e42aafdd04291bc48f12ea9"
     },
     {
       "file": "delivery/screenshots/screenshot_10_change_table.png",
@@ -107,7 +128,9 @@
       "source": "change_table_template.csv",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "428321fcfa3255a25a928a9055c16518394e81311ccd609c860c6c55358e56c4"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "46ae5344f65e72111d11ac18859a4134520eeb3768e22948d9a574e4e82a2fe1"
     },
     {
       "file": "delivery/screenshots/screenshot_11_print_order.png",
@@ -117,7 +140,9 @@
       "source": "print_order.csv",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "9004df6e9410cd4caf62385aff86fa51e584507509d86043a527fbeebbb25389"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "9db295e01e122120f9557e96605134d3b720362eb5551bac04dd8d3ff5df519a"
     },
     {
       "file": "delivery/screenshots/screenshot_12_architecture.png",
@@ -127,7 +152,9 @@
       "source": "architecture summary",
       "nanoCADScreenshot": false,
       "watermark": true,
-      "sha256": "10c0d8698faaed1fcf0b4e01916bf4403374584c5e881d3c6c273019018331bd"
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "sha256": "3d014fc66a0537bc7304c8b720780ccf713e982e85504f9ef3e9201c50a84a6b"
     }
   ]
 }

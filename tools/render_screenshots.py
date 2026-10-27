@@ -77,7 +77,7 @@ def canvas(title: str, subtitle: str, accent: tuple[int, int, int] = BLUE):
     d.rounded_rectangle((40, 38, 58, 132), radius=8, fill=accent)
     d.text((78, 38), title, font=f(40, bold=True), fill=TEXT)
     d.text((80, 95), subtitle, font=f(21), fill=MUTED)
-    d.text((W - 400, 48), "2026-10-26 • NIGHT SESSION", font=f(20, mono=True), fill=accent)
+    d.text((W - 400, 48), "2026-10-27 • NIGHT SESSION 2", font=f(20, mono=True), fill=accent)
     d.rounded_rectangle((40, 158, W - 40, 208), radius=12, fill=(48, 24, 32), outline=(135, 55, 68), width=2)
     d.text((62, 171), "СИНТЕТИЧЕСКИЙ ДИАГНОСТИЧЕСКИЙ МАКЕТ • nanoCAD НЕ ЗАПУСКАЛСЯ • НЕ ЯВЛЯЕТСЯ СКРИНШОТОМ CAD",
            font=f(21, bold=True), fill=RED)
@@ -131,13 +131,33 @@ def footer(d: ImageDraw.ImageDraw, source: str):
            font=f(18), fill=(185, 110, 110))
 
 
+def add_corner_watermark(img: Image.Image) -> Image.Image:
+    """Semi-transparent persistent bottom-right watermark in ADDITION to the top banner."""
+    base = img.convert("RGBA")
+    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    od = ImageDraw.Draw(overlay)
+    label = "nanoCAD НЕ запускался / не скриншот CAD"
+    font = f(22, bold=True)
+    bbox = od.textbbox((0, 0), label, font=font)
+    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    x = base.width - tw - 36
+    y = base.height - th - 52
+    od.rounded_rectangle((x - 16, y - 10, x + tw + 16, y + th + 10), radius=10,
+                         fill=(80, 18, 28, 130), outline=(220, 90, 90, 140), width=2)
+    od.text((x, y), label, font=font, fill=(255, 205, 205, 205))
+    return Image.alpha_composite(base, overlay).convert("RGB")
+
+
 def save(img: Image.Image, name: str, manifest: list[dict], title: str, source: str) -> None:
+    img = add_corner_watermark(img)
     path = OUT / name
     img.save(path, optimize=True)
     manifest.append({
         "file": f"delivery/screenshots/{name}", "width": img.width, "height": img.height,
         "title": title, "source": source, "nanoCADScreenshot": False,
-        "watermark": True, "sha256": __import__("hashlib").sha256(path.read_bytes()).hexdigest(),
+        "watermark": True, "cornerWatermark": True,
+        "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+        "sha256": __import__("hashlib").sha256(path.read_bytes()).hexdigest(),
     })
 
 
@@ -367,9 +387,12 @@ def main() -> int:
 
     write_json = lambda p, data: p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     write_json(OUT / "screenshots_manifest.json", {
-        "format": "navigator-kit.screenshots/v1",
+        "format": "navigator-kit.screenshots/v2",
+        "sessionId": "night-session-20261027",
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "nanoCADExecuted": False,
+        "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+        "cornerWatermark": True,
         "disclaimer": "All PNGs are explicitly labelled synthetic diagnostic mockups, not nanoCAD screenshots.",
         "minResolution": {"width": W, "height": H},
         "count": len(manifest),

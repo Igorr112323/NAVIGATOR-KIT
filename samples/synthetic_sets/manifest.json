@@ -8,7 +8,7 @@
       "sequence": 1,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "1",
-      "sha256": "95cdfbf338f75575132f7c18d50a499bac742c32b457d70798f0081c37ee3c93"
+      "sha256": "8ce6451d5a71b6d1b92c6553af5c69c62e7847a42a12ca3cbfd5211a5972c618"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_002.dxf",
@@ -16,7 +16,7 @@
       "sequence": 2,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "2",
-      "sha256": "793d0d96fa95ed90915261fdba2d3e59ada42035f08e82db1bc568182f5ca4f6"
+      "sha256": "422b5f4bfd08af5b8972a120615b4cef6e237bce08fc442e2ce831b2510051c0"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_003.dxf",
@@ -24,7 +24,7 @@
       "sequence": 3,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "3",
-      "sha256": "745ed0760cbbf04e916ed318cbbe1e406ad8dd09abcb2ffc609d929c50231e3b"
+      "sha256": "5a9e9f52431673f01a01e18cd1ff959ccc55cbf820d072a338c06f8a72d6b4e4"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_004.dxf",
@@ -32,7 +32,7 @@
       "sequence": 4,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "4",
-      "sha256": "625443e4948eff983430daacadc370f07a2eb874cc6c28a08dae4f03a98ebdce"
+      "sha256": "6ecbc7bababa8f54c71817eb359192d213b99873699745262151c6ce71cc7311"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_005.dxf",
@@ -40,7 +40,7 @@
       "sequence": 5,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "5",
-      "sha256": "bd82ad1f023517710547bb0d7eca092f5455dff6bb3717a548f2dd3f3f2626be"
+      "sha256": "c1d415eefff8089330ad7ac5d64d35c86987e90a3d88184077765963314fb962"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_006.dxf",
@@ -48,7 +48,7 @@
       "sequence": 6,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "6",
-      "sha256": "4c722a3d01c2b4b2477016c3b7629b8f2c77a87a7f2581ef1a9b8dbae0f770f7"
+      "sha256": "1ebe6cccbf62731142860bfa5dac734627b6b609efffc633d9b41bf7c850f43d"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_007.dxf",
@@ -56,7 +56,7 @@
       "sequence": 7,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "7",
-      "sha256": "e1a19007f216c56a3534e2dcdda4ea17ff9b45b99f6d725c9e7f4052aa28252b"
+      "sha256": "3d55c06c0d59b47c17e9f64d30f9dd3b644eec3b41abc26311dad24520b6c914"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_008.dxf",
@@ -64,7 +64,7 @@
       "sequence": 8,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "8",
-      "sha256": "041674b1e23460baa376d7ecda78d244db9d4b2d0c0662f9e042b5c31d6c5acd"
+      "sha256": "bcd3d49c92e9d17f566cabcddf285ca02aca31048740bc4515b73cfad1360a05"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_009.dxf",
@@ -72,7 +72,7 @@
       "sequence": 9,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "9",
-      "sha256": "224f80bae9c81d79ef600dd25fd57e4a6bb78285a079165926575d523da35089"
+      "sha256": "eca9468f1b269a3464d5db43639a9b824c1ee01c3620f92d0995ac6a32e7bbea"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_010.dxf",
@@ -80,7 +80,7 @@
       "sequence": 10,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "10",
-      "sha256": "0fae79dbd017d3fb033c0b50e74a3ff7ecd3b5874eaf844706a66a49d9c2c541"
+      "sha256": "c8ed66eb3c35cbaa4509723ac87eb09966993a1f50e04dc4b0d30579a41d6b04"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_011.dxf",
@@ -88,7 +88,7 @@
       "sequence": 11,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "11",
-      "sha256": "ca832cb3234b970f4287bbb69611ba50c42df5b178dad34e2956fc48bc018996"
+      "sha256": "5693652db6e69390f2bc764cd47193479e062bb73dd19d4215610a7702416ed3"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_012.dxf",
@@ -96,7 +96,7 @@
       "sequence": 12,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "12",
-      "sha256": "94f5850dca238fb138236adbd7fbe08cd0fbb9be27a5132f538951ea7364a9b9"
+      "sha256": "2993d81b970e98c9ee29009df3769ce0785af3b742a2eb61686840813b5dabfd"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_013.dxf",
@@ -104,7 +104,7 @@
       "sequence": 13,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "13",
-      "sha256": "1a1739f242098a542180f78901791d6969cdeeac3a2b5bda7cb7e4b5e61cb97c"
+      "sha256": "0b0762709106e48b0cd6fec85074f5d7cb4cc1941f61dffcaaabfc406137b6e7"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_014.dxf",
@@ -112,7 +112,7 @@
       "sequence": 14,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "14",
-      "sha256": "2388e4c67236ad90c47dbb0d5f63f2a60588a868e6d7c02d32bcea48ae094506"
+      "sha256": "baab796b022038ce699b9b19bf15220e9ce3643319b6dc3ff1c382ae8bc57737"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_015.dxf",
@@ -120,7 +120,7 @@
       "sequence": 15,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "15",
-      "sha256": "e90ec20ce249faaf7b3a59440edb68a2b906a527528b50fcc8904139e1111b9b"
+      "sha256": "a27d8f591528c234ad33ff30ebe14cef7879cd04ba8fd3daf33a59ef5d98dad1"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_016.dxf",
@@ -128,7 +128,7 @@
       "sequence": 16,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "15",
-      "sha256": "399d52b02ee63e7b6ca0ba99a39be445a51bf187d70b84c107c4dac642114f88"
+      "sha256": "fdceb0beff7c59d4c5a9bd169d24373111ec4fb7187b56d607b98d07fcb524cf"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_017.dxf",
@@ -136,7 +136,7 @@
       "sequence": 17,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "17",
-      "sha256": "30fc15a16a96bf73e94e94e0a5f6fdf9e4e0331475a53062000a885711b845e6"
+      "sha256": "808c54d862b96afa106008c7d510e16634f148f461e1c0d4bc2bdad9b3dae6bd"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_018.dxf",
@@ -144,7 +144,7 @@
       "sequence": 18,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "18",
-      "sha256": "662f174c07034d138ea6d1a8aa6eddcfa19b1728a2b6eabd58c211b28af21454"
+      "sha256": "2a14dea09ea8b46484e8802d4ca76cd14eb1e45196080a4895ca00280f38fb26"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_019.dxf",
@@ -152,7 +152,7 @@
       "sequence": 19,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "19",
-      "sha256": "aa1475f1b3884564af3f6aa727ef0f0b488dcb3151a258751129384ddad90016"
+      "sha256": "b8115777422ca2ca9440e709eef11827b3de62a85ed495187abdbc6a3afc6ffb"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_020.dxf",
@@ -160,7 +160,7 @@
       "sequence": 20,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "20",
-      "sha256": "f36ccf942b9fce5a23c7dfe158ea7a66ca4198abce77d8a73ecc0208b2c502bf"
+      "sha256": "fde0db120c55b8717f1204f68ac8a16c21d4cbb9233d35a385f2302e2bee8755"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_021.dxf",
@@ -168,7 +168,7 @@
       "sequence": 21,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "21",
-      "sha256": "ef52c73690da9e61d2be97d68779551ed4cf6b4c331463e900bff010bf7ec815"
+      "sha256": "33284ad83749fd7ce3c2f35120c05df0184eae4a5b35ad2ec5c59dcec990b0ca"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_022.dxf",
@@ -176,7 +176,7 @@
       "sequence": 22,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "22",
-      "sha256": "f2ad23b81d950cde3a120028b7848f17a64e8f773cfd54c1a87aa7f570159a2f"
+      "sha256": "701d9b99e8c27e851f0115b5e33fe59518059ba65990116388c53fcd09f03fcc"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_023.dxf",
@@ -184,7 +184,7 @@
       "sequence": 23,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "23",
-      "sha256": "3be1f5a5101d1410350691fa48088cb4cc614bdc5b9d04c309f94a26d6ce4275"
+      "sha256": "eedd3771f9eefdcf0335603ce39261fa29e26c290952b467d06b03b0e80026c0"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_024.dxf",
@@ -192,7 +192,7 @@
       "sequence": 24,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "24",
-      "sha256": "f2c473213a1553bc34cbf67505b05852897b69caef58832e622590f553ada013"
+      "sha256": "c0727b03188e5510ffd65b3fb044643f1470b4d728dfef9e4bf28ddbd9ab4b0f"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_025.dxf",
@@ -200,7 +200,7 @@
       "sequence": 25,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "25",
-      "sha256": "6e53e18c6619f471bdfdc487651dbdb3219dc563f36d0cc6272e89b50ab969a1"
+      "sha256": "ce8dcb4170d67b10e385060e645a5b758cee6dde8522cee9516fdf6160cac529"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_026.dxf",
@@ -208,7 +208,7 @@
       "sequence": 26,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "26",
-      "sha256": "ab877890db707c4966c948cf978bbd3749c220b15cb54262d541c4977d5c44ef"
+      "sha256": "54fdc27906ad870170bc1cd610bab336620ca4e283d0c3f060b9b71068ddeebf"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_027.dxf",
@@ -216,7 +216,7 @@
       "sequence": 27,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "27",
-      "sha256": "2e3a78c99fcae27a9e46f68a76592a41d2672ef8a8a43a2f9d488dc32f9c9837"
+      "sha256": "0f82bd260a5470fe4a78bf37f5a69df385fa65e5af5199f19c64f6d0ebf09acf"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_028.dxf",
@@ -224,7 +224,7 @@
       "sequence": 28,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "27",
-      "sha256": "5353c96482449f4bc3969359439c5c2de0268b4f110526e27f44dcd8cde84aab"
+      "sha256": "24161adef6c217b1c8bfd426158e20513e636c9753145a71aaa751b05b44e111"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_029.dxf",
@@ -232,7 +232,7 @@
       "sequence": 29,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "29",
-      "sha256": "fbc10e60aee6c4889419c33c7ccbb26ac2390fdc01ba0a3a8d4ae3d93c1db0c7"
+      "sha256": "cad129e2a02e792823fd0544b9f02be8a82294a92f1e22f7dd5beafb92d81724"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_030.dxf",
@@ -240,7 +240,7 @@
       "sequence": 30,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "30",
-      "sha256": "bf68d860a64c26e7016b227803776ef990cd3f0722530a317066e539e0f99ee6"
+      "sha256": "39cb100b575e3ee3d9810539c292abeebfdfc5fc292fbd3186aa00a63f25f40d"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_031.dxf",
@@ -248,7 +248,7 @@
       "sequence": 31,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "31",
-      "sha256": "662fc776cbc88445988f9b41c8588cff07a01d1be5268c607bf7546bf5203be9"
+      "sha256": "cc4bc73dfeee41c26f8b85a08c071fc537d97d4bc5386f73f1bea29072f15271"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_032.dxf",
@@ -256,7 +256,7 @@
       "sequence": 32,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "32",
-      "sha256": "8efadd603a4f172072bf338aa069d30101ca89c4279674b9dc33728645e98c22"
+      "sha256": "226a9300681de284af411de57bb4a0b92c00121bb872950e875bc39dc0f3fdc6"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_033.dxf",
@@ -264,7 +264,7 @@
       "sequence": 33,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "33",
-      "sha256": "5958813a7558c2948658fde835ba02a64e5cc51642adb1f88ff1725d4df5bc13"
+      "sha256": "e86350b8aee530843137c167b7aa9617175ce4f426278fe804801b13c072aa56"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_034.dxf",
@@ -272,7 +272,7 @@
       "sequence": 34,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "34",
-      "sha256": "b34adf57f3c7a70f359f7729d66ad06a7a1de5f7d83c8cacd1f1dbd6d08da1ee"
+      "sha256": "6aa52a22154185ff6edd05340213c62312ae50da2f69118896865b9d53991101"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_035.dxf",
@@ -280,7 +280,7 @@
       "sequence": 35,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "35",
-      "sha256": "ea975dd05bcf48e4e93dd1c770e1865fe67e5be87f62cfb335a5983bccef3cad"
+      "sha256": "3754f1f1ee03159e9d9082008600fb02ed4979fe0b43458e60ba5c40a4fd0a6d"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_036.dxf",
@@ -288,7 +288,7 @@
       "sequence": 36,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "36",
-      "sha256": "59a21c2d81740e95da5b3fe9615448df4ea868f77d7d2caaf1c688f6245a9af8"
+      "sha256": "bdccdd7310fde2da53dfeb04e87e7a078b0b65a477e19029dc36fdb91bc7fc77"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_037.dxf",
@@ -296,7 +296,7 @@
       "sequence": 37,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "37",
-      "sha256": "6ab065235f6567190637e50cfd4b67fec537af3c575a23e978500295e045e027"
+      "sha256": "5719cb83a9d615ff65d44763b8158d0b350acccd1a374f319d2fbf8154ddf125"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_038.dxf",
@@ -304,7 +304,7 @@
       "sequence": 38,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "38",
-      "sha256": "4f9754529f21f54253671b13cfd9580a57b4cdb7ca8d29d2b069ee8880fd5597"
+      "sha256": "b2c9347b3aa3dcd301b3d3f73f7c372768cb9dde7aff3d5e51a26e2326957c09"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_039.dxf",
@@ -312,7 +312,7 @@
       "sequence": 39,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "39",
-      "sha256": "7beeb7129466216b64c74884293c82309955537237183d0419c7f179959e3fa8"
+      "sha256": "1c858770f7ae95e7bf11c3d621f9f3a3d39fc37f895a39c73d5e3c4acc31169d"
     },
     {
       "file": "samples/synthetic_sets/АР/АР_040.dxf",
@@ -320,7 +320,7 @@
       "sequence": 40,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "40",
-      "sha256": "2a8f3eb04cbc02514a8b8a8c00f03e1ed84e2bc383f497e1ff3c8c5b1ace9b39"
+      "sha256": "9bb2d87f4081e7498f262d8b5022766aa1bcd8b87c28a450c62850e23f981629"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_001.dxf",
@@ -328,7 +328,7 @@
       "sequence": 1,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "1",
-      "sha256": "394f669d9aa36bd46755c1c397d0f7c3b391d2559292228c4fae0f24d9d0ff99"
+      "sha256": "7b6bfaa0be1f31eeb0345248a85f3e9f7816f7958553c48dc516cd0474a65669"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_002.dxf",
@@ -336,7 +336,7 @@
       "sequence": 2,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "2",
-      "sha256": "932d90cda909127d75e5bfabc821311c7602900aa2c0737c07be56218649c377"
+      "sha256": "33348d169ad0c78bade834d6a8b182169c94706da5e0daab14e7a4b6d18f367b"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_003.dxf",
@@ -344,7 +344,7 @@
       "sequence": 3,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "3",
-      "sha256": "edf23d4c880bed9cdf35c2b8849038ca56f5894e66e42fba65afb231303fd6c5"
+      "sha256": "bfbde1f203e9975f6f13babd5f1d6e107d0c64ef159f301df8129686606f6d5c"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_004.dxf",
@@ -352,7 +352,7 @@
       "sequence": 4,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "4",
-      "sha256": "a594bcf6112abfc5e5da45f4338b7d80f1917f7b8cd1f6bcca0fa2ed590490ca"
+      "sha256": "0d1126641f914954d45fb6525d1e94717c4df17545dbc8b0c41f381862e71683"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_005.dxf",
@@ -360,7 +360,7 @@
       "sequence": 5,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "5",
-      "sha256": "8183016b9fd45d8e145e4a757005aae3da2c13a79a3063dca7e304fadbb6d719"
+      "sha256": "736fd45a6a348560c690dba262bf78645438b393810fbad2ca46581038a1d233"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_006.dxf",
@@ -368,7 +368,7 @@
       "sequence": 6,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "6",
-      "sha256": "4980e5e3274624f3135f3820a5b6bfdc6a26260ea3a904048cce7233a4484e59"
+      "sha256": "92105f24c76fa5de63553084305eb6c2cf37dbecd513b61c2bc5849b833cc854"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_007.dxf",
@@ -376,7 +376,7 @@
       "sequence": 7,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "7",
-      "sha256": "6a543ff42f332a1276051428e7d2b650c4fcf12323128ace07ee452c00ece1c5"
+      "sha256": "0b6fcae0f8700c525218d354a35abbadf1da3b5ffff1103f1d0bef41133bc27e"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_008.dxf",
@@ -384,7 +384,7 @@
       "sequence": 8,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "7",
-      "sha256": "c26ad02ca59dd505b483d71e3fd6050db44e7198e96d128ec837a08cfce30dbc"
+      "sha256": "aeb769fe57019a5cf4c182e72232d05a9b57fdf9e0508da3b62d2906533cf8a1"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_009.dxf",
@@ -392,7 +392,7 @@
       "sequence": 9,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "9",
-      "sha256": "4bd8bc87a80be19586b2fd110a8b42524b6a59218a6613e388218cacd52540a3"
+      "sha256": "f55f4f41eba24090523d33e7ab1e9bd1fa97d322a958b88eb3161856c6aec4c2"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_010.dxf",
@@ -400,7 +400,7 @@
       "sequence": 10,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "10",
-      "sha256": "d8fa63ed28316e55ccc44d39c15ea21a139c7dacfb75282ee439d5152c7523fa"
+      "sha256": "8238c8271292939211854b3585ad55ecfc2696110caadd95a9d2eac0467e2f9f"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_011.dxf",
@@ -408,7 +408,7 @@
       "sequence": 11,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "11",
-      "sha256": "d97720e9540a69b85fc1503b963c049bb0c9224be95a1b8e059d7307934d41d8"
+      "sha256": "59fa15dfaf4605724e25fb562d8fde89675dabcd38f55fddb847a634b07ce4b5"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_012.dxf",
@@ -416,7 +416,7 @@
       "sequence": 12,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "12",
-      "sha256": "969491465112be31cb9fa6a798b03f6686af11504bed9d71e3ffb4c24b95e574"
+      "sha256": "bd81d2b1420595cf58a2c98e7c0001610e836b95eca46fe7fa40d4cffa2fe46d"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_013.dxf",
@@ -424,7 +424,7 @@
       "sequence": 13,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "13",
-      "sha256": "959798ed97305f0c1dcac5ead2541150d7fd7e98780477c204670e07af2bc19f"
+      "sha256": "5183bba92836f01aa0ddce6b78133e3964f943dc4b97709d68e5a8080de85d3c"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_014.dxf",
@@ -432,7 +432,7 @@
       "sequence": 14,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "14",
-      "sha256": "a4f7f02a37584c46cb9300ecd57f4ecc83291afa81b92a9e9a3e9f92d2deea7e"
+      "sha256": "91c3ce7c68b12287f6f98ae2e7d2710ac187ef4c47027533b886181ece47c8e0"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_015.dxf",
@@ -440,7 +440,7 @@
       "sequence": 15,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "15",
-      "sha256": "a2ea327e6300e97bcb0bc6230933fe0935f5325d1e6d3f967f8381ec14da9d05"
+      "sha256": "dae2d64de9e473f55c1cd10af7069904b142be078c852b3a439ad27f2180f3d6"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_016.dxf",
@@ -448,7 +448,7 @@
       "sequence": 16,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "16",
-      "sha256": "35505fdb77c4b32adab9fe604e35409cc8796e4091f4ce41dc993f265efbfed3"
+      "sha256": "b46ba15d917777fcc78567d65a28d17e1a47f916bd44958e240f1eeb67280dbb"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_017.dxf",
@@ -456,7 +456,7 @@
       "sequence": 17,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "17",
-      "sha256": "aad475af3cd3ef2ce318199cb4bbd03fbe057e6ffbd48657b49aede5d0b2bea3"
+      "sha256": "055492fb69c0a3dadea3d0e6ed7213f99ebdb75c75dd8e02db061987ee3fb89e"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_018.dxf",
@@ -464,7 +464,7 @@
       "sequence": 18,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "18",
-      "sha256": "fa7b8adf7b1777b1112ffac424ad28f1e62b3cd7fa470f96a3b8bddc4e3684b6"
+      "sha256": "8c770b3ddc14a237cc982a07f04d5b769e66aad25da6d7ea2b07b948e19f78ad"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_019.dxf",
@@ -472,7 +472,7 @@
       "sequence": 19,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "19",
-      "sha256": "95c2e238bc45d2091eab00778b088e2b1802e942a600f4d2d5892f8286b836ae"
+      "sha256": "fdd7ab177f9af36ed89111fc059278fa59274da39c281c891b5dd9cc1688eecf"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_020.dxf",
@@ -480,7 +480,7 @@
       "sequence": 20,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "20",
-      "sha256": "4954424b280a57b613a718fd4ba8edef34493fa643022103da69b220d66d56ab"
+      "sha256": "bd05f83e51bf9c0acc6ca794479eda461a965fb0811dde96e70ab36f84f34b4b"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_021.dxf",
@@ -488,7 +488,7 @@
       "sequence": 21,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "21",
-      "sha256": "200c53e7027978a3c18a31c64409496998656704779add0dc8c2388ee928dbb2"
+      "sha256": "7d677c383927896744e1a73fb6c29cf8224a9047e5b424fc60d5579f2abc04da"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_022.dxf",
@@ -496,7 +496,7 @@
       "sequence": 22,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "22",
-      "sha256": "08d3006aa9418ed9c8336ee99c0c89ee9b09a1a7b2863d8a3e471e75e1d23f62"
+      "sha256": "141baaacd78adf0bc2302f520d987b59499c72a6f538926f4876bd7cd1404d29"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_023.dxf",
@@ -504,7 +504,7 @@
       "sequence": 23,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "23",
-      "sha256": "06727240467b14d6e5c51d59b147b651de930ed389e98009643e55a1ed98970c"
+      "sha256": "a2fc3cf01ccc22a9035c69c888f3fc00db5cd718f5ae2f43bd5fdb2fc95989e7"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_024.dxf",
@@ -512,7 +512,7 @@
       "sequence": 24,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "24",
-      "sha256": "e1205d8fc9fee0b2ea988f4efaba0f930688b6ae0ff1ae8a76d8a112316da76c"
+      "sha256": "401cfb82183d4fb694eaefecf824acfad3ff174972175f32b3119b94ce9fc06c"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_025.dxf",
@@ -520,7 +520,7 @@
       "sequence": 25,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "25",
-      "sha256": "d82ce36c18e0516776aa455c505751756bc3639f787ca5b3e923f17281dc034b"
+      "sha256": "f08aaaeb5e2d1b58e3b5a1aa78677c9b51b4af6a3cc134d220d05622edd995a0"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_026.dxf",
@@ -528,7 +528,7 @@
       "sequence": 26,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "26",
-      "sha256": "3313971aaece7d7afbb24a6c74b04091c7ae6b98bb4ef3f00f333482f56beeaf"
+      "sha256": "577ecaa4bc577b7097def09ea154515277f38181d7a53015432676b15f9954da"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_027.dxf",
@@ -536,7 +536,7 @@
       "sequence": 27,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "27",
-      "sha256": "6b69f2cb655f814cb1c89a27105669204e03c69b8fca5a5cb275a9b5de3f2b0c"
+      "sha256": "a0c75395e0b1b1a1415e4e04cdb9a443072f0b5ea975e1af9314557c849bf39e"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_028.dxf",
@@ -544,7 +544,7 @@
       "sequence": 28,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "28",
-      "sha256": "1b249cf986e0bc94f3b621cd4b585f9c9cf61d3dcf2b115d8eae74c2c65a959e"
+      "sha256": "355b48495d23bf6ad6812341bd2d7ece21d9d5ecce85dd2a3a9457dc51eb309b"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_029.dxf",
@@ -552,7 +552,7 @@
       "sequence": 29,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "29",
-      "sha256": "0354b88f42137cfd97e4d0006f3f18527544ad69ac3dea6ef69e9bbcdf9b21ae"
+      "sha256": "127f933f1fe443355230290239b8cec545dede06c350cb41e8ce3a3a1b22c0a3"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_030.dxf",
@@ -560,7 +560,7 @@
       "sequence": 30,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "30",
-      "sha256": "bd9054e3520c8d4bf6352e3ea74128e2687a1c4ecbf05f23cb5d2e8471376174"
+      "sha256": "601f75f9f83f3aebae77a86c26da0341a5d6dfe4f7a969dc5a2eaa9536bab305"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_031.dxf",
@@ -568,7 +568,7 @@
       "sequence": 31,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "31",
-      "sha256": "9445a0647e143564da8303d4b5ca68eac6a8a9143b5acb72c17ee2cff3d6c758"
+      "sha256": "78aa55fa6d6515e1e81e54e16c2b37771eda910b9fc6906a625567407451f70d"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_032.dxf",
@@ -576,7 +576,7 @@
       "sequence": 32,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "32",
-      "sha256": "dea8f0162e0841c48560cdb37f1c544990d72bdba332c30ff75f1781c963a806"
+      "sha256": "6e0deb828113285f53dbdb6456a50d52b4faa9e1e4d1932e4531da45ccf290b3"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_033.dxf",
@@ -584,7 +584,7 @@
       "sequence": 33,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "33",
-      "sha256": "62a51e39eb37ec9cc90c02f293195d811ba1a1327d0a22ea556a4ce3b59a2162"
+      "sha256": "448e0faad507b478867851dfdca20a6dd68e9b1f7d2ba5ff727853c6ab52948b"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_034.dxf",
@@ -592,7 +592,7 @@
       "sequence": 34,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "34",
-      "sha256": "194b6b5e66ce66bc3aab670d8cacdc52034cc5d69323c3354eb3b46af3684cc2"
+      "sha256": "14283f520b01610846f5fefa1f43e21ae4c2372d76b47e875767233247b35be1"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_035.dxf",
@@ -600,7 +600,7 @@
       "sequence": 35,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "35",
-      "sha256": "dc04edb95934b268dd2769c2c3fdbdbd8fc6cba7e2e75dc77dc2f4e6667c471f"
+      "sha256": "e7e7085658c8c5add5546f06c071d94d4d338a2cd5acc6b7e1f0c06730fb3297"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_036.dxf",
@@ -608,7 +608,7 @@
       "sequence": 36,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "36",
-      "sha256": "210e067c2dacb80bb24ee68d1597ebbdf479e2114bcaa94d90ccebb7c9e13484"
+      "sha256": "e3d4b5dd17cb65c1835a52a3824bdb425659e5626bce45c5e5753cd5806ac583"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_037.dxf",
@@ -616,7 +616,7 @@
       "sequence": 37,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "37",
-      "sha256": "67e35e6455fcc99d53292efd3df26fd365263259afbf1676abec438eb3455bc5"
+      "sha256": "7327be0604a11ad355d5a8a32e50b47698a0655df3a23cacf93eedad973f79c6"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_038.dxf",
@@ -624,7 +624,7 @@
       "sequence": 38,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "38",
-      "sha256": "534ee09d9569d535e85e3df0346e05f40aa41b6baed0f29636c90a1c2459e067"
+      "sha256": "430607691ac00c47e6f303269b2e53c7ead918df17df9e4972f317449a69ef04"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_039.dxf",
@@ -632,7 +632,7 @@
       "sequence": 39,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "39",
-      "sha256": "d8b91e6a02ebed418d754d82d2d83780ccab9fdaeaae4535aa4fd42cc99205a6"
+      "sha256": "f4af02d22e64c5c36a6a4125279356467a3b9591229214d3df34d250cb515a85"
     },
     {
       "file": "samples/synthetic_sets/КР/КР_040.dxf",
@@ -640,7 +640,7 @@
       "sequence": 40,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "40",
-      "sha256": "8006d404ad824f5bf5d77c749a261baf9241219fe52c98030f802f175736450e"
+      "sha256": "fb34cac2568e9e02099d9d2309f6f3529c097c37613100db86fd59b05aa3b1ba"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_001.dxf",
@@ -648,7 +648,7 @@
       "sequence": 1,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "1",
-      "sha256": "666dc6626d67c33a2c1ac906e6f6413f74a841f126c955434c0484a938ecddd8"
+      "sha256": "0197a43e95cea92aa5135f88f0b040a8d008b7b743fcbde4d3c3727a79847e70"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_002.dxf",
@@ -656,7 +656,7 @@
       "sequence": 2,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "2",
-      "sha256": "33cce87f119397d466664623a2387db0548d65ab4061373b61f021b529bc1dc7"
+      "sha256": "ec860677ff15fcb0da7eacfaad1890df33d1187abea554c2bb87fae0a34f2b0a"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_003.dxf",
@@ -664,7 +664,7 @@
       "sequence": 3,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "3",
-      "sha256": "ff82efa7662801a551b15a71dea630f534ae14186fc842680963feefcc7e1242"
+      "sha256": "779b186b5d603ef04321fa60e559f27969af40e80cbc87b6467c5754f3febdc1"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_004.dxf",
@@ -672,7 +672,7 @@
       "sequence": 4,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "4",
-      "sha256": "94187a694f614ee01ae6a829a1701fb2b85078dc048deb850f6828e119706106"
+      "sha256": "0f2857bf0e005eb48bca2a5206d14c35d9594d7dca0af76059704d584b80a050"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_005.dxf",
@@ -680,7 +680,7 @@
       "sequence": 5,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "5",
-      "sha256": "45548b108ee5e693c213ceb837ded3fb8cbdd82303b37c6775744217fa301e39"
+      "sha256": "8140c8b8960ce3f6d43050d20359e439b75d67c6df411bbf9f2175acd567eebd"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_006.dxf",
@@ -688,7 +688,7 @@
       "sequence": 6,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "6",
-      "sha256": "408f2498ddb283fdde013aec890302f216052133f491944bb463e19c3c8fd9e6"
+      "sha256": "eacf03aa88cd5090460205b5ca4cd0274bf8d1a4fc73a32eebe4a1b4e58a121d"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_007.dxf",
@@ -696,7 +696,7 @@
       "sequence": 7,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "7",
-      "sha256": "24f1b23e01ebaa28ce93a6a16f15812e91a387f8a12313edf1c01bf3d86dce6f"
+      "sha256": "23b5e44ed61d93bddfb7d8b0dccaff66032229bf2bc0d8dd48ae2a6a2946f2c1"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_008.dxf",
@@ -704,7 +704,7 @@
       "sequence": 8,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "8",
-      "sha256": "68e0dc035321475bad2cf6a27152e1e9fbf50fb69a8657f08d8c383374a00a40"
+      "sha256": "b486213c098f07ff8818bab915b37af1686c74ac8e27bf80027b03c3c7b50d1e"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_009.dxf",
@@ -712,7 +712,7 @@
       "sequence": 9,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "9",
-      "sha256": "a3bf699584d8716c7c717edaa09a56cd45f6ede29b2a34104adc9ed78b069639"
+      "sha256": "3c001a0674346cfdaeed054ba916c514e0301931920e2cc155d66548c3c58875"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_010.dxf",
@@ -720,7 +720,7 @@
       "sequence": 10,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "10",
-      "sha256": "16e65022facc640bea1e57c5ae89318ad46db0976f96add4c553d8f073289b74"
+      "sha256": "5c02e6aa066e43e4b6373bf4883c20fe165de1987f229be8fc84cc885005f08c"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_011.dxf",
@@ -728,7 +728,7 @@
       "sequence": 11,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "11",
-      "sha256": "a4642a20729bafb63b423c51fbdc1a18fdfad759eb98fa018b1baf3ce50143e6"
+      "sha256": "45acd6822e657563b91c8f5c0c95e08eea64a4087284510cdfeeb450df5d0674"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_012.dxf",
@@ -736,7 +736,7 @@
       "sequence": 12,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "12",
-      "sha256": "cc056493378d2afc8a5c1fe9cfb9f1243812e7e27b6606c5bf28d0b1600226c2"
+      "sha256": "f666b344282a5dd89f96f4e9c583d46749ca62b63796a87a347de4e7f0048554"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_013.dxf",
@@ -744,7 +744,7 @@
       "sequence": 13,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "13",
-      "sha256": "1285c0e14e52875826144e075fd7e506fe0f81284916ae5653062bf0b0584c5b"
+      "sha256": "15beedd804b2dd4afe0644deed41017de1700f4beb767aca57d37293c39ce354"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_014.dxf",
@@ -752,7 +752,7 @@
       "sequence": 14,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "14",
-      "sha256": "56afc5b61225e6237e1bb97f34437ea6a626f2a9ef71150058806a11ba2dbf7e"
+      "sha256": "53959ee221caeb2116d2ee1da1838f7cdb56de936f1838becccccc9a5c0d6ab8"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_015.dxf",
@@ -760,7 +760,7 @@
       "sequence": 15,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "15",
-      "sha256": "88cd8a55ab38e050a1685a2f58c7acfaa25797c1d6ed0857addb3d33eb5c25e7"
+      "sha256": "2abbb64a6f2f095941ec155ab30f957738f6d98cb16e3cafd32ce98ef0d464af"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_016.dxf",
@@ -768,7 +768,7 @@
       "sequence": 16,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "16",
-      "sha256": "8e2acd2f4400a8fb5405f84f154179a918499983cf0aef38755cd3e3e017db5c"
+      "sha256": "0706a79f158558b38bd95b15c9fc51b24c927eb07257ad4939e6e66cd535340d"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_017.dxf",
@@ -776,7 +776,7 @@
       "sequence": 17,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "17",
-      "sha256": "5f21798bc73ea70597198837532f303090eefc3b70c3b2a15d36c665b403188c"
+      "sha256": "1dab9a396b82742b165388415e93b7fe2524a1dc665c20d79511d9e7ecbfef99"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_018.dxf",
@@ -784,7 +784,7 @@
       "sequence": 18,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "18",
-      "sha256": "fea0a3d3dec56460d1671891eeb80973afd01da8f04493ad0b35f0036b8a17bb"
+      "sha256": "c5e7a696994ec8873f8cbc47d8787c49209b7a36737a7db6fa8991d115b5b07b"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_019.dxf",
@@ -792,7 +792,7 @@
       "sequence": 19,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "19",
-      "sha256": "e74b3dab252d8bc37e1fceb1c5b84c1910fbbe41cb6e062974edad9a016d40be"
+      "sha256": "ec64f2404bfc5cdb47554addbf125b6d4957faac684f42f945bb71dc6a65fd34"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_020.dxf",
@@ -800,7 +800,7 @@
       "sequence": 20,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "20",
-      "sha256": "f2d34728bbb90590c4d2345278c049b765b98eb0d2f9c4dfc9d135512023e984"
+      "sha256": "d82ab84cecacfdecb5feb2b7ad917275c9bc023bcb79a8b4ccc2539ece4b7bd4"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_021.dxf",
@@ -808,7 +808,7 @@
       "sequence": 21,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "21",
-      "sha256": "d76b24eb7ab6940862881477de31946140135316d5a0cd2fc6433da9df182e54"
+      "sha256": "6ec01899e44a424fa88479fe9d89b908c2f98179b6905bd00e471325fe1ca8a7"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_022.dxf",
@@ -816,7 +816,7 @@
       "sequence": 22,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "21",
-      "sha256": "5660e52c1fd875608b8679728920e36b4844cb417c6291e30042913e456ef1a9"
+      "sha256": "865792f66b662de50209ae5b7665386e2ca68cc85910e40e301bb364713dfade"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_023.dxf",
@@ -824,7 +824,7 @@
       "sequence": 23,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "23",
-      "sha256": "5ea480faf997a6f9153ef9cd3446cd1eb5b2e4ac3996491fabdc34d2124eb989"
+      "sha256": "f2786f5c3883ece6c5db7c8c28ffd6fef412d8be422f6ef7d7047fe2fd865f4c"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_024.dxf",
@@ -832,7 +832,7 @@
       "sequence": 24,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "24",
-      "sha256": "b333322a466d1b892556309c9c2e22851d4181adddde1772a915eee18a605095"
+      "sha256": "131963e59eb56044289cf4a3aef44168295e2be87ff632a3a46d0c7252878d8e"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_025.dxf",
@@ -840,7 +840,7 @@
       "sequence": 25,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "25",
-      "sha256": "dfb1f06d658218322d764ee1de572018ef4c8329fbc469025f120f249c58b954"
+      "sha256": "80913155f1d645140f65d791ee7d0ad17c794c8e7bad9f224870bfb5f371a303"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_026.dxf",
@@ -848,7 +848,7 @@
       "sequence": 26,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "26",
-      "sha256": "474ec92f03ef0997b3f72ea5549042bd2eb4306501e16da3224f6bae25da4bb1"
+      "sha256": "2e1eac2b77d959f857d62622104544c64511b61fcdb706d5316019afae7fcec9"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_027.dxf",
@@ -856,7 +856,7 @@
       "sequence": 27,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "27",
-      "sha256": "90982b0f9bb730a7afc263f815d2c2b9561877e2f80ab5ed89855907b054276a"
+      "sha256": "cce0b9312cb969f984679c0203c21fc3ead21115c641b5b64fa2155750debb89"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_028.dxf",
@@ -864,7 +864,7 @@
       "sequence": 28,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "28",
-      "sha256": "963d98c08e3de48b03b0e16c0cbb71dc81a4117e705a80b88d122c63fe4636a9"
+      "sha256": "81674e334897376296c8c1355bfb1407fe68d9ab75c3a0803aae0290b357c6bb"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_029.dxf",
@@ -872,7 +872,7 @@
       "sequence": 29,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "29",
-      "sha256": "aa04af3a45f01e83fec3a026cb2b35788358c016ff698ced5a4012f9d5e8d3d9"
+      "sha256": "77acb9778d8ac63fa96dc41206a446cdb5a1ee15e51d8e2a2f7ccabd59dbcd0c"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_030.dxf",
@@ -880,7 +880,7 @@
       "sequence": 30,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "30",
-      "sha256": "7ed3c170d29ac6e684c8807d351913807874d3f35bb4eb0e3e8c91891e6a303f"
+      "sha256": "2fdc49db669660b2e16a64044a9a35537159da189fb5de30808ae06e9b3bbaef"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_031.dxf",
@@ -888,7 +888,7 @@
       "sequence": 31,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "31",
-      "sha256": "b66e70a90e4c6706abd2c39239c9efac29c1be220541e63f7c5a0ab59217029c"
+      "sha256": "6db795656bbeb8169d5740a5014d2a72f6affe733525d5b1929f784eb804b39a"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_032.dxf",
@@ -896,7 +896,7 @@
       "sequence": 32,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "32",
-      "sha256": "ba3ec90665f8a1d42539b2e18228c31cb99ebd2183928a472d50a6a4793cc6c9"
+      "sha256": "6b88a3d5380c9a5fc0c1222440ed5ea665b2c1c07559253a11f34fba6efdca84"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_033.dxf",
@@ -904,7 +904,7 @@
       "sequence": 33,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "",
-      "sha256": "476e1f667d663b6f5977c35683a2eb58b09e6ba2014d619c200a9cd106bff9ab"
+      "sha256": "2ba649b911ce5e05863a5ea463d0a323c2aaf3171f119eed566da614b9e3d16b"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_034.dxf",
@@ -912,7 +912,7 @@
       "sequence": 34,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "34",
-      "sha256": "3f546dfa541fe55c96b78cef567c3b7d1de0dd87665512301a40e1c2a3e55669"
+      "sha256": "7e1ec2422ac06310167b213b1fb2b164cd1e7c1b7a09a62568812dba019fdf73"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_035.dxf",
@@ -920,7 +920,7 @@
       "sequence": 35,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "35",
-      "sha256": "a378d04486b2b712986f82d011f219b71599e0cd2700e99b13ea85d0fcce27ca"
+      "sha256": "91dbe05e3760af1ef9a30f556e14380e151bcd4f78c817507c22eaa3d35be54c"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_036.dxf",
@@ -928,7 +928,7 @@
       "sequence": 36,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "36",
-      "sha256": "045f9c22ed7f7bb999686beb28eee73a30b0de131636e835c9b72070c990bc35"
+      "sha256": "2647a9682f54eafff880f4b865850f2acb56d32639f059a6e0aa97920863627d"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_037.dxf",
@@ -936,7 +936,7 @@
       "sequence": 37,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "37",
-      "sha256": "512f0dfd131d004bac474ec8713e85040dd9f56db43e7e4d2f137291019edf42"
+      "sha256": "30425d6d45eeb4ba9bb44558355465d4d8c99acbfc924eff0af77e6667123db3"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_038.dxf",
@@ -944,7 +944,7 @@
       "sequence": 38,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "38",
-      "sha256": "e74ce670ef46b442d00884d2e8ac958dc7d5223f5442af4ff183f1258c1cfc65"
+      "sha256": "c904c52f7e8035c99328fc4f4b2684d36d56cf2e6b5b8c19f9e7ff15c5f02d05"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_039.dxf",
@@ -952,7 +952,7 @@
       "sequence": 39,
       "profile": "SPDS_FORM3_CLASSIC",
       "sheet_no": "39",
-      "sha256": "2966b64022360bbc169df6751a8222553d310ea44d14ef0458dd1637a13f115f"
+      "sha256": "afdb567eff3a48a574b79f152e75d6a6c167ff5d2d0b125f1d696d2b7f5fe281"
     },
     {
       "file": "samples/synthetic_sets/ОВ/ОВ_040.dxf",
@@ -960,7 +960,7 @@
       "sequence": 40,
       "profile": "SPDS_FORM3_ALT",
       "sheet_no": "40",
-      "sha256": "37ca7d7a337c451656e11a277ae67c78d6e9f11f99695a268466d057bda7597d"
+      "sha256": "25613fcb58fd8e46bd98a14f9f26f3197007acf6bd051d0ea4fbbfbe5f92c3b8"
     }
   ],
   "warning": "Synthetic DXF, not customer DWG."

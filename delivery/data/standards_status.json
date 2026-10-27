@@ -1,6 +1,15 @@
 {
-  "format": "navigator-kit.standards-status/v1",
-  "checkedAt": "2026-10-26T22:04:38+00:00",
+  "format": "navigator-kit.standards-status/v2",
+  "checkedAt": "2026-10-27T03:23:43+00:00",
+  "checkedAtDate": "2026-10-27",
+  "officialRegistry": {
+    "spds2026": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
+    "spds2020Replaced": "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
+    "changes2023": "https://protect.gost.ru/document.aspx?control=7&id=256448",
+    "changes2013Revoked": "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
+    "appendixB": "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
+    "formats": "https://www.spds.ru/info/standarts/2.301-68.html"
+  },
   "active": {
     "spds": "ГОСТ Р 21.101-2026 (с 2026-04-01)",
     "forms": "Приложение Б (обязательное)",
@@ -18,6 +27,7 @@
   ],
   "sources": [
     "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
+    "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
     "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
     "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
     "https://protect.gost.ru/document.aspx?control=7&id=256448",

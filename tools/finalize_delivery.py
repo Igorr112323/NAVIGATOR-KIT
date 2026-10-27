@@ -7,6 +7,7 @@ import hashlib
 import html
 import json
 import shutil
+import subprocess
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -22,7 +23,7 @@ RESULTS = DATA / "verification_results.json"
 MANIFEST = DELIVERY / "MANIFEST.json"
 CHECKSUMS = DELIVERY / "manifest.sha256"
 BUNDLE = DELIVERY / "navigator-kit-night-session.zip"
-SESSION = "night-session-20261026"
+SESSION = "night-session-20261027"
 
 
 def write_text(path: Path, text: str) -> None:
@@ -34,15 +35,26 @@ def read_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def groups_phrase(n: int) -> str:
+    """Russian plural for 'duplicate groups' in generated text."""
+    if n % 10 == 1 and n % 100 != 11:
+        return f"{n} группа дублей"
+    if 2 <= n % 10 <= 4 and not (12 <= n % 100 <= 14):
+        return f"{n} группы дублей"
+    return f"{n} групп дублей"
+
+
 def build_readme(summary: dict, verification: dict, commit: str, pr_url: str, branch: str) -> str:
     shots = read_json(SHOTS / "screenshots_manifest.json")["images"]
     shot_lines = "\n".join(
         f"| {i+1:02d} | `{Path(s['file']).name}` | {html.escape(s['title'])} |" for i, s in enumerate(shots))
     issue_lines = "\n".join(f"- `{k}` — {v}" for k, v in summary["issueCounts"].items())
     pr_text = f"[{pr_url}]({pr_url})" if pr_url.startswith("http") else "`PR будет создан после push`"
-    return f"""# Ночной отчет ИИ-куратора — 2026-10-26
+    return f"""# Ночной отчет ИИ-куратора — 2026-10-27 (продолжение)
 
-> **Статус честности:** локальный контур `VERIFIED_LOCALLY`, nanoCAD 26 **не запускался**. Все PNG — подписанные диагностические макеты, а не снимки CAD. C# код синтаксически разобран tree-sitter, но не скомпилирован (`dotnet` отсутствует).
+> **Статус честности:** локальный контур `VERIFIED_LOCALLY`, nanoCAD 26 **не запускался**. Все PNG — подписанные диагностические макеты с постоянным водяным знаком, а не снимки CAD. C# код синтаксически разобран tree-sitter; portable сборка подготовлена для Windows workflow, но в Linux sandbox не выполнялась (`dotnet` отсутствует).
+>
+> **Вторая сессия 2026-10-27.** Отчёт продолжает PR #1: обновлён нормативный слой, добавлены именованные артефакты, подготовлен `.github/workflows/windows-build.yml`, все 12 PNG получили полупрозрачный водяной знак в правом нижнем углу.
 
 ## Что сделано за ночь
 
@@ -54,10 +66,26 @@ def build_readme(summary: dict, verification: dict, commit: str, pr_url: str, br
 6. **Обратимая правка** — dry-run → `.bak` → apply → verify → rollback на изолированных DXF-копиях; SHA-256 исходного и восстановленного совпадают. Исходники не изменены.
 7. **Ведомости ф.1/ф.2** — CSV с строгими графами, мастер-файлы с техническими колонками, markdown-черновики. Нормативная база переключена на приложение Б ГОСТ Р 21.101-2026.
 8. **Контроль комплектности** — {summary['output']['completenessIssues']} инцидентов, включая дубли, пустые графы, неверные форматы, « file ↔ registry » и « doc ↔ file » расхождения.
-9. **Нумератор** — {summary['output']['duplicateGroups']} групп дублей; prepared minimal patch и full shift на 120 листов, без автоматической правки исходников.
+9. **Нумератор** — {groups_phrase(summary['output']['duplicateGroups'])}; подготовлены minimal patch и full shift на 120 листов, без автоматической правки исходников.
 10. **Таблица изменений** — пустой шаблон из 5 граф и технический реестр операций. Исправлена ошибка задания: «Аннулир.» не является значением графы «Лист».
 11. **Порядок печати** — 120 элементов, совпадение с формой 1 по хэшу; `.dst` не редактировался.
 12. **Код и визуализация** — C# Core/CLI/плагин-скелет, Python reference CLI, 12 PNG 1600×1200, HTML dashboard, log, manifest, ZIP.
+13. **Продолжение 2026-10-27** — повторная проверка официального реестра ГОСТ, XSD-совместимый XML-маппинг с атрибутами номера листа/формата, DOCX/CSV шаблоны, Python-нумератор, разделённая таблица изменений, Windows workflow и обновлённый PR #1.
+
+## Артефакты второй сессии
+
+| Файл | Назначение |
+|---|---|
+| `delivery/completeness_report.md` | 16 инцидентов, 4 группы дублей, честная формулировка (не все — «нет файла»). |
+| `delivery/data/completeness_chart.png` | график инцидентов с подписью «nanoCAD НЕ запускался / не скриншот CAD». |
+| `delivery/data/wo1_template.csv`, `delivery/data/wo1_template.docx` | данные формы 1 по Приложению Б ГОСТ Р 21.101-2026. |
+| `delivery/data/wo2_template.csv` | данные формы 2 по Приложению Б ГОСТ Р 21.101-2026. |
+| `delivery/numbering_patch.py` | подготовка minimal patch и full shift, без записи в исходные DXF. |
+| `delivery/changes_table.md` | нормативная таблица ГОСТ Р 2.503-2023 + отдельная операционная таблица. |
+| `delivery/next_steps.md` | 5 задач P0–P2. |
+| `delivery/night-session-2.md`, `logs/night-session-2.log` | хронология второй сессии. |
+| `.github/workflows/windows-build.yml` | ручная сборка C# на будущей Windows-VM. |
+| `docs/normative-audit.md`, `docs/windows-vm-build.md` | повторная проверка реестра и инструкция по VM. |
 
 ## Ключевые показатели
 
@@ -87,6 +115,7 @@ def build_readme(summary: dict, verification: dict, commit: str, pr_url: str, br
 
 ## Нормативные находки — обязательно к ревью
 
+- **Повторная проверка 2026-10-27:** [Росстандарт, ГОСТ Р 21.101-2026](https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f) — «Действует», приказ 129-ст от 12.02.2026, введение 01.04.2026; [ГОСТ Р 2.503-2023](https://protect.gost.ru/document.aspx?control=7&id=256448) — «Действует» с 01.03.2024; [ГОСТ 2.503-2013](https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39) — «Утратил силу в РФ».
 - **ГОСТ Р 21.101-2020 утратил силу**: действует ГОСТ Р 21.101-2026 с 01.04.2026; формы 1/2 — приложение Б.
 - **ГОСТ 2.503-2013 утратил силу в РФ**: действует ГОСТ Р 2.503-2023; для СПДС также проверять раздел 7 ГОСТ Р 21.101-2026.
 - **ГОСТ 2.301-68** пока применяется для проверки обозначений форматов; вопрос досрочного применения ГОСТ Р 2.301-2026 требует уточнения.
@@ -104,12 +133,14 @@ def build_readme(summary: dict, verification: dict, commit: str, pr_url: str, br
 ## GitHub-действия
 
 - Ветка: `{branch}` (создавать `night-session-YYYYMMDD` нельзя: имя ветки зафиксировано сессией Arena).
-- Коммит: `{commit}`.
+- Коммит на момент генерации отчёта: `{commit}`.
 - PR: {pr_text}.
 - Push: `git push origin {branch}`.
 - PR body: `delivery/PR_BODY.md`.
 
 ## Что сделать до следующего раза (3–5 пунктов)
+
+Подробный чек-лист: [`next_steps.md`](next_steps.md).
 
 1. **P0 — Нормоконтроль.** Получить официальный текст ГОСТ Р 21.101-2026 и сверить геометрию форм 1/2; подтвердить редакцию стандарта у организаторов конкурса.
 2. **P0 — Windows/SDK.** Установить nanoCAD 26, получить лицензию и SDK 26, запустить `NK_HELLO` + `SdkProbe`, заменить макеты настоящими скриншотами.
@@ -124,6 +155,7 @@ python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 .venv/bin/python tools/generate_fixtures.py
 python3 tools/navigator_kit.py all
+python3 tools/night_session_2.py
 .venv/bin/python tools/render_screenshots.py
 python3 tools/finalize_delivery.py
 python3 tools/verify_delivery.py --check-only
@@ -135,13 +167,15 @@ python3 tools/verify_delivery.py --check-only
 
 
 def build_pr_body(summary: dict, verification: dict) -> str:
-    return f"""## Ночная сессия «Комплект-Навигатор» — 2026-10-26
+    return f"""## Ночная сессия «Комплект-Навигатор» — 2026-10-26 → обновление 2026-10-27
 
 Автономно собран воспроизводимый каркас: {summary['input']['syntheticDxfFiles']} синтетических DXF, реестр, формы 1/2, контроль комплектности, нумератор, rollback, таблица изменений, порядок печати, C# скелеты, {len(read_json(SHOTS / 'screenshots_manifest.json')['images'])} подписанных PNG-макетов, HTML dashboard и ZIP.
 
+**Обновление 2026-10-27:** повторно проверен официальный реестр Росстандарта; добавлены `completeness_report.md`, `wo1_template.docx`, `wo1_template.csv`, `wo2_template.csv`, `numbering_patch.py`, `changes_table.md`, `next_steps.md`, `night-session-2.md`; XML-маппинг дополнен атрибутами номера листа и формата и проверен по XSD; все PNG получили постоянный полупрозрачный водяной знак; подготовлен `.github/workflows/windows-build.yml`. Метки PR: `good first issue`, `night-session`.
+
 ### Доказательно выполнено
 - Python reference CLI просканировал 120 DXF R2010 и записал CSV/JSON.
-- Обнаружено {summary['output']['completenessIssues']} контрольных инцидентов и {summary['output']['duplicateGroups']} групп дублей.
+- Обнаружено {summary['output']['completenessIssues']} контрольных инцидентов и {groups_phrase(summary['output']['duplicateGroups'])}.
 - Rollback штампов подтверждён SHA-256; исходные файлы не изменены.
 - Порядок печати совпадает с формой 1.
 - XSD/JSON/CSV/PNG проверены; C# синтаксис разобран tree-sitter.
@@ -150,7 +184,8 @@ def build_pr_body(summary: dict, verification: dict) -> str:
 - nanoCAD 26 / SDK / .NET / Windows / лицензия в sandbox отсутствуют.
 - PNG — **не скриншоты nanoCAD**, а честно помеченные диагностические макеты.
 - Production DWG, `Database`/`Transaction`, Tables API и `.dst` остаются непроверенными.
-- **ГОСТ Р 21.101-2020 заменён ГОСТ Р 21.101-2026**; ГОСТ 2.503-2013 заменён ГОСТ Р 2.503-2023.
+- **ГОСТ Р 21.101-2020 заменён ГОСТ Р 21.101-2026**; ГОСТ 2.503-2013 заменён ГОСТ Р 2.503-2023. Ссылки на официальный реестр — в `docs/normative-audit.md`.
+- Windows-VM workflow подготовлен, но **не запускался** в этом Linux sandbox; реальные DWG и nanoCAD остаются внешней зависимостью.
 
 ### Что сделать до следующего раза
 1. **P0:** нормоконтроль по официальному тексту ГОСТ Р 21.101-2026 и геометрии форм 1/2.
@@ -167,13 +202,13 @@ def build_chat_reply(summary: dict, verification: dict, commit: str, pr_url: str
     pr = pr_url if pr_url.startswith("http") else "PR будет создан после push"
     return f"""# Готовый ответ в чат
 
-Ночная сессия завершена. Ветка `{branch}`, коммит `{commit}`, PR: {pr}.
+Ночная сессия завершена и обновлена 2026-10-27. Ветка `{branch}`, коммит `{commit}`, PR: {pr}.
 
-**Сделано:** 120 синтетических DXF → реестр CSV/JSON, формы 1/2, {summary['output']['completenessIssues']} инцидентов комплектности, {summary['output']['duplicateGroups']} групп дублей, rollback с проверкой SHA-256, порядок печати на 120 листов, XML/XSD-маппинг, C# каркас, 12 PNG 1600×1200, HTML-дашборд и ZIP.
+**Сделано:** 120 синтетических DXF → реестр CSV/JSON, формы 1/2, {summary['output']['completenessIssues']} инцидентов комплектности, {groups_phrase(summary['output']['duplicateGroups'])}, rollback с проверкой SHA-256, порядок печати на 120 листов, XML/XSD-маппинг, C# каркас, 12 PNG 1600×1200, HTML-дашборд и ZIP. Добавлены именованные артефакты второй сессии, Windows workflow, постоянный watermark и нормативный аудит.
 
 **Важно:** nanoCAD/SDK здесь не запускались. PNG — подписанные диагностические макеты, не скриншоты CAD. Обнаружено, что ГОСТ Р 21.101-2020 и ГОСТ 2.503-2013 утратили силу; отчёт содержит предупреждение и переключение на актуальные редакции.
 
-**Артефакты:** `delivery/README_night-session.md`, `delivery/index.html`, `delivery/data/`, `delivery/xml/`, `delivery/screenshots/`, `delivery/navigator-kit-night-session.zip`.
+**Артефакты:** `delivery/README_night-session.md`, `delivery/index.html`, `delivery/completeness_report.md`, `delivery/data/wo1_template.docx`, `delivery/data/wo2_template.csv`, `delivery/numbering_patch.py`, `delivery/changes_table.md`, `delivery/next_steps.md`, `delivery/data/`, `delivery/xml/`, `delivery/screenshots/`, `delivery/navigator-kit-night-session.zip`.
 
 **Следующий шаг:** Windows + nanoCAD 26 + SDK, `NK_HELLO`/`SdkProbe`, реальные DWG и нормоконтроль форм 1/2 по ГОСТ Р 21.101-2026.
 
@@ -187,6 +222,8 @@ def build_dashboard(summary: dict, verification: dict, standards: dict, commit: 
         f'<article class="card"><img src="screenshots/{html.escape(Path(s["file"]).name)}" alt="{html.escape(s["title"])}"><div><h3>{i+1:02d}. {html.escape(s["title"])}</h3><p>{html.escape(Path(s["file"]).name)} • 1600×1200 • НЕ nanoCAD</p></div></article>'
         for i, s in enumerate(shots))
     issue_rows = "".join(f"<tr><td>{html.escape(k)}</td><td>{v}</td></tr>" for k, v in summary["issueCounts"].items())
+    session2_path = DATA / "session2_summary.json"
+    session2 = read_json(session2_path) if session2_path.is_file() else {"tasks": []}
     check_rows = "".join(
         f'<tr class="{"ok" if c["ok"] else "bad"}"><td>{"OK" if c["ok"] else "FAIL"}</td><td>{html.escape(c["name"])}</td><td>{html.escape(c["detail"])}</td></tr>'
         for c in verification["checks"])
@@ -196,8 +233,9 @@ def build_dashboard(summary: dict, verification: dict, standards: dict, commit: 
 <style>
 :root{color-scheme:dark;--bg:#0b1220;--panel:#142036;--line:#344a6c;--text:#e9f1ff;--muted:#9aafca;--green:#4ade80;--amber:#fbbf24;--red:#f87171;--blue:#60a5fa}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.wrap{max-width:1440px;margin:auto;padding:32px}.hero{border:2px solid var(--red);background:linear-gradient(135deg,#311b26,#101b2d);border-radius:22px;padding:34px}.hero h1{font-size:44px;margin:0 0 8px}.hero p{color:var(--muted);font-size:20px;margin:6px 0}.badge{display:inline-block;margin-top:12px;padding:8px 14px;border-radius:999px;background:#48222b;color:#fca5a5;font-weight:700}.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin:24px 0}.kpi{background:var(--panel);border:2px solid var(--line);border-radius:18px;padding:20px}.kpi b{display:block;font-size:40px;color:var(--green)}.kpi span{color:var(--muted)}h2{margin-top:42px;font-size:30px;border-bottom:1px solid var(--line);padding-bottom:10px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:var(--panel);border:2px solid var(--line);border-radius:18px;overflow:hidden}.card img{display:block;width:100%;height:auto}.card div{padding:14px 18px}.card h3{margin:0;font-size:20px}.card p{margin:4px 0;color:var(--muted)}table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:14px;overflow:hidden}th,td{padding:10px 12px;border-bottom:1px solid #263956;text-align:left;vertical-align:top}th{background:#1c2c48;color:var(--blue)}tr.ok td:first-child{color:var(--green);font-weight:700}tr.bad td:first-child{color:var(--red);font-weight:700}.warn{border-left:6px solid var(--amber);background:#332711;padding:18px;border-radius:12px}.links a{color:var(--blue);margin-right:16px}code{background:#1d2b43;padding:2px 6px;border-radius:5px}footer{margin:50px 0 20px;color:var(--muted);font-size:14px}@media(max-width:1000px){.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}}
 </style></head><body><div class="wrap">
-<section class="hero"><h1>Комплект-Навигатор</h1><p>Ночная сессия • 2026-10-26 • branch $branch • commit $commit</p><p>$sheets DXF • $issues инцидентов • $duplicates групп дублей • $shots PNG-макетов</p><div class="badge">nanoCAD НЕ запускался • все изображения — подписанные диагностические макеты</div></section>
+<section class="hero"><h1>Комплект-Навигатор</h1><p>Ночные сессии • 2026-10-26 → 2026-10-27 • branch $branch • commit $commit</p><p>$sheets DXF • $issues инцидентов • $duplicates_label • $shots PNG-макетов</p><div class="badge">nanoCAD НЕ запускался • все изображения — подписанные диагностические макеты</div></section>
 <section class="kpis"><div class="kpi"><b>$sheets</b><span>DXF R2010</span></div><div class="kpi"><b>$registry</b><span>строк реестра</span></div><div class="kpi"><b>$issues</b><span>инцидентов</span></div><div class="kpi"><b>$duplicates</b><span>групп дублей</span></div><div class="kpi"><b>$shots</b><span>PNG 1600×1200</span></div><div class="kpi"><b>$verification</b><span>required checks</span></div></section>
+<section><h2>Обновление второй сессии — 2026-10-27</h2><div class="warn"><p>Повторно проверен официальный реестр Росстандарта; XML-маппинг дополнен атрибутами <code>sheet_no</code> и <code>format</code>; подготовлен Windows-VM workflow. Все 12 PNG имеют постоянный полупрозрачный водяной знак в правом нижнем углу.</p><p>Новые артефакты: <a href="completeness_report.md">completeness_report.md</a> • <a href="data/wo1_template.docx">wo1_template.docx</a> • <a href="data/wo2_template.csv">wo2_template.csv</a> • <a href="numbering_patch.py">numbering_patch.py</a> • <a href="changes_table.md">changes_table.md</a> • <a href="next_steps.md">next_steps.md</a> • <a href="night-session-2.md">night-session-2.md</a> • <a href="data/completeness_chart.png">график инцидентов</a>. Задач в session2: $session2_tasks.</p></div></section>
 <section><h2>Нормативное предупреждение</h2><div class="warn"><p><b>$active_spds</b>. Запрошенный ГОСТ Р 21.101-2020 утратил силу. Формы 1/2 — приложение Б.</p><p><b>$active_changes</b>. ГОСТ 2.503-2013 утратил силу в РФ. Точные размеры таблиц и приоритет раздела 7 СПДС — <b>ГИПОТЕЗА/ПРОВЕРИТЬ</b>.</p></div></section>
 <section><h2>Ключевые ссылки</h2><p class="links"><a href="README_night-session.md">Полный отчет</a><a href="PR_BODY.md">PR body</a><a href="CHAT_REPLY.md">Ответ в чат</a><a href="night-log.md">Ночной лог</a><a href="data/summary.json">summary.json</a><a href="xml/stamp_mapping.xml">XML-маппинг</a><a href="navigator-kit-night-session.zip">ZIP-бандл</a><a href="../docs/standards-warning.md">Нормы</a></p></section>
 <section><h2>Инциденты комплектности</h2><table><thead><tr><th>Код</th><th>Количество</th></tr></thead><tbody>$issue_rows</tbody></table></section>
@@ -209,9 +247,11 @@ def build_dashboard(summary: dict, verification: dict, standards: dict, commit: 
         branch="arena/ec9fddc1-navigator-kit", commit=html.escape(commit), sheets=summary["input"]["syntheticDxfFiles"],
         issues=summary["output"]["completenessIssues"], duplicates=summary["output"]["duplicateGroups"],
         shots=len(shots), registry=summary["output"]["registryRows"], verification=verification["requiredChecks"],
+        duplicates_label=groups_phrase(summary["output"]["duplicateGroups"]),
         active_spds=html.escape(standards["active"]["spds"]), active_changes=html.escape(standards["active"]["changesEskd"]),
         issue_rows=issue_rows, cards=cards, check_rows=check_rows,
         pr_url=html.escape(pr_url if pr_url.startswith("http") else "pending"),
+        session2_tasks=len(session2["tasks"]),
     )
 
 
@@ -241,7 +281,7 @@ def build_zip() -> None:
     if BUNDLE.exists():
         BUNDLE.unlink()
     include_roots = ["delivery", "docs", "src", "tools", "tests", "samples", ".github/workflows"]
-    extra_files = ["README.md", "briefing.md", "requirements.txt", ".gitignore", "night-log.md"]
+    extra_files = ["README.md", "briefing.md", "requirements.txt", "requirements-analysis.txt", ".gitignore", "night-log.md"]
     with zipfile.ZipFile(BUNDLE, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
         for rel in extra_files:
             p = ROOT / rel
@@ -262,22 +302,28 @@ def build_zip() -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--commit", default="pending")
-    ap.add_argument("--pr-url", default="pending")
+    ap.add_argument("--commit", default="HEAD")
+    ap.add_argument("--pr-url", default="https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1")
     ap.add_argument("--branch", default="arena/ec9fddc1-navigator-kit")
     args = ap.parse_args()
 
     summary = read_json(DATA / "summary.json")
     standards = read_json(DATA / "standards_status.json")
+    commit = args.commit
+    if commit in ("HEAD", "pending", ""):
+        try:
+            commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+        except (OSError, subprocess.CalledProcessError):
+            commit = "pending"
 
     def write_text_artifacts(state: dict) -> None:
         write_text(DELIVERY / "README_night-session.md",
-                   build_readme(summary, state, args.commit, args.pr_url, args.branch))
+                   build_readme(summary, state, commit, args.pr_url, args.branch))
         write_text(DELIVERY / "PR_BODY.md", build_pr_body(summary, state))
         write_text(DELIVERY / "CHAT_REPLY.md",
-                   build_chat_reply(summary, state, args.commit, args.pr_url, args.branch))
+                   build_chat_reply(summary, state, commit, args.pr_url, args.branch))
         write_text(DELIVERY / "index.html",
-                   build_dashboard(summary, state, standards, args.commit, args.pr_url))
+                   build_dashboard(summary, state, standards, commit, args.pr_url))
 
     # Phase A: validate freshly regenerated source artifacts. Do NOT validate a
     # stale manifest here — CI regenerates timestamped logs/screenshots first.
@@ -303,7 +349,7 @@ def main() -> int:
     print(json.dumps({
         "status": "PASS", "report": "delivery/README_night-session.md",
         "dashboard": "delivery/index.html", "manifestFiles": read_json(MANIFEST)["fileCount"],
-        "zipBytes": BUNDLE.stat().st_size, "commit": args.commit, "prUrl": args.pr_url,
+        "zipBytes": BUNDLE.stat().st_size, "commit": commit, "prUrl": args.pr_url,
         "requiredChecks": final["requiredChecks"],
     }, ensure_ascii=False, indent=2))
     return 0

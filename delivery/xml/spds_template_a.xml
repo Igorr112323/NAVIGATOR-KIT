@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<stampMapping version="1.0" normativeProfile="GOST-R-21.101-2026-Appendix-B" legacyProfile="GOST-R-21.101-2020-Appendix-V" generatedAt="2026-10-26" status="EXAMPLE-A">
+<stampMapping version="1.0" normativeProfile="GOST-R-21.101-2026-Appendix-B" legacyProfile="GOST-R-21.101-2020-Appendix-V" generatedAt="2026-10-27" status="EXAMPLE-A">
   <metadata><project>Комплект-Навигатор</project><purpose>Пример A: latin attribute tags.</purpose><warning>Имена блоков/тегов условий требуют проверки на реальных шаблонах СПДС.</warning><source>docs/standards-warning.md</source></metadata>
   <templates>
     <template id="SPDS_FORM3_CLASSIC" blockName="SPDS_FORM3" description="Условный эталонный шаблон СПДС, форма 3, латинские теги" status="HYPOTHESIS-REAL-TEMPLATE-NAME-MUST-BE-VERIFIED">
@@ -13,6 +13,10 @@
       <attribute tag="LAYOUT" field="layout" required="false" example="Лист 1"/>
     </template>
   </templates>
+  <keyAttributes description="Явные привязки номера листа и формата; имена тегов требуют проверки на реальных шаблонах СПДС.">
+    <attributeBinding field="sheet_no" purpose="Номер листа" required="true" tags="SHEET"/>
+    <attributeBinding field="format" purpose="Формат листа" required="true" tags="FORMAT"/>
+  </keyAttributes>
   <formatRules standard="GOST 2.301-68" status="DESIGNATION-CHECK-ONLY">
     <basicFormat name="A0" shortSide="841" longSide="1189"/>
     <basicFormat name="A1" shortSide="594" longSide="841"/>

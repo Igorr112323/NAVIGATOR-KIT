@@ -1,8 +1,8 @@
 {
   "format": "navigator-kit.verification-results/v1",
-  "sessionId": "night-session-20261026",
+  "sessionId": "night-session-20261027",
   "status": "PASS",
-  "requiredChecks": 30,
+  "requiredChecks": 45,
   "optionalChecks": 0,
   "failedRequiredChecks": 0,
   "warnings": [],
@@ -17,7 +17,7 @@
       "name": "json_documents_parse",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "parsed=11; errors=[]"
+      "detail": "parsed=15; errors=[]"
     },
     {
       "name": "xml_documents_parse",
@@ -149,7 +149,7 @@
       "name": "night_log_has_start_end",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "lines=20"
+      "detail": "lines=31"
     },
     {
       "name": "no_obvious_secrets",
@@ -185,7 +185,97 @@
       "name": "zip_integrity",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "bad_member=None; pngs=12; bytes=2512519"
+      "detail": "bad_member=None; pngs=13; bytes=2739118"
+    },
+    {
+      "name": "official_standard_registry_links",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "checkedAtDate=2026-10-27; links=6"
+    },
+    {
+      "name": "xml_key_attributes_sheet_and_format",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "files=3; ok=3"
+    },
+    {
+      "name": "wo1_docx_is_valid_package",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "path=delivery/data/wo1_template.docx"
+    },
+    {
+      "name": "wo_template_row_counts",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "form1=120; form2=8"
+    },
+    {
+      "name": "completeness_report_honest_counts",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "16 incidents / 4 duplicate groups / no false 'all missing files' claim"
+    },
+    {
+      "name": "numbering_patch_script_valid",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "minimal_patch + full_shift + Python syntax OK"
+    },
+    {
+      "name": "changes_table_normative_and_operational_separated",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "GOST 5-column table and non-GOST PM table are distinct"
+    },
+    {
+      "name": "next_steps_priorities",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "P0/P1/P2 tasks present"
+    },
+    {
+      "name": "completeness_chart_watermarked",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "generatedBy=matplotlib"
+    },
+    {
+      "name": "screenshots_corner_watermark",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "all images have persistent bottom-right watermark metadata"
+    },
+    {
+      "name": "session2_log_start_end",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "logs/night-session.log contains second-session boundaries"
+    },
+    {
+      "name": "windows_vm_workflow_prepared",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "manual Windows build with optional SDK path"
+    },
+    {
+      "name": "pr_labels_requested",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "labels=['good first issue', 'night-session']"
+    },
+    {
+      "name": "session2_summary_complete",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "tasks=11; nanoCADExecuted=False"
+    },
+    {
+      "name": "normative_audit_classifies_legacy",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "occurrences={'GOST-2.503-2013': 23, 'GOST-R-21.101-2020': 25, 'GOST-R-21.1101-2013': 5}"
     }
   ]
 }

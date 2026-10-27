@@ -1,4 +1,6 @@
-# План ночной сессии (~10 ч, буфер 20 %)
+# План ночных сессий
+
+## Первая сессия — 2026-10-26 (~10 ч, буфер 20 %)
 
 Активная работа — 8 ч, резерв — 2 ч. Каждая задача имеет результат и критерий готовности.
 
@@ -17,7 +19,25 @@
 | 11 | 08:00–08:30 | ≥10 PNG 1600×1200, HTML‑дашборд | Pillow | подписанные макеты, не fake screenshots |
 | 12 | 08:30–10:00 | **Буфер 20 %+**: QA, manifest, ZIP, отчёт, push, PR | `verify_delivery.py`, `git`, `gh` | зелёная матрица, PR с «Что сделать до следующего раза» |
 
-##Предложенный календарь на 4 недели
+## Вторая сессия — 2026-10-27 (продолжение PR #1)
+
+Цель: не дублировать проект, а обновить нормативный слой, добавить именованные артефакты из задания, подготовить Windows-VM workflow и привести PR к финальному виду.
+
+| # | Задача | Инструменты | Артефакт / критерий |
+|---|---|---|---|
+| 1 | Синхронизация `origin/arena/ec9fddc1-navigator-kit` до `bc47b35`, повторная проверка issue/PR/веток | `git`, `gh` | чистое дерево, PR #1 открыт, чек зелёный |
+| 2 | Повторная проверка окружения и официального реестра ГОСТ | `bash`, web, Rosstandart | `environment.json`, `normative-audit.md`, дата 2026-10-27 |
+| 3 | Подготовка workflow для будущей Windows-VM | GitHub Actions | `windows-build.yml`, `windows-vm-build.md` |
+| 4 | XML-маппинг: атрибуты номера листа и формата + XSD | XML/XSD | `keyAttributes` во всех XML, валидация без ошибок |
+| 5 | 120 DXF → `sheets_registry.csv/json` | `navigator_kit.py` | 120 строк, SHA-256, 2 профиля |
+| 6 | Отчёт комплектности: 16 инцидентов, 4 группы дублей | CSV/Markdown | `completeness_report.md`, `completeness_chart.png` |
+| 7 | Формы 1/2 по Приложению Б ГОСТ Р 21.101-2026 | DOCX/CSV | `wo1_template.docx`, `wo1_template.csv`, `wo2_template.csv` |
+| 8 | Скрипт нумерации: minimal patch + full shift | Python stdlib | `numbering_patch.py`, 120 записей плана |
+| 9 | Таблица изменений: нормативная + операционная | Markdown | `changes_table.md`, явное разделение ГОСТ и PM-таблицы |
+| 10 | 12 PNG 1600×1200 с постоянным водяным знаком | Pillow | `screenshots/`, `screenshots_manifest.json` |
+| 11 | `next_steps.md`, отчёт, PR body, labels, ZIP | `finalize_delivery.py`, `gh api` | 3–5 задач P0–P2, labels `good first issue` и `night-session` |
+
+## Предложенный календарь на 4 недели
 
 Оригинальный календарь отсутствует. Предложенный план:
 

@@ -2,7 +2,7 @@
 <stampMapping version="1.0"
               normativeProfile="GOST-R-21.101-2026-Appendix-B"
               legacyProfile="GOST-R-21.101-2020-Appendix-V"
-              generatedAt="2026-10-26"
+              generatedAt="2026-10-27"
               status="DATA-MAPPING-VERIFIED-LOCALLY;FORM-GEOMETRY-HYPOTHESIS">
   <metadata>
     <project>Комплект-Навигатор</project>
@@ -34,6 +34,10 @@
       <attribute tag="LSTLAYOUT" field="layout" required="false" example="Лист 1"/>
     </template>
   </templates>
+  <keyAttributes description="Явные привязки номера листа и формата; имена тегов требуют проверки на реальных шаблонах СПДС.">
+    <attributeBinding field="sheet_no" purpose="Номер листа" required="true" tags="SHEET;LIST"/>
+    <attributeBinding field="format" purpose="Формат листа" required="true" tags="FORMAT;FORM"/>
+  </keyAttributes>
 
   <formatRules standard="GOST 2.301-68" status="DESIGNATION-CHECK-ONLY;ACTUAL-FRAME-SIZE-HYPOTHESIS">
     <basicFormat name="A0" shortSide="841" longSide="1189"/>

@@ -6,6 +6,7 @@ import importlib.util
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,6 +71,42 @@ class NavigatorKitTests(unittest.TestCase):
             self.assertEqual(changes["template_rows"], 10)
             self.assertEqual(len(print_data["order"]), 120)
             self.assertTrue(print_data["consistency"]["consistent"])
+
+    def test_xml_key_attributes_for_sheet_and_format(self):
+        for path in (ROOT / "delivery/xml").glob("*.xml"):
+            root = ET.parse(path).getroot()
+            fields = {a.attrib.get("field", "") for a in root.findall("./keyAttributes/attributeBinding")}
+            self.assertIn("sheet_no", fields, path.name)
+            self.assertIn("format", fields, path.name)
+
+    def test_numbering_patch_script_compiles(self):
+        path = ROOT / "delivery/numbering_patch.py"
+        source = path.read_text(encoding="utf-8")
+        compile(source, str(path), "exec")
+        self.assertIn("minimal_patch", source)
+        self.assertIn("full_shift", source)
+
+    def test_wo1_docx_is_valid_package(self):
+        path = ROOT / "delivery/data/wo1_template.docx"
+        self.assertTrue(path.is_file())
+        with zipfile.ZipFile(path) as zf:
+            self.assertIn("[Content_Types].xml", zf.namelist())
+            self.assertIsNone(zf.testzip())
+
+    def test_changes_table_keeps_normative_and_operational_apart(self):
+        text = (ROOT / "delivery/changes_table.md").read_text(encoding="utf-8")
+        self.assertIn("Изм.", text)
+        self.assertIn("№ докум.", text)
+        self.assertIn("Номер листа", text)
+        self.assertIn("не заменяет", text)
+
+    def test_session2_summary_and_labels(self):
+        import json
+        summary = json.loads((ROOT / "delivery/data/session2_summary.json").read_text(encoding="utf-8"))
+        labels = json.loads((ROOT / "delivery/data/pr_labels.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(summary["tasks"]), 11)
+        self.assertFalse(summary["nanoCADExecuted"])
+        self.assertEqual(labels["requestedLabels"], ["good first issue", "night-session"])
 
     def test_replace_attribute_value_roundtrip(self):
         source = ROOT / "samples/synthetic_sets/АР/АР_002.dxf"

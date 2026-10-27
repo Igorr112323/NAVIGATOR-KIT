@@ -1,0 +1,10 @@
+{
+  "format": "navigator-kit.pr-labels/v1",
+  "sessionId": "night-session-20261027",
+  "prUrl": "https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1",
+  "requestedLabels": [
+    "good first issue",
+    "night-session"
+  ],
+  "note": "Labels are applied via GitHub REST API; good first issue is built-in, night-session is created if absent."
+}

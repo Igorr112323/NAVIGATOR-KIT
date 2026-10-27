@@ -33,6 +33,21 @@
             </xs:element>
           </xs:sequence></xs:complexType>
         </xs:element>
+        <xs:element name="keyAttributes" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="attributeBinding" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="field" type="xs:string" use="required"/>
+                  <xs:attribute name="purpose" type="xs:string" use="required"/>
+                  <xs:attribute name="required" type="xs:boolean" use="required"/>
+                  <xs:attribute name="tags" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="description" type="xs:string" use="optional"/>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="formatRules">
           <xs:complexType>
             <xs:choice minOccurs="1" maxOccurs="unbounded">
