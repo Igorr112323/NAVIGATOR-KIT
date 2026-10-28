@@ -64,3 +64,10 @@ dotnet run --project src/NavigatorKit.Cli -- --input samples/synthetic_sets --ou
 - `tools/make_demo_gif.py` — генератор GIF без CAD-скриншотов.
 - `docs/windows-stand-setup.md`, `tools/windows_stand_check.ps1` — инструкция и чек будущего Windows-стенда.
 - `delivery/session-3/senior_review.md` — что проверено и что осталось **ГИПОТЕЗА/ПРОВЕРИТЬ**.
+
+## Исполняемый Linux-стенд
+
+Новый изолированный цикл: `python tools/run_linux_stand.py` (после установки requirements).
+Чистое Python-ядро → ezdxf backend → DXF → реальный рендер PNG → независимая
+перечитка group codes → 8 автотестов. [Отчёт и ограничения](delivery/linux-stand/README.md).
+Это не запуск nanoCAD и не реализация MultiCAD-адаптера.

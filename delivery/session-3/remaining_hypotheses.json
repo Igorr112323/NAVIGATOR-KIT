@@ -1,8 +1,8 @@
 {
   "format": "navigator-kit.remaining-hypotheses/v1",
   "sessionId": "night-session-20261028",
-  "generatedAt": "2026-10-28T15:49:13+00:00",
-  "totalMarkers": 237,
+  "generatedAt": "2026-10-28T18:35:00+00:00",
+  "totalMarkers": 242,
   "files": [
     {
       "file": "README.md",
@@ -18,7 +18,7 @@
     },
     {
       "file": "delivery/README_night-session.md",
-      "count": 2
+      "count": 3
     },
     {
       "file": "delivery/changes_table.md",
@@ -51,6 +51,14 @@
     {
       "file": "delivery/index.html",
       "count": 2
+    },
+    {
+      "file": "delivery/linux-stand/README.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/linux-stand/verification.json",
+      "count": 1
     },
     {
       "file": "delivery/next_steps.md",
@@ -149,6 +157,10 @@
       "count": 2
     },
     {
+      "file": "linux_stand/multicad_backend.py",
+      "count": 1
+    },
+    {
       "file": "night-log.md",
       "count": 1
     },
@@ -211,6 +223,10 @@
     {
       "file": "tools/render_screenshots.py",
       "count": 7
+    },
+    {
+      "file": "tools/run_linux_stand.py",
+      "count": 1
     },
     {
       "file": "tools/session3_runner.py",
