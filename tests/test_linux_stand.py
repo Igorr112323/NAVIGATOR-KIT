@@ -58,3 +58,24 @@ class LinuxStandTests(unittest.TestCase):
 
     def test_multicad_fails_explicitly(self):
         with self.assertRaises(NotImplementedError): MulticadBackend()
+
+    def test_independent_odd_lines_rejected(self):
+        self.path.write_text('0\nSECTION\n2\n')
+        with self.assertRaises(ValueError): inspect(self.path)
+
+    def test_batch_reader_two_files(self):
+        from tools.independent_dxf_parser import parse_folder
+        import shutil
+        shutil.copyfile(self.path, self.path.with_name('second.dxf'))
+        parsed = parse_folder(self.path.parent)
+        self.assertEqual(len(parsed), 2)
+        self.assertEqual(parsed['second.dxf']['attributes'], EXPECTED)
+
+    def test_actual_render_dimensions(self):
+        from linux_stand.render import render
+        from PIL import Image
+        png = self.path.with_suffix('.png')
+        render(self.path, png)
+        with Image.open(png) as image:
+            self.assertEqual(image.size, (1600, 1200))
+            self.assertGreater(len(set(image.getdata())), 5)

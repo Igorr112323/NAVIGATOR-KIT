@@ -7,7 +7,7 @@
   "realDwgProcessed": 0,
   "registryRows": 120,
   "sha256AllPresent": true,
-  "registryJsonSha256": "9c1196a61b0277d120b651d47e252a1b3743f9a9c29c3c7e425b3d4376b5367b",
+  "registryJsonSha256": "5918d3130c5116c87f2a2f6a5cb2f582af3a58e6fcfb418b7a15fa8d3708d645",
   "completeness": {
     "incidents": 16,
     "duplicateGroups": 4,
@@ -30,5 +30,5 @@
   "printOrderConsistent": true,
   "format": "navigator-kit.session3-pipeline/v1",
   "sessionId": "night-session-20261028",
-  "generatedAt": "2026-10-28T18:34:58+00:00"
+  "generatedAt": "2026-10-28T18:47:03+00:00"
 }

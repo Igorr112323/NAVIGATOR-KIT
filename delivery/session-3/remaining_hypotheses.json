@@ -1,8 +1,8 @@
 {
   "format": "navigator-kit.remaining-hypotheses/v1",
   "sessionId": "night-session-20261028",
-  "generatedAt": "2026-10-28T18:35:00+00:00",
-  "totalMarkers": 242,
+  "generatedAt": "2026-10-28T18:47:05+00:00",
+  "totalMarkers": 243,
   "files": [
     {
       "file": "README.md",
@@ -54,7 +54,7 @@
     },
     {
       "file": "delivery/linux-stand/README.md",
-      "count": 1
+      "count": 2
     },
     {
       "file": "delivery/linux-stand/verification.json",

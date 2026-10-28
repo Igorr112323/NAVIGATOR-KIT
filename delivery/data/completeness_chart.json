@@ -1,7 +1,7 @@
 {
   "format": "navigator-kit.completeness-chart/v2",
   "sessionId": "night-session-20261028",
-  "generatedAt": "2026-10-28T18:34:58+00:00",
+  "generatedAt": "2026-10-28T18:47:03+00:00",
   "generatedBy": "tools/pipeline.py + matplotlib",
   "incidents": 16,
   "duplicateGroups": 4,

@@ -7,15 +7,18 @@ PASS: ezdxf audit + render actual saved DXF to PNG
 platform linux -- Python 3.11.2, pytest-8.4.2, pluggy-1.7.0 -- /home/user/.venv/bin/python
 cachedir: .pytest_cache
 rootdir: /home/user/NAVIGATOR-KIT
-collecting ... collected 8 items
+collecting ... collected 11 items
 
-tests/test_linux_stand.py::LinuxStandTests::test_core_has_no_cad_import PASSED [ 12%]
-tests/test_linux_stand.py::LinuxStandTests::test_duplicate_attribute_rejected PASSED [ 25%]
-tests/test_linux_stand.py::LinuxStandTests::test_independent_entities PASSED [ 37%]
-tests/test_linux_stand.py::LinuxStandTests::test_independent_geometry_and_text PASSED [ 50%]
-tests/test_linux_stand.py::LinuxStandTests::test_multicad_fails_explicitly PASSED [ 62%]
-tests/test_linux_stand.py::LinuxStandTests::test_numbering PASSED        [ 75%]
-tests/test_linux_stand.py::LinuxStandTests::test_required_field PASSED   [ 87%]
+tests/test_linux_stand.py::LinuxStandTests::test_actual_render_dimensions PASSED [  9%]
+tests/test_linux_stand.py::LinuxStandTests::test_batch_reader_two_files PASSED [ 18%]
+tests/test_linux_stand.py::LinuxStandTests::test_core_has_no_cad_import PASSED [ 27%]
+tests/test_linux_stand.py::LinuxStandTests::test_duplicate_attribute_rejected PASSED [ 36%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_entities PASSED [ 45%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_geometry_and_text PASSED [ 54%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_odd_lines_rejected PASSED [ 63%]
+tests/test_linux_stand.py::LinuxStandTests::test_multicad_fails_explicitly PASSED [ 72%]
+tests/test_linux_stand.py::LinuxStandTests::test_numbering PASSED        [ 81%]
+tests/test_linux_stand.py::LinuxStandTests::test_required_field PASSED   [ 90%]
 tests/test_linux_stand.py::LinuxStandTests::test_stamp_roundtrip PASSED  [100%]
 
-============================== 8 passed in 0.39s ===============================
+============================== 11 passed in 0.98s ==============================

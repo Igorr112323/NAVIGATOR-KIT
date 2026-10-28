@@ -195,6 +195,16 @@ def build_pr_body(summary: dict, verification: dict) -> str:
 
 **Обновление 2026-10-28:** выполнен P0–P2 проход. Добавлены `delivery/session-3/`, выписка из официального издания ГОСТ Р 21.101-2026 (Приложение Б + раздел 7), `norms_registry.json`, `tools/pipeline.py`, `tools/sheetset_probe.py`, `tools/make_demo_gif.py`, PowerShell-чек Windows-стенда, GIF-демо ≤3 МБ и senior-review чек-лист. Synthetic backend пересобрал 120 DXF; MultiCAD/DWG часть честно помечена внешней зависимостью. Метки PR: `good first issue`, `night-session`.
 
+### Linux-стенд: завершение пакетного прогона
+12 DXF fixtures → независимая перечитка без ezdxf → 12 реальных рендеров 1600×1200 с баннером и watermark.
+Полный pytest и delivery-проверки раздельно записаны в `delivery/linux-stand/test_report.json` и `pytest.log`.
+Отдельный пакет: `delivery/navigator-kit-linux-stand.zip` (≤3 MB; фактический размер в комментарии PR).
+
+Что сделать до следующего раза:
+1. **P0 — Нормоконтроль:** подтвердить геометрию форм 1/2 по официальному тексту; сохранённые выдержки не закрывают проверку размеров.
+2. **P0 — Windows-стенд:** выполнить существующую инструкцию и PowerShell-чек на nanoCAD 26/SDK/лицензии, получить реальные NK_HELLO/SdkProbe и снимки.
+3. **P1 — C#-ядро:** перенести Python-контракт с одинаковыми fixtures; существующий SdkProbe.cs подтвердить на SDK, не угадывать API.
+
 ### Доказательно выполнено
 - Python reference CLI просканировал 120 DXF R2010 и записал CSV/JSON.
 - Обнаружено {summary['output']['completenessIssues']} контрольных инцидентов и {groups_phrase(summary['output']['duplicateGroups'])}.
@@ -289,7 +299,7 @@ def build_manifest() -> None:
         if not p.is_file():
             continue
         rel = p.relative_to(ROOT).as_posix()
-        if rel in excluded or "__pycache__" in p.parts:
+        if rel in excluded or p.suffix == ".zip" or "__pycache__" in p.parts:
             continue
         files[rel] = sha256_file(p)
     manifest = {
@@ -322,7 +332,7 @@ def build_zip() -> None:
                 if not p.is_file():
                     continue
                 rel = p.relative_to(ROOT).as_posix()
-                if rel.endswith("navigator-kit-night-session.zip") or "__pycache__" in p.parts or p.suffix == ".pyc":
+                if p.suffix == ".zip" or "__pycache__" in p.parts or p.suffix == ".pyc":
                     continue
                 zf.write(p, f"navigator-kit/{rel}")
 

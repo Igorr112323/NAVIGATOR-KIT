@@ -1,7 +1,7 @@
 {
   "format": "navigator-kit.session3-summary/v1",
   "sessionId": "night-session-20261028",
-  "generatedAt": "2026-10-28T18:35:00+00:00",
+  "generatedAt": "2026-10-28T18:47:05+00:00",
   "checkedAtDate": "2026-10-28",
   "branch": "arena/ec9fddc1-navigator-kit",
   "baseRemoteCommit": "49e592d",
@@ -74,9 +74,9 @@
     },
     "p2": {
       "status": "GIF_OK;SENIOR_REVIEW_DONE;HYPOTHESES_REMAIN",
-      "gifBytes": 177399,
+      "gifBytes": 176910,
       "within3MB": true,
-      "remainingHypothesisMarkers": 242
+      "remainingHypothesisMarkers": 243
     }
   },
   "nanoCADExecuted": false,

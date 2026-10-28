@@ -1,12 +1,12 @@
 {
   "format": "navigator-kit.session3-demo-review/v1",
   "sessionId": "night-session-20261028",
-  "generatedAt": "2026-10-28T18:35:00+00:00",
+  "generatedAt": "2026-10-28T18:47:05+00:00",
   "status": "GIF_OK;SENIOR_REVIEW_DONE;HYPOTHESES_REMAIN",
   "demo": {
     "format": "navigator-kit.demo-gif/v1",
     "sessionId": "night-session-20261028",
-    "generatedAt": "2026-10-28T18:35:00+00:00",
+    "generatedAt": "2026-10-28T18:47:05+00:00",
     "path": "delivery/session-3/demo.gif",
     "storyboard": "delivery/session-3/demo_storyboard.png",
     "frameCount": 6,
@@ -17,7 +17,7 @@
     "durationMsPerFrame": 900,
     "loop": true,
     "paletteColors": 64,
-    "bytes": 177399,
+    "bytes": 176910,
     "maxBytes": 3000000,
     "withinLimit": true,
     "watermark": "nanoCAD НЕ запускался / не скриншот CAD",
@@ -29,7 +29,7 @@
   "watermarkTopAndBottom": true,
   "gifWithin3MB": true,
   "seniorReview": "delivery/session-3/senior_review.md",
-  "remainingHypothesisMarkers": 242,
+  "remainingHypothesisMarkers": 243,
   "hypothesesRemoved": false,
   "reason": "No Windows/nanoCAD/SDK/real DWG/norms geometry review; removing markers would be dishonest.",
   "nextSteps": "delivery/next_steps.md"

@@ -121,7 +121,7 @@
 ## GitHub-действия
 
 - Ветка: `arena/ec9fddc1-navigator-kit` (создавать `night-session-YYYYMMDD` нельзя: имя ветки зафиксировано сессией Arena).
-- Коммит на момент генерации отчёта: `cf89780a4c902ec0589591500a530344300d4789`.
+- Коммит на момент генерации отчёта: `9e6e3ff3af839d860887c9450a64275ade7f7028`.
 - PR: [https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1](https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1).
 - Push: `git push origin arena/ec9fddc1-navigator-kit`.
 - PR body: `delivery/PR_BODY.md`.

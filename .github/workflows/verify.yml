@@ -25,9 +25,13 @@ jobs:
         run: python tools/render_screenshots.py
       - name: Run Linux DXF stand (render and independent verification)
         run: python tools/run_linux_stand.py
+      - name: Complete Linux stand batch and full pytest
+        run: python tools/complete_linux_stand.py
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
       - name: Build dashboard and delivery bundle
         run: python tools/finalize_delivery.py
       - name: Verify delivery
         run: python tools/verify_delivery.py --check-only
+      - name: Finalize Linux stand bundle
+        run: python tools/finalize_linux_stand.py

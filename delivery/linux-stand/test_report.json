@@ -1,0 +1,9 @@
+{
+  "passed": 28,
+  "failed": 0,
+  "skipped": 0,
+  "total_tests": 28,
+  "delivery_checks": "Run tools/finalize_linux_stand.py after finalize_delivery.py",
+  "total_checks": 59,
+  "failed_checks": 0
+}
