@@ -1,6 +1,6 @@
 # Зависимости и состояние окружения
 
-Дата первой проверки: 2026‑10‑26. Повторная проверка: **2026‑10‑27** (вторая ночная сессия).
+Дата первой проверки: 2026‑10‑26. Повторные проверки: **2026‑10‑27** (вторая сессия) и **2026‑10‑28** (третья сессия). Подробный чек Windows-стенда: `docs/windows-stand-setup.md`.
 
 ## Что реально есть в sandbox
 
@@ -10,7 +10,7 @@
 | Python | 3.11.2, стандартная библиотека |
 | Node.js / npm | установлены |
 | Python tooling | `/home/user/.venv`: `ezdxf`, `Pillow`, `xmlschema`, `tree_sitter`, `python-docx`, `lxml`, `pandas`, `matplotlib` |
-| `dotnet`, `mono`, `msbuild`, `csc` | **отсутствуют** |
+| `dotnet`, `mono`, `msbuild`, `csc`, `ffmpeg` | **отсутствуют**; GIF собран средствами Pillow без ffmpeg |
 | Visual Studio 2022 / Rider | **отсутствуют** |
 | nanoCAD 26 | **отсутствует** |
 | MultiCAD .NET SDK 26, `mapimgd.dll`, `hostmgd.dll`, `hostdbmgd.dll` | **отсутствуют** |

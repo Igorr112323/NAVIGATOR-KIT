@@ -3,11 +3,14 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
+
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOL = ROOT / "tools" / "navigator_kit.py"
@@ -107,6 +110,41 @@ class NavigatorKitTests(unittest.TestCase):
         self.assertEqual(len(summary["tasks"]), 11)
         self.assertFalse(summary["nanoCADExecuted"])
         self.assertEqual(labels["requestedLabels"], ["good first issue", "night-session"])
+
+    def test_session3_python_scripts_compile(self):
+        for rel in ("tools/pipeline.py", "tools/sheetset_probe.py",
+                    "tools/make_demo_gif.py", "tools/session3_runner.py"):
+            path = ROOT / rel
+            compile(path.read_text(encoding="utf-8"), str(path), "exec")
+
+    def test_norms_registry_required_fields(self):
+        norms = json.loads((ROOT / "delivery/data/norms_registry.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(norms), 5)
+        for n in norms:
+            self.assertTrue({"norm", "edition", "date_force", "source"}.issubset(n))
+
+    def test_demo_gif_is_small_and_watermarked(self):
+        path = ROOT / "delivery/session-3/demo.gif"
+        meta = json.loads((ROOT / "delivery/session-3/demo_metadata.json").read_text(encoding="utf-8"))
+        self.assertLessEqual(path.stat().st_size, 3_000_000)
+        self.assertTrue(meta["withinLimit"])
+        self.assertIn("nanoCAD", meta["watermark"])
+        with Image.open(path) as gif:
+            self.assertGreaterEqual(getattr(gif, "n_frames", 1), 5)
+
+    def test_session3_summary_and_external_dependency(self):
+        summary = json.loads((ROOT / "delivery/data/session3_summary.json").read_text(encoding="utf-8"))
+        windows = json.loads((ROOT / "delivery/session-3/p0_windows_stand.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(summary["tasks"]), 5)
+        self.assertFalse(summary["nanoCADExecuted"])
+        self.assertEqual(windows["status"], "EXTERNAL_DEPENDENCY")
+        self.assertFalse(windows["nkHelloExecuted"])
+
+    def test_remaining_hypotheses_are_retained(self):
+        hyp = json.loads((ROOT / "delivery/session-3/remaining_hypotheses.json").read_text(encoding="utf-8"))
+        review = json.loads((ROOT / "delivery/session-3/p2_demo_review.json").read_text(encoding="utf-8"))
+        self.assertGreater(hyp["totalMarkers"], 0)
+        self.assertFalse(review["hypothesesRemoved"])
 
     def test_replace_attribute_value_roundtrip(self):
         source = ROOT / "samples/synthetic_sets/АР/АР_002.dxf"

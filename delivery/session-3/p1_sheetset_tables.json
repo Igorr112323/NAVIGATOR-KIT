@@ -1,0 +1,30 @@
+{
+  "format": "navigator-kit.sheetset-tables-probe/v1",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-28T15:49:12+00:00",
+  "status": "LOCAL_HANDOFF_VERIFIED;CAD_API_HYPOTHESIS",
+  "getSheetsStatus": "HYPOTHESIS",
+  "getSheetSetsStatus": "HYPOTHESIS",
+  "tablesApiVerified": false,
+  "sheetSetApiVerified": false,
+  "dstTouched": false,
+  "nanoCADExecuted": false,
+  "printOrderConsistent": true,
+  "printOrderItems": 120,
+  "form1Rows": 120,
+  "wo1Rows": 120,
+  "wo2Rows": 8,
+  "wo1Sha256": "f5073808b4fef49e992cf2bb74b9334e4b183848ec8a20777f32557c07d74c4c",
+  "wo2Sha256": "0c65cd986de58495067653fa95b870e67feb9e55e5e4645d84bf307abf8e2ad1",
+  "hypotheses": [
+    "GetSheets() signature in MultiCAD .NET SDK 26",
+    "GetSheetSets() existence and contract",
+    "Tables API / sheet-list-table columns vs ГОСТ Р 21.101-2026 Appendix Б",
+    "Documented .dst export or layout-order synchronisation"
+  ],
+  "nextWindowsSteps": [
+    "Run SDK_PROBE and dump real method signatures",
+    "Insert Sheet List Table and compare columns with wo1_template.csv",
+    "Compare layout tab order with delivery/session-3/print_order.json"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "sessionId": "night-session-20261028",
+  "status": "EXTERNAL_DEPENDENCY",
+  "nanoCADExecuted": false,
+  "workflow": ".github/workflows/windows-build.yml"
+}

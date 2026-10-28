@@ -24,3 +24,14 @@
 2. Открыть реальный `.dst`, вызвать «Вставить ведомость листов», сравнить заголовки и ширины с приложением Б 2026.
 3. Сделать reflection‑дамп всех методов с `Sheet`/`Layout`/`Attribute` и положить в `delivery/data/sdk_probe.txt`.
 4. Только после этого заменить заглушки в `src/NavigatorKit.NanoCad`.
+
+## Сессия 3 — SHEETSET/Tables probe
+
+`tools/sheetset_probe.py` не вызывает CAD API, но проверяет готовность данных:
+
+- читает статусы `GetSheets()` и `GetSheetSets()` из `api_experiment_results.json`;
+- подтверждает совпадение `print_order.json` и формы 1 по хэшу;
+- перегенерирует `wo1_template.csv` / `wo2_template.csv` по Приложению Б-2026;
+- явно пишет `dstTouched: false`, `tablesApiVerified: false`, `getSheetSetsStatus: HYPOTHESIS`.
+
+C#-класс `src/NavigatorKit.NanoCad/DwgReadiness.cs` перечисляет проверки `Database`/`Transaction`/`AttributeReference` без выдуманных сигнатур. Решение о снятии гипотез принимается только после `SDK_PROBE` на Windows-стенде.

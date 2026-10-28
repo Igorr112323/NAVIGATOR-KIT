@@ -77,7 +77,7 @@ def canvas(title: str, subtitle: str, accent: tuple[int, int, int] = BLUE):
     d.rounded_rectangle((40, 38, 58, 132), radius=8, fill=accent)
     d.text((78, 38), title, font=f(40, bold=True), fill=TEXT)
     d.text((80, 95), subtitle, font=f(21), fill=MUTED)
-    d.text((W - 400, 48), "2026-10-27 • NIGHT SESSION 2", font=f(20, mono=True), fill=accent)
+    d.text((W - 400, 48), "2026-10-28 • NIGHT SESSION 3", font=f(20, mono=True), fill=accent)
     d.rounded_rectangle((40, 158, W - 40, 208), radius=12, fill=(48, 24, 32), outline=(135, 55, 68), width=2)
     d.text((62, 171), "СИНТЕТИЧЕСКИЙ ДИАГНОСТИЧЕСКИЙ МАКЕТ • nanoCAD НЕ ЗАПУСКАЛСЯ • НЕ ЯВЛЯЕТСЯ СКРИНШОТОМ CAD",
            font=f(21, bold=True), fill=RED)
@@ -148,8 +148,14 @@ def add_corner_watermark(img: Image.Image) -> Image.Image:
     return Image.alpha_composite(base, overlay).convert("RGB")
 
 
+PALETTE_COLORS = 128
+
+
 def save(img: Image.Image, name: str, manifest: list[dict], title: str, source: str) -> None:
     img = add_corner_watermark(img)
+    # Palette-reduce to keep the whole delivery ZIP below 3 MB while preserving
+    # the 1600x1200 geometry and the persistent watermark.
+    img = img.quantize(colors=PALETTE_COLORS, method=Image.MEDIANCUT, dither=Image.Dither.NONE)
     path = OUT / name
     img.save(path, optimize=True)
     manifest.append({
@@ -157,6 +163,8 @@ def save(img: Image.Image, name: str, manifest: list[dict], title: str, source: 
         "title": title, "source": source, "nanoCADScreenshot": False,
         "watermark": True, "cornerWatermark": True,
         "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+        "colorMode": "P", "paletteColors": PALETTE_COLORS,
+        "compression": "PNG-8 palette, optimize=True",
         "sha256": __import__("hashlib").sha256(path.read_bytes()).hexdigest(),
     })
 
@@ -174,6 +182,8 @@ def main() -> int:
     stamp = read_json(DATA / "stamp_patch_report.json")
     consistency = read_json(DATA / "print_order_consistency.json")
     standards = read_json(DATA / "standards_status.json")
+    session3_path = DATA / "session3_summary.json"
+    session3 = read_json(session3_path) if session3_path.is_file() else {"tasks": [], "results": {}}
 
     # 01 Environment
     img, d = canvas("01 • Окружение и зависимости", "Фактическая проверка Linux sandbox / нет nanoCAD, SDK и .NET", RED)
@@ -385,16 +395,103 @@ def main() -> int:
     footer(d, "docs/nanocad-integration.md + src/*")
     save(img, "screenshot_12_architecture.png", manifest, "Архитектура", "architecture summary")
 
+    # 13 Session-3 P0-P2 pipeline
+    img, d = canvas("13 • Сессия 3: P0–P2", "Нормоконтроль → Windows → DWG → SHEETSET → демо", GREEN)
+    task_rows = [[str(x["id"]), x["priority"], x["task"], x["status"]] for x in session3["tasks"]]
+    table(d, 40, 250, [90, 110, 620, 680], ["#", "Приоритет", "Задача", "Статус"], task_rows,
+          row_h=72, font_size=18)
+    card(d, 40, 700, 720, 360, "Доказано", [
+        "• 120 DXF → реестр с SHA-256",
+        "• 16 инцидентов / 4 дубля",
+        "• rollback и print order verified",
+        "• GIF ≤3 МБ с watermark",
+    ], GREEN, value="LOCAL")
+    card(d, 780, 700, 780, 360, "Внешняя зависимость", [
+        "• Windows + nanoCAD 26 + SDK 26",
+        "• лицензия и реальные DWG",
+        "• NK_HELLO / SDK_PROBE",
+        "• реальные скриншоты CAD",
+    ], RED, value="0")
+    d.text((42, 1090), "Все неподтверждённые CAD API остаются ГИПОТЕЗА/ПРОВЕРИТЬ.", font=f(20), fill=AMBER)
+    footer(d, "delivery/data/session3_summary.json + delivery/session-3/")
+    save(img, "screenshot_13_session3_pipeline.png", manifest, "Сессия 3 P0-P2", "session3_summary.json")
+
+    # 14 Windows dependency map
+    img, d = canvas("14 • Карта внешнего Windows-стенда", "Подготовлено в Linux / реальный запуск недоступен", RED)
+    boxes = [
+        (50, 250, 430, 430, "LINUX SANDBOX", [
+            "Python 3.11 + 120 DXF",
+            "45 checks + 12 tests",
+            "PNG/GIF mockups",
+            "dotnet / nanoCAD: MISSING",
+        ], BLUE),
+        (520, 250, 900, 430, "GITHUB ACTIONS", [
+            "verify.yml — pass",
+            "dotnet-build.yml — manual",
+            "windows-build.yml — manual",
+            "optional NANOCAD_SDK_PATH",
+        ], PURPLE),
+        (990, 250, 1370, 430, "WINDOWS VM", [
+            "nanoCAD 26 + license",
+            "SDK 26 + TFM/DLL",
+            "NETLOAD / NK_HELLO",
+            "SDK_PROBE + screenshots",
+        ], RED),
+    ]
+    for x1, y1, x2, y2, title, lines, color in boxes:
+        d.rounded_rectangle((x1, y1, x2, y2), radius=16, fill=PANEL, outline=color, width=3)
+        d.text((x1 + 20, y1 + 16), title, font=f(23, bold=True), fill=color)
+        yy = y1 + 60
+        for line in lines:
+            d.text((x1 + 20, yy), clip(d, line, f(19), x2 - x1 - 40), font=f(19), fill=TEXT)
+            yy += 34
+    card(d, 50, 520, 1320, 330, "Блокирующие проверки", [
+        "1. Получить образовательную/коммерческую лицензию nanoCAD (nanoPassport, капча).",
+        "2. Скачать MultiCAD .NET SDK 26 и сверить DLL/TFM/разрядность.",
+        "3. Собрать адаптер, выполнить NK_HELLO и SDK_PROBE, сохранить reflection-дамп.",
+        "4. Снять 3 реальных снимка с правдивым watermark, не выдавая Linux-макеты за CAD.",
+    ], AMBER)
+    d.text((42, 900), "tools/windows_stand_check.ps1 • docs/windows-stand-setup.md • .github/workflows/windows-build.yml",
+           font=f(19), fill=MUTED)
+    footer(d, "delivery/session-3/p0_windows_stand.json")
+    save(img, "screenshot_14_windows_dependency.png", manifest, "Windows-стенд", "p0_windows_stand.json")
+
+    # 15 GIF storyboard
+    img, d = canvas("15 • GIF-демо: 6 кадров", "Папка → реестр → штамп → нумерация → печать → итог", CYAN)
+    demo_path = ROOT / "delivery" / "session-3" / "demo_metadata.json"
+    demo = read_json(demo_path) if demo_path.is_file() else {}
+    card(d, 40, 250, 360, 175, "Кадров", [], BLUE, value=str(demo.get("frameCount", 6)))
+    card(d, 420, 250, 360, 175, "Размер кадра", [], PURPLE, value="960×720")
+    card(d, 800, 250, 360, 175, "GIF", [], GREEN, value="≤3 МБ")
+    card(d, 1180, 250, 380, 175, "nanoCAD", [], RED, value="0")
+    steps = [
+        "01 Папка: 120 DXF R2010",
+        "02 Реестр: 120 строк + SHA-256",
+        "03 Штамп: .bak → apply → rollback",
+        "04 Нумерация: 4 дубля / 2 стратегии",
+        "05 Печать: 120 элементов, hash OK",
+        "06 Итог: формы 1/2, 16 инцидентов",
+    ]
+    for i, step in enumerate(steps):
+        x = 40 + (i % 2) * 760
+        y = 470 + (i // 2) * 200
+        card(d, x, y, 720, 170, f"Кадр {i+1:02d}", [step], CYAN if i % 2 == 0 else BLUE)
+    d.text((42, 1090), "Верхний баннер + нижний watermark «nanoCAD НЕ запускался / не скриншот CAD» на каждом кадре.",
+           font=f(20), fill=AMBER)
+    footer(d, "delivery/session-3/demo.gif + demo_metadata.json")
+    save(img, "screenshot_15_demo_storyboard.png", manifest, "GIF-демо", "demo_metadata.json")
+
     write_json = lambda p, data: p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     write_json(OUT / "screenshots_manifest.json", {
-        "format": "navigator-kit.screenshots/v2",
-        "sessionId": "night-session-20261027",
+        "format": "navigator-kit.screenshots/v3",
+        "sessionId": "night-session-20261028",
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "nanoCADExecuted": False,
         "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
         "cornerWatermark": True,
         "disclaimer": "All PNGs are explicitly labelled synthetic diagnostic mockups, not nanoCAD screenshots.",
         "minResolution": {"width": W, "height": H},
+        "paletteColors": PALETTE_COLORS,
         "count": len(manifest),
         "images": manifest,
     })

@@ -39,7 +39,7 @@ DERIVED_MULTIPLICITIES = {
     "A0": {2, 3}, "A1": {3, 4}, "A2": {3, 4, 5},
     "A3": {3, 4, 5, 6, 7}, "A4": {3, 4, 5, 6, 7, 8, 9},
 }
-SESSION_ID = "night-session-20261027"
+SESSION_ID = "night-session-20261028"
 LOG_LINES: list[str] = []
 
 
@@ -56,7 +56,13 @@ def init_log() -> None:
     for p in [LOG_REPO, LOG_DELIVERY, LOG_EXTERNAL]:
         try:
             ensure_parent(p)
-            p.write_text("", encoding="utf-8")
+            # Session 3: append a new run boundary instead of destroying
+            # SESSION_START/SESSION_END evidence from earlier night sessions.
+            if p.exists() and p.stat().st_size > 0:
+                with p.open("a", encoding="utf-8") as f:
+                    f.write("\n--- NEW PIPELINE RUN ---\n")
+            else:
+                p.write_text("", encoding="utf-8")
         except OSError:
             pass
     log("SESSION_START", f"id={SESSION_ID}; repo={ROOT}; python={platform.python_version()}")
@@ -693,7 +699,7 @@ def build_print_order(sheets: list[dict], form1_rows: list[dict], samples_dir: P
 
 def capture_environment(output_dir: Path) -> dict:
     tools = {name: (shutil.which(name) or "MISSING") for name in
-             ["dotnet", "mono", "msbuild", "csc", "python3", "node", "npm", "git", "gh", "convert"]}
+             ["dotnet", "mono", "msbuild", "csc", "python3", "node", "npm", "git", "gh", "convert", "ffmpeg"]}
     modules = {name: bool(importlib.util.find_spec(name)) for name in
                ["PIL", "ezdxf", "xmlschema", "docx", "lxml", "pandas", "matplotlib"]}
     env = {
@@ -757,7 +763,14 @@ def write_standards_status(output_dir: Path) -> dict:
     data = {
         "format": "navigator-kit.standards-status/v2",
         "checkedAt": utcnow(),
-        "checkedAtDate": "2026-10-27",
+        "checkedAtDate": "2026-10-28",
+        "previousCheckedAtDate": "2026-10-27",
+        "officialText": {
+            "officialEditionPdf": "https://pravdaosro.ru/wp-content/uploads/2026/03/GOST-R-21.101-2026.pdf",
+            "appendixB": "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
+            "section7Verified": True,
+            "fullTextRedistributed": False,
+        },
         "officialRegistry": {
             "spds2026": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
             "spds2020Replaced": "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
@@ -784,6 +797,7 @@ def write_standards_status(output_dir: Path) -> dict:
         "sources": [
             "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
             "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
+            "https://pravdaosro.ru/wp-content/uploads/2026/03/GOST-R-21.101-2026.pdf",
             "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
             "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
             "https://protect.gost.ru/document.aspx?control=7&id=256448",
@@ -836,7 +850,8 @@ def write_night_log(summary: dict, issues: list[dict], stamp_report: dict) -> No
         f"# Ночной лог — {SESSION_ID}", "",
         "Все временные метки — UTC, реальное время sandbox. План на 8–10 ч находится в `docs/session-plan.md`; "
         "фактическая сессия сжата в автоматизированный проход, без симуляции девяти часов. "
-        "Вторая сессия продолжает PR #1 от 2026-10-26: ветка синхронизирована с `origin/arena/ec9fddc1-navigator-kit` до `bc47b35`.", "",
+        "Вторая сессия продолжает PR #1 от 2026-10-26: ветка синхронизирована с `origin/arena/ec9fddc1-navigator-kit` до `bc47b35`. "
+        "Третья сессия 2026-10-28 добавляет P0-P2 проход; подробности в `delivery/night-session-3.md` и `delivery/session-3/`.", "",
         "## Хронология", "",
     ]
     for line in LOG_LINES:

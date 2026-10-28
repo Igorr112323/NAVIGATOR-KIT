@@ -19,6 +19,8 @@ jobs:
         run: python tools/navigator_kit.py all
       - name: Run second-session continuation artifacts
         run: python tools/night_session_2.py
+      - name: Run third-session P0-P2 chain
+        run: python tools/session3_runner.py
       - name: Render screenshots
         run: python tools/render_screenshots.py
       - name: Run unit tests

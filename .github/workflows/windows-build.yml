@@ -15,6 +15,9 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
+      - name: Record Windows stand readiness (non-blocking)
+        continue-on-error: true
+        run: powershell -ExecutionPolicy Bypass -File tools/windows_stand_check.ps1
       - name: Build portable solution
         run: dotnet build src/NavigatorKit.Cli/NavigatorKit.Cli.csproj -c Release
       - name: Run C# reference pipeline
@@ -35,4 +38,5 @@ jobs:
             src/**/bin/Release/**
             src/**/obj/Release/**
             delivery/data/csharp-windows-preview/**
+            delivery/data/windows_stand_check.json
           if-no-files-found: warn

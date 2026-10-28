@@ -1,0 +1,13 @@
+{
+  "format": "navigator-kit.print-order-session3/v1",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-28T15:49:12+00:00",
+  "source": "delivery/data/print_order.json",
+  "sourceSha256": "002dcb35ddf725204d3862abd0587ed0416e367b4475fb8c990d944afe4a5fe2",
+  "form1OrderHash": "9971eb7942ef849080c68973eb131f234f34a8aeea12a0089a51a877b8fa9cc4",
+  "printOrderHash": "9971eb7942ef849080c68973eb131f234f34a8aeea12a0089a51a877b8fa9cc4",
+  "printOrderItems": 120,
+  "layoutOrderMatchesPrintOrder": true,
+  "dstTouched": false,
+  "method": "Local handoff JSON only; nanoCAD layouts were NOT read."
+}

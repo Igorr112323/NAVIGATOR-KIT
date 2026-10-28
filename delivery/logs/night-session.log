@@ -29,3 +29,150 @@
 2026-10-27T03:23:44+00:00Z TASK_OK session2_log
 2026-10-27T03:23:44+00:00Z TASK_OK session2_summary
 2026-10-27T03:23:44+00:00Z SESSION_2_END status=PASS; artifacts=7 groups
+
+--- NEW PIPELINE RUN ---
+2026-10-28T15:47:00+00:00 [SESSION_START] id=night-session-20261028; repo=/home/user/NAVIGATOR-KIT; python=3.11.2
+2026-10-28T15:47:00+00:00 [WARNING] Original briefing.md is absent; reconstructed brief is not authoritative.
+2026-10-28T15:47:00+00:00 [WARNING] No Windows/nanoCAD 26/MultiCAD .NET SDK/dotnet in this sandbox.
+2026-10-28T15:47:00+00:00 [WARNING] Screenshots later in the pipeline are labelled diagnostic mockups, not nanoCAD captures.
+2026-10-28T15:47:00+00:00 [TASK_START] Environment and dependency capture
+2026-10-28T15:47:00+00:00 [TASK_START] Load XML mapping profiles
+2026-10-28T15:47:00+00:00 [TASK_OK] Loaded 2 stamp profiles
+2026-10-28T15:47:00+00:00 [TASK_START] POC scan of synthetic DXF directory
+2026-10-28T15:47:00+00:00 [TASK_OK] Scanned 120 DXF files
+2026-10-28T15:47:00+00:00 [TASK_START] Completeness validation
+2026-10-28T15:47:00+00:00 [TASK_OK] Found 16 completeness issues
+2026-10-28T15:47:00+00:00 [TASK_OK] Build form 1 data
+2026-10-28T15:47:00+00:00 [TASK_OK] Build form 2 data
+2026-10-28T15:47:00+00:00 [TASK_OK] Duplicate detection and numbering policy
+2026-10-28T15:47:00+00:00 [TASK_OK] Reversible stamp patch + rollback
+2026-10-28T15:47:00+00:00 [TASK_OK] Change table template
+2026-10-28T15:47:00+00:00 [TASK_OK] Print order handoff
+2026-10-28T15:47:00+00:00 [TASK_OK] Write API experiment results
+2026-10-28T15:47:00+00:00 [TASK_OK] Write standards status
+2026-10-28T15:47:00+00:00 [SESSION_END] summary=SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING
+
+--- NEW PIPELINE RUN ---
+2026-10-28T15:47:02+00:00 [SESSION_START] id=night-session-20261028; repo=/home/user/NAVIGATOR-KIT; python=3.11.2
+2026-10-28T15:47:02+00:00 [WARNING] Original briefing.md is absent; reconstructed brief is not authoritative.
+2026-10-28T15:47:02+00:00 [WARNING] No Windows/nanoCAD 26/MultiCAD .NET SDK/dotnet in this sandbox.
+2026-10-28T15:47:02+00:00 [WARNING] Screenshots later in the pipeline are labelled diagnostic mockups, not nanoCAD captures.
+2026-10-28T15:47:02+00:00 [TASK_START] Environment and dependency capture
+2026-10-28T15:47:02+00:00 [TASK_START] Load XML mapping profiles
+2026-10-28T15:47:02+00:00 [TASK_OK] Loaded 2 stamp profiles
+2026-10-28T15:47:02+00:00 [TASK_START] POC scan of synthetic DXF directory
+2026-10-28T15:47:02+00:00 [TASK_OK] Scanned 120 DXF files
+2026-10-28T15:47:02+00:00 [TASK_START] Completeness validation
+2026-10-28T15:47:02+00:00 [TASK_OK] Found 16 completeness issues
+2026-10-28T15:47:02+00:00 [TASK_OK] Build form 1 data
+2026-10-28T15:47:02+00:00 [TASK_OK] Build form 2 data
+2026-10-28T15:47:02+00:00 [TASK_OK] Duplicate detection and numbering policy
+2026-10-28T15:47:02+00:00 [TASK_OK] Reversible stamp patch + rollback
+2026-10-28T15:47:02+00:00 [TASK_OK] Change table template
+2026-10-28T15:47:02+00:00 [TASK_OK] Print order handoff
+2026-10-28T15:47:02+00:00 [TASK_OK] Write API experiment results
+2026-10-28T15:47:02+00:00 [TASK_OK] Write standards status
+2026-10-28T15:47:02+00:00 [SESSION_END] summary=SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING
+
+2026-10-28T15:47:02+00:00Z SESSION_3_START id=night-session-20261028; branch=arena/ec9fddc1-navigator-kit; pr=https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1; base=49e592d
+2026-10-28T15:47:02+00:00Z TASK_OK P0_norm_control
+2026-10-28T15:47:02+00:00Z TASK_OK P0_windows_stand
+2026-10-28T15:47:03+00:00Z TOOL_OUTPUT pipeline.py: }
+2026-10-28T15:47:03+00:00Z TOOL_OUTPUT pipeline.py: }
+2026-10-28T15:47:03+00:00Z TASK_OK P1_production_dwg
+2026-10-28T15:47:04+00:00Z TOOL_OUTPUT sheetset_probe.py: }
+2026-10-28T15:47:04+00:00Z TASK_OK P1_sheetset_tables
+2026-10-28T15:47:04+00:00Z TOOL_OUTPUT make_demo_gif.py: }
+2026-10-28T15:47:04+00:00Z TASK_OK P2_demo_review
+2026-10-28T15:47:04+00:00Z TASK_OK session3_summary
+2026-10-28T15:47:04+00:00Z TASK_OK session3_readme
+2026-10-28T15:47:04+00:00Z TASK_OK session3_manifests
+2026-10-28T15:47:04+00:00Z SESSION_3_END status=PASS_WITH_EXTERNAL_DEPENDENCIES
+
+--- NEW PIPELINE RUN ---
+2026-10-28T15:48:14+00:00 [SESSION_START] id=night-session-20261028; repo=/home/user/NAVIGATOR-KIT; python=3.11.2
+2026-10-28T15:48:14+00:00 [WARNING] Original briefing.md is absent; reconstructed brief is not authoritative.
+2026-10-28T15:48:14+00:00 [WARNING] No Windows/nanoCAD 26/MultiCAD .NET SDK/dotnet in this sandbox.
+2026-10-28T15:48:14+00:00 [WARNING] Screenshots later in the pipeline are labelled diagnostic mockups, not nanoCAD captures.
+2026-10-28T15:48:14+00:00 [TASK_START] Environment and dependency capture
+2026-10-28T15:48:14+00:00 [TASK_START] Load XML mapping profiles
+2026-10-28T15:48:14+00:00 [TASK_OK] Loaded 2 stamp profiles
+2026-10-28T15:48:14+00:00 [TASK_START] POC scan of synthetic DXF directory
+2026-10-28T15:48:14+00:00 [TASK_OK] Scanned 120 DXF files
+2026-10-28T15:48:14+00:00 [TASK_START] Completeness validation
+2026-10-28T15:48:14+00:00 [TASK_OK] Found 16 completeness issues
+2026-10-28T15:48:14+00:00 [TASK_OK] Build form 1 data
+2026-10-28T15:48:14+00:00 [TASK_OK] Build form 2 data
+2026-10-28T15:48:14+00:00 [TASK_OK] Duplicate detection and numbering policy
+2026-10-28T15:48:14+00:00 [TASK_OK] Reversible stamp patch + rollback
+2026-10-28T15:48:14+00:00 [TASK_OK] Change table template
+2026-10-28T15:48:14+00:00 [TASK_OK] Print order handoff
+2026-10-28T15:48:14+00:00 [TASK_OK] Write API experiment results
+2026-10-28T15:48:14+00:00 [TASK_OK] Write standards status
+2026-10-28T15:48:14+00:00 [SESSION_END] summary=SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING
+
+--- NEW PIPELINE RUN ---
+2026-10-28T15:48:15+00:00 [SESSION_START] id=night-session-20261028; repo=/home/user/NAVIGATOR-KIT; python=3.11.2
+2026-10-28T15:48:15+00:00 [WARNING] Original briefing.md is absent; reconstructed brief is not authoritative.
+2026-10-28T15:48:15+00:00 [WARNING] No Windows/nanoCAD 26/MultiCAD .NET SDK/dotnet in this sandbox.
+2026-10-28T15:48:15+00:00 [WARNING] Screenshots later in the pipeline are labelled diagnostic mockups, not nanoCAD captures.
+2026-10-28T15:48:15+00:00 [TASK_START] Environment and dependency capture
+2026-10-28T15:48:15+00:00 [TASK_START] Load XML mapping profiles
+2026-10-28T15:48:15+00:00 [TASK_OK] Loaded 2 stamp profiles
+2026-10-28T15:48:15+00:00 [TASK_START] POC scan of synthetic DXF directory
+2026-10-28T15:48:16+00:00 [TASK_OK] Scanned 120 DXF files
+2026-10-28T15:48:16+00:00 [TASK_START] Completeness validation
+2026-10-28T15:48:16+00:00 [TASK_OK] Found 16 completeness issues
+2026-10-28T15:48:16+00:00 [TASK_OK] Build form 1 data
+2026-10-28T15:48:16+00:00 [TASK_OK] Build form 2 data
+2026-10-28T15:48:16+00:00 [TASK_OK] Duplicate detection and numbering policy
+2026-10-28T15:48:16+00:00 [TASK_OK] Reversible stamp patch + rollback
+2026-10-28T15:48:16+00:00 [TASK_OK] Change table template
+2026-10-28T15:48:16+00:00 [TASK_OK] Print order handoff
+2026-10-28T15:48:16+00:00 [TASK_OK] Write API experiment results
+2026-10-28T15:48:16+00:00 [TASK_OK] Write standards status
+2026-10-28T15:48:16+00:00 [SESSION_END] summary=SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING
+
+--- NEW PIPELINE RUN ---
+2026-10-28T15:49:09+00:00 [SESSION_START] id=night-session-20261028; repo=/home/user/NAVIGATOR-KIT; python=3.11.2
+2026-10-28T15:49:09+00:00 [WARNING] Original briefing.md is absent; reconstructed brief is not authoritative.
+2026-10-28T15:49:09+00:00 [WARNING] No Windows/nanoCAD 26/MultiCAD .NET SDK/dotnet in this sandbox.
+2026-10-28T15:49:09+00:00 [WARNING] Screenshots later in the pipeline are labelled diagnostic mockups, not nanoCAD captures.
+2026-10-28T15:49:09+00:00 [TASK_START] Environment and dependency capture
+2026-10-28T15:49:09+00:00 [TASK_START] Load XML mapping profiles
+2026-10-28T15:49:09+00:00 [TASK_OK] Loaded 2 stamp profiles
+2026-10-28T15:49:09+00:00 [TASK_START] POC scan of synthetic DXF directory
+2026-10-28T15:49:09+00:00 [TASK_OK] Scanned 120 DXF files
+2026-10-28T15:49:09+00:00 [TASK_START] Completeness validation
+2026-10-28T15:49:09+00:00 [TASK_OK] Found 16 completeness issues
+2026-10-28T15:49:09+00:00 [TASK_OK] Build form 1 data
+2026-10-28T15:49:09+00:00 [TASK_OK] Build form 2 data
+2026-10-28T15:49:09+00:00 [TASK_OK] Duplicate detection and numbering policy
+2026-10-28T15:49:09+00:00 [TASK_OK] Reversible stamp patch + rollback
+2026-10-28T15:49:09+00:00 [TASK_OK] Change table template
+2026-10-28T15:49:09+00:00 [TASK_OK] Print order handoff
+2026-10-28T15:49:09+00:00 [TASK_OK] Write API experiment results
+2026-10-28T15:49:09+00:00 [TASK_OK] Write standards status
+2026-10-28T15:49:09+00:00 [SESSION_END] summary=SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING
+
+--- NEW PIPELINE RUN ---
+2026-10-28T15:49:10+00:00 [SESSION_START] id=night-session-20261028; repo=/home/user/NAVIGATOR-KIT; python=3.11.2
+2026-10-28T15:49:10+00:00 [WARNING] Original briefing.md is absent; reconstructed brief is not authoritative.
+2026-10-28T15:49:10+00:00 [WARNING] No Windows/nanoCAD 26/MultiCAD .NET SDK/dotnet in this sandbox.
+2026-10-28T15:49:10+00:00 [WARNING] Screenshots later in the pipeline are labelled diagnostic mockups, not nanoCAD captures.
+2026-10-28T15:49:10+00:00 [TASK_START] Environment and dependency capture
+2026-10-28T15:49:10+00:00 [TASK_START] Load XML mapping profiles
+2026-10-28T15:49:10+00:00 [TASK_OK] Loaded 2 stamp profiles
+2026-10-28T15:49:10+00:00 [TASK_START] POC scan of synthetic DXF directory
+2026-10-28T15:49:11+00:00 [TASK_OK] Scanned 120 DXF files
+2026-10-28T15:49:11+00:00 [TASK_START] Completeness validation
+2026-10-28T15:49:11+00:00 [TASK_OK] Found 16 completeness issues
+2026-10-28T15:49:11+00:00 [TASK_OK] Build form 1 data
+2026-10-28T15:49:11+00:00 [TASK_OK] Build form 2 data
+2026-10-28T15:49:11+00:00 [TASK_OK] Duplicate detection and numbering policy
+2026-10-28T15:49:11+00:00 [TASK_OK] Reversible stamp patch + rollback
+2026-10-28T15:49:11+00:00 [TASK_OK] Change table template
+2026-10-28T15:49:11+00:00 [TASK_OK] Print order handoff
+2026-10-28T15:49:11+00:00 [TASK_OK] Write API experiment results
+2026-10-28T15:49:11+00:00 [TASK_OK] Write standards status
+2026-10-28T15:49:11+00:00 [SESSION_END] summary=SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING

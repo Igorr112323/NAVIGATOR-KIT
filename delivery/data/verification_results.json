@@ -1,8 +1,8 @@
 {
   "format": "navigator-kit.verification-results/v1",
-  "sessionId": "night-session-20261027",
+  "sessionId": "night-session-20261028",
   "status": "PASS",
-  "requiredChecks": 45,
+  "requiredChecks": 59,
   "optionalChecks": 0,
   "failedRequiredChecks": 0,
   "warnings": [],
@@ -17,7 +17,7 @@
       "name": "json_documents_parse",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "parsed=15; errors=[]"
+      "detail": "parsed=19; errors=[]"
     },
     {
       "name": "xml_documents_parse",
@@ -119,7 +119,7 @@
       "name": "screenshot_count_at_least_5",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "count=12"
+      "detail": "count=15"
     },
     {
       "name": "screenshot_resolution_and_files",
@@ -143,13 +143,13 @@
       "name": "csharp_tree_sitter_syntax",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "files=13; errors=[]"
+      "detail": "files=14; errors=[]"
     },
     {
       "name": "night_log_has_start_end",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "lines=31"
+      "detail": "lines=178"
     },
     {
       "name": "no_obvious_secrets",
@@ -185,13 +185,13 @@
       "name": "zip_integrity",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "bad_member=None; pngs=13; bytes=2739118"
+      "detail": "bad_member=None; pngs=18; bytes=2607050"
     },
     {
       "name": "official_standard_registry_links",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "checkedAtDate=2026-10-27; links=6"
+      "detail": "checkedAtDate=2026-10-28; links=6; officialText=yes"
     },
     {
       "name": "xml_key_attributes_sheet_and_format",
@@ -239,7 +239,7 @@
       "name": "completeness_chart_watermarked",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "generatedBy=matplotlib"
+      "detail": "generatedBy=tools/pipeline.py + matplotlib"
     },
     {
       "name": "screenshots_corner_watermark",
@@ -275,7 +275,91 @@
       "name": "normative_audit_classifies_legacy",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "occurrences={'GOST-2.503-2013': 23, 'GOST-R-21.101-2020': 25, 'GOST-R-21.1101-2013': 5}"
+      "detail": "occurrences={'GOST-2.503-2013': 38, 'GOST-R-21.101-2020': 49, 'GOST-R-21.1101-2013': 5}; norms=5"
+    },
+    {
+      "name": "norms_registry_required_fields",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "entries=5; fields=norm,edition,date_force,source"
+    },
+    {
+      "name": "screenshot_count_session3",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "count=15"
+    },
+    {
+      "name": "screenshots_palette_optimized",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "all images PNG-8/128 colors for <=3 MB bundle"
+    },
+    {
+      "name": "session3_log_start_end",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "logs/night-session.log contains third-session boundaries"
+    },
+    {
+      "name": "official_text_extract_present",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "Appendix B + section 7 + replacement clause recorded"
+    },
+    {
+      "name": "session3_json_documents_parse",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "parsed=18; errors=[]"
+    },
+    {
+      "name": "session3_python_scripts_compile",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "files=4"
+    },
+    {
+      "name": "windows_stand_external_dependency",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "no fake nanoCAD installation or screenshots"
+    },
+    {
+      "name": "sheetset_api_hypotheses_retained",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "getSheetSets=HYPOTHESIS; dstTouched=False"
+    },
+    {
+      "name": "demo_gif_valid_and_under_3mb",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "bytes=177524; frames=6; watermark=True"
+    },
+    {
+      "name": "remaining_hypotheses_retained",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "markers=237; files=55"
+    },
+    {
+      "name": "session3_summary_complete",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "tasks=5; nanoCADExecuted=False"
+    },
+    {
+      "name": "session3_next_steps_refreshed",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "new 5-task P0-P2 plan present"
+    },
+    {
+      "name": "session3_manifest_hashes_match",
+      "ok": true,
+      "severity": "REQUIRED",
+      "detail": "files=35; bad=[]"
     }
   ]
 }

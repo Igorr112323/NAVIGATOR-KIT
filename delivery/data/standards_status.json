@@ -1,7 +1,14 @@
 {
   "format": "navigator-kit.standards-status/v2",
-  "checkedAt": "2026-10-27T03:23:43+00:00",
-  "checkedAtDate": "2026-10-27",
+  "checkedAt": "2026-10-28T15:49:11+00:00",
+  "checkedAtDate": "2026-10-28",
+  "previousCheckedAtDate": "2026-10-27",
+  "officialText": {
+    "officialEditionPdf": "https://pravdaosro.ru/wp-content/uploads/2026/03/GOST-R-21.101-2026.pdf",
+    "appendixB": "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
+    "section7Verified": true,
+    "fullTextRedistributed": false
+  },
   "officialRegistry": {
     "spds2026": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
     "spds2020Replaced": "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
@@ -28,6 +35,7 @@
   "sources": [
     "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
     "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
+    "https://pravdaosro.ru/wp-content/uploads/2026/03/GOST-R-21.101-2026.pdf",
     "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
     "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
     "https://protect.gost.ru/document.aspx?control=7&id=256448",

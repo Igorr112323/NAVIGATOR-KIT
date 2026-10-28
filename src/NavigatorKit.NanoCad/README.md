@@ -20,3 +20,7 @@
 - Нет прямой записи `.dst` — формат не подтверждён как открытый.
 - Нет Tables API — его сигнатуры нужно взять из SDK 26.
 - Нет правки реальных DWG — reversible transaction показана на текстовых DXF-копиях в Python/C# Core.
+
+## Session 3 readiness
+
+`DwgReadiness.cs` is a compile-safe checklist for production DWG. It intentionally does not reference `Database`, `Transaction`, or `BlockReference` until SDK 26 signatures are confirmed with `SDK_PROBE`. See `delivery/session-3/p1_production_dwg.json` and `tools/pipeline.py --backend multicad`.

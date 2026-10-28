@@ -1,0 +1,34 @@
+{
+  "backend": "synthetic-dxf",
+  "status": "VERIFIED_LOCALLY_SYNTHETIC_ONLY",
+  "input": "samples/synthetic_sets",
+  "output": "delivery/data",
+  "syntheticDxfProcessed": 120,
+  "realDwgProcessed": 0,
+  "registryRows": 120,
+  "sha256AllPresent": true,
+  "registryJsonSha256": "fed454639d2f7eeeb74ef1c7ace66d70e4fc03f18e26e9d6afa858fa67048836",
+  "completeness": {
+    "incidents": 16,
+    "duplicateGroups": 4,
+    "counts": {
+      "DOC_FILE_NOT_IN_REGISTRY": 1,
+      "DOC_IN_REGISTRY_NO_FILE": 2,
+      "DUPLICATE_SHEET_NUMBER": 4,
+      "EMPTY_STAMP_FIELD": 2,
+      "FILE_NOT_IN_REGISTRY": 1,
+      "INVALID_FORMAT": 2,
+      "IN_REGISTRY_NO_FILE": 1,
+      "SEQUENCE_GAP": 3
+    },
+    "chart": "delivery/data/completeness_chart.png"
+  },
+  "summaryStatus": "SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING",
+  "nanoCADExecuted": false,
+  "multiCadSdkUsed": false,
+  "rollbackVerified": true,
+  "printOrderConsistent": true,
+  "format": "navigator-kit.session3-pipeline/v1",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-28T15:49:11+00:00"
+}

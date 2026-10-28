@@ -1,6 +1,6 @@
 {
   "format": "navigator-kit.environment/v1",
-  "capturedAt": "2026-10-27T03:23:43+00:00",
+  "capturedAt": "2026-10-28T15:49:10+00:00",
   "os": "Linux-6.1.158+-x86_64-with-glibc2.36",
   "python": "3.11.2",
   "architecture": "x86_64",
@@ -14,7 +14,8 @@
     "npm": "/usr/local/bin/npm",
     "git": "/usr/bin/git",
     "gh": "/usr/bin/gh",
-    "convert": "/usr/bin/convert"
+    "convert": "/usr/bin/convert",
+    "ffmpeg": "MISSING"
   },
   "pythonModulesInCurrentInterpreter": {
     "PIL": true,

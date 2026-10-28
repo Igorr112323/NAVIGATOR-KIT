@@ -1,6 +1,6 @@
 # Подготовка сборки на Windows-VM
 
-Дата: 2026-10-27. Workflow подготовлен, но **не запускался в текущем Linux sandbox**, потому что здесь нет Windows, nanoCAD 26, MultiCAD .NET SDK 26 и лицензии.
+Дата: 2026-10-27; обновлено 2026-10-28. Workflow подготовлен, но **не запускался в текущем Linux sandbox**, потому что здесь нет Windows, nanoCAD 26, MultiCAD .NET SDK 26 и лицензии. Подробная инструкция для человека: [`windows-stand-setup.md`](windows-stand-setup.md) и `tools/windows_stand_check.ps1`.
 
 ## Что уже есть в GitHub Actions
 
@@ -8,7 +8,7 @@
 |---|---|---|
 | `.github/workflows/verify.yml` |регенерация fixtures, Python pipeline, second-session artifacts, 12 PNG, unit tests, manifest/ZIP, verification | запускается на `push`, `pull_request`, `workflow_dispatch`; в PR #1 зелёный |
 | `.github/workflows/dotnet-build.yml` | ручная сборка переносимых .NET 8 Core/CLI на Ubuntu | подготовлен, требует `workflow_dispatch` |
-| `.github/workflows/windows-build.yml` | **новая** ручная сборка C# на `windows-latest`, запуск CLI и условная сборка nanoCAD-адаптера | подготовлен для будущей VM; требует `workflow_dispatch` |
+| `.github/workflows/windows-build.yml` | **новая** ручная сборка C# на `windows-latest`: `windows_stand_check.ps1`, запуск CLI и условная сборка nanoCAD-адаптера | подготовлен для будущей VM; требует `workflow_dispatch` |
 
 ## Как запустить Windows workflow
 

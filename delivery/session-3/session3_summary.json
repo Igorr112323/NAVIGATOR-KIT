@@ -1,0 +1,89 @@
+{
+  "format": "navigator-kit.session3-summary/v1",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-28T15:49:13+00:00",
+  "checkedAtDate": "2026-10-28",
+  "branch": "arena/ec9fddc1-navigator-kit",
+  "baseRemoteCommit": "49e592d",
+  "prUrl": "https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1",
+  "prState": "OPEN",
+  "requestedLabels": [
+    "good first issue",
+    "night-session"
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "priority": "P0",
+      "task": "Нормоконтроль 2026/2023",
+      "status": "NORM_CONTROL_OK_WITH_GEOMETRY_HYPOTHESIS"
+    },
+    {
+      "id": 2,
+      "priority": "P0",
+      "task": "Windows-стенд nanoCAD 26",
+      "status": "EXTERNAL_DEPENDENCY"
+    },
+    {
+      "id": 3,
+      "priority": "P1",
+      "task": "Production DWG pipeline",
+      "status": "SYNTHETIC_VERIFIED;MULTICAD_EXTERNAL_DEPENDENCY"
+    },
+    {
+      "id": 4,
+      "priority": "P1",
+      "task": "SHEETSET/Tables/print order",
+      "status": "LOCAL_HANDOFF_VERIFIED;CAD_API_HYPOTHESIS"
+    },
+    {
+      "id": 5,
+      "priority": "P2",
+      "task": "GIF demo and senior review",
+      "status": "GIF_OK;SENIOR_REVIEW_DONE;HYPOTHESES_REMAIN"
+    }
+  ],
+  "results": {
+    "p0_norm": {
+      "status": "NORM_CONTROL_OK_WITH_GEOMETRY_HYPOTHESIS",
+      "norms": 5,
+      "oldReferenceOccurrences": {
+        "GOST-2.503-2013": 38,
+        "GOST-R-21.101-2020": 49,
+        "GOST-R-21.1101-2013": 5
+      },
+      "geometryHypothesis": true
+    },
+    "p0_windows": {
+      "status": "EXTERNAL_DEPENDENCY",
+      "nkHello": false,
+      "sdkProbe": false,
+      "realScreenshots": false
+    },
+    "p1_dwg": {
+      "status": "SYNTHETIC_VERIFIED;MULTICAD_EXTERNAL_DEPENDENCY",
+      "syntheticDxf": 120,
+      "realDwg": 0,
+      "rollbackVerified": true
+    },
+    "p1_sheetset": {
+      "status": "LOCAL_HANDOFF_VERIFIED;CAD_API_HYPOTHESIS",
+      "printOrderConsistent": true,
+      "getSheetSets": "HYPOTHESIS",
+      "dstTouched": false
+    },
+    "p2": {
+      "status": "GIF_OK;SENIOR_REVIEW_DONE;HYPOTHESES_REMAIN",
+      "gifBytes": 177524,
+      "within3MB": true,
+      "remainingHypothesisMarkers": 237
+    }
+  },
+  "nanoCADExecuted": false,
+  "dotnetBuildExecutedInSandbox": false,
+  "windowsWorkflow": ".github/workflows/windows-build.yml",
+  "gif": "delivery/session-3/demo.gif",
+  "watermark": "nanoCAD НЕ запускался / не скриншот CAD",
+  "expectedScreenshotCount": 15,
+  "honesty": "Legacy standards mentions are audited, not blindly removed; remaining hypotheses are retained."
+}

@@ -1,0 +1,30 @@
+{
+  "format": "navigator-kit.session3-official-sources/v1",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-28T15:49:10+00:00",
+  "checkedAtDate": "2026-10-28",
+  "accessMethod": "web_search + fetch_page; official registry page and official-edition PDF (first 30 pages) were readable",
+  "fullOfficialTextStored": false,
+  "copyrightNote": "Защищённый полный текст не перераспространяется; в репозитории хранится только выписка ключевых положений.",
+  "officialRegistry": {
+    "registry2026": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
+    "registry2020Replaced": "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
+    "officialPdf": "https://pravdaosro.ru/wp-content/uploads/2026/03/GOST-R-21.101-2026.pdf",
+    "appendixB": "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
+    "changes2023": "https://protect.gost.ru/document.aspx?control=7&id=256448",
+    "changes2013Revoked": "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
+    "formats": "https://www.spds.ru/info/standarts/2.301-68.html"
+  },
+  "confirmed": [
+    "ГОСТ Р 21.101-2026 действует с 01.04.2026 и заменяет редакцию 2020",
+    "Приложение Б обязательное; форма 1: Лист/Наименование/Примечание; форма 2: Обозначение/Наименование/Примечание",
+    "Раздел 7: изменения обозначаются порядковыми номерами, требуют разрешения и согласованной правки связанных документов",
+    "Информация об изменениях указывается в таблице изменений основной надписи и/или таблице регистрации изменений формы 10",
+    "ГОСТ Р 2.503-2023 действует; ГОСТ 2.503-2013 утратил силу в РФ"
+  ],
+  "remainingHypotheses": [
+    "Точная геометрия граф форм 1/2 и размещение на листе",
+    "Приоритет раздела 7 над ЕСКД при заполнении таблицы изменений",
+    "Соответствие штатной таблицы SHEETSET форме 1-2026"
+  ]
+}

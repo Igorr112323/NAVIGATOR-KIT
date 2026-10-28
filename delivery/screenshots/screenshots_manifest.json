@@ -1,7 +1,7 @@
 {
-  "format": "navigator-kit.screenshots/v2",
-  "sessionId": "night-session-20261027",
-  "generatedAt": "2026-10-27T03:23:47+00:00",
+  "format": "navigator-kit.screenshots/v3",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-28T15:49:17+00:00",
   "nanoCADExecuted": false,
   "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
   "cornerWatermark": true,
@@ -10,7 +10,8 @@
     "width": 1600,
     "height": 1200
   },
-  "count": 12,
+  "paletteColors": 128,
+  "count": 15,
   "images": [
     {
       "file": "delivery/screenshots/screenshot_01_environment.png",
@@ -22,7 +23,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "aa999fbfdcd2f21df0b161c25cf0932315c68976f7ca812e847d398632fc6eaa"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "24e491efd7e03524dccac9a95f5f995cd9c918664e9d22523330b14859050ff6"
     },
     {
       "file": "delivery/screenshots/screenshot_02_poc_scan.png",
@@ -34,7 +38,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "f020e3df51ff3bddd679fd90665f100ed4ef3bc881f06cb69f1daae3d14953a0"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "c3de09f899ee43b4904edf09acf671cee782face08c2777ded4cceaaead2684c"
     },
     {
       "file": "delivery/screenshots/screenshot_03_api_attempt.png",
@@ -46,7 +53,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "8a09dbf2020ab0c4173419a855d28b1654907f872415dca16faa8a29e66fce48"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "68562104bf3f4d7ec9a9b034b1ece083159db424332ba904fc02022980444dba"
     },
     {
       "file": "delivery/screenshots/screenshot_04_xml_profile.png",
@@ -58,7 +68,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "80b00f57ffa1b329185357deef95d4650ded825863158ef4ef4458dd1875cbd0"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "7b2819d10698879ed5feb1c161b4b272562093682411260a157aecd3e46d1046"
     },
     {
       "file": "delivery/screenshots/screenshot_05_form1.png",
@@ -70,7 +83,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "f036416a243c292d8a4fcb4a936d603ce94a8dc3b4fa6ee2ab53886edd37762b"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "a6f6b5db731e7a6d794a3ce4bcfc90f29eb6959553a146df30e2b2af1838c8ca"
     },
     {
       "file": "delivery/screenshots/screenshot_06_form2.png",
@@ -82,7 +98,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "2ec5fa12c8cea7abc39c733ca20bd3e4f469f3e937200effeb596e25b04c583e"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "63da1832f6a1b46bb60f08f551dd89d5d440baf861a9496ca884c541239cd116"
     },
     {
       "file": "delivery/screenshots/screenshot_07_completeness.png",
@@ -94,7 +113,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "c56acdc8e5452eb9be6f7e98c1a523cb9e83079e298659c63879838523c72789"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "29b46bff3c06b82e25df48e219cbbeb5e8563c810347400dabaf116788196ee6"
     },
     {
       "file": "delivery/screenshots/screenshot_08_numbering.png",
@@ -106,7 +128,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "222ba247b51cf164dcd072fff63ce17d9a9573543d41a9ee314ea85c488eaf05"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "b8088abcba3f12f0f684f8d741fdd39c4901475e73935b570a0e0727eadc9ac4"
     },
     {
       "file": "delivery/screenshots/screenshot_09_stamp_rollback.png",
@@ -118,7 +143,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "8cf7f53b7e766ac5afca0265a345fd55ac7b86a18e42aafdd04291bc48f12ea9"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "44a19eb0366141cbb9acb7e20fda9a06a2c6b162366200d5deea7b9f793c98c4"
     },
     {
       "file": "delivery/screenshots/screenshot_10_change_table.png",
@@ -130,7 +158,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "46ae5344f65e72111d11ac18859a4134520eeb3768e22948d9a574e4e82a2fe1"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "a69e86eafcb4a1bfc600ccc35b3132d8118a44c530cb4164a5f42e64a2828904"
     },
     {
       "file": "delivery/screenshots/screenshot_11_print_order.png",
@@ -142,7 +173,10 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "9db295e01e122120f9557e96605134d3b720362eb5551bac04dd8d3ff5df519a"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "27c27900f7ccd549b53102b53fd9a5492dbf661bac3c6e231e4f2b4c45db8dc0"
     },
     {
       "file": "delivery/screenshots/screenshot_12_architecture.png",
@@ -154,7 +188,55 @@
       "watermark": true,
       "cornerWatermark": true,
       "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
-      "sha256": "3d014fc66a0537bc7304c8b720780ccf713e982e85504f9ef3e9201c50a84a6b"
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "6c1c8dac456174dc6f7740a3eaf8ac2e51523541f461859cde2df577d614d831"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_13_session3_pipeline.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Сессия 3 P0-P2",
+      "source": "session3_summary.json",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "e6c18cc53fe9f13a3b0a2caddce4e7550c734ab4bc62ad74b2f7aa33f56e0b70"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_14_windows_dependency.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "Windows-стенд",
+      "source": "p0_windows_stand.json",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "565d9f181081949e1ea670fe0c03aae5200a5284484c87a1fba90437ee706728"
+    },
+    {
+      "file": "delivery/screenshots/screenshot_15_demo_storyboard.png",
+      "width": 1600,
+      "height": 1200,
+      "title": "GIF-демо",
+      "source": "demo_metadata.json",
+      "nanoCADScreenshot": false,
+      "watermark": true,
+      "cornerWatermark": true,
+      "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
+      "colorMode": "P",
+      "paletteColors": 128,
+      "compression": "PNG-8 palette, optimize=True",
+      "sha256": "968cfee9015414cc37fdfd1ba6eb789b2848f3f2ddf5f49152dc7c85412205ff"
     }
   ]
 }

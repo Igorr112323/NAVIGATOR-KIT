@@ -1,0 +1,121 @@
+﻿sequence;mark;sheet_no;sheet_name;file;layout;format;copies;source_hash
+1;АР;1;Общие данные по рабочим чертежам;samples/synthetic_sets/АР/АР_001.dxf;Лист 1;A1;1;9f59a1fb24d97efdccfbece1bd46d72ea251b07c9d7b135ae097142bfc813b38
+2;АР;2;План на отм. 0,000;samples/synthetic_sets/АР/АР_002.dxf;Лист 2;A2;1;179863287f96d25d1ab4e8181813a0e51ea76de7e7f78c683b11883d3fac0757
+3;АР;3;План на отм. 3,300;samples/synthetic_sets/АР/АР_003.dxf;Лист 3;A3;1;0ec97ad7c4d2b752db3e4d29650ad97b5f694d8193e4ae21eccac845a457efb6
+4;АР;4;План кровли;samples/synthetic_sets/АР/АР_004.dxf;Лист 4;A4;1;15d89795e4a67a02d2c5d3108ddc6672fece5109a9b0f3671d7bb711f02681b0
+5;АР;5;Фасад 1-4;samples/synthetic_sets/АР/АР_005.dxf;Лист 5;A0;1;4dc03abe4a209fb8141ef6640203323e5f19b113298c0486d378a941024bd51a
+6;АР;6;Фасад А-Д;samples/synthetic_sets/АР/АР_006.dxf;Лист 6;A1;1;0ee780cf9992d5a9824fcc59dce8de47c61f5a9b72d6c48c59a185f40b93ec5a
+7;АР;7;Разрез 1-1;samples/synthetic_sets/АР/АР_007.dxf;Лист 7;A2;1;ba735f7b5e89e4de040cd840cac56c700f3b7f86414221bd46cf0265fba76115
+8;АР;8;Разрез 2-2;samples/synthetic_sets/АР/АР_008.dxf;Лист 8;A3;1;4e196e61a62eb817eadf0a6aa5d23e6a7c9b774648db863733d783ee60c651d5
+9;АР;9;План полов;samples/synthetic_sets/АР/АР_009.dxf;Лист 9;A4;1;92ab09b3b4ccf47edca4577252e6e5497e959ef00321967fb9e191728a2cca2b
+10;АР;10;Ведомость отделки;samples/synthetic_sets/АР/АР_010.dxf;Лист 10;A0;1;440f0d01572c5edf23561762f9c4813bb186554e9cb047c311b54362861700ee
+11;АР;11;Узлы наружных стен;samples/synthetic_sets/АР/АР_011.dxf;Лист 11;A1;1;a58d802e1457f915201e06add0e16d72f6335b74e1cece1b4daedaeaba6970e9
+12;АР;12;Спецификация окон;samples/synthetic_sets/АР/АР_012.dxf;Лист 12;A2;1;3c6bff6d77d96f7025b1b6a20269766f9302174c84426e8797173ad915bdecf5
+13;АР;13;Общие данные по рабочим чертежам;samples/synthetic_sets/АР/АР_013.dxf;Лист 13;A3;1;c007d8abcfc056a71f3c221477a961a288d8b49c9bdf5e62f983dcd602a7b690
+14;АР;14;План на отм. 0,000;samples/synthetic_sets/АР/АР_014.dxf;Лист 14;A4;1;526d8ec274e5def2f5d49a486ad07d814b1f12407187a8a139df19a8972c92a9
+15;АР;15;План на отм. 3,300;samples/synthetic_sets/АР/АР_015.dxf;Лист 15;A0;1;19caf3ae5146934b77725fb25b84239964cd20cf799252cacc62994058308e0b
+16;АР;15;План кровли;samples/synthetic_sets/АР/АР_016.dxf;Лист 16;A1;1;61fad29dbd48f05dab9c366ec6d8b4f339052b4b408a0468a6cd9860d19cb0e5
+17;АР;17;Фасад 1-4;samples/synthetic_sets/АР/АР_017.dxf;Лист 17;A2;1;c231dcbf89498f4ad602630d37728f6b7f60bb5b05f90b204b400c50314a33fc
+18;АР;18;Фасад А-Д;samples/synthetic_sets/АР/АР_018.dxf;Лист 18;A3;1;d896e2d3a214900d764cbbc2a049ee8550d270d0dbabfc8fc624479566d16da7
+19;АР;19;Разрез 1-1;samples/synthetic_sets/АР/АР_019.dxf;Лист 19;A4;1;849920c74803dd87d73a79775956a2002cc48145d0d1fa730eb94f750cd0e90e
+20;АР;20;Разрез 2-2;samples/synthetic_sets/АР/АР_020.dxf;Лист 20;A0;1;71638562b28c883839ea1d139e9b0c896a9c065cae0e33cb95cec5a572056d8b
+21;АР;21;План полов;samples/synthetic_sets/АР/АР_021.dxf;Лист 21;A1;1;66ab0eef53bdf4065798b54544dc5e901a2d841d4507caf6890e7da8de94a8b4
+22;АР;22;Ведомость отделки;samples/synthetic_sets/АР/АР_022.dxf;Лист 22;A2;1;df23d6cf77c6eac3de64b0cb45888b173bd0ef6770ec4db4267bc9c5f055d32b
+23;АР;23;Узлы наружных стен;samples/synthetic_sets/АР/АР_023.dxf;Лист 23;A3;1;08fe8cf8c0d4b083140aa51f0d30c7681ee5b8938f9806009ceb26450478f97a
+24;АР;24;Спецификация окон;samples/synthetic_sets/АР/АР_024.dxf;Лист 24;A4;1;48c968e701bfda3b93b6e730733513c67679abefd3a6ca805770c278d3d94a22
+25;АР;25;Общие данные по рабочим чертежам;samples/synthetic_sets/АР/АР_025.dxf;Лист 25;A0;1;156bdfe70dee89a9d52959bce59afeab0b507de8eeecad0ab3f4ca9967b857bd
+26;АР;26;План на отм. 0,000;samples/synthetic_sets/АР/АР_026.dxf;Лист 26;A1;1;2bfc9d4d9cc0889221b243ed046ac4cdf76aefd74adde2b28a7215894657eaae
+27;АР;27;План на отм. 3,300;samples/synthetic_sets/АР/АР_027.dxf;Лист 27;A2;1;8559620877086f2708e164aa41ab0ee5c25f555454f69356f01be7bdb9478b27
+28;АР;27;План кровли;samples/synthetic_sets/АР/АР_028.dxf;Лист 28;A3;1;5e522fc5a6addea2910451d78c6a798e1a0e55078f3edc972d950460464d1399
+29;АР;29;Фасад 1-4;samples/synthetic_sets/АР/АР_029.dxf;Лист 29;A4;1;9d3be9cafbda31b0556146b6226c3b7348e4746f60f66d1d9173720301e28eec
+30;АР;30;Фасад А-Д;samples/synthetic_sets/АР/АР_030.dxf;Лист 30;A0;1;d7605c9edbbc92bddbbaaf8fa680e10ec48fb4e4b38f35c1497cdb42c1e2524c
+31;АР;31;Разрез 1-1;samples/synthetic_sets/АР/АР_031.dxf;Лист 31;A1;1;8a0dc11d4346988504ae4553c610f70d92ae181bfd642c83fc0d1df2eeffbdb9
+32;АР;32;Разрез 2-2;samples/synthetic_sets/АР/АР_032.dxf;Лист 32;A2;1;01d63d0cf7ea2141f293f4d6d47f7cd0023ab74b6e97979b0d46cf4bad5ddef9
+33;АР;33;План полов;samples/synthetic_sets/АР/АР_033.dxf;Лист 33;A3;1;d69525dbd45068410c26f5a022ee4231a66aa48a0b61f7b4f3abd1b0861019ca
+34;АР;34;Ведомость отделки;samples/synthetic_sets/АР/АР_034.dxf;Лист 34;A4;1;a5853c29799cc2dce387dee93eca06c618a8f76e81363c573435973c3909f8a6
+35;АР;35;Узлы наружных стен;samples/synthetic_sets/АР/АР_035.dxf;Лист 35;A2x3;1;20771efabd60af3a0812135250c0f0f63f4e0dc14c78ac3d9ad3006bd8d0c15a
+36;АР;36;Спецификация окон;samples/synthetic_sets/АР/АР_036.dxf;Лист 36;A1;1;3db7ef7246806172fad3eeff76a644dc0f1f26b386ab8913962fdba42400bd33
+37;АР;37;Общие данные по рабочим чертежам;samples/synthetic_sets/АР/АР_037.dxf;Лист 37;A2;1;dc6e6ff900d6ac487810b797b866660186ead5a2c0919971bd8a2698293f9513
+38;АР;38;План на отм. 0,000;samples/synthetic_sets/АР/АР_038.dxf;Лист 38;A3;1;dc895d457e39976eb465030f927c7e06f7443c5c60c445187b179c53e19620e7
+39;АР;39;План на отм. 3,300;samples/synthetic_sets/АР/АР_039.dxf;Лист 39;A4;1;182db2a505296cb059856e80384afa66256e846e64ce257a8ff856d3c6b206bc
+40;АР;40;План кровли;samples/synthetic_sets/АР/АР_040.dxf;Лист 40;A0;1;ca128d10c06c3987d1a8be13148be1ace3a7a119dce89a95a6bae159de6be04b
+41;КР;1;Общие данные по рабочим чертежам;samples/synthetic_sets/КР/КР_001.dxf;Лист 1;A1;1;ab276948f688345ce8b32647f75506972a7618e61583065cf932e69800984a8b
+42;КР;2;Схема расположения свай;samples/synthetic_sets/КР/КР_002.dxf;Лист 2;A2;1;fafa30de3ba395dd65a6c7948fc26b7d75715030443d8beea23dbce026c2e5b3
+43;КР;3;План фундаментов;samples/synthetic_sets/КР/КР_003.dxf;Лист 3;A3;1;4d65bc25f7c31e4fd27b16434e1c2b7030424b99901f22c199c1eaa0da8a8ad7
+44;КР;4;Сечение 1-1 фундамента;samples/synthetic_sets/КР/КР_004.dxf;Лист 4;A4;1;7b083af8c7b12a4dabfb56740e4c0d4890a6cdc1417a1aaccbd39f1360945605
+45;КР;5;План колонн;samples/synthetic_sets/КР/КР_005.dxf;Лист 5;A0;1;ef3b8de0104e945f683a4caa497efcb3fa0c4856f93f59160fb166c1f3d55595
+46;КР;6;План перекрытия;samples/synthetic_sets/КР/КР_006.dxf;Лист 6;A1;1;c3a28a81764c6fdb7073a916c73c799cb9e3a0469f5553a8795ae02b65b3aeb3
+47;КР;7;Схема армирования плиты;samples/synthetic_sets/КР/КР_007.dxf;Лист 7;A2;1;52066f5418ecdca0333f9021050773c370e85a2d32c49d135cd3fa655372008a
+48;КР;7;Схема балок покрытия;samples/synthetic_sets/КР/КР_008.dxf;Лист 8;A3;1;d527068c7481a133769a2ae56650415ce8f4055161da5d60fb58188c290e690d
+49;КР;9;Узел опирания;samples/synthetic_sets/КР/КР_009.dxf;Лист 9;A4;1;0d06a244ca9a0489184b18272272c2e8a4098642a97c8e60cb865dae4aa8142f
+50;КР;10;Спецификация элементов;samples/synthetic_sets/КР/КР_010.dxf;Лист 10;A0;1;5d03be2273d6ef0dea975965dd52654bdf49e4eca56ca541d75e732b6b15296e
+51;КР;11;Разрез по лестнице;samples/synthetic_sets/КР/КР_011.dxf;Лист 11;A1;1;27548389fa8b76b43e86d1a6aeef6056c0981eb1dc6fcc5d3ca90a04ca7063b6
+52;КР;12;;samples/synthetic_sets/КР/КР_012.dxf;Лист 12;A2;1;e4b018340ed40bfebf741408554070492055ab32223b2b127161c19a33cec58e
+53;КР;13;Общие данные по рабочим чертежам;samples/synthetic_sets/КР/КР_013.dxf;Лист 13;A3;1;0b6cb22c721a0ab51dc54cfe7d5724773652acfb648e2cd51f90e56d20b409c8
+54;КР;14;Схема расположения свай;samples/synthetic_sets/КР/КР_014.dxf;Лист 14;A4;1;372146c05210d4965ca22298e2e57582afda3c488253fbb796af9bf5c268f116
+55;КР;15;План фундаментов;samples/synthetic_sets/КР/КР_015.dxf;Лист 15;A0;1;c38692c7f9cd68bc5bb33462636de054c9e694d2f5b843bab76b58fd0f322814
+56;КР;16;Сечение 1-1 фундамента;samples/synthetic_sets/КР/КР_016.dxf;Лист 16;A1;1;825da14f3bf587596030eb7c13880e6e7358bcc32a329a91b48a45cffec4973b
+57;КР;17;План колонн;samples/synthetic_sets/КР/КР_017.dxf;Лист 17;A2;1;2a3e32097e45cce543d8c59125520feffaacf8cab2254ac1b34ec2b10118c677
+58;КР;18;План перекрытия;samples/synthetic_sets/КР/КР_018.dxf;Лист 18;A3;1;641cf964d7228b2b903645bfd736136714067a2a625bb547dad4b4c21285a0fc
+59;КР;19;Схема армирования плиты;samples/synthetic_sets/КР/КР_019.dxf;Лист 19;A4;1;819f2e1532afb92402f9c9d20a24a83c72f8b666129fff3cb4d612b4c9af15d2
+60;КР;20;Схема балок покрытия;samples/synthetic_sets/КР/КР_020.dxf;Лист 20;B4;1;dbd2c1f625cfb8853eed49577fc9ced5e656ad011efb8e05fc7b1cddb20fab56
+61;КР;21;Узел опирания;samples/synthetic_sets/КР/КР_021.dxf;Лист 21;A1;1;2cbdf0cdb28e4b0b602a44dd1fa3daac330bb1cbe4ee62b8a3ab7333fc03aad8
+62;КР;22;Спецификация элементов;samples/synthetic_sets/КР/КР_022.dxf;Лист 22;A2;1;10e1b13a20e6000d0314762047562b7d0b4cf83bd09861ae951800065deb45a4
+63;КР;23;Разрез по лестнице;samples/synthetic_sets/КР/КР_023.dxf;Лист 23;A3;1;32e3e6be42b804ea82c460528a79216c4d826850ac083a8ec0d6809c5f88179a
+64;КР;24;Ведомость расхода стали;samples/synthetic_sets/КР/КР_024.dxf;Лист 24;A4;1;9d6df15e4b847fa011a606dbe352c012186bb4a0893f6c005d6d4dafec36998a
+65;КР;25;Общие данные по рабочим чертежам;samples/synthetic_sets/КР/КР_025.dxf;Лист 25;A0;1;974bc19c2f553d089546ff4bd78be66ab33fc3cca5c55ff27d7588bf258f34bc
+66;КР;26;Схема расположения свай;samples/synthetic_sets/КР/КР_026.dxf;Лист 26;A1;1;de4cf24eacab8523e84c0a580996121fce3703946883ea8b1c5b57b8f41706f6
+67;КР;27;План фундаментов;samples/synthetic_sets/КР/КР_027.dxf;Лист 27;A2;1;a351d56e9dc5fb7ae3e9b980ec6ccd6bc44c8f3dd6d34d4c20f52860f4492441
+68;КР;28;Сечение 1-1 фундамента;samples/synthetic_sets/КР/КР_028.dxf;Лист 28;A3;1;ab112050f76b170ec214f12969ee814bf30f697f7d756246ddab57589fb420c8
+69;КР;29;План колонн;samples/synthetic_sets/КР/КР_029.dxf;Лист 29;A4;1;1eef63eef0e165a8a7a7e9e07e72a7d173197c1f9767bc5a21a0c5cee28b03b1
+70;КР;30;План перекрытия;samples/synthetic_sets/КР/КР_030.dxf;Лист 30;A0;1;802e716c2ab665a7761f6a646c9838da54f67b7b58e98fa37f359f60c1b6c910
+71;КР;31;Схема армирования плиты;samples/synthetic_sets/КР/КР_031.dxf;Лист 31;A1;1;2c0cc9d3744f81e0f77bfa28bdfc9c78449f3298638bc051970c535c19029b2b
+72;КР;32;Схема балок покрытия;samples/synthetic_sets/КР/КР_032.dxf;Лист 32;A2;1;b9eaffc00c18ebcad84be3b6911186af121ec7edbc12589b0a9ca1a3d5b49104
+73;КР;33;Узел опирания;samples/synthetic_sets/КР/КР_033.dxf;Лист 33;A3;1;373a72a1dc4e1e8d8b35d278bb4f0ee019a9277717503251b3db1051c8ed820f
+74;КР;34;Спецификация элементов;samples/synthetic_sets/КР/КР_034.dxf;Лист 34;A4;1;8bdab3f4f1a1925223a01a6472e2ed416050e2acb22165e4d0f4ed1b4675c3c6
+75;КР;35;Разрез по лестнице;samples/synthetic_sets/КР/КР_035.dxf;Лист 35;A0;1;1711645d05c042b1c9b4ae52501782124eaaa644eed49761ccc7ae6a5c4b5e47
+76;КР;36;Ведомость расхода стали;samples/synthetic_sets/КР/КР_036.dxf;Лист 36;A1;1;5135ed026db5ef64a489b0468057759c7a10c3585a540d41055151db6d204c24
+77;КР;37;Общие данные по рабочим чертежам;samples/synthetic_sets/КР/КР_037.dxf;Лист 37;A2;1;fd9804dd643d0a15fbd3e2434a969e4b2a1915beee39ad4092546734385f0bc1
+78;КР;38;Схема расположения свай;samples/synthetic_sets/КР/КР_038.dxf;Лист 38;A3;1;1d6a3833c5497b88f34ec7f58e7697a21c652be386c239833d4dcd97c61a738c
+79;КР;39;План фундаментов;samples/synthetic_sets/КР/КР_039.dxf;Лист 39;A4;1;d730a6f214ee9defd9b48f0f3e77cd1fc7213589ae9d730e1900fad33c1c11b2
+80;КР;40;Сечение 1-1 фундамента;samples/synthetic_sets/КР/КР_040.dxf;Лист 40;A0;1;e1c547e1c5386d9ad251fda76ba483461d5747027a2bed36e5549a77dcb59325
+81;ОВ;1;Общие данные по рабочим чертежам;samples/synthetic_sets/ОВ/ОВ_001.dxf;Лист 1;A1;1;39ed2d0185ea8ba867b5057878a0775002c052b50a8ba82fd26cd78b39ca1dac
+82;ОВ;2;План отопления подвала;samples/synthetic_sets/ОВ/ОВ_002.dxf;Лист 2;A2;1;0ab942231f2bc83710ee3f17b2541b2c39d87aac3132ea5393a0ef4613bf728a
+83;ОВ;3;План отопления 1 этажа;samples/synthetic_sets/ОВ/ОВ_003.dxf;Лист 3;A3;1;91b3d33396cf1b66f3375cc8c580a9f5700ce499c33901787d4258867dafa2b0
+84;ОВ;4;План вентиляции;samples/synthetic_sets/ОВ/ОВ_004.dxf;Лист 4;A4;1;b95f26ceeb5a5211935f50ff5687675220c5fc8eceab77cbd174dc27f22220a0
+85;ОВ;5;Схема воздуховодов;samples/synthetic_sets/ОВ/ОВ_005.dxf;Лист 5;A0;1;a24f295a11b1fcf2c0a05f926fcf44fb9966cd6cbe4967389f63fc46021c4fa7
+86;ОВ;6;План дымоудаления;samples/synthetic_sets/ОВ/ОВ_006.dxf;Лист 6;A1;1;6f1509ace24c63c039e6e6d3be03c3ad7d28347e6fb5516f9b108be04f63efd1
+87;ОВ;7;Разрез венткамеры;samples/synthetic_sets/ОВ/ОВ_007.dxf;Лист 7;A2;1;ffaa9e60c51e8ca581b3dba0dc3c8e69c0d1eb33934a6865a9a3246fdfcf9c9d
+88;ОВ;8;Схема трубопроводов;samples/synthetic_sets/ОВ/ОВ_008.dxf;Лист 8;A3;1;bd77fa6e1b748c587af3da4f8a11d35dd468b63abc88189b27ea7c1f9b8e78c1
+89;ОВ;9;Узел присоединения;samples/synthetic_sets/ОВ/ОВ_009.dxf;Лист 9;A4;1;33700d6985409e95371dee45513f2d8b29c2d3559c2d125fc1ba9eb3dff08e21
+90;ОВ;10;Спецификация оборудования;samples/synthetic_sets/ОВ/ОВ_010.dxf;Лист 10;A0;1;ce5881c5e29b051c45d5ebfe7f6315a90c3f862d13926195fe0eae77d29eefd0
+91;ОВ;11;Аксонометрическая схема;samples/synthetic_sets/ОВ/ОВ_011.dxf;Лист 11;A1;1;d2a209838a06703499a19f133b9b8bf97acb002f2735d08e0898c9af1e4bb148
+92;ОВ;12;Ведомость воздуховодов;samples/synthetic_sets/ОВ/ОВ_012.dxf;Лист 12;A2;1;cd68bdd017a16adbdf350de501e7daafa47265e88d89dddff6a78231823d6537
+93;ОВ;13;Общие данные по рабочим чертежам;samples/synthetic_sets/ОВ/ОВ_013.dxf;Лист 13;A3;1;ee3a3c583726f229411aeb3c7c870921a7bfd25159821c48c123f71b287c1fa6
+94;ОВ;14;План отопления подвала;samples/synthetic_sets/ОВ/ОВ_014.dxf;Лист 14;A4;1;c7edc41313e63eaecbab2935220fa03a265d1a4df9c72e4e4351e7ad30a788de
+95;ОВ;15;План отопления 1 этажа;samples/synthetic_sets/ОВ/ОВ_015.dxf;Лист 15;A0;1;5d30b072b50d6c18dbf1f18a617a9a68f78e408799bc21ed9ac54c3320fa1906
+96;ОВ;16;План вентиляции;samples/synthetic_sets/ОВ/ОВ_016.dxf;Лист 16;A1;1;1379da4053b164e6aaa70ee2039daa60cec8735a06f6f64fce5e8eb20822fd9b
+97;ОВ;17;Схема воздуховодов;samples/synthetic_sets/ОВ/ОВ_017.dxf;Лист 17;A2;1;4cff1412bffee3e42fa691e83d89ad6897dc23cb4bac1dea82d617b73ebbaa11
+98;ОВ;18;План дымоудаления;samples/synthetic_sets/ОВ/ОВ_018.dxf;Лист 18;A6;1;978fb2767324e18ac20eb1593df9e0558d7bb8f1d67c8bb516a78d5a7ae8e193
+99;ОВ;19;Разрез венткамеры;samples/synthetic_sets/ОВ/ОВ_019.dxf;Лист 19;A4;1;8dd16864cd20cb5a161f076eeb5e82f4c0f28eec7ea4396cf1f16003c9c1d6d7
+100;ОВ;20;Схема трубопроводов;samples/synthetic_sets/ОВ/ОВ_020.dxf;Лист 20;A0;1;ab504812e0688bec367a0f46bf708b6358c2e8fdbbd6ba713956a7aec2ca46eb
+101;ОВ;21;Узел присоединения;samples/synthetic_sets/ОВ/ОВ_021.dxf;Лист 21;A1;1;b137d3c1307c0d5786483c66bb5128f714f6b4f841daf0e919839c8a843c7be5
+102;ОВ;21;Спецификация оборудования;samples/synthetic_sets/ОВ/ОВ_022.dxf;Лист 22;A2;1;a156c36328fb56a1f5843b077980bf955ad01a552710dd676f8a4df55a94eec4
+103;ОВ;23;Аксонометрическая схема;samples/synthetic_sets/ОВ/ОВ_023.dxf;Лист 23;A3;1;f77bc1cd9f69c0451e8743788442d82115026543f28c905b576844b92946e506
+104;ОВ;24;Ведомость воздуховодов;samples/synthetic_sets/ОВ/ОВ_024.dxf;Лист 24;A4;1;54548e2ba649318edc397d53530326480b341607e398c2384a69e3506103c91d
+105;ОВ;25;Общие данные по рабочим чертежам;samples/synthetic_sets/ОВ/ОВ_025.dxf;Лист 25;A0;1;39c1847d13495a4f7427583a0a1160c82b1b3671ff072f22e8a4f59d1cfe537e
+106;ОВ;26;План отопления подвала;samples/synthetic_sets/ОВ/ОВ_026.dxf;Лист 26;A1;1;3c1b676a5fce8c91ce00d0e78dc7b8f7ab825781eb0c84c0ce0ddf36f4cb5888
+107;ОВ;27;План отопления 1 этажа;samples/synthetic_sets/ОВ/ОВ_027.dxf;Лист 27;A2;1;b10e8852712b318bac76b54280d01d969496898a67fa3b59472db5ed046b110a
+108;ОВ;28;План вентиляции;samples/synthetic_sets/ОВ/ОВ_028.dxf;Лист 28;A3;1;9ad8b0cef66b4f0f7d07b4626135721bebdddb54a42db3e78ecbc65856e2d179
+109;ОВ;29;Схема воздуховодов;samples/synthetic_sets/ОВ/ОВ_029.dxf;Лист 29;A4;1;eb220f2d0f39c41969782fe899093dc36b01fdba6f54f6af98d91c8ed563c445
+110;ОВ;30;План дымоудаления;samples/synthetic_sets/ОВ/ОВ_030.dxf;Лист 30;A0;1;47c9a0a2c88ca90bd700f59d5028909835ce4807d37db2d5fa97885c4731eb91
+111;ОВ;31;Разрез венткамеры;samples/synthetic_sets/ОВ/ОВ_031.dxf;Лист 31;A1;1;9ce3b1b3824f032a1d3600e274fd2db3a3913a57468a65d4c62159f82899cfe1
+112;ОВ;32;Схема трубопроводов;samples/synthetic_sets/ОВ/ОВ_032.dxf;Лист 32;A2;1;39eabdd904df90e28370eae5b14c4b3764a450cd82ad0a3fd3afc4c091020eff
+113;ОВ;34;Спецификация оборудования;samples/synthetic_sets/ОВ/ОВ_034.dxf;Лист 34;A4;1;f5510c5dd0309a9f6c8d0673d81dd7a9803b7905e2210b7c7ad2de671c4793af
+114;ОВ;35;Аксонометрическая схема;samples/synthetic_sets/ОВ/ОВ_035.dxf;Лист 35;A0;1;fcddaaa8537b3b4b8f138d7ef3a8b8fb98986d9a29afe2d17273b8b93d714a85
+115;ОВ;36;Ведомость воздуховодов;samples/synthetic_sets/ОВ/ОВ_036.dxf;Лист 36;A1;1;b006f07a7c6e631c9bd4173694608f8d7955a508310db26f03da8302cda2156e
+116;ОВ;37;Общие данные по рабочим чертежам;samples/synthetic_sets/ОВ/ОВ_037.dxf;Лист 37;A2;1;04b82f80752368186b7e050b613d71329b05ad02c382a727ffb3d9f9213d18bf
+117;ОВ;38;План отопления подвала;samples/synthetic_sets/ОВ/ОВ_038.dxf;Лист 38;A3;1;ae3aed90006f258683adc1b2cf701d49ed43f9ddf63d91d1416090690018baa1
+118;ОВ;39;План отопления 1 этажа;samples/synthetic_sets/ОВ/ОВ_039.dxf;Лист 39;A4;1;c7fd71c98fc8dc1bd70ca12b8460c03fb81a91b3e2c78ba91837496e1287ddea
+119;ОВ;40;План вентиляции;samples/synthetic_sets/ОВ/ОВ_040.dxf;Лист 40;A0;1;756f0f186df6057ccd21f2da475a4408421f0ac608f69ad07e13535b5ce0293a
+120;ОВ;?;Узел присоединения;samples/synthetic_sets/ОВ/ОВ_033.dxf;Лист 33;A3;1;828c40adda56170856e78dd16579134b675b1603a1fef4a1b3de90674bab55cf

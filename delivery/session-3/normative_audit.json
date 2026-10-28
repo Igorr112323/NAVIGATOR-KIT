@@ -1,0 +1,124 @@
+{
+  "format": "navigator-kit.normative-audit/v2",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-28T15:49:10+00:00",
+  "checkedAtDate": "2026-10-28",
+  "officialRegistry": {
+    "registry2026": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
+    "registry2020Replaced": "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
+    "officialPdf": "https://pravdaosro.ru/wp-content/uploads/2026/03/GOST-R-21.101-2026.pdf",
+    "appendixB": "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
+    "changes2023": "https://protect.gost.ru/document.aspx?control=7&id=256448",
+    "changes2013Revoked": "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
+    "formats": "https://www.spds.ru/info/standarts/2.301-68.html"
+  },
+  "activeProfiles": {
+    "spds": "GOST-R-21.101-2026-Appendix-B",
+    "changesEskd": "GOST-R-2.503-2023-section-5.12",
+    "changesSpds": "GOST-R-21.101-2026-section-7",
+    "formats": "GOST-2.301-68-Formats"
+  },
+  "oldReferenceOccurrences": {
+    "GOST-2.503-2013": 38,
+    "GOST-R-21.101-2020": 49,
+    "GOST-R-21.1101-2013": 5
+  },
+  "classification": {
+    "historicalDocumentation": [
+      "README.md",
+      "delivery/CHAT_REPLY.md",
+      "delivery/PR_BODY.md",
+      "delivery/README_night-session.md",
+      "delivery/data/change_table_notes.md",
+      "delivery/data/norms_registry.json",
+      "delivery/data/standards_status.json",
+      "delivery/data/summary.json",
+      "delivery/session-3/README.md",
+      "delivery/session-3/normative_audit.json",
+      "delivery/session-3/norms_registry.json",
+      "delivery/session-3/official_text_extract.md",
+      "delivery/session-3/p0_norm_control.json",
+      "delivery/session-3/p0_norm_sources.json",
+      "delivery/xml/stamp_mapping.xml",
+      "docs/api-experiment.md",
+      "docs/nanocad-integration.md",
+      "docs/normative-audit.md",
+      "docs/official-text-extract.md",
+      "docs/sources.md",
+      "docs/standards-warning.md",
+      "night-log.md",
+      "tools/finalize_delivery.py",
+      "tools/navigator_kit.py",
+      "tools/render_screenshots.py",
+      "tools/session3_runner.py"
+    ],
+    "legacyNanoCadHelp": [
+      "delivery/session-3/p0_norm_sources.json",
+      "docs/api-experiment.md",
+      "docs/sources.md"
+    ],
+    "executableProfile": [
+      "delivery/data/change_table_notes.md",
+      "delivery/data/standards_status.json",
+      "delivery/xml/stamp_mapping.xml",
+      "tools/navigator_kit.py"
+    ]
+  },
+  "hypotheses": [
+    "Точная геометрия граф форм 1/2 в официальном издании",
+    "Приоритет раздела 7 ГОСТ Р 21.101-2026 над ЕСКД для СПДС",
+    "Соответствие штатной таблицы SHEETSET редакции 2026 года",
+    "Tables API и .dst в nanoCAD 26"
+  ],
+  "conclusion": "Registry, Appendix B columns, and section 7 principles verified. Exact form geometry and SHEETSET compliance remain ГИПОТЕЗА/ПРОВЕРИТЬ.",
+  "previousCheckedAtDate": "2026-10-27",
+  "norms": [
+    {
+      "norm": "ГОСТ Р 21.101-2026",
+      "edition": "2026",
+      "date_force": "2026-04-01",
+      "source": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
+      "status": "ACTIVE",
+      "classification": "ACTUAL_EXECUTABLE_PROFILE",
+      "note": "Приказ 129-ст от 12.02.2026; заменяет ГОСТ Р 21.101-2020; формы 1/2 — обязательное Приложение Б."
+    },
+    {
+      "norm": "ГОСТ Р 21.101-2020",
+      "edition": "2020",
+      "date_force": "до 2026-04-01",
+      "source": "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
+      "status": "REPLACED",
+      "classification": "HISTORICAL_REFERENCE_ONLY",
+      "note": "Сохраняется только в аудите и backward-compatibility comments; не является базой новой подачи."
+    },
+    {
+      "norm": "ГОСТ Р 2.503-2023",
+      "edition": "2023",
+      "date_force": "2024-03-01",
+      "source": "https://protect.gost.ru/document.aspx?control=7&id=256448",
+      "status": "ACTIVE",
+      "classification": "ACTUAL_CHANGE_TABLE_PROFILE",
+      "note": "Графы Изм. / Лист / № докум. / Подп. / Дата; для СПДС дополнительно раздел 7 ГОСТ Р 21.101-2026."
+    },
+    {
+      "norm": "ГОСТ 2.503-2013",
+      "edition": "2013",
+      "date_force": "утратил силу в РФ с 2024-03-01",
+      "source": "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
+      "status": "REVOKED_RU",
+      "classification": "HISTORICAL_REFERENCE_ONLY",
+      "note": "«На территории РФ пользоваться ГОСТ Р 2.503-2023»."
+    },
+    {
+      "norm": "ГОСТ 2.301-68",
+      "edition": "1968",
+      "date_force": "действует с оговоркой",
+      "source": "https://www.spds.ru/info/standarts/2.301-68.html",
+      "status": "ACTIVE_WITH_CAVEAT",
+      "classification": "FORMAT_DESIGNATION_CHECK",
+      "note": "Проверяются обозначения A0–A5 и производные; вопрос досрочного применения ГОСТ Р 2.301-2026 требует уточнения."
+    }
+  ],
+  "section7VerifiedFromOfficialPdf": true,
+  "geometryStillHypothesis": true
+}

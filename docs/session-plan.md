@@ -37,6 +37,18 @@
 | 10 | 12 PNG 1600×1200 с постоянным водяным знаком | Pillow | `screenshots/`, `screenshots_manifest.json` |
 | 11 | `next_steps.md`, отчёт, PR body, labels, ZIP | `finalize_delivery.py`, `gh api` | 3–5 задач P0–P2, labels `good first issue` и `night-session` |
 
+## Третья сессия — 2026-10-28 (P0–P2, продолжение PR #1)
+
+| # | Приоритет | Microtask | Артефакт / критерий |
+|---:|---|---|---|
+| 1 | P0 | Повторный нормоконтроль: реестр, официальное издание, Приложение Б, раздел 7 | `delivery/data/norms_registry.json`, `p0_norm_control.json`, `official_text_extract.md` |
+| 2 | P0 | Windows-стенд: инструкция, PowerShell-чек, C# readiness, честный статус | `p0_windows_stand.json`, `windows_stand_setup.md`, `DwgReadiness.cs` |
+| 3 | P1 | Production pipeline: synthetic backend + MultiCAD stub | `tools/pipeline.py`, `p1_production_dwg.json`, обновлённый реестр |
+| 4 | P1 | SHEETSET/Tables probe: print order, формы 1/2, API-гипотезы | `tools/sheetset_probe.py`, `p1_sheetset_tables.json`, `print_order.json` |
+| 5 | P2 | GIF ≤3 МБ, storyboard, senior review, новый `next_steps.md` | `demo.gif`, `senior_review.md`, `remaining_hypotheses.json` |
+
+Фактическая сессия снова сжата в автоматизированный проход; 8–10 часов не симулировались. Реальные nanoCAD/DWG задачи перенесены в новый блок «Что сделать до следующего раза».
+
 ## Предложенный календарь на 4 недели
 
 Оригинальный календарь отсутствует. Предложенный план:

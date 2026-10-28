@@ -15,6 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DELIVERY = ROOT / "delivery"
+DOCS_ROOT = ROOT / "docs"
 DATA = DELIVERY / "data"
 SHOTS = DELIVERY / "screenshots"
 MANIFEST = DELIVERY / "MANIFEST.json"
@@ -77,11 +78,26 @@ def run_checks(require_bundle: bool = True) -> dict:
         "delivery/data/wo1_template.docx", "delivery/data/completeness_chart.png",
         "delivery/data/completeness_chart.json", "delivery/data/normative_audit.json",
         "delivery/data/session2_summary.json", "delivery/data/pr_labels.json",
+        "docs/official-text-extract.md", "docs/windows-stand-setup.md",
+        "tools/pipeline.py", "tools/sheetset_probe.py", "tools/make_demo_gif.py",
+        "tools/session3_runner.py", "tools/windows_stand_check.ps1",
+        "src/NavigatorKit.NanoCad/DwgReadiness.cs",
+        "delivery/session-3/README.md", "delivery/session-3/demo.gif",
+        "delivery/session-3/demo_metadata.json", "delivery/session-3/manifest.json",
+        "delivery/session-3/p0_norm_control.json", "delivery/session-3/p0_windows_stand.json",
+        "delivery/session-3/p1_production_dwg.json", "delivery/session-3/p1_sheetset_tables.json",
+        "delivery/session-3/p2_demo_review.json", "delivery/session-3/senior_review.md",
+        "delivery/session-3/next_steps.md", "delivery/session-3/remaining_hypotheses.json",
+        "delivery/session-3/official_text_extract.md", "delivery/session-3/norms_registry.json",
+        "delivery/manifest.json", "delivery/data/norms_registry.json",
+        "delivery/data/session3_summary.json", "delivery/night-session-3.md",
+        "logs/night-session-3.log", "delivery/logs/night-session-3.log",
     ]
     bundle_files = [
         "delivery/README_night-session.md", "delivery/index.html", "delivery/PR_BODY.md",
         "delivery/CHAT_REPLY.md", "delivery/night-log.md",
         "delivery/data/verification_results.json", "delivery/night-session-2.md",
+        "delivery/session-3/README.md", "delivery/manifest.json", "delivery/night-session-3.md",
     ]
     missing = [p for p in core_files if not (ROOT / p).is_file()]
     check("required_files_present", not missing, "missing=" + (", ".join(missing) or "none"))
@@ -172,7 +188,7 @@ def run_checks(require_bundle: bool = True) -> dict:
                        r"GITHUB_TOKEN=[A-Za-z0-9_\-]{20,}", r"-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----"]
     secret_hits = []
     for p in ROOT.rglob("*"):
-        if not p.is_file() or ".git" in p.parts or p.suffix.lower() in {".png", ".zip", ".dxf", ".pyc"}:
+        if not p.is_file() or ".git" in p.parts or p.suffix.lower() in {".png", ".gif", ".jpg", ".zip", ".dxf", ".docx", ".bak", ".pyc"}:
             continue
         try:
             text = p.read_text(encoding="utf-8")
@@ -215,8 +231,10 @@ def run_checks(require_bundle: bool = True) -> dict:
         registry.get(key, "").startswith("https://www.spds.ru/")
         for key in ("spds2026", "spds2020Replaced", "appendixB", "changes2023", "changes2013Revoked", "formats")
     )
-    check("official_standard_registry_links", registry_ok and standards.get("checkedAtDate") == "2026-10-27",
-          f"checkedAtDate={standards.get('checkedAtDate')}; links={len(registry)}")
+    check("official_standard_registry_links",
+          registry_ok and standards.get("checkedAtDate") == "2026-10-28" and
+          "officialEditionPdf" in standards.get("officialText", {}),
+          f"checkedAtDate={standards.get('checkedAtDate')}; links={len(registry)}; officialText=yes")
 
     mapping_fields_ok = []
     for xml_path in sorted((DELIVERY / "xml").glob("*.xml")):
@@ -239,8 +257,10 @@ def run_checks(require_bundle: bool = True) -> dict:
           f"form1={len(wo1_rows)}; form2={len(wo2_rows)}")
 
     completeness_md = (DELIVERY / "completeness_report.md").read_text(encoding="utf-8")
+    cm_lower = completeness_md.lower()
     check("completeness_report_honest_counts",
-          "16" in completeness_md and "4 группы дублей" in completeness_md and "нельзя утверждать" in completeness_md,
+          "16" in cm_lower and ("4 группы дублей" in cm_lower or "4 групп дублей" in cm_lower)
+          and "нельзя утверждать" in cm_lower,
           "16 incidents / 4 duplicate groups / no false 'all missing files' claim")
 
     patch_src = (DELIVERY / "numbering_patch.py").read_text(encoding="utf-8")
@@ -288,15 +308,106 @@ def run_checks(require_bundle: bool = True) -> dict:
           f"tasks={len(session2['tasks'])}; nanoCADExecuted={session2['nanoCADExecuted']}")
 
     audit = read_json(DATA / "normative_audit.json")
+    norms = read_json(DATA / "norms_registry.json")
+    norm_fields_ok = all(all(k in n for k in ("norm", "edition", "date_force", "source")) for n in norms)
     check("normative_audit_classifies_legacy",
-          audit["checkedAtDate"] == "2026-10-27" and
+          audit["checkedAtDate"] == "2026-10-28" and len(audit.get("norms", [])) == 5 and
           all(key in audit["oldReferenceOccurrences"] for key in ("GOST-R-21.101-2020", "GOST-2.503-2013")),
-          f"occurrences={audit['oldReferenceOccurrences']}")
+          f"occurrences={audit['oldReferenceOccurrences']}; norms={len(norms)}")
+    check("norms_registry_required_fields", norm_fields_ok and len(norms) == 5,
+          f"entries={len(norms)}; fields=norm,edition,date_force,source")
+
+    # --- Session-3 checks ---
+    check("screenshot_count_session3", len(images) >= 15, f"count={len(images)}")
+    check("screenshots_palette_optimized",
+          all(i.get("paletteColors") == 128 and i.get("colorMode") == "P" for i in images),
+          "all images PNG-8/128 colors for <=3 MB bundle")
+    check("session3_log_start_end",
+          "SESSION_3_START" in log_text and "SESSION_3_END" in log_text,
+          "logs/night-session.log contains third-session boundaries")
+
+    official_md = (DOCS_ROOT / "official-text-extract.md").read_text(encoding="utf-8")
+    check("official_text_extract_present",
+          "Приложение Б" in official_md and "Раздел 7" in official_md and "ВЗАМЕН" in official_md,
+          "Appendix B + section 7 + replacement clause recorded")
+
+    s3_json_bad, s3_json_count = [], 0
+    for jp in sorted((DELIVERY / "session-3").rglob("*.json")):
+        s3_json_count += 1
+        try:
+            read_json(jp)
+        except Exception as exc:
+            s3_json_bad.append(f"{jp.name}: {exc}")
+    check("session3_json_documents_parse", not s3_json_bad,
+          f"parsed={s3_json_count}; errors={s3_json_bad[:3]}")
+
+    py_scripts = [
+        ROOT / "tools/pipeline.py", ROOT / "tools/sheetset_probe.py",
+        ROOT / "tools/make_demo_gif.py", ROOT / "tools/session3_runner.py",
+    ]
+    py_ok = True
+    for sp in py_scripts:
+        try:
+            compile(sp.read_text(encoding="utf-8"), str(sp), "exec")
+        except SyntaxError:
+            py_ok = False
+    check("session3_python_scripts_compile", py_ok, f"files={len(py_scripts)}")
+
+    win = read_json(DELIVERY / "session-3/p0_windows_stand.json")
+    check("windows_stand_external_dependency",
+          win["status"] == "EXTERNAL_DEPENDENCY" and win["nanoCAD26Installed"] is False and
+          win["nkHelloExecuted"] is False and win["sdkProbeExecuted"] is False,
+          "no fake nanoCAD installation or screenshots")
+
+    sheet = read_json(DELIVERY / "session-3/p1_sheetset_tables.json")
+    check("sheetset_api_hypotheses_retained",
+          sheet["getSheetSetsStatus"] == "HYPOTHESIS" and sheet["dstTouched"] is False and
+          sheet["printOrderConsistent"] is True,
+          f"getSheetSets={sheet['getSheetSetsStatus']}; dstTouched=False")
+
+    demo_meta = read_json(DELIVERY / "session-3/demo_metadata.json")
+    gif_path = DELIVERY / "session-3/demo.gif"
+    gif_ok = gif_path.stat().st_size <= 3_000_000 and demo_meta.get("withinLimit") is True
+    try:
+        from PIL import Image as PILImage
+        with PILImage.open(gif_path) as gif:
+            gif_ok = gif_ok and getattr(gif, "n_frames", 1) >= 5
+            frames = getattr(gif, "n_frames", 1)
+    except ImportError:
+        frames = "unknown"
+    check("demo_gif_valid_and_under_3mb", gif_ok,
+          f"bytes={gif_path.stat().st_size}; frames={frames}; watermark={demo_meta.get('watermark') is not None}")
+
+    review = read_json(DELIVERY / "session-3/p2_demo_review.json")
+    hyp = read_json(DELIVERY / "session-3/remaining_hypotheses.json")
+    check("remaining_hypotheses_retained",
+          review["hypothesesRemoved"] is False and hyp["totalMarkers"] > 0,
+          f"markers={hyp['totalMarkers']}; files={len(hyp['files'])}")
+
+    session3 = read_json(DATA / "session3_summary.json")
+    check("session3_summary_complete",
+          len(session3["tasks"]) == 5 and session3["nanoCADExecuted"] is False and
+          session3["expectedScreenshotCount"] == 15,
+          f"tasks={len(session3['tasks'])}; nanoCADExecuted=False")
+
+    next_md = (DELIVERY / "next_steps.md").read_text(encoding="utf-8")
+    check("session3_next_steps_refreshed",
+          "2026-10-28" in next_md and "Windows-стенд" in next_md and "реальных DWG" in next_md,
+          "new 5-task P0-P2 plan present")
+
+    s3manifest = read_json(DELIVERY / "manifest.json")
+    bad_s3 = []
+    for rel, expected in s3manifest["files"].items():
+        fp = DELIVERY / rel
+        if not fp.is_file() or sha256_file(fp) != expected:
+            bad_s3.append(rel)
+    check("session3_manifest_hashes_match", not bad_s3,
+          f"files={s3manifest['fileCount']}; bad={bad_s3[:3]}")
 
     required_failed = [c for c in checks if c["severity"] == "REQUIRED" and not c["ok"]]
     return {
         "format": "navigator-kit.verification-results/v1",
-        "sessionId": "night-session-20261027",
+        "sessionId": "night-session-20261028",
         "status": "PASS" if not required_failed else "FAIL",
         "requiredChecks": sum(1 for c in checks if c["severity"] == "REQUIRED"),
         "optionalChecks": sum(1 for c in checks if c["severity"] == "OPTIONAL"),

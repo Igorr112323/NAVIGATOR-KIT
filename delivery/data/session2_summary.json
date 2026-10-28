@@ -1,7 +1,7 @@
 {
   "format": "navigator-kit.session2-summary/v1",
   "sessionId": "night-session-20261027",
-  "generatedAt": "2026-10-27T03:23:44+00:00",
+  "generatedAt": "2026-10-28T15:49:10+00:00",
   "checkedAtDate": "2026-10-27",
   "branch": "arena/ec9fddc1-navigator-kit",
   "baseRemoteCommit": "bc47b35",
@@ -78,11 +78,11 @@
   "results": {
     "normativeAudit": {
       "oldReferenceOccurrences": {
-        "GOST-2.503-2013": 23,
-        "GOST-R-21.101-2020": 25,
+        "GOST-2.503-2013": 39,
+        "GOST-R-21.101-2020": 51,
         "GOST-R-21.1101-2013": 5
       },
-      "classifiedFiles": 19
+      "classifiedFiles": 30
     },
     "completeness": {
       "incidents": 16,
