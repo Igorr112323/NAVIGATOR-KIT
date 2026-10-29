@@ -1,0 +1,22 @@
+name: Portable CSharp DXF parser
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  parser-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Build portable parser (no CAD SDK)
+        run: dotnet build src/CSharpAdapter/CSharpAdapter.csproj -c Release
+      - name: Run 28 CSharp cases on shared DXF fixtures
+        run: dotnet test src/CSharpAdapter/Tests/CSharpAdapter.Tests.csproj -c Release --logger "trx;LogFileName=parser.trx" --results-directory TestResults
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: csharp-parser-test-results
+          path: TestResults

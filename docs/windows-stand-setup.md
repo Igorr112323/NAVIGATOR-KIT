@@ -1,81 +1,83 @@
-# Windows-стенд для nanoCAD 26 — инструкция third-session
+# Windows-стенд «Комплект-Навигатор»
 
-Дата: **2026-10-28**. Документ подготовлен в Linux sandbox. Реальный стенд **не запускался**: нет Windows, nanoCAD 26, лицензии, MultiCAD .NET SDK 26 и `dotnet`. Поэтому все пункты ниже — чек-лист для человека, а не отчёт о выполненной установке.
+Обновлено 2026-10-29 в Linux. Это инструкция, НЕ отчёт об установке.
+Windows/nanoCAD/лицензия/SDK здесь отсутствуют. Указанные ниже шаги требуют
+проверки по текущему установщику и документации поставщика.
 
-## 0. Что уже подготовлено в репозитории
+## 1. Лицензия и nanoCAD 26
 
-- `.github/workflows/windows-build.yml` — ручная сборка portable C# Core/CLI на `windows-latest`.
-- `tools/windows_stand_check.ps1` — PowerShell-скрипт проверки готовности стенда.
-- `src/NavigatorKit.NanoCad/SdkProbe.cs` — reflection-дамп реальных типов/методов SDK без выдуманных контрактов.
-- `src/NavigatorKit.NanoCad/NanoCadCommands.cs` — команды `NK_HELLO` и `SDK_PROBE` (проверить по реальному SDK).
-- `src/NavigatorKit.NanoCad/DwgReadiness.cs` — чек-лист готовности к чтению production DWG, без ссылок на непроверенные API.
+1. Открыть официальный сайт nanoCAD и личный кабинет. Для образования исходная
+   ссылка: <https://lk.nanocad.ru/education/request> (доступность/условия в этой
+   сессии не проверены). Указать реальные данные организации/учебного заведения.
+2. Дождаться решения поставщика; срок 1–2 дня и право на бесплатную лицензию
+   не гарантируются. Секреты/ключи в Git и отчёты НЕ помещать.
+3. Скачать nanoCAD 26 из официального кабинета; установить по инструкции Nanosoft.
+   Повышение прав — только если требует установщик. Путь установки не фиксирован.
+4. Активировать законную лицензию (или официальный пробный режим, если доступен).
+   Зафиксировать версию/build и разрядность из окна «О программе» без ключа лицензии.
 
-## 1. Установка и лицензия
+## 2. Visual Studio / SDK / TFM
 
-1. Установить nanoCAD 26 (x64) на Windows 10/11.
-2. Получить действующую лицензию:
-   - коммерческая/временная лицензия Nanosoft; или
-   - образовательная лицензия через <https://lk.nanocad.ru/education/request>. Страница требует nanoPassport и капчу, автономно получить нельзя.
-3. Запустить nanoCAD, убедиться, что лицензия активна и открывается новый чертёж.
-4. Зафиксировать точную версию: `Help → About` или `%ProgramFiles%\Nanosoft\nanoCAD x64 26\...`.
+1. Установить Visual Studio 2022 Community, если подходит лицензия Microsoft,
+   с нагрузкой «Разработка классических приложений .NET» и .NET 8 SDK для
+   **portable parser**. На Windows: `dotnet --info`.
+2. Через <https://www.nanocad.ru/developers/> получить официальный MultiCAD .NET SDK
+   для nanoCAD 26. Условия доступа/регистрация определяются поставщиком.
+3. Папка примера `C:\SDK\MultiCAD26` — не обязательный путь. Сохранить список
+   DLL, версии сборок и документацию. **ГИПОТЕЗА/ПРОВЕРИТЬ:** реальные DLL, TFM,
+   разрядность и загрузчик host-плагина. .NET 8 portable-парсера НЕ доказывает TFM SDK.
+4. Не создавать ссылку на выдуманную `MultiCAD26.dll`. Исторические mapimgd/hostmgd/
+   hostdbmgd в props.example — только гипотезы; сверить с SDK 26.
 
-## 2. SDK 26 и TFM
+## 3. Сначала portable C# (CAD не нужен)
 
-1. Вступить в клуб разработчиков nanoCAD: <https://www.nanocad.ru/developers/>.
-2. Скачать MultiCAD .NET SDK именно для версии 26.
-3. Сверить:
-   - `TargetFramework` (в репозитории сейчас `net8.0` — **ГИПОТЕЗА/ПРОВЕРИТЬ**);
-   - разрядность x64;
-   - фактические DLL (`mapimgd.dll`, `hostmgd.dll`, `hostdbmgd.dll` — имена из старых примеров, для 26 не подтверждены);
-   - способ загрузки (`NETLOAD` / `APPLOAD`).
-4. Скопировать `src/NavigatorKit.NanoCad/NanoCadSdkReferences.props.example` в `NanoCadSdkReferences.props` и заменить пути/имена DLL на фактические.
+Из корня репозитория в PowerShell:
+```powershell
+dotnet build src/CSharpAdapter/CSharpAdapter.csproj -c Release
+dotnet test src/CSharpAdapter/Tests/CSharpAdapter.Tests.csproj -c Release --logger trx
+dotnet run --project src/CSharpAdapter -- delivery/linux-stand/samples/stamp_01.dxf
+```
+Ожидается 28 xUnit cases; сохранить фактические логи. NuGet restore требует сети.
+Этот EXE не загружается в nanoCAD как плагин.
 
-## 3. Проверка окружения PowerShell
-
-Выполнить в корне репозитория:
+## 4. Готовность реального host-стенда
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File tools/windows_stand_check.ps1 `
-  -NanoCadPath "C:\Program Files\Nanosoft\nanoCAD x64 26" `
-  -SdkPath "C:\SDK\nanoCAD26" `
-  -LicenseStatus "ACTIVE"
+  -NanoCadPath "C:\фактический-путь-nanoCAD" `
+  -SdkPath "C:\SDK\MultiCAD26" -LicenseStatus "ACTIVE"
 ```
+`ACTIVE` здесь — заявление оператора, не автоматическая проверка лицензии.
+Не использовать эту строку как доказательство активации. Скрипт только инвентаризирует.
 
-Скрипт пишет `delivery/data/windows_stand_check.json`. Он **не устанавливает** nanoCAD и не обходит лицензию.
-
-## 4. Сборка и запуск команд
-
+После проверки имён/TFM: адаптировать
+`src/NavigatorKit.NanoCad/NanoCadSdkReferences.props.example`, сохранить рядом как
+`NanoCadSdkReferences.props`, сверить условие `NANOCAD_SDK` в проекте, затем:
 ```powershell
-$env:NANOCAD_SDK_PATH = "C:\SDK\nanoCAD26"
-Copy-Item src/NavigatorKit.NanoCad/NanoCadSdkReferences.props.example src/NavigatorKit.NanoCad/NanoCadSdkReferences.props
+$env:NANOCAD_SDK_PATH = "C:\SDK\MultiCAD26"
 dotnet build src/NavigatorKit.NanoCad/NavigatorKit.NanoCad.csproj -c Release -p:NANOCAD_SDK_PATH=$env:NANOCAD_SDK_PATH
 ```
+Это шаблон, не гарантия сборки с SDK26. Способ загрузки DLL взять из SDK, не угадывать
+NETLOAD/APPLOAD. В исходнике условно объявлены команды `NK_HELLO` и **`NK_SDK_PROBE`**,
+не `SdkProbe`, не `SDK_PROBE`, не `_-NKHELLO`. Они существуют в nanoCAD только после
+проверки атрибута регистрации и загрузки совместимой DLL. NK_HELLO пишет сообщение,
+не диаграмму. NK_SDK_PROBE пишет текстовый reflection dump в temp
+`navigator-kit-sdk-probe.txt`, **не JSON** и не специальное меню nanoCAD.
 
-Затем в nanoCAD:
+## 5. Доказательства и критерии приёмки
 
-1. `NETLOAD` → выбрать собранную DLL `NavigatorKit.NanoCad.dll`.
-2. Выполнить команду `NK_HELLO` — ожидается сообщение в командной строке.
-3. Выполнить `SDK_PROBE` — сохранить вывод в `delivery/data/sdk_probe.json`.
-4. Скопировать реальные имена методов в `docs/api-experiment.md` и снять статус `HYPOTHESIS` только для подтверждённых методов.
+- [ ] Лицензия и nanoCAD build проверены оператором без публикации секретов.
+- [ ] Сохранён dotnet --info; portable parser собран, xUnit фактически прошёл.
+- [ ] Реальные SDK DLL/TFM/методы записаны; наличие числа 26 в версии не единственный критерий.
+- [ ] NK_HELLO и NK_SDK_PROBE зарегистрированы/выполнены в nanoCAD; сохранён вывод.
+- [ ] Сняты главное окно, загруженный модуль и результаты команд; по возможности 1600×1200,
+      оригиналы сохраняются без изменения масштаба для доказательств.
+- [ ] Имена: nanocad_26_main_window.png, nanocad_26_toolbar.png, nanocad_26_api_commands.png.
 
-## 5. Скриншоты
+Реальный снимок помечать `nanoCAD 26 / реальный снимок стенда`, а не «nanoCAD НЕ
+запускался». В манифесте `nanoCADScreenshot: true` только после проверки происхождения.
+Локальные Linux PNG сохраняют прежнее предупреждение. В Git не публиковать ключи,
+персональные данные и закрытые SDK DLL без разрешения.
 
-Нужны три реальных снимка 1600×1200:
-
-| Файл | Сюжет |
-|---|---|
-| `delivery/screenshots/nanocad_26_main_window.png` | главное окно nanoCAD 26 с открытым чертежом |
-| `delivery/screenshots/nanocad_26_toolbar.png` | панель/ лента с загруженным модулем |
-| `delivery/screenshots/nanocad_26_api_commands.png` | командная строка с `NK_HELLO` / `SDK_PROBE` |
-
-**Важно:** текущий водяной знак «nanoCAD НЕ запускался / не скриншот CAD» нельзя ставить на реальные снимки. Для реальных снимков используйте правдивый watermark, например `nanoCAD 26 / реальный снимок стенда`, и выставьте `nanoCADScreenshot: true` в `screenshots_manifest.json`. Диагностические PNG из Linux sandbox остаются с прежним предупреждением.
-
-## 6. Что остаётся гипотезой до запуска
-
-- Точный TFM и состав DLL SDK 26.
-- `GetSheets()` / `GetSheetSets()` и подписи методов.
-- `Database` / `Transaction` / `BlockReference` API для фонового чтения и записи атрибутов штампа.
-- Tables API и документированный доступ к SHEETSET/`.dst`.
-- Соответствие штатной «ведомости листов» форме 1 ГОСТ Р 21.101-2026.
-
-См. также `docs/windows-vm-build.md` и `delivery/session-3/p0_windows_stand.json`.
+Гипотезы GetSheets/GetSheetSets, Tables, .dst, Database/Transaction остаются открыты.
+См. `docs/api-experiment.md`, `src/CSharpAdapter/README.md`, `docs/gif-demo-scenario.md`.

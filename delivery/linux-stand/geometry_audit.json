@@ -1,0 +1,1056 @@
+{
+  "version": "1.0",
+  "normativeStatus": "ГИПОТЕЗА/ПРОВЕРИТЬ — NOT_ASSESSED",
+  "references": [
+    {
+      "norm": "ГОСТ Р 21.101-2026",
+      "scope": "Appendix B forms 1/2 not present in samples",
+      "source": "docs/official-text-extract.md"
+    },
+    {
+      "norm": "ГОСТ 2.301-68",
+      "scope": "basic paper-size reference; not verified official text in this session",
+      "paper_mm": {
+        "A0": [
+          841,
+          1189
+        ],
+        "A1": [
+          594,
+          841
+        ],
+        "A2": [
+          420,
+          594
+        ],
+        "A3": [
+          297,
+          420
+        ],
+        "A4": [
+          210,
+          297
+        ]
+      }
+    }
+  ],
+  "groupCodeCorrections": {
+    "9": "HEADER variable name, not sheet number",
+    "70": "entity-specific flags, not paper format",
+    "2": "ATTRIB tag",
+    "1": "ATTRIB value",
+    "40": "TEXT/ATTRIB height",
+    "39": "thickness"
+  },
+  "files": [
+    {
+      "file": "stamp_01.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "1",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-001-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "1",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 01",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "1",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_02.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "2",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-002-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "2",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 02",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "2",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_03.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "3",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-003-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "3",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 03",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "3",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_04.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "4",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-004-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 04",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "4",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_05.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "5",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-005-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "5",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 05",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "5",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_06.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "6",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-006-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "6",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 06",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "6",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_07.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "7",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-007-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "7",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 07",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "7",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_08.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "8",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-008-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "8",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 08",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "8",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_09.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "9",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-009-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "9",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 09",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "9",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_10.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "10",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-010-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "10",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 10",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "10",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_11.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "11",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-011-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "11",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 11",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "11",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    },
+    {
+      "file": "stamp_12.dxf",
+      "matched": [
+        {
+          "rule": "project_positive_sheet",
+          "actual": "12",
+          "expected": "positive integer (project rule, not fixed by GOST)",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "demo_outer_rectangle_vs_paper_reference",
+          "actual": [
+            210.0,
+            297.0
+          ],
+          "expected": [
+            210,
+            297
+          ],
+          "codes": "LWPOLYLINE:10/20; ATTRIB:2=FORMAT,1=value",
+          "note": "Only demo outer rectangle; not a normative drawing-frame margin check"
+        },
+        {
+          "rule": "project_field_DESIGNATION",
+          "actual": "NK-012-AR",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=DESIGNATION,1=value"
+        },
+        {
+          "rule": "project_field_SHEET",
+          "actual": "12",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=SHEET,1=value"
+        },
+        {
+          "rule": "project_field_TITLE",
+          "actual": "Sheet 12",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=TITLE,1=value"
+        },
+        {
+          "rule": "project_field_FORMAT",
+          "actual": "A4",
+          "expected": "non-empty",
+          "codes": "ATTRIB:2=FORMAT,1=value"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "FRAME",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "STAMP",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        },
+        {
+          "rule": "project_layer",
+          "actual": true,
+          "expected": "NOTES",
+          "codes": "8",
+          "note": "Layer names are project conventions, not GOST requirements"
+        }
+      ],
+      "mismatch": [],
+      "unverified": [
+        "ГОСТ Р 21.101-2026, Приложение Б: no form 1/2 tables in these samples; geometry NOT_ASSESSED",
+        "ГОСТ 2.301-68: paper-size reference only; official text and allowed orientation/margins require norm control",
+        "MARK attribute absent; DESIGNATION suffix must not be silently treated as mark"
+      ],
+      "sheet": "12",
+      "format": "A4",
+      "mark": null,
+      "layers": [
+        "FRAME",
+        "NOTES",
+        "STAMP"
+      ],
+      "status": "DEMO_CHECKS_PASS;NORMATIVE_NOT_ASSESSED"
+    }
+  ],
+  "demoMismatchCount": 0
+}
