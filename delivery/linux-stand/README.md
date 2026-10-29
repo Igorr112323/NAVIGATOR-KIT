@@ -79,3 +79,14 @@ python tools/finalize_linux_stand.py
 Размер PNG проверяется по факту; диапазон 20–30 KB не является доказательством качества.
 Нормативные тексты не скачивались повторно: доступны сохранённые ссылки/выдержки,
 геометрия форм и SDK по-прежнему ГИПОТЕЗА/ПРОВЕРИТЬ.
+
+## Самостоятельный Test Runner
+
+См. `README_test_runner.md` в корне репозитория/пакета.
+`python tools/build_test_runner.py` собирает ≤3 MB архив, распаковывает во временную
+папку и выполняет полный pytest оттуда, без доступа к данным репозитория по путям.
+Минимальные зависимости — `requirements-test-runner.txt`.
+`python -m pytest tests/ -v --tb=short` обновляет test_report.json автоматически.
+`checks_total/checks_failed` — явно отмеченный snapshot отдельного delivery-verifier,
+а не доказательство повторного запуска всех 59 проверок при каждой команде pytest.
+Лог независимого запуска из ZIP: `logs/test-runner-extracted.log`.

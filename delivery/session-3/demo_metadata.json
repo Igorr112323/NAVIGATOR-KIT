@@ -1,7 +1,7 @@
 {
   "format": "navigator-kit.demo-gif/v1",
   "sessionId": "night-session-20261028",
-  "generatedAt": "2026-10-28T18:47:05+00:00",
+  "generatedAt": "2026-10-29T06:13:06+00:00",
   "path": "delivery/session-3/demo.gif",
   "storyboard": "delivery/session-3/demo_storyboard.png",
   "frameCount": 6,
@@ -12,7 +12,7 @@
   "durationMsPerFrame": 900,
   "loop": true,
   "paletteColors": 64,
-  "bytes": 176910,
+  "bytes": 177356,
   "maxBytes": 3000000,
   "withinLimit": true,
   "watermark": "nanoCAD НЕ запускался / не скриншот CAD",

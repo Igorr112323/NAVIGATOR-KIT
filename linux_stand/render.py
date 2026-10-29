@@ -23,7 +23,9 @@ def render(source: Path, target: Path) -> None:
     with Image.open(target) as original:
         image = original.convert('RGB')
     draw = ImageDraw.Draw(image)
-    font = ImageFont.truetype('DejaVuSans.ttf', 22)
+    # Matplotlib ships this font: no dependency on OS-installed fonts.
+    font_path = Path(matplotlib.get_data_path()) / 'fonts/ttf/DejaVuSans.ttf'
+    font = ImageFont.truetype(str(font_path), 22)
     draw.rectangle((0, 0, 1599, 65), fill='#fff0dd')
     draw.text((24, 20), 'LINUX DXF RENDER / TEST GEOMETRY / NOT A GOST FORM', font=font, fill='#9b2020')
     box = draw.textbbox((0, 0), WATERMARK, font=font)

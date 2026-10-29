@@ -1,6 +1,15 @@
 # Ночной отчет ИИ-куратора — 2026-10-28 (третья сессия)
 
-> **Статус честности:** локальный контур `VERIFIED_LOCALLY`, nanoCAD 26 **не запускался**. Все PNG — подписанные диагностические макеты с постоянным водяным знаком, а не снимки CAD. C# код синтаксически разобран tree-sitter; portable сборка подготовлена для Windows workflow, но в Linux sandbox не выполнялась (`dotnet` отсутствует).
+## Самостоятельный Test Runner
+
+`delivery/navigator-kit-test-runner.zip` — исходники, fixtures и результаты для повторения
+28 pytest-тестов. `README_test_runner.md` содержит установку минимальных зависимостей.
+Проверены Python 3.11/Linux и запуск из распакованного архива в отдельном venv.
+`pytest_output.log`, `collect_log.txt`, `test_report.json` — в `delivery/linux-stand/`.
+59 delivery checks — отдельный verifier; Windows/macOS не проверены запуском.
+Это не двоичный nanoCAD-плагин. Сборщик проверяет ограничение ZIP ≤3 MB.
+
+> **Статус честности:** локальный контур `VERIFIED_LOCALLY`, nanoCAD 26 **не запускался**. Прежние диагностические PNG — макеты; linux_stamp_*.png — реальные DXF-рендеры. Все снабжены watermark и не являются снимками CAD. C# код синтаксически разобран tree-sitter; portable сборка подготовлена для Windows workflow, но в Linux sandbox не выполнялась (`dotnet` отсутствует).
 >
 > **Вторая сессия 2026-10-27.** PR #1 получил обновлённый нормативный слой, именованные артефакты, Windows workflow и 12 PNG с полупрозрачным водяным знаком.
 >
@@ -121,7 +130,7 @@
 ## GitHub-действия
 
 - Ветка: `arena/ec9fddc1-navigator-kit` (создавать `night-session-YYYYMMDD` нельзя: имя ветки зафиксировано сессией Arena).
-- Коммит на момент генерации отчёта: `9e6e3ff3af839d860887c9450a64275ade7f7028`.
+- Коммит на момент генерации отчёта: `2f57aa65019baed1e4e9ea22433b315f83be5dda`.
 - PR: [https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1](https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1).
 - Push: `git push origin arena/ec9fddc1-navigator-kit`.
 - PR body: `delivery/PR_BODY.md`.

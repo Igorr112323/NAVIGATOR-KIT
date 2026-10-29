@@ -49,7 +49,7 @@ class LinuxStandTests(unittest.TestCase):
         with self.assertRaises(ValueError): inspect(self.path)
 
     def test_core_has_no_cad_import(self):
-        for path in Path('linux_stand/core').glob('*.py'):
+        for path in (Path(__file__).resolve().parents[1] / 'linux_stand/core').glob('*.py'):
             for node in ast.walk(ast.parse(path.read_text())):
                 if isinstance(node, ast.Import):
                     self.assertTrue(all(not a.name.startswith(('ezdxf', 'linux_stand.dxf_backend')) for a in node.names))

@@ -1,9 +1,16 @@
 {
+  "tests_passed": 28,
+  "tests_total": 28,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "checks_total": 59,
+  "checks_failed": 0,
+  "checks_source": "delivery/data/verification_results.json (last delivery verification, NOT rerun by pytest)",
+  "status": "passed",
   "passed": 28,
   "failed": 0,
   "skipped": 0,
   "total_tests": 28,
-  "delivery_checks": "Run tools/finalize_linux_stand.py after finalize_delivery.py",
   "total_checks": 59,
   "failed_checks": 0
 }

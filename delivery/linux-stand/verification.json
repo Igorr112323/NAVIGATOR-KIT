@@ -31,7 +31,7 @@
     "ГИПОТЕЗА/ПРОВЕРИТЬ: form geometry, SDK binding, DWG, transactions, layouts, printing"
   ],
   "hashes": {
-    "hello_stamp.dxf": "90b4f4e6aea38bbb06d99bdd94de4f6844183f300d661adcc357dc95423d84c5",
+    "hello_stamp.dxf": "063ad272db1b3423f473527e4b0a67dcc4bc3bfe4f8f828324f943d3f98ddfef",
     "hello_stamp.png": "cda10b71a08f65dc219be1a0502e1db471e0cfa81961f143144d20a86707b7b0"
   }
 }

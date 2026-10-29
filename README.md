@@ -71,3 +71,7 @@ dotnet run --project src/NavigatorKit.Cli -- --input samples/synthetic_sets --ou
 Чистое Python-ядро → ezdxf backend → DXF → реальный рендер PNG → независимая
 перечитка group codes → 8 автотестов. [Отчёт и ограничения](delivery/linux-stand/README.md).
 Это не запуск nanoCAD и не реализация MultiCAD-адаптера.
+
+Самостоятельный пакет проверок: [README_test_runner.md](README_test_runner.md).
+Сборка и пробный запуск из распакованного ZIP: `python tools/build_test_runner.py`.
+Это Test Runner, не двоичный nanoCAD-плагин.

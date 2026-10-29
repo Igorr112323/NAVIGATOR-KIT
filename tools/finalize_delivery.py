@@ -52,7 +52,16 @@ def build_readme(summary: dict, verification: dict, commit: str, pr_url: str, br
     pr_text = f"[{pr_url}]({pr_url})" if pr_url.startswith("http") else "`PR будет создан после push`"
     return f"""# Ночной отчет ИИ-куратора — 2026-10-28 (третья сессия)
 
-> **Статус честности:** локальный контур `VERIFIED_LOCALLY`, nanoCAD 26 **не запускался**. Все PNG — подписанные диагностические макеты с постоянным водяным знаком, а не снимки CAD. C# код синтаксически разобран tree-sitter; portable сборка подготовлена для Windows workflow, но в Linux sandbox не выполнялась (`dotnet` отсутствует).
+## Самостоятельный Test Runner
+
+`delivery/navigator-kit-test-runner.zip` — исходники, fixtures и результаты для повторения
+28 pytest-тестов. `README_test_runner.md` содержит установку минимальных зависимостей.
+Проверены Python 3.11/Linux и запуск из распакованного архива в отдельном venv.
+`pytest_output.log`, `collect_log.txt`, `test_report.json` — в `delivery/linux-stand/`.
+59 delivery checks — отдельный verifier; Windows/macOS не проверены запуском.
+Это не двоичный nanoCAD-плагин. Сборщик проверяет ограничение ZIP ≤3 MB.
+
+> **Статус честности:** локальный контур `VERIFIED_LOCALLY`, nanoCAD 26 **не запускался**. Прежние диагностические PNG — макеты; linux_stamp_*.png — реальные DXF-рендеры. Все снабжены watermark и не являются снимками CAD. C# код синтаксически разобран tree-sitter; portable сборка подготовлена для Windows workflow, но в Linux sandbox не выполнялась (`dotnet` отсутствует).
 >
 > **Вторая сессия 2026-10-27.** PR #1 получил обновлённый нормативный слой, именованные артефакты, Windows workflow и 12 PNG с полупрозрачным водяным знаком.
 >
@@ -195,6 +204,16 @@ def build_pr_body(summary: dict, verification: dict) -> str:
 
 **Обновление 2026-10-28:** выполнен P0–P2 проход. Добавлены `delivery/session-3/`, выписка из официального издания ГОСТ Р 21.101-2026 (Приложение Б + раздел 7), `norms_registry.json`, `tools/pipeline.py`, `tools/sheetset_probe.py`, `tools/make_demo_gif.py`, PowerShell-чек Windows-стенда, GIF-демо ≤3 МБ и senior-review чек-лист. Synthetic backend пересобрал 120 DXF; MultiCAD/DWG часть честно помечена внешней зависимостью. Метки PR: `good first issue`, `night-session`.
 
+### Test Runner (обновление после 2f57aa6)
+Пакет `delivery/navigator-kit-test-runner.zip` содержит исходники, все данные 28 тестов,
+12 новых DXF и 12 рендеров. Запуск из распакованного ZIP проверяется автоматически.
+`README_test_runner.md`, `tests/portability_note.md`: зависимости, установка, границы переносимости.
+`pytest_output.log`, `collect_log.txt`, `test_report.json`: фактический прогон/обнаружение тестов.
+28 pytest PASS / 59 delivery checks, 0 failures — разные наборы проверок.
+Размер ZIP проверяется сборщиком (≤3 MB); точный размер сообщается после сборки.
+Python 3.11/Linux проверен; Windows/macOS и другие версии Python не выполнялись.
+Это НЕ nanoCAD-плагин; MultiCAD backend и C#-порт не реализованы.
+
 ### Linux-стенд: завершение пакетного прогона
 12 DXF fixtures → независимая перечитка без ezdxf → 12 реальных рендеров 1600×1200 с баннером и watermark.
 Полный pytest и delivery-проверки раздельно записаны в `delivery/linux-stand/test_report.json` и `pytest.log`.
@@ -233,6 +252,13 @@ def build_pr_body(summary: dict, verification: dict) -> str:
 def build_chat_reply(summary: dict, verification: dict, commit: str, pr_url: str, branch: str) -> str:
     pr = pr_url if pr_url.startswith("http") else "PR будет создан после push"
     return f"""# Готовый ответ в чат
+
+🚀 Linux-stand и Test Runner готовы для повторения проверок.
+✅ 12 подготовленных DXF + 12 рендеров 1600×1200, banner + watermark.
+✅ 28 pytest PASS; 59 delivery checks / 0 failures — отдельно.
+✅ ZIP проверяется распаковкой и запуском тестов; минимальные зависимости перечислены.
+Python 3.11/Linux проверен. Другие ОС не запускались. Это не nanoCAD-плагин.
+Пакет: `delivery/navigator-kit-test-runner.zip` (≤3 MB); инструкция: `README_test_runner.md`.
 
 Ночная сессия завершена и обновлена 2026-10-28. Ветка `{branch}`, коммит `{commit}`, PR: {pr}.
 
@@ -318,7 +344,7 @@ def build_zip() -> None:
     if BUNDLE.exists():
         BUNDLE.unlink()
     include_roots = ["delivery", "docs", "src", "tools", "tests", "samples", "linux_stand", ".github/workflows"]
-    extra_files = ["README.md", "briefing.md", "requirements.txt", "requirements-analysis.txt", ".gitignore", "night-log.md"]
+    extra_files = ["README_test_runner.md", "requirements-test-runner.txt", "README.md", "briefing.md", "requirements.txt", "requirements-analysis.txt", ".gitignore", "night-log.md"]
     with zipfile.ZipFile(BUNDLE, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
         for rel in extra_files:
             p = ROOT / rel
