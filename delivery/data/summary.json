@@ -1,0 +1,47 @@
+{
+  "format": "navigator-kit.summary/v1",
+  "generatedAt": "2026-10-29T06:57:27+00:00",
+  "sessionId": "night-session-20261028",
+  "verifiedLocally": true,
+  "input": {
+    "syntheticDxfFiles": 120,
+    "marks": 3,
+    "perMark": {
+      "АР": 40,
+      "КР": 40,
+      "ОВ": 40
+    }
+  },
+  "output": {
+    "registryRows": 120,
+    "form1Rows": 120,
+    "form2Rows": 8,
+    "completenessIssues": 16,
+    "duplicateGroups": 4,
+    "numberingPlanRows": 120,
+    "changeTemplateRows": 10,
+    "printOrderItems": 120
+  },
+  "issueCounts": {
+    "DOC_FILE_NOT_IN_REGISTRY": 1,
+    "DOC_IN_REGISTRY_NO_FILE": 2,
+    "DUPLICATE_SHEET_NUMBER": 4,
+    "EMPTY_STAMP_FIELD": 2,
+    "FILE_NOT_IN_REGISTRY": 1,
+    "INVALID_FORMAT": 2,
+    "IN_REGISTRY_NO_FILE": 1,
+    "SEQUENCE_GAP": 3
+  },
+  "stampApplyVerified": true,
+  "stampRollbackVerified": true,
+  "printOrderConsistent": true,
+  "nanoCADExecuted": false,
+  "dotnetAvailable": false,
+  "status": "SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING",
+  "criticalWarnings": [
+    "ГОСТ Р 21.101-2020 заменён ГОСТ Р 21.101-2026",
+    "ГОСТ 2.503-2013 заменён ГОСТ Р 2.503-2023",
+    "Иллюстрации не являются скриншотами nanoCAD",
+    "C# сборка не выполнялась в sandbox"
+  ]
+}

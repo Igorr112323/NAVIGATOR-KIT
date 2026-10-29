@@ -1,0 +1,142 @@
+{
+  "format": "navigator-kit.session2-summary/v1",
+  "sessionId": "night-session-20261027",
+  "generatedAt": "2026-10-29T06:57:26+00:00",
+  "checkedAtDate": "2026-10-27",
+  "branch": "arena/ec9fddc1-navigator-kit",
+  "baseRemoteCommit": "bc47b35",
+  "prUrl": "https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1",
+  "requestedLabels": [
+    "good first issue",
+    "night-session"
+  ],
+  "officialRegistry": {
+    "spds2026": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
+    "spds2020Replaced": "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
+    "appendixB": "https://base.garant.ru/413848474/f7ee959fd36b5699076b35abf4f52c5c/",
+    "changes2023": "https://protect.gost.ru/document.aspx?control=7&id=256448",
+    "changes2013Revoked": "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
+    "formats": "https://www.spds.ru/info/standarts/2.301-68.html"
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "task": "GitHub sync and re-read briefing",
+      "status": "DONE"
+    },
+    {
+      "id": 2,
+      "task": "Environment and normative registry re-check",
+      "status": "DONE"
+    },
+    {
+      "id": 3,
+      "task": "GitHub Actions Windows VM workflow",
+      "status": "PREPARED_NOT_EXECUTED"
+    },
+    {
+      "id": 4,
+      "task": "XML stamp mapping with sheet/format key attributes",
+      "status": "DONE_XSD_VALID"
+    },
+    {
+      "id": 5,
+      "task": "120 synthetic DXF to sheets_registry",
+      "status": "DONE"
+    },
+    {
+      "id": 6,
+      "task": "completeness_report.md with 16 incidents and 4 duplicate groups",
+      "status": "DONE"
+    },
+    {
+      "id": 7,
+      "task": "wo1_template.docx / wo1_template.csv / wo2_template.csv",
+      "status": "DONE"
+    },
+    {
+      "id": 8,
+      "task": "numbering_patch.py with minimal patch and full shift",
+      "status": "DONE"
+    },
+    {
+      "id": 9,
+      "task": "changes_table.md with normative and operational tables",
+      "status": "DONE"
+    },
+    {
+      "id": 10,
+      "task": "12 PNG 1600x1200 with persistent watermark",
+      "status": "DONE_BY_RENDERER"
+    },
+    {
+      "id": 11,
+      "task": "next_steps.md, report, PR body, labels, ZIP",
+      "status": "DONE_AFTER_FINALIZE"
+    }
+  ],
+  "results": {
+    "normativeAudit": {
+      "oldReferenceOccurrences": {
+        "GOST-2.503-2013": 40,
+        "GOST-R-21.101-2020": 53,
+        "GOST-R-21.1101-2013": 5
+      },
+      "classifiedFiles": 31
+    },
+    "completeness": {
+      "incidents": 16,
+      "duplicateGroups": 4,
+      "counts": {
+        "DOC_FILE_NOT_IN_REGISTRY": 1,
+        "DOC_IN_REGISTRY_NO_FILE": 2,
+        "DUPLICATE_SHEET_NUMBER": 4,
+        "EMPTY_STAMP_FIELD": 2,
+        "FILE_NOT_IN_REGISTRY": 1,
+        "INVALID_FORMAT": 2,
+        "IN_REGISTRY_NO_FILE": 1,
+        "SEQUENCE_GAP": 3
+      }
+    },
+    "forms": {
+      "form1Rows": 120,
+      "form2Rows": 8,
+      "wo1Docx": "delivery/data/wo1_template.docx"
+    },
+    "numbering": {
+      "script": "delivery/numbering_patch.py",
+      "strategies": [
+        "minimal",
+        "full"
+      ],
+      "planRows": 120,
+      "duplicateGroups": 4
+    },
+    "changesTable": {
+      "normativeColumns": 5,
+      "operationalColumns": 5,
+      "sampleRow": true
+    },
+    "nextSteps": {
+      "tasks": 5,
+      "priorities": [
+        "P0",
+        "P0",
+        "P1",
+        "P1",
+        "P2"
+      ]
+    }
+  },
+  "nanoCADExecuted": false,
+  "dotnetBuildExecutedInSandbox": false,
+  "windowsWorkflow": ".github/workflows/windows-build.yml",
+  "watermark": "nanoCAD НЕ запускался / не скриншот CAD",
+  "remainingHypotheses": [
+    "Form 1/2 exact geometry",
+    "GOST R 21.101-2026 section 7 priority for SPDS",
+    "MultiCAD .NET SDK 26 TFM/DLLs/API",
+    "Tables API and .dst export",
+    "Real DWG, license, and Windows VM workflow run"
+  ]
+}

@@ -1,0 +1,9 @@
+GitHub API: Portable CSharp DXF parser run 40832125855, head 115ebdb23c21dd4a980dfbdb02fc8aaf5893bf0f
+parser-tests job conclusion: success (build and dotnet test).
+Log ZIP download failed: results-receiver.actions.githubusercontent.com is outside allowed outbound hosts.
+No raw TRX/log download was obtained locally. An explicit 28-case TRX gate was subsequently added to CI.
+GitHub API: run 40832412743, head 82bc4db023f815c0f5c92b373fdfed541d751f40, conclusion success.
+Build portable parser (no CAD SDK): success.
+Run 28 CSharp cases on shared DXF fixtures: success.
+Assert exactly 28 passed cases from TRX: success.
+Thus explicit TRX assertions total=28, passed=28, failed=0 passed on .NET8 Ubuntu CI.

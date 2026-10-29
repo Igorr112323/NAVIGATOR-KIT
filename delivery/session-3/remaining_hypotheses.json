@@ -1,0 +1,273 @@
+{
+  "format": "navigator-kit.remaining-hypotheses/v1",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-29T06:57:29+00:00",
+  "totalMarkers": 251,
+  "files": [
+    {
+      "file": "README.md",
+      "count": 4
+    },
+    {
+      "file": "briefing.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/PR_BODY.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/README_night-session-final.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/README_night-session.md",
+      "count": 3
+    },
+    {
+      "file": "delivery/changes_table.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/data/change_register.csv",
+      "count": 6
+    },
+    {
+      "file": "delivery/data/change_table_notes.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/data/form1_vedomost.csv",
+      "count": 120
+    },
+    {
+      "file": "delivery/data/form2_vedomost.csv",
+      "count": 6
+    },
+    {
+      "file": "delivery/data/normative_audit.json",
+      "count": 1
+    },
+    {
+      "file": "delivery/data/stamp_patch_report.json",
+      "count": 1
+    },
+    {
+      "file": "delivery/index.html",
+      "count": 2
+    },
+    {
+      "file": "delivery/linux-stand/README.md",
+      "count": 2
+    },
+    {
+      "file": "delivery/linux-stand/geometry_audit.json",
+      "count": 1
+    },
+    {
+      "file": "delivery/linux-stand/geometry_audit.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/linux-stand/verification.json",
+      "count": 1
+    },
+    {
+      "file": "delivery/next_steps.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/night-log.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/night-session-2.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/night-session-3.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/README.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/multicad_backend_status.json",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/next_steps.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/normative_audit.json",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/official_text_extract.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/p0_norm_control.json",
+      "count": 2
+    },
+    {
+      "file": "delivery/session-3/p0_windows_stand.json",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/p1_multicad_dwg.json",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/p1_production_dwg_summary.json",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/senior_review.md",
+      "count": 1
+    },
+    {
+      "file": "delivery/session-3/windows_stand_check.ps1",
+      "count": 2
+    },
+    {
+      "file": "delivery/session-3/windows_stand_setup.md",
+      "count": 1
+    },
+    {
+      "file": "docs/api-experiment.md",
+      "count": 2
+    },
+    {
+      "file": "docs/nanocad-integration.md",
+      "count": 4
+    },
+    {
+      "file": "docs/normative-audit.md",
+      "count": 4
+    },
+    {
+      "file": "docs/official-text-extract.md",
+      "count": 1
+    },
+    {
+      "file": "docs/sources.md",
+      "count": 2
+    },
+    {
+      "file": "docs/standards-warning.md",
+      "count": 5
+    },
+    {
+      "file": "docs/windows-stand-setup.md",
+      "count": 1
+    },
+    {
+      "file": "docs/windows-vm-build.md",
+      "count": 2
+    },
+    {
+      "file": "linux_stand/multicad_backend.py",
+      "count": 1
+    },
+    {
+      "file": "night-log.md",
+      "count": 1
+    },
+    {
+      "file": "src/CSharpAdapter/CSharpAdapter.csproj",
+      "count": 1
+    },
+    {
+      "file": "src/CSharpAdapter/README.md",
+      "count": 1
+    },
+    {
+      "file": "src/NavigatorKit.Cli/Program.cs",
+      "count": 1
+    },
+    {
+      "file": "src/NavigatorKit.Core/ChangeTableWriter.cs",
+      "count": 1
+    },
+    {
+      "file": "src/NavigatorKit.Core/ReportWriters.cs",
+      "count": 1
+    },
+    {
+      "file": "src/NavigatorKit.Core/StampTransaction.cs",
+      "count": 1
+    },
+    {
+      "file": "src/NavigatorKit.NanoCad/DwgReadiness.cs",
+      "count": 1
+    },
+    {
+      "file": "src/NavigatorKit.NanoCad/NanoCadCommands.cs",
+      "count": 2
+    },
+    {
+      "file": "src/NavigatorKit.NanoCad/NanoCadSdkReferences.props.example",
+      "count": 1
+    },
+    {
+      "file": "src/NavigatorKit.NanoCad/NavigatorKit.NanoCad.csproj",
+      "count": 1
+    },
+    {
+      "file": "src/NavigatorKit.NanoCad/README.md",
+      "count": 1
+    },
+    {
+      "file": "tools/final_session.py",
+      "count": 1
+    },
+    {
+      "file": "tools/finalize_delivery.py",
+      "count": 6
+    },
+    {
+      "file": "tools/geometry_audit.py",
+      "count": 2
+    },
+    {
+      "file": "tools/make_demo_gif.py",
+      "count": 1
+    },
+    {
+      "file": "tools/navigator_kit.py",
+      "count": 7
+    },
+    {
+      "file": "tools/night_session_2.py",
+      "count": 7
+    },
+    {
+      "file": "tools/pipeline.py",
+      "count": 1
+    },
+    {
+      "file": "tools/render_screenshots.py",
+      "count": 7
+    },
+    {
+      "file": "tools/run_linux_stand.py",
+      "count": 1
+    },
+    {
+      "file": "tools/session3_runner.py",
+      "count": 9
+    },
+    {
+      "file": "tools/sheetset_probe.py",
+      "count": 1
+    },
+    {
+      "file": "tools/windows_stand_check.ps1",
+      "count": 2
+    }
+  ],
+  "policy": "Markers are intentionally retained until a real Windows/nanoCAD/SDK/norms review closes them."
+}

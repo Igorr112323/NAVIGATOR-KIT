@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- ГИПОТЕЗА/ПРОВЕРИТЬ: точный TFM плагина сверить с SDK nanoCAD 26.
+         net8.0 выбран только для совместимости с портируемым Core/CLI. -->
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>10.0</LangVersion>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NANOCAD_SDK_PATH)' != ''">
+    <DefineConstants>$(DefineConstants);NANOCAD_SDK</DefineConstants>
+  </PropertyGroup>
+  <!-- Пользователь создаёт этот файл из .example после проверки реальных DLL SDK. -->
+  <Import Project="NanoCadSdkReferences.props" Condition="Exists('NanoCadSdkReferences.props')" />
+  <ItemGroup>
+    <ProjectReference Include="../NavigatorKit.Core/NavigatorKit.Core.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,121 @@
+﻿Марка;Лист;Наименование;Примечание;Статус;Файл
+АР;1;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/АР/АР_001.dxf
+АР;2;План на отм. 0,000;;OK;samples/synthetic_sets/АР/АР_002.dxf
+АР;3;План на отм. 3,300;;OK;samples/synthetic_sets/АР/АР_003.dxf
+АР;4;План кровли;;OK;samples/synthetic_sets/АР/АР_004.dxf
+АР;5;Фасад 1-4;;OK;samples/synthetic_sets/АР/АР_005.dxf
+АР;6;Фасад А-Д;;OK;samples/synthetic_sets/АР/АР_006.dxf
+АР;7;Разрез 1-1;;OK;samples/synthetic_sets/АР/АР_007.dxf
+АР;8;Разрез 2-2;;OK;samples/synthetic_sets/АР/АР_008.dxf
+АР;9;План полов;;OK;samples/synthetic_sets/АР/АР_009.dxf
+АР;10;Ведомость отделки;;OK;samples/synthetic_sets/АР/АР_010.dxf
+АР;11;Узлы наружных стен;;OK;samples/synthetic_sets/АР/АР_011.dxf
+АР;12;Спецификация окон;;OK;samples/synthetic_sets/АР/АР_012.dxf
+АР;13;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/АР/АР_013.dxf
+АР;14;План на отм. 0,000;;OK;samples/synthetic_sets/АР/АР_014.dxf
+АР;15;План на отм. 3,300;DUPLICATE_SHEET_NUMBER;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/АР/АР_015.dxf
+АР;15;План кровли;DUPLICATE_SHEET_NUMBER;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/АР/АР_016.dxf
+АР;17;Фасад 1-4;;OK;samples/synthetic_sets/АР/АР_017.dxf
+АР;18;Фасад А-Д;;OK;samples/synthetic_sets/АР/АР_018.dxf
+АР;19;Разрез 1-1;;OK;samples/synthetic_sets/АР/АР_019.dxf
+АР;20;Разрез 2-2;;OK;samples/synthetic_sets/АР/АР_020.dxf
+АР;21;План полов;;OK;samples/synthetic_sets/АР/АР_021.dxf
+АР;22;Ведомость отделки;;OK;samples/synthetic_sets/АР/АР_022.dxf
+АР;23;Узлы наружных стен;;OK;samples/synthetic_sets/АР/АР_023.dxf
+АР;24;Спецификация окон;;OK;samples/synthetic_sets/АР/АР_024.dxf
+АР;25;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/АР/АР_025.dxf
+АР;26;План на отм. 0,000;;OK;samples/synthetic_sets/АР/АР_026.dxf
+АР;27;План на отм. 3,300;DUPLICATE_SHEET_NUMBER;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/АР/АР_027.dxf
+АР;27;План кровли;DUPLICATE_SHEET_NUMBER;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/АР/АР_028.dxf
+АР;29;Фасад 1-4;;OK;samples/synthetic_sets/АР/АР_029.dxf
+АР;30;Фасад А-Д;;OK;samples/synthetic_sets/АР/АР_030.dxf
+АР;31;Разрез 1-1;;OK;samples/synthetic_sets/АР/АР_031.dxf
+АР;32;Разрез 2-2;;OK;samples/synthetic_sets/АР/АР_032.dxf
+АР;33;План полов;;OK;samples/synthetic_sets/АР/АР_033.dxf
+АР;34;Ведомость отделки;;OK;samples/synthetic_sets/АР/АР_034.dxf
+АР;35;Узлы наружных стен;;OK;samples/synthetic_sets/АР/АР_035.dxf
+АР;36;Спецификация окон;;OK;samples/synthetic_sets/АР/АР_036.dxf
+АР;37;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/АР/АР_037.dxf
+АР;38;План на отм. 0,000;;OK;samples/synthetic_sets/АР/АР_038.dxf
+АР;39;План на отм. 3,300;;OK;samples/synthetic_sets/АР/АР_039.dxf
+АР;40;План кровли;FILE_NOT_IN_REGISTRY;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/АР/АР_040.dxf
+КР;1;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/КР/КР_001.dxf
+КР;2;Схема расположения свай;;OK;samples/synthetic_sets/КР/КР_002.dxf
+КР;3;План фундаментов;;OK;samples/synthetic_sets/КР/КР_003.dxf
+КР;4;Сечение 1-1 фундамента;;OK;samples/synthetic_sets/КР/КР_004.dxf
+КР;5;План колонн;;OK;samples/synthetic_sets/КР/КР_005.dxf
+КР;6;План перекрытия;;OK;samples/synthetic_sets/КР/КР_006.dxf
+КР;7;Схема армирования плиты;DUPLICATE_SHEET_NUMBER;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/КР/КР_007.dxf
+КР;7;Схема балок покрытия;DUPLICATE_SHEET_NUMBER;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/КР/КР_008.dxf
+КР;9;Узел опирания;;OK;samples/synthetic_sets/КР/КР_009.dxf
+КР;10;Спецификация элементов;;OK;samples/synthetic_sets/КР/КР_010.dxf
+КР;11;Разрез по лестнице;;OK;samples/synthetic_sets/КР/КР_011.dxf
+КР;12;[НЕ ЗАПОЛНЕНО];EMPTY_STAMP_FIELD;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/КР/КР_012.dxf
+КР;13;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/КР/КР_013.dxf
+КР;14;Схема расположения свай;;OK;samples/synthetic_sets/КР/КР_014.dxf
+КР;15;План фундаментов;;OK;samples/synthetic_sets/КР/КР_015.dxf
+КР;16;Сечение 1-1 фундамента;;OK;samples/synthetic_sets/КР/КР_016.dxf
+КР;17;План колонн;;OK;samples/synthetic_sets/КР/КР_017.dxf
+КР;18;План перекрытия;;OK;samples/synthetic_sets/КР/КР_018.dxf
+КР;19;Схема армирования плиты;;OK;samples/synthetic_sets/КР/КР_019.dxf
+КР;20;Схема балок покрытия;INVALID_FORMAT;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/КР/КР_020.dxf
+КР;21;Узел опирания;;OK;samples/synthetic_sets/КР/КР_021.dxf
+КР;22;Спецификация элементов;;OK;samples/synthetic_sets/КР/КР_022.dxf
+КР;23;Разрез по лестнице;;OK;samples/synthetic_sets/КР/КР_023.dxf
+КР;24;Ведомость расхода стали;;OK;samples/synthetic_sets/КР/КР_024.dxf
+КР;25;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/КР/КР_025.dxf
+КР;26;Схема расположения свай;;OK;samples/synthetic_sets/КР/КР_026.dxf
+КР;27;План фундаментов;;OK;samples/synthetic_sets/КР/КР_027.dxf
+КР;28;Сечение 1-1 фундамента;;OK;samples/synthetic_sets/КР/КР_028.dxf
+КР;29;План колонн;;OK;samples/synthetic_sets/КР/КР_029.dxf
+КР;30;План перекрытия;;OK;samples/synthetic_sets/КР/КР_030.dxf
+КР;31;Схема армирования плиты;;OK;samples/synthetic_sets/КР/КР_031.dxf
+КР;32;Схема балок покрытия;;OK;samples/synthetic_sets/КР/КР_032.dxf
+КР;33;Узел опирания;;OK;samples/synthetic_sets/КР/КР_033.dxf
+КР;34;Спецификация элементов;;OK;samples/synthetic_sets/КР/КР_034.dxf
+КР;35;Разрез по лестнице;;OK;samples/synthetic_sets/КР/КР_035.dxf
+КР;36;Ведомость расхода стали;;OK;samples/synthetic_sets/КР/КР_036.dxf
+КР;37;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/КР/КР_037.dxf
+КР;38;Схема расположения свай;;OK;samples/synthetic_sets/КР/КР_038.dxf
+КР;39;План фундаментов;;OK;samples/synthetic_sets/КР/КР_039.dxf
+КР;40;Сечение 1-1 фундамента;;OK;samples/synthetic_sets/КР/КР_040.dxf
+ОВ;1;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/ОВ/ОВ_001.dxf
+ОВ;2;План отопления подвала;;OK;samples/synthetic_sets/ОВ/ОВ_002.dxf
+ОВ;3;План отопления 1 этажа;;OK;samples/synthetic_sets/ОВ/ОВ_003.dxf
+ОВ;4;План вентиляции;;OK;samples/synthetic_sets/ОВ/ОВ_004.dxf
+ОВ;5;Схема воздуховодов;;OK;samples/synthetic_sets/ОВ/ОВ_005.dxf
+ОВ;6;План дымоудаления;;OK;samples/synthetic_sets/ОВ/ОВ_006.dxf
+ОВ;7;Разрез венткамеры;;OK;samples/synthetic_sets/ОВ/ОВ_007.dxf
+ОВ;8;Схема трубопроводов;;OK;samples/synthetic_sets/ОВ/ОВ_008.dxf
+ОВ;9;Узел присоединения;;OK;samples/synthetic_sets/ОВ/ОВ_009.dxf
+ОВ;10;Спецификация оборудования;;OK;samples/synthetic_sets/ОВ/ОВ_010.dxf
+ОВ;11;Аксонометрическая схема;;OK;samples/synthetic_sets/ОВ/ОВ_011.dxf
+ОВ;12;Ведомость воздуховодов;;OK;samples/synthetic_sets/ОВ/ОВ_012.dxf
+ОВ;13;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/ОВ/ОВ_013.dxf
+ОВ;14;План отопления подвала;;OK;samples/synthetic_sets/ОВ/ОВ_014.dxf
+ОВ;15;План отопления 1 этажа;;OK;samples/synthetic_sets/ОВ/ОВ_015.dxf
+ОВ;16;План вентиляции;;OK;samples/synthetic_sets/ОВ/ОВ_016.dxf
+ОВ;17;Схема воздуховодов;;OK;samples/synthetic_sets/ОВ/ОВ_017.dxf
+ОВ;18;План дымоудаления;INVALID_FORMAT;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/ОВ/ОВ_018.dxf
+ОВ;19;Разрез венткамеры;;OK;samples/synthetic_sets/ОВ/ОВ_019.dxf
+ОВ;20;Схема трубопроводов;;OK;samples/synthetic_sets/ОВ/ОВ_020.dxf
+ОВ;21;Узел присоединения;DUPLICATE_SHEET_NUMBER;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/ОВ/ОВ_021.dxf
+ОВ;21;Спецификация оборудования;DUPLICATE_SHEET_NUMBER;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/ОВ/ОВ_022.dxf
+ОВ;23;Аксонометрическая схема;;OK;samples/synthetic_sets/ОВ/ОВ_023.dxf
+ОВ;24;Ведомость воздуховодов;;OK;samples/synthetic_sets/ОВ/ОВ_024.dxf
+ОВ;25;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/ОВ/ОВ_025.dxf
+ОВ;26;План отопления подвала;;OK;samples/synthetic_sets/ОВ/ОВ_026.dxf
+ОВ;27;План отопления 1 этажа;;OK;samples/synthetic_sets/ОВ/ОВ_027.dxf
+ОВ;28;План вентиляции;;OK;samples/synthetic_sets/ОВ/ОВ_028.dxf
+ОВ;29;Схема воздуховодов;;OK;samples/synthetic_sets/ОВ/ОВ_029.dxf
+ОВ;30;План дымоудаления;;OK;samples/synthetic_sets/ОВ/ОВ_030.dxf
+ОВ;31;Разрез венткамеры;;OK;samples/synthetic_sets/ОВ/ОВ_031.dxf
+ОВ;32;Схема трубопроводов;;OK;samples/synthetic_sets/ОВ/ОВ_032.dxf
+ОВ;34;Спецификация оборудования;;OK;samples/synthetic_sets/ОВ/ОВ_034.dxf
+ОВ;35;Аксонометрическая схема;;OK;samples/synthetic_sets/ОВ/ОВ_035.dxf
+ОВ;36;Ведомость воздуховодов;;OK;samples/synthetic_sets/ОВ/ОВ_036.dxf
+ОВ;37;Общие данные по рабочим чертежам;;OK;samples/synthetic_sets/ОВ/ОВ_037.dxf
+ОВ;38;План отопления подвала;;OK;samples/synthetic_sets/ОВ/ОВ_038.dxf
+ОВ;39;План отопления 1 этажа;;OK;samples/synthetic_sets/ОВ/ОВ_039.dxf
+ОВ;40;План вентиляции;;OK;samples/synthetic_sets/ОВ/ОВ_040.dxf
+ОВ;?;Узел присоединения;EMPTY_STAMP_FIELD;ЕСТЬ_ИНЦИДЕНТЫ;samples/synthetic_sets/ОВ/ОВ_033.dxf

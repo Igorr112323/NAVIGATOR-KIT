@@ -1,0 +1,38 @@
+{
+  "format": "navigator-kit.session3-windows-stand/v1",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-29T06:57:27+00:00",
+  "status": "EXTERNAL_DEPENDENCY",
+  "hypothesisMarker": "ГИПОТЕЗА/ПРОВЕРИТЬ",
+  "hostOS": "Linux-6.1.158+-x86_64-with-glibc2.36",
+  "windowsAvailable": false,
+  "dotnetAvailable": false,
+  "tools": {
+    "dotnet": "MISSING",
+    "mono": "MISSING",
+    "msbuild": "MISSING",
+    "csc": "MISSING",
+    "ffmpeg": "MISSING",
+    "pwsh": "MISSING",
+    "powershell": "MISSING"
+  },
+  "nanoCAD26Installed": false,
+  "licenseFound": false,
+  "multiCadSdk26Installed": false,
+  "nkHelloExecuted": false,
+  "sdkProbeExecuted": false,
+  "realScreenshotsCaptured": false,
+  "screenshotsExpected": [
+    "delivery/screenshots/nanocad_26_main_window.png",
+    "delivery/screenshots/nanocad_26_toolbar.png",
+    "delivery/screenshots/nanocad_26_api_commands.png"
+  ],
+  "preparedArtifacts": [
+    ".github/workflows/windows-build.yml",
+    "tools/windows_stand_check.ps1",
+    "docs/windows-stand-setup.md",
+    "src/NavigatorKit.NanoCad/SdkProbe.cs",
+    "src/NavigatorKit.NanoCad/DwgReadiness.cs"
+  ],
+  "reason": "Linux sandbox has no Windows, nanoCAD 26, SDK 26, license, or real DWG. Installation and screenshots require a human-operated stand."
+}

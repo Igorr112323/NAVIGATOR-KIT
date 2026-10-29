@@ -1,0 +1,59 @@
+# План ночных сессий
+
+## Первая сессия — 2026-10-26 (~10 ч, буфер 20 %)
+
+Активная работа — 8 ч, резерв — 2 ч. Каждая задача имеет результат и критерий готовности.
+
+| # | Время | Microtask | Инструменты | Артефакт / критерий |
+|---|---|---|---|---|
+| 1 | 00:00–00:30 | Загрузка контекста, GitHub sync, инвентаризация | `git`, `gh`, `find` | `night-log.md`, состояние ветки/issue/PR |
+| 2 | 00:30–01:00 | Проверка зависимостей и действующих ГОСТ | `bash`, web sources | `dependencies.md`, `standards-warning.md` |
+| 3 | 01:00–02:00 | Генератор 3×40 синтетических DXF + два профиля штампа | `ezdxf`, XML | 120 DXF, `stamp_mapping.xml` |
+| 4 | 02:00–03:00 | POC‑сканер атрибутов → реестр CSV/JSON | Python stdlib / C# BCL | 120 строк, SHA‑256 файлов |
+| 5 | 03:00–03:30 | Исследование штатных способов ф.1 и API | официальная справка, forum | `api-experiment.md`, матрица гипотез |
+| 6 | 03:30–04:15 | Обратимая правка штампа dry‑run/backup/rollback | текстовый DXF patcher | отчёт с совпавшими хэшами |
+| 7 | 04:15–05:15 | Формы 1/2 + контроль комплектности | CSV, XML | строгие колонки, отчёт инцидентов |
+| 8 | 05:15–06:15 | Граф нумерации, дубли, два варианта сдвига | Python / C# | `duplicate_report.csv`, `numbering_plan.csv` |
+| 9 | 06:15–07:00 | Таблица изменений + синхронизация печати | CSV/JSON | пустая таблица, `print_order.json` |
+| 10 | 07:00–08:00 | C#‑каркас, адаптер nanoCAD, probe SDK | .NET 8, reflection | решения и проекты, без выдуманных API |
+| 11 | 08:00–08:30 | ≥10 PNG 1600×1200, HTML‑дашборд | Pillow | подписанные макеты, не fake screenshots |
+| 12 | 08:30–10:00 | **Буфер 20 %+**: QA, manifest, ZIP, отчёт, push, PR | `verify_delivery.py`, `git`, `gh` | зелёная матрица, PR с «Что сделать до следующего раза» |
+
+## Вторая сессия — 2026-10-27 (продолжение PR #1)
+
+Цель: не дублировать проект, а обновить нормативный слой, добавить именованные артефакты из задания, подготовить Windows-VM workflow и привести PR к финальному виду.
+
+| # | Задача | Инструменты | Артефакт / критерий |
+|---|---|---|---|
+| 1 | Синхронизация `origin/arena/ec9fddc1-navigator-kit` до `bc47b35`, повторная проверка issue/PR/веток | `git`, `gh` | чистое дерево, PR #1 открыт, чек зелёный |
+| 2 | Повторная проверка окружения и официального реестра ГОСТ | `bash`, web, Rosstandart | `environment.json`, `normative-audit.md`, дата 2026-10-27 |
+| 3 | Подготовка workflow для будущей Windows-VM | GitHub Actions | `windows-build.yml`, `windows-vm-build.md` |
+| 4 | XML-маппинг: атрибуты номера листа и формата + XSD | XML/XSD | `keyAttributes` во всех XML, валидация без ошибок |
+| 5 | 120 DXF → `sheets_registry.csv/json` | `navigator_kit.py` | 120 строк, SHA-256, 2 профиля |
+| 6 | Отчёт комплектности: 16 инцидентов, 4 группы дублей | CSV/Markdown | `completeness_report.md`, `completeness_chart.png` |
+| 7 | Формы 1/2 по Приложению Б ГОСТ Р 21.101-2026 | DOCX/CSV | `wo1_template.docx`, `wo1_template.csv`, `wo2_template.csv` |
+| 8 | Скрипт нумерации: minimal patch + full shift | Python stdlib | `numbering_patch.py`, 120 записей плана |
+| 9 | Таблица изменений: нормативная + операционная | Markdown | `changes_table.md`, явное разделение ГОСТ и PM-таблицы |
+| 10 | 12 PNG 1600×1200 с постоянным водяным знаком | Pillow | `screenshots/`, `screenshots_manifest.json` |
+| 11 | `next_steps.md`, отчёт, PR body, labels, ZIP | `finalize_delivery.py`, `gh api` | 3–5 задач P0–P2, labels `good first issue` и `night-session` |
+
+## Третья сессия — 2026-10-28 (P0–P2, продолжение PR #1)
+
+| # | Приоритет | Microtask | Артефакт / критерий |
+|---:|---|---|---|
+| 1 | P0 | Повторный нормоконтроль: реестр, официальное издание, Приложение Б, раздел 7 | `delivery/data/norms_registry.json`, `p0_norm_control.json`, `official_text_extract.md` |
+| 2 | P0 | Windows-стенд: инструкция, PowerShell-чек, C# readiness, честный статус | `p0_windows_stand.json`, `windows_stand_setup.md`, `DwgReadiness.cs` |
+| 3 | P1 | Production pipeline: synthetic backend + MultiCAD stub | `tools/pipeline.py`, `p1_production_dwg.json`, обновлённый реестр |
+| 4 | P1 | SHEETSET/Tables probe: print order, формы 1/2, API-гипотезы | `tools/sheetset_probe.py`, `p1_sheetset_tables.json`, `print_order.json` |
+| 5 | P2 | GIF ≤3 МБ, storyboard, senior review, новый `next_steps.md` | `demo.gif`, `senior_review.md`, `remaining_hypotheses.json` |
+
+Фактическая сессия снова сжата в автоматизированный проход; 8–10 часов не симулировались. Реальные nanoCAD/DWG задачи перенесены в новый блок «Что сделать до следующего раза».
+
+## Предложенный календарь на 4 недели
+
+Оригинальный календарь отсутствует. Предложенный план:
+
+- **Неделя 1.** Нормативная ревизия, получение SDK/лицензии, реальные DWG, точный TFM и API probe.
+- **Неделя 2.** POC фонового чтения DWG без открытия в редакторе, маппинг двух реальных шаблонов, 3×40 реестр.
+- **Неделя 3.** Генерация таблиц в чертеже, обратимая правка штампов, контроль комплектности.
+- **Неделя 4.** GIF‑демо ≤3 МБ, выступление/пояснительная записка, norms review, подача.

@@ -1,0 +1,49 @@
+name: Verify night delivery
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install tooling
+        run: python -m pip install -r requirements.txt
+      - name: Regenerate fixtures
+        run: python tools/generate_fixtures.py
+      - name: Run reference pipeline
+        run: python tools/navigator_kit.py all
+      - name: Run second-session continuation artifacts
+        run: python tools/night_session_2.py
+      - name: Run third-session P0-P2 chain
+        run: python tools/session3_runner.py
+      - name: Render screenshots
+        run: python tools/render_screenshots.py
+      - name: Run Linux DXF stand (render and independent verification)
+        run: python tools/run_linux_stand.py
+      - name: Complete Linux stand batch and full pytest
+        run: python tools/complete_linux_stand.py
+      - name: Collect and execute portable pytest suite
+        run: |
+          python -m pytest tests/ --collect-only -q > delivery/linux-stand/collect_log.txt 2>&1
+          python -m pytest tests/ -v --tb=short > delivery/linux-stand/pytest_output.log 2>&1
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Audit demo geometry and prepare final reports
+        run: |
+          python tools/geometry_audit.py --self-test
+          python tools/final_session.py --prepare
+      - name: Build dashboard and delivery bundle
+        run: python tools/finalize_delivery.py
+      - name: Verify delivery
+        run: python tools/verify_delivery.py --check-only
+      - name: Finalize Linux stand bundle
+        run: python tools/finalize_linux_stand.py
+      - name: Build test-runner and verify extracted suite
+        run: python tools/build_test_runner.py
+      - name: Build final-session package
+        run: python tools/final_session.py --package

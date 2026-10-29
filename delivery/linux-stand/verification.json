@@ -1,0 +1,37 @@
+{
+  "counts": {
+    "LWPOLYLINE": 1,
+    "LINE": 1,
+    "TEXT": 1,
+    "INSERT": 1,
+    "ATTRIB": 4,
+    "SEQEND": 1
+  },
+  "attributes": {
+    "DESIGNATION": "NK-001-AR",
+    "SHEET": "1",
+    "TITLE": "General data",
+    "FORMAT": "A4"
+  },
+  "layers": [
+    "FRAME",
+    "NOTES",
+    "STAMP"
+  ],
+  "frameBounds": [
+    0.0,
+    0.0,
+    297.0,
+    210.0
+  ],
+  "status": "PASS",
+  "nanoCADExecuted": false,
+  "renderer": "ezdxf 1.4.5 / matplotlib",
+  "limitations": [
+    "ГИПОТЕЗА/ПРОВЕРИТЬ: form geometry, SDK binding, DWG, transactions, layouts, printing"
+  ],
+  "hashes": {
+    "hello_stamp.dxf": "4303fd184088c85fac4d6126858a30ccd64ba4068f2edfa3b997ca79efb0e279",
+    "hello_stamp.png": "cda10b71a08f65dc219be1a0502e1db471e0cfa81961f143144d20a86707b7b0"
+  }
+}

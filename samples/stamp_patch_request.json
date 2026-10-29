@@ -1,0 +1,19 @@
+{
+  "format": "navigator-kit.stamp-patch/v1",
+  "dry_run": true,
+  "note": "Правка применяется только к копиям DXF и откатывается; исходные файлы не меняются.",
+  "patches": [
+    {
+      "file": "samples/synthetic_sets/АР/АР_016.dxf",
+      "tag": "SHEET",
+      "old_value": "15",
+      "new_value": "16"
+    },
+    {
+      "file": "samples/synthetic_sets/КР/КР_008.dxf",
+      "tag": "LIST",
+      "old_value": "7",
+      "new_value": "8"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Development tooling: fixtures, screenshots, XSD validation, C# syntax parsing, tests.
+# The core CLI in tools/navigator_kit.py uses only the Python standard library.
+ezdxf==1.4.5
+Pillow==11.3.0
+xmlschema==4.1.0
+tree_sitter==0.25.2
+tree_sitter_c_sharp==0.23.5
+# Second-session deliverables (DOCX forms, optional XML/analytics tooling, chart).
+python-docx==1.2.0
+lxml==6.1.3
+pandas==3.1.0
+matplotlib==3.11.2
+
+# Linux stand tests
+pytest==8.4.2

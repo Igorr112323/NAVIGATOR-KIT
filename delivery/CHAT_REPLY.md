@@ -1,0 +1,22 @@
+# Готовый ответ в чат
+
+🚀 Финальный Linux-этап: аудит, Windows-инструкция, portable C# parser и GIF-сценарий готовы.
+C# build/xUnit проверены отдельным CI; см. delivery/linux-stand/csharp_ci_validation.json.
+Финальный пакет: delivery/navigator-kit-final-session.zip (≤3 MB).
+✅ 12 подготовленных DXF + 12 рендеров 1600×1200, banner + watermark.
+✅ 28 pytest PASS; 59 delivery checks / 0 failures — отдельно.
+✅ ZIP проверяется распаковкой и запуском тестов; минимальные зависимости перечислены.
+Python 3.11/Linux проверен. Другие ОС не запускались. Это не nanoCAD-плагин.
+Пакет: `delivery/navigator-kit-test-runner.zip` (≤3 MB); инструкция: `README_test_runner.md`.
+
+Ночная сессия завершена и обновлена 2026-10-28. Ветка `arena/ec9fddc1-navigator-kit`, коммит `82bc4db023f815c0f5c92b373fdfed541d751f40`, PR: https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1.
+
+**Сделано:** 120 синтетических DXF → реестр CSV/JSON, формы 1/2, 16 инцидентов комплектности, 4 группы дублей, rollback с проверкой SHA-256, порядок печати на 120 листов, XML/XSD-маппинг, C# каркас, 15 PNG 1600×1200, HTML-дашборд и ZIP. Добавлены именованные артефакты второй сессии, Windows workflow и постоянный watermark. Третья сессия добавила P0–P2 проход, официальную выписку, GIF-демо ≤3 МБ и senior review; гипотезы CAD-стенда сохранены.
+
+**Важно:** nanoCAD/SDK здесь не запускались. PNG — подписанные диагностические макеты, не скриншоты CAD. Обнаружено, что ГОСТ Р 21.101-2020 и ГОСТ 2.503-2013 утратили силу; отчёт содержит предупреждение и переключение на актуальные редакции.
+
+**Артефакты:** `delivery/README_night-session.md`, `delivery/index.html`, `delivery/session-3/`, `delivery/session-3/demo.gif`, `delivery/completeness_report.md`, `delivery/data/wo1_template.docx`, `delivery/data/wo2_template.csv`, `delivery/numbering_patch.py`, `delivery/changes_table.md`, `delivery/next_steps.md`, `delivery/data/`, `delivery/xml/`, `delivery/screenshots/`, `delivery/navigator-kit-night-session.zip`.
+
+**Следующий шаг:** Windows + nanoCAD 26 + SDK, `NK_HELLO`/`SdkProbe`, реальные DWG и нормоконтроль форм 1/2 по ГОСТ Р 21.101-2026.
+
+Верификация: `PASS`.

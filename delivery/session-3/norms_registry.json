@@ -1,0 +1,47 @@
+[
+  {
+    "norm": "ГОСТ Р 21.101-2026",
+    "edition": "2026",
+    "date_force": "2026-04-01",
+    "source": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
+    "status": "ACTIVE",
+    "classification": "ACTUAL_EXECUTABLE_PROFILE",
+    "note": "Приказ 129-ст от 12.02.2026; заменяет ГОСТ Р 21.101-2020; формы 1/2 — обязательное Приложение Б."
+  },
+  {
+    "norm": "ГОСТ Р 21.101-2020",
+    "edition": "2020",
+    "date_force": "до 2026-04-01",
+    "source": "https://protect.gost.ru/gost/details/ba2db0a2-01aa-45da-a9dd-e5525bd69ec3",
+    "status": "REPLACED",
+    "classification": "HISTORICAL_REFERENCE_ONLY",
+    "note": "Сохраняется только в аудите и backward-compatibility comments; не является базой новой подачи."
+  },
+  {
+    "norm": "ГОСТ Р 2.503-2023",
+    "edition": "2023",
+    "date_force": "2024-03-01",
+    "source": "https://protect.gost.ru/document.aspx?control=7&id=256448",
+    "status": "ACTIVE",
+    "classification": "ACTUAL_CHANGE_TABLE_PROFILE",
+    "note": "Графы Изм. / Лист / № докум. / Подп. / Дата; для СПДС дополнительно раздел 7 ГОСТ Р 21.101-2026."
+  },
+  {
+    "norm": "ГОСТ 2.503-2013",
+    "edition": "2013",
+    "date_force": "утратил силу в РФ с 2024-03-01",
+    "source": "https://protect.gost.ru/gost/details/03d72f0a-a11e-436f-ba81-41f9333ccc39",
+    "status": "REVOKED_RU",
+    "classification": "HISTORICAL_REFERENCE_ONLY",
+    "note": "«На территории РФ пользоваться ГОСТ Р 2.503-2023»."
+  },
+  {
+    "norm": "ГОСТ 2.301-68",
+    "edition": "1968",
+    "date_force": "действует с оговоркой",
+    "source": "https://www.spds.ru/info/standarts/2.301-68.html",
+    "status": "ACTIVE_WITH_CAVEAT",
+    "classification": "FORMAT_DESIGNATION_CHECK",
+    "note": "Проверяются обозначения A0–A5 и производные; вопрос досрочного применения ГОСТ Р 2.301-2026 требует уточнения."
+  }
+]

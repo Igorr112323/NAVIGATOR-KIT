@@ -1,0 +1,5 @@
+# Optional analytics stack for a future Windows VM / dashboard work.
+# These are already pinned in requirements.txt so CI can regenerate the chart.
+lxml==6.1.3
+pandas==3.1.0
+matplotlib==3.11.2

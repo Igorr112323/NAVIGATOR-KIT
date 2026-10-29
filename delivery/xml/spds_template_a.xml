@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stampMapping version="1.0" normativeProfile="GOST-R-21.101-2026-Appendix-B" legacyProfile="GOST-R-21.101-2020-Appendix-V" generatedAt="2026-10-27" status="EXAMPLE-A">
+  <metadata><project>Комплект-Навигатор</project><purpose>Пример A: latin attribute tags.</purpose><warning>Имена блоков/тегов условий требуют проверки на реальных шаблонах СПДС.</warning><source>docs/standards-warning.md</source></metadata>
+  <templates>
+    <template id="SPDS_FORM3_CLASSIC" blockName="SPDS_FORM3" description="Условный эталонный шаблон СПДС, форма 3, латинские теги" status="HYPOTHESIS-REAL-TEMPLATE-NAME-MUST-BE-VERIFIED">
+      <attribute tag="PROFILE" field="profile_id" required="true" example="SPDS_FORM3_CLASSIC"/>
+      <attribute tag="MARK" field="mark" required="true" example="АР"/>
+      <attribute tag="DESIGNATION" field="doc_designation" required="true" example="2345-12-АР"/>
+      <attribute tag="SHEET" field="sheet_no" required="true" example="15"/>
+      <attribute tag="TITLE" field="sheet_name" required="true" example="План на отм. 0,000"/>
+      <attribute tag="FORMAT" field="format" required="true" example="A2"/>
+      <attribute tag="REV" field="revision" required="false" example="0"/>
+      <attribute tag="LAYOUT" field="layout" required="false" example="Лист 1"/>
+    </template>
+  </templates>
+  <keyAttributes description="Явные привязки номера листа и формата; имена тегов требуют проверки на реальных шаблонах СПДС.">
+    <attributeBinding field="sheet_no" purpose="Номер листа" required="true" tags="SHEET"/>
+    <attributeBinding field="format" purpose="Формат листа" required="true" tags="FORMAT"/>
+  </keyAttributes>
+  <formatRules standard="GOST 2.301-68" status="DESIGNATION-CHECK-ONLY">
+    <basicFormat name="A0" shortSide="841" longSide="1189"/>
+    <basicFormat name="A1" shortSide="594" longSide="841"/>
+    <basicFormat name="A2" shortSide="420" longSide="594"/>
+    <basicFormat name="A3" shortSide="297" longSide="420"/>
+    <basicFormat name="A4" shortSide="210" longSide="297"/>
+    <basicFormat name="A5" shortSide="148" longSide="210" optional="true"/>
+  </formatRules>
+  <changeTable standard="GOST-R-2.503-2023-section-5.12" spdsStandard="GOST-R-21.101-2026-section-7" status="HYPOTHESIS-NORMS-REVIEW-REQUIRED">
+    <column name="Изм."/><column name="Лист"/><column name="№ докум."/><column name="Подп."/><column name="Дата"/>
+    <allowedListMarker value="Зам."/><allowedListMarker value="Нов."/><allowedListMarker value="Все"/><allowedListMarker value="-"/>
+    <note>Аннулирование оформляется отдельно.</note>
+  </changeTable>
+</stampMapping>

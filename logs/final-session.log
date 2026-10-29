@@ -1,0 +1,341 @@
+$ python tools/generate_fixtures.py
+Generated 120 DXF files in /home/user/NAVIGATOR-KIT/samples/synthetic_sets
+Expected registry rows: 120; reference docs: 6
+
+exit=0
+$ python tools/navigator_kit.py all
+2026-10-29T06:57:25+00:00 [SESSION_START] id=night-session-20261028; repo=/home/user/NAVIGATOR-KIT; python=3.11.2
+2026-10-29T06:57:25+00:00 [WARNING] Original briefing.md is absent; reconstructed brief is not authoritative.
+2026-10-29T06:57:25+00:00 [WARNING] No Windows/nanoCAD 26/MultiCAD .NET SDK/dotnet in this sandbox.
+2026-10-29T06:57:25+00:00 [WARNING] Screenshots later in the pipeline are labelled diagnostic mockups, not nanoCAD captures.
+2026-10-29T06:57:25+00:00 [TASK_START] Environment and dependency capture
+2026-10-29T06:57:25+00:00 [TASK_START] Load XML mapping profiles
+2026-10-29T06:57:25+00:00 [TASK_OK] Loaded 2 stamp profiles
+2026-10-29T06:57:25+00:00 [TASK_START] POC scan of synthetic DXF directory
+2026-10-29T06:57:26+00:00 [TASK_OK] Scanned 120 DXF files
+2026-10-29T06:57:26+00:00 [TASK_START] Completeness validation
+2026-10-29T06:57:26+00:00 [TASK_OK] Found 16 completeness issues
+2026-10-29T06:57:26+00:00 [TASK_OK] Build form 1 data
+2026-10-29T06:57:26+00:00 [TASK_OK] Build form 2 data
+2026-10-29T06:57:26+00:00 [TASK_OK] Duplicate detection and numbering policy
+2026-10-29T06:57:26+00:00 [TASK_OK] Reversible stamp patch + rollback
+2026-10-29T06:57:26+00:00 [TASK_OK] Change table template
+2026-10-29T06:57:26+00:00 [TASK_OK] Print order handoff
+2026-10-29T06:57:26+00:00 [TASK_OK] Write API experiment results
+2026-10-29T06:57:26+00:00 [TASK_OK] Write standards status
+2026-10-29T06:57:26+00:00 [SESSION_END] summary=SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING
+{
+  "format": "navigator-kit.summary/v1",
+  "generatedAt": "2026-10-29T06:57:26+00:00",
+  "sessionId": "night-session-20261028",
+  "verifiedLocally": true,
+  "input": {
+    "syntheticDxfFiles": 120,
+    "marks": 3,
+    "perMark": {
+      "АР": 40,
+      "КР": 40,
+      "ОВ": 40
+    }
+  },
+  "output": {
+    "registryRows": 120,
+    "form1Rows": 120,
+    "form2Rows": 8,
+    "completenessIssues": 16,
+    "duplicateGroups": 4,
+    "numberingPlanRows": 120,
+    "changeTemplateRows": 10,
+    "printOrderItems": 120
+  },
+  "issueCounts": {
+    "DOC_FILE_NOT_IN_REGISTRY": 1,
+    "DOC_IN_REGISTRY_NO_FILE": 2,
+    "DUPLICATE_SHEET_NUMBER": 4,
+    "EMPTY_STAMP_FIELD": 2,
+    "FILE_NOT_IN_REGISTRY": 1,
+    "INVALID_FORMAT": 2,
+    "IN_REGISTRY_NO_FILE": 1,
+    "SEQUENCE_GAP": 3
+  },
+  "stampApplyVerified": true,
+  "stampRollbackVerified": true,
+  "printOrderConsistent": true,
+  "nanoCADExecuted": false,
+  "dotnetAvailable": false,
+  "status": "SUBSTANTIAL_LOCAL_DELIVERY;CAD_HOST_INTEGRATION_PENDING",
+  "criticalWarnings": [
+    "ГОСТ Р 21.101-2020 заменён ГОСТ Р 21.101-2026",
+    "ГОСТ 2.503-2013 заменён ГОСТ Р 2.503-2023",
+    "Иллюстрации не являются скриншотами nanoCAD",
+    "C# сборка не выполнялась в sandbox"
+  ]
+}
+
+exit=0
+$ python tools/night_session_2.py
+{
+  "status": "PASS",
+  "sessionId": "night-session-20261027",
+  "generatedAt": "2026-10-29T06:57:26+00:00",
+  "results": {
+    "normativeAudit": {
+      "oldReferenceOccurrences": {
+        "GOST-2.503-2013": 40,
+        "GOST-R-21.101-2020": 53,
+        "GOST-R-21.1101-2013": 5
+      },
+      "classifiedFiles": 31
+    },
+    "completeness": {
+      "incidents": 16,
+      "duplicateGroups": 4,
+      "counts": {
+        "DOC_FILE_NOT_IN_REGISTRY": 1,
+        "DOC_IN_REGISTRY_NO_FILE": 2,
+        "DUPLICATE_SHEET_NUMBER": 4,
+        "EMPTY_STAMP_FIELD": 2,
+        "FILE_NOT_IN_REGISTRY": 1,
+        "INVALID_FORMAT": 2,
+        "IN_REGISTRY_NO_FILE": 1,
+        "SEQUENCE_GAP": 3
+      }
+    },
+    "forms": {
+      "form1Rows": 120,
+      "form2Rows": 8,
+      "wo1Docx": "delivery/data/wo1_template.docx"
+    },
+    "numbering": {
+      "script": "delivery/numbering_patch.py",
+      "strategies": [
+        "minimal",
+        "full"
+      ],
+      "planRows": 120,
+      "duplicateGroups": 4
+    },
+    "changesTable": {
+      "normativeColumns": 5,
+      "operationalColumns": 5,
+      "sampleRow": true
+    },
+    "nextSteps": {
+      "tasks": 5,
+      "priorities": [
+        "P0",
+        "P0",
+        "P1",
+        "P1",
+        "P2"
+      ]
+    },
+    "summary": {
+      "tasks": 11,
+      "labels": [
+        "good first issue",
+        "night-session"
+      ]
+    }
+  },
+  "log": "logs/night-session-2.log"
+}
+
+exit=0
+$ python tools/session3_runner.py
+{
+  "status": "PASS_WITH_EXTERNAL_DEPENDENCIES",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-29T06:57:29+00:00",
+  "results": {
+    "p0_norm": {
+      "status": "NORM_CONTROL_OK_WITH_GEOMETRY_HYPOTHESIS",
+      "norms": 5,
+      "oldReferenceOccurrences": {
+        "GOST-2.503-2013": 39,
+        "GOST-R-21.101-2020": 51,
+        "GOST-R-21.1101-2013": 5
+      },
+      "geometryHypothesis": true
+    },
+    "p0_windows": {
+      "status": "EXTERNAL_DEPENDENCY",
+      "nkHello": false,
+      "sdkProbe": false,
+      "realScreenshots": false
+    },
+    "p1_dwg": {
+      "status": "SYNTHETIC_VERIFIED;MULTICAD_EXTERNAL_DEPENDENCY",
+      "syntheticDxf": 120,
+      "realDwg": 0,
+      "rollbackVerified": true
+    },
+    "p1_sheetset": {
+      "status": "LOCAL_HANDOFF_VERIFIED;CAD_API_HYPOTHESIS",
+      "printOrderConsistent": true,
+      "getSheetSets": "HYPOTHESIS",
+      "dstTouched": false
+    },
+    "p2": {
+      "status": "GIF_OK;SENIOR_REVIEW_DONE;HYPOTHESES_REMAIN",
+      "gifBytes": 177476,
+      "within3MB": true,
+      "remainingHypothesisMarkers": 251
+    }
+  },
+  "session3": "delivery/session-3/",
+  "log": "logs/night-session-3.log"
+}
+
+exit=0
+$ python tools/render_screenshots.py
+Rendered 15 images at 1600x1200
+
+exit=0
+$ python tools/run_linux_stand.py
+Linux stand: Linux-6.1.158+-x86_64-with-glibc2.36
+Python: 3.11.2 (main, Apr  8 2026, 01:58:00) [GCC 12.2.0]
+dotnet: NOT AVAILABLE
+PASS: stamp roundtrip, 2 seeded defects, independent counts/layers/bounds/text
+PASS: ezdxf audit + render actual saved DXF to PNG
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.4.2, pluggy-1.7.0 -- /home/user/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/user/NAVIGATOR-KIT
+collecting ... collected 11 items
+
+tests/test_linux_stand.py::LinuxStandTests::test_actual_render_dimensions PASSED [  9%]
+tests/test_linux_stand.py::LinuxStandTests::test_batch_reader_two_files PASSED [ 18%]
+tests/test_linux_stand.py::LinuxStandTests::test_core_has_no_cad_import PASSED [ 27%]
+tests/test_linux_stand.py::LinuxStandTests::test_duplicate_attribute_rejected PASSED [ 36%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_entities PASSED [ 45%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_geometry_and_text PASSED [ 54%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_odd_lines_rejected PASSED [ 63%]
+tests/test_linux_stand.py::LinuxStandTests::test_multicad_fails_explicitly PASSED [ 72%]
+tests/test_linux_stand.py::LinuxStandTests::test_numbering PASSED        [ 81%]
+tests/test_linux_stand.py::LinuxStandTests::test_required_field PASSED   [ 90%]
+tests/test_linux_stand.py::LinuxStandTests::test_stamp_roundtrip PASSED  [100%]
+
+============================== 11 passed in 0.96s ==============================
+
+
+exit=0
+$ python tools/complete_linux_stand.py
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.4.2, pluggy-1.7.0 -- /home/user/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/user/NAVIGATOR-KIT
+collecting ... collected 28 items
+
+tests/test_linux_stand.py::LinuxStandTests::test_actual_render_dimensions PASSED [  3%]
+tests/test_linux_stand.py::LinuxStandTests::test_batch_reader_two_files PASSED [  7%]
+tests/test_linux_stand.py::LinuxStandTests::test_core_has_no_cad_import PASSED [ 10%]
+tests/test_linux_stand.py::LinuxStandTests::test_duplicate_attribute_rejected PASSED [ 14%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_entities PASSED [ 17%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_geometry_and_text PASSED [ 21%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_odd_lines_rejected PASSED [ 25%]
+tests/test_linux_stand.py::LinuxStandTests::test_multicad_fails_explicitly PASSED [ 28%]
+tests/test_linux_stand.py::LinuxStandTests::test_numbering PASSED        [ 32%]
+tests/test_linux_stand.py::LinuxStandTests::test_required_field PASSED   [ 35%]
+tests/test_linux_stand.py::LinuxStandTests::test_stamp_roundtrip PASSED  [ 39%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_changes_table_keeps_normative_and_operational_apart PASSED [ 42%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_demo_gif_is_small_and_watermarked PASSED [ 46%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_dxf_attribute_reader PASSED [ 50%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_format_validator PASSED [ 53%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_mapping_has_two_profiles PASSED [ 57%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_norms_registry_required_fields PASSED [ 60%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_numbering_patch_script_compiles PASSED [ 64%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_pipeline_reports_and_rollback PASSED [ 67%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_remaining_hypotheses_are_retained PASSED [ 71%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_replace_attribute_value_roundtrip PASSED [ 75%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_scan_120_sheets PASSED [ 78%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_session2_summary_and_labels PASSED [ 82%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_session3_python_scripts_compile PASSED [ 85%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_session3_summary_and_external_dependency PASSED [ 89%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_wo1_docx_is_valid_package PASSED [ 92%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_xml_examples_parse PASSED [ 96%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_xml_key_attributes_for_sheet_and_format PASSED [100%]
+
+- generated xml file: /home/user/NAVIGATOR-KIT/delivery/linux-stand/pytest.xml -
+============================== 28 passed in 1.18s ==============================
+
+stand_status: ready (Linux DXF scope only)
+
+exit=0
+$ python tools/geometry_audit.py --self-test
+geometry_audit self-tests: 8 PASS
+Audit: 12 DXF, 0 demo mismatches; normative NOT_ASSESSED
+
+exit=0
+$ python -m pytest tests/ --collect-only -q
+tests/test_linux_stand.py::LinuxStandTests::test_actual_render_dimensions
+tests/test_linux_stand.py::LinuxStandTests::test_batch_reader_two_files
+tests/test_linux_stand.py::LinuxStandTests::test_core_has_no_cad_import
+tests/test_linux_stand.py::LinuxStandTests::test_duplicate_attribute_rejected
+tests/test_linux_stand.py::LinuxStandTests::test_independent_entities
+tests/test_linux_stand.py::LinuxStandTests::test_independent_geometry_and_text
+tests/test_linux_stand.py::LinuxStandTests::test_independent_odd_lines_rejected
+tests/test_linux_stand.py::LinuxStandTests::test_multicad_fails_explicitly
+tests/test_linux_stand.py::LinuxStandTests::test_numbering
+tests/test_linux_stand.py::LinuxStandTests::test_required_field
+tests/test_linux_stand.py::LinuxStandTests::test_stamp_roundtrip
+tests/test_navigator_kit.py::NavigatorKitTests::test_changes_table_keeps_normative_and_operational_apart
+tests/test_navigator_kit.py::NavigatorKitTests::test_demo_gif_is_small_and_watermarked
+tests/test_navigator_kit.py::NavigatorKitTests::test_dxf_attribute_reader
+tests/test_navigator_kit.py::NavigatorKitTests::test_format_validator
+tests/test_navigator_kit.py::NavigatorKitTests::test_mapping_has_two_profiles
+tests/test_navigator_kit.py::NavigatorKitTests::test_norms_registry_required_fields
+tests/test_navigator_kit.py::NavigatorKitTests::test_numbering_patch_script_compiles
+tests/test_navigator_kit.py::NavigatorKitTests::test_pipeline_reports_and_rollback
+tests/test_navigator_kit.py::NavigatorKitTests::test_remaining_hypotheses_are_retained
+tests/test_navigator_kit.py::NavigatorKitTests::test_replace_attribute_value_roundtrip
+tests/test_navigator_kit.py::NavigatorKitTests::test_scan_120_sheets
+tests/test_navigator_kit.py::NavigatorKitTests::test_session2_summary_and_labels
+tests/test_navigator_kit.py::NavigatorKitTests::test_session3_python_scripts_compile
+tests/test_navigator_kit.py::NavigatorKitTests::test_session3_summary_and_external_dependency
+tests/test_navigator_kit.py::NavigatorKitTests::test_wo1_docx_is_valid_package
+tests/test_navigator_kit.py::NavigatorKitTests::test_xml_examples_parse
+tests/test_navigator_kit.py::NavigatorKitTests::test_xml_key_attributes_for_sheet_and_format
+
+28 tests collected in 0.23s
+
+exit=0
+$ python -m pytest tests/ -v --tb=short
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.4.2, pluggy-1.7.0 -- /home/user/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/user/NAVIGATOR-KIT
+collecting ... collected 28 items
+
+tests/test_linux_stand.py::LinuxStandTests::test_actual_render_dimensions PASSED [  3%]
+tests/test_linux_stand.py::LinuxStandTests::test_batch_reader_two_files PASSED [  7%]
+tests/test_linux_stand.py::LinuxStandTests::test_core_has_no_cad_import PASSED [ 10%]
+tests/test_linux_stand.py::LinuxStandTests::test_duplicate_attribute_rejected PASSED [ 14%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_entities PASSED [ 17%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_geometry_and_text PASSED [ 21%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_odd_lines_rejected PASSED [ 25%]
+tests/test_linux_stand.py::LinuxStandTests::test_multicad_fails_explicitly PASSED [ 28%]
+tests/test_linux_stand.py::LinuxStandTests::test_numbering PASSED        [ 32%]
+tests/test_linux_stand.py::LinuxStandTests::test_required_field PASSED   [ 35%]
+tests/test_linux_stand.py::LinuxStandTests::test_stamp_roundtrip PASSED  [ 39%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_changes_table_keeps_normative_and_operational_apart PASSED [ 42%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_demo_gif_is_small_and_watermarked PASSED [ 46%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_dxf_attribute_reader PASSED [ 50%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_format_validator PASSED [ 53%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_mapping_has_two_profiles PASSED [ 57%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_norms_registry_required_fields PASSED [ 60%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_numbering_patch_script_compiles PASSED [ 64%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_pipeline_reports_and_rollback PASSED [ 67%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_remaining_hypotheses_are_retained PASSED [ 71%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_replace_attribute_value_roundtrip PASSED [ 75%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_scan_120_sheets PASSED [ 78%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_session2_summary_and_labels PASSED [ 82%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_session3_python_scripts_compile PASSED [ 85%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_session3_summary_and_external_dependency PASSED [ 89%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_wo1_docx_is_valid_package PASSED [ 92%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_xml_examples_parse PASSED [ 96%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_xml_key_attributes_for_sheet_and_format PASSED [100%]
+
+============================== 28 passed in 1.17s ==============================
+
+exit=0

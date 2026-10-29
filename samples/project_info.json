@@ -1,0 +1,14 @@
+{
+  "project": "2345-12",
+  "object": "Демонстрационный объект",
+  "mark_order": [
+    "АР",
+    "КР",
+    "ОВ"
+  ],
+  "profiles": [
+    "SPDS_FORM3_CLASSIC",
+    "SPDS_FORM3_ALT"
+  ],
+  "normative_profile": "GOST-R-21.101-2026-Appendix-B"
+}

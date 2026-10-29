@@ -1,0 +1,3 @@
+stand_status: ready
+Scope: Linux DXF only; nanoCAD not executed
+12 generated fixtures, independent reread and renders PASS

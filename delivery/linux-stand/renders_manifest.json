@@ -1,0 +1,146 @@
+[
+  {
+    "path": "delivery/screenshots/linux_stamp_01.png",
+    "bytes": 13482,
+    "sha256": "e5fc9e546c84ccfef4bd5bf9e73116a8a08136bf26a6a3af75e80f57afeb09fd",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_02.png",
+    "bytes": 13613,
+    "sha256": "a41ffc6202261c0a8bda2f7ed896012712277683150cc909f0a2935d0f4b9832",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_03.png",
+    "bytes": 13612,
+    "sha256": "3e88ed4e42b6788018dbcc34864f8f3390403da25c76fe20da932514fd00f85e",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_04.png",
+    "bytes": 13587,
+    "sha256": "d5191a22a18e9b6961646e7bc21e7d317c6b035b98e7201766e00c85df6a612a",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_05.png",
+    "bytes": 13602,
+    "sha256": "bea019f425921c73df7c51847c8f26e66b40f99f0fc1958b109830684d734d2c",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_06.png",
+    "bytes": 13650,
+    "sha256": "7dea874b1839cf6110e6b903d8135dcf9e64084fd0130c7e994d4d80a88d2dc6",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_07.png",
+    "bytes": 13534,
+    "sha256": "543670584db1e0a82ba6100293b094d0897632bc9117556c0b665debb20653cf",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_08.png",
+    "bytes": 13631,
+    "sha256": "c0bc435e288d5bc092d5ce13d10e73213b3bca57998f956406668eb1db12d6b3",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_09.png",
+    "bytes": 13653,
+    "sha256": "3f7697e4d68e207704c4ae098a4d6ca33151640ce47ee9ba3c361d9032a3efc9",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_10.png",
+    "bytes": 13597,
+    "sha256": "66366e17efb09c50c0fef3bd365059f840480d39c0e9fd130d1da76a442823b6",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_11.png",
+    "bytes": 13459,
+    "sha256": "9fb26dde72db00e4e768d514d26d633974caab814bb1d3b566143c64bc9ea2cd",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  },
+  {
+    "path": "delivery/screenshots/linux_stamp_12.png",
+    "bytes": 13619,
+    "sha256": "c39806c1b48096c656fa54dc5083685105d60ae940cb1d02fc4ace95631da162",
+    "size": [
+      1600,
+      1200
+    ],
+    "nanoCADScreenshot": false,
+    "warningBanner": true,
+    "bottomRightWatermark": true
+  }
+]

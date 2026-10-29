@@ -1,0 +1,42 @@
+name: Build C# on Windows VM (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      include_nanocad_adapter:
+        description: 'Attempt optional NanoCad adapter build (requires SDK path variable)'
+        required: false
+        default: 'false'
+        type: boolean
+jobs:
+  windows-build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Record Windows stand readiness (non-blocking)
+        continue-on-error: true
+        run: powershell -ExecutionPolicy Bypass -File tools/windows_stand_check.ps1
+      - name: Build portable solution
+        run: dotnet build src/NavigatorKit.Cli/NavigatorKit.Cli.csproj -c Release
+      - name: Run C# reference pipeline
+        run: dotnet run --project src/NavigatorKit.Cli/NavigatorKit.Cli.csproj -c Release -- all --input samples/synthetic_sets --mapping delivery/xml/stamp_mapping.xml --samples samples --output delivery/data/csharp-windows-preview
+      - name: Prepare optional SDK reference props
+        if: ${{ github.event.inputs.include_nanocad_adapter == 'true' && vars.NANOCAD_SDK_PATH != '' }}
+        run: Copy-Item src/NavigatorKit.NanoCad/NanoCadSdkReferences.props.example src/NavigatorKit.NanoCad/NanoCadSdkReferences.props
+      - name: Optional NanoCad adapter build
+        if: ${{ github.event.inputs.include_nanocad_adapter == 'true' && vars.NANOCAD_SDK_PATH != '' }}
+        env:
+          NANOCAD_SDK_PATH: ${{ vars.NANOCAD_SDK_PATH }}
+        run: dotnet build src/NavigatorKit.NanoCad/NavigatorKit.NanoCad.csproj -c Release -p:NANOCAD_SDK_PATH=$env:NANOCAD_SDK_PATH
+      - name: Upload build evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: navigator-kit-windows-build
+          path: |
+            src/**/bin/Release/**
+            src/**/obj/Release/**
+            delivery/data/csharp-windows-preview/**
+            delivery/data/windows_stand_check.json
+          if-no-files-found: warn

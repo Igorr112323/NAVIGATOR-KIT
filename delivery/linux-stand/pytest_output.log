@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.4.2, pluggy-1.7.0 -- /home/user/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/user/NAVIGATOR-KIT
+collecting ... collected 28 items
+
+tests/test_linux_stand.py::LinuxStandTests::test_actual_render_dimensions PASSED [  3%]
+tests/test_linux_stand.py::LinuxStandTests::test_batch_reader_two_files PASSED [  7%]
+tests/test_linux_stand.py::LinuxStandTests::test_core_has_no_cad_import PASSED [ 10%]
+tests/test_linux_stand.py::LinuxStandTests::test_duplicate_attribute_rejected PASSED [ 14%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_entities PASSED [ 17%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_geometry_and_text PASSED [ 21%]
+tests/test_linux_stand.py::LinuxStandTests::test_independent_odd_lines_rejected PASSED [ 25%]
+tests/test_linux_stand.py::LinuxStandTests::test_multicad_fails_explicitly PASSED [ 28%]
+tests/test_linux_stand.py::LinuxStandTests::test_numbering PASSED        [ 32%]
+tests/test_linux_stand.py::LinuxStandTests::test_required_field PASSED   [ 35%]
+tests/test_linux_stand.py::LinuxStandTests::test_stamp_roundtrip PASSED  [ 39%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_changes_table_keeps_normative_and_operational_apart PASSED [ 42%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_demo_gif_is_small_and_watermarked PASSED [ 46%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_dxf_attribute_reader PASSED [ 50%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_format_validator PASSED [ 53%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_mapping_has_two_profiles PASSED [ 57%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_norms_registry_required_fields PASSED [ 60%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_numbering_patch_script_compiles PASSED [ 64%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_pipeline_reports_and_rollback PASSED [ 67%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_remaining_hypotheses_are_retained PASSED [ 71%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_replace_attribute_value_roundtrip PASSED [ 75%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_scan_120_sheets PASSED [ 78%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_session2_summary_and_labels PASSED [ 82%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_session3_python_scripts_compile PASSED [ 85%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_session3_summary_and_external_dependency PASSED [ 89%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_wo1_docx_is_valid_package PASSED [ 92%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_xml_examples_parse PASSED [ 96%]
+tests/test_navigator_kit.py::NavigatorKitTests::test_xml_key_attributes_for_sheet_and_format PASSED [100%]
+
+============================== 28 passed in 1.17s ==============================

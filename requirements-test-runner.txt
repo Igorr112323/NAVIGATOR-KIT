@@ -1,0 +1,5 @@
+# Full 28-test suite: no nanoCAD, .NET, GUI, or OS-installed font needed.
+pytest==8.4.2
+ezdxf==1.4.5
+Pillow==11.3.0
+matplotlib==3.11.2

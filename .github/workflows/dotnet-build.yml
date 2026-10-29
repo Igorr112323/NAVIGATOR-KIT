@@ -1,0 +1,15 @@
+name: Build C# Core and CLI (manual)
+on:
+  workflow_dispatch:
+jobs:
+  dotnet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Build portable solution
+        run: dotnet build src/NavigatorKit.Cli/NavigatorKit.Cli.csproj -c Release
+      - name: Run C# reference pipeline
+        run: dotnet run --project src/NavigatorKit.Cli/NavigatorKit.Cli.csproj -c Release -- all --output delivery/data/csharp-ci-preview

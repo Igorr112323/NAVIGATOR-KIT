@@ -1,0 +1,326 @@
+{
+  "stamp_01.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-001-AR",
+      "SHEET": "1",
+      "TITLE": "Sheet 01",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_02.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-002-AR",
+      "SHEET": "2",
+      "TITLE": "Sheet 02",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_03.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-003-AR",
+      "SHEET": "3",
+      "TITLE": "Sheet 03",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_04.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-004-AR",
+      "SHEET": "4",
+      "TITLE": "Sheet 04",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_05.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-005-AR",
+      "SHEET": "5",
+      "TITLE": "Sheet 05",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_06.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-006-AR",
+      "SHEET": "6",
+      "TITLE": "Sheet 06",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_07.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-007-AR",
+      "SHEET": "7",
+      "TITLE": "Sheet 07",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_08.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-008-AR",
+      "SHEET": "8",
+      "TITLE": "Sheet 08",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_09.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-009-AR",
+      "SHEET": "9",
+      "TITLE": "Sheet 09",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_10.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-010-AR",
+      "SHEET": "10",
+      "TITLE": "Sheet 10",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_11.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-011-AR",
+      "SHEET": "11",
+      "TITLE": "Sheet 11",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  },
+  "stamp_12.dxf": {
+    "counts": {
+      "LWPOLYLINE": 1,
+      "LINE": 1,
+      "TEXT": 1,
+      "INSERT": 1,
+      "ATTRIB": 4,
+      "SEQEND": 1
+    },
+    "attributes": {
+      "DESIGNATION": "NK-012-AR",
+      "SHEET": "12",
+      "TITLE": "Sheet 12",
+      "FORMAT": "A4"
+    },
+    "layers": [
+      "FRAME",
+      "NOTES",
+      "STAMP"
+    ],
+    "frameBounds": [
+      0.0,
+      0.0,
+      297.0,
+      210.0
+    ]
+  }
+}

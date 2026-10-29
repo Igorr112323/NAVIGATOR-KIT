@@ -1,0 +1,10 @@
+{
+  "format": "navigator-kit.completeness-chart/v2",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-29T06:57:28+00:00",
+  "generatedBy": "tools/pipeline.py + matplotlib",
+  "incidents": 16,
+  "duplicateGroups": 4,
+  "watermark": "nanoCAD НЕ запускался / не скриншот CAD",
+  "nanoCADScreenshot": false
+}

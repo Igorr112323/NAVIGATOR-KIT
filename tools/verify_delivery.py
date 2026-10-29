@@ -1,0 +1,438 @@
+#!/usr/bin/env python3
+"""Verify the generated delivery without needing nanoCAD or .NET."""
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import json
+import re
+import struct
+import sys
+import xml.etree.ElementTree as ET
+import zipfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+DELIVERY = ROOT / "delivery"
+DOCS_ROOT = ROOT / "docs"
+DATA = DELIVERY / "data"
+SHOTS = DELIVERY / "screenshots"
+MANIFEST = DELIVERY / "MANIFEST.json"
+CHECKSUMS = DELIVERY / "manifest.sha256"
+BUNDLE = DELIVERY / "navigator-kit-night-session.zip"
+RESULTS = DATA / "verification_results.json"
+
+
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def read_json(path: Path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def csv_rows(path: Path) -> list[dict]:
+    with path.open("r", encoding="utf-8-sig", newline="") as f:
+        return list(csv.DictReader(f, delimiter=";"))
+
+
+def png_size(path: Path) -> tuple[int, int]:
+    with path.open("rb") as f:
+        head = f.read(24)
+    if len(head) < 24 or head[:8] != b"\x89PNG\r\n\x1a\n":
+        return (0, 0)
+    return struct.unpack(">II", head[16:24])
+
+
+def run_checks(require_bundle: bool = True) -> dict:
+    checks: list[dict] = []
+    warnings: list[str] = []
+
+    def check(name: str, ok: bool, detail: str, required: bool = True) -> None:
+        checks.append({"name": name, "ok": bool(ok),
+                       "severity": "REQUIRED" if required else "OPTIONAL",
+                       "detail": detail})
+        if not ok and not required:
+            warnings.append(f"{name}: {detail}")
+
+    core_files = [
+        "README.md", "briefing.md", "night-log.md", "requirements.txt",
+        "docs/standards-warning.md", "docs/sources.md", "docs/session-plan.md",
+        "docs/nanocad-integration.md", "docs/api-experiment.md",
+        "delivery/xml/stamp_mapping.xml", "delivery/xml/stamp_mapping.xsd",
+        "delivery/xml/spds_template_a.xml", "delivery/xml/spds_template_b.xml",
+        "delivery/data/summary.json", "delivery/data/sheets_registry.csv",
+        "delivery/data/form1_vedomost.csv", "delivery/data/form2_vedomost.csv",
+        "delivery/data/completeness_report.csv", "delivery/data/duplicate_report.csv",
+        "delivery/data/numbering_plan.csv", "delivery/data/stamp_patch_report.json",
+        "delivery/data/change_table_template.csv", "delivery/data/print_order.json",
+        "logs/night-session.log", "delivery/logs/night-session.log",
+        "logs/night-session-2.log", "delivery/logs/night-session-2.log",
+        "docs/normative-audit.md", "docs/windows-vm-build.md",
+        ".github/workflows/windows-build.yml", "requirements-analysis.txt",
+        "delivery/completeness_report.md", "delivery/changes_table.md",
+        "delivery/next_steps.md", "delivery/numbering_patch.py",
+        "delivery/night-session-2.md",
+        "delivery/data/wo1_template.csv", "delivery/data/wo2_template.csv",
+        "delivery/data/wo1_template.docx", "delivery/data/completeness_chart.png",
+        "delivery/data/completeness_chart.json", "delivery/data/normative_audit.json",
+        "delivery/data/session2_summary.json", "delivery/data/pr_labels.json",
+        "docs/official-text-extract.md", "docs/windows-stand-setup.md",
+        "tools/pipeline.py", "tools/sheetset_probe.py", "tools/make_demo_gif.py",
+        "tools/session3_runner.py", "tools/windows_stand_check.ps1",
+        "src/NavigatorKit.NanoCad/DwgReadiness.cs",
+        "delivery/session-3/README.md", "delivery/session-3/demo.gif",
+        "delivery/session-3/demo_metadata.json", "delivery/session-3/manifest.json",
+        "delivery/session-3/p0_norm_control.json", "delivery/session-3/p0_windows_stand.json",
+        "delivery/session-3/p1_production_dwg.json", "delivery/session-3/p1_sheetset_tables.json",
+        "delivery/session-3/p2_demo_review.json", "delivery/session-3/senior_review.md",
+        "delivery/session-3/next_steps.md", "delivery/session-3/remaining_hypotheses.json",
+        "delivery/session-3/official_text_extract.md", "delivery/session-3/norms_registry.json",
+        "delivery/manifest.json", "delivery/data/norms_registry.json",
+        "delivery/data/session3_summary.json", "delivery/night-session-3.md",
+        "logs/night-session-3.log", "delivery/logs/night-session-3.log",
+    ]
+    bundle_files = [
+        "delivery/README_night-session.md", "delivery/index.html", "delivery/PR_BODY.md",
+        "delivery/CHAT_REPLY.md", "delivery/night-log.md",
+        "delivery/data/verification_results.json", "delivery/night-session-2.md",
+        "delivery/session-3/README.md", "delivery/manifest.json", "delivery/night-session-3.md",
+    ]
+    missing = [p for p in core_files if not (ROOT / p).is_file()]
+    check("required_files_present", not missing, "missing=" + (", ".join(missing) or "none"))
+
+    # Parse every JSON and XML generated by the pipeline.
+    json_bad, json_count = [], 0
+    for p in sorted(DATA.glob("*.json")) + sorted(SHOTS.glob("*.json")):
+        json_count += 1
+        try:
+            read_json(p)
+        except Exception as exc:
+            json_bad.append(f"{p.name}: {exc}")
+    check("json_documents_parse", not json_bad, f"parsed={json_count}; errors={json_bad[:3]}")
+
+    xml_bad, xml_count = [], 0
+    for p in sorted((DELIVERY / "xml").glob("*.xml")):
+        xml_count += 1
+        try:
+            ET.parse(p)
+        except Exception as exc:
+            xml_bad.append(f"{p.name}: {exc}")
+    check("xml_documents_parse", not xml_bad, f"parsed={xml_count}; errors={xml_bad[:3]}")
+
+    try:
+        import xmlschema
+        schema = xmlschema.XMLSchema(str(DELIVERY / "xml" / "stamp_mapping.xsd"))
+        invalid = [p.name for p in sorted((DELIVERY / "xml").glob("*.xml")) if not schema.is_valid(str(p))]
+        check("xml_xsd_validation", not invalid, "invalid=" + (", ".join(invalid) or "none"))
+    except ImportError:
+        check("xml_xsd_validation", False, "xmlschema not installed", required=False)
+
+    summary = read_json(DATA / "summary.json")
+    check("sheet_count_120", summary["input"]["syntheticDxfFiles"] == 120,
+          f"syntheticDxfFiles={summary['input']['syntheticDxfFiles']}")
+    check("registry_rows_120", len(csv_rows(DATA / "sheets_registry.csv")) == 120,
+          f"rows={len(csv_rows(DATA / 'sheets_registry.csv'))}")
+    check("form1_rows_120", len(csv_rows(DATA / "form1_vedomost.csv")) == 120,
+          f"rows={len(csv_rows(DATA / 'form1_vedomost.csv'))}")
+    form2 = csv_rows(DATA / "form2_vedomost.csv")
+    check("form2_sections_present", {"Ссылочные документы", "Прилагаемые документы"}.issubset({r["Раздел"] for r in form2}),
+          f"rows={len(form2)}")
+    check("completeness_issues_present", len(csv_rows(DATA / "completeness_report.csv")) >= 10,
+          f"issues={len(csv_rows(DATA / 'completeness_report.csv'))}")
+    check("duplicates_detected", len(csv_rows(DATA / "duplicate_report.csv")) >= 2,
+          f"groups={len(csv_rows(DATA / 'duplicate_report.csv'))}")
+    check("numbering_plan_120", len(csv_rows(DATA / "numbering_plan.csv")) == 120,
+          f"rows={len(csv_rows(DATA / 'numbering_plan.csv'))}")
+    check("print_order_120", len(csv_rows(DATA / "print_order.csv")) == 120,
+          f"rows={len(csv_rows(DATA / 'print_order.csv'))}")
+    check("print_order_consistency", read_json(DATA / "print_order_consistency.json")["consistent"], "form1 order == print order")
+    check("stamp_rollback_verified", read_json(DATA / "stamp_patch_report.json")["rollbackVerified"], "before == rollback SHA-256")
+
+    standards = read_json(DATA / "standards_status.json")
+    check("active_standard_2026", "2026" in standards["active"]["spds"], standards["active"]["spds"])
+    check("active_change_standard_2023", "2023" in standards["active"]["changesEskd"], standards["active"]["changesEskd"])
+    api = read_json(DATA / "api_experiment_results.json")
+    check("nanocad_not_executed_is_explicit", api["nanoCADExecuted"] is False, "nanoCADExecuted=false")
+    check("get_sheet_sets_marked_hypothesis",
+          any(e["subject"] == "GetSheetSets()" and e["status"] == "HYPOTHESIS" for e in api["experiments"]),
+          "GetSheetSets() status=HYPOTHESIS")
+
+    shots_manifest = read_json(SHOTS / "screenshots_manifest.json")
+    images = shots_manifest["images"]
+    dims_ok = all(png_size(ROOT / i["file"]) == (i["width"], i["height"]) and i["width"] >= 1600 and i["height"] >= 1200 for i in images)
+    check("screenshot_count_at_least_5", len(images) >= 5, f"count={len(images)}")
+    check("screenshot_resolution_and_files", dims_ok, "all PNGs >= 1600x1200 and match manifest")
+    check("screenshots_are_not_fake_cad",
+          all(i["nanoCADScreenshot"] is False and i["watermark"] is True for i in images),
+          "all labelled synthetic diagnostic mockups")
+
+    cs_files = sorted((ROOT / "src").rglob("*.cs"))
+    todo_hits = [p for p in cs_files if "TODO: проверка по ГОСТ" in p.read_text(encoding="utf-8")]
+    check("csharp_gost_todo_comments", len(todo_hits) >= 3, f"files={len(todo_hits)}")
+    try:
+        from tree_sitter import Language, Parser
+        import tree_sitter_c_sharp as tscs
+        parser = Parser(Language(tscs.language()))
+        bad = [p.name for p in cs_files if parser.parse(p.read_bytes()).root_node.has_error]
+        check("csharp_tree_sitter_syntax", not bad, f"files={len(cs_files)}; errors={bad}")
+    except ImportError:
+        check("csharp_tree_sitter_syntax", False, "tree_sitter packages not installed", required=False)
+
+    log_text = (ROOT / "logs" / "night-session.log").read_text(encoding="utf-8", errors="replace")
+    check("night_log_has_start_end", "SESSION_START" in log_text and "SESSION_END" in log_text,
+          f"lines={len(log_text.splitlines())}")
+
+    secret_patterns = [r"ghp_[A-Za-z0-9]{20,}", r"github_pat_[A-Za-z0-9_]{20,}",
+                       r"GITHUB_TOKEN=[A-Za-z0-9_\-]{20,}", r"-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----"]
+    secret_hits = []
+    for p in ROOT.rglob("*"):
+        if not p.is_file() or ".git" in p.parts or p.suffix.lower() in {".png", ".gif", ".jpg", ".zip", ".dxf", ".docx", ".bak", ".pyc"}:
+            continue
+        try:
+            text = p.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        for pat in secret_patterns:
+            if re.search(pat, text):
+                secret_hits.append(str(p.relative_to(ROOT)))
+                break
+    check("no_obvious_secrets", not secret_hits, "hits=" + (", ".join(secret_hits[:5]) or "none"))
+
+    if require_bundle:
+        missing_bundle = [p for p in bundle_files if not (ROOT / p).is_file()]
+        check("bundle_required_files_present", not missing_bundle, "missing=" + (", ".join(missing_bundle) or "none"))
+        check("verification_results_present", RESULTS.is_file(), f"path={RESULTS.relative_to(ROOT)}")
+        manifest_exists = MANIFEST.is_file() and CHECKSUMS.is_file() and BUNDLE.is_file()
+        check("bundle_files_present", manifest_exists,
+              f"manifest={MANIFEST.is_file()}; checksums={CHECKSUMS.is_file()}; zip={BUNDLE.is_file()}")
+        if MANIFEST.is_file():
+            manifest = read_json(MANIFEST)
+            bad_hashes = []
+            for rel, expected in manifest["files"].items():
+                p = ROOT / rel
+                if not p.is_file() or sha256_file(p) != expected:
+                    bad_hashes.append(rel)
+            check("manifest_checksums_match", not bad_hashes, "bad=" + (", ".join(bad_hashes[:5]) or "none"))
+        if BUNDLE.is_file():
+            with zipfile.ZipFile(BUNDLE) as zf:
+                bad_member = zf.testzip()
+                names = zf.namelist()
+            pngs = [n for n in names if n.lower().endswith(".png")]
+            check("zip_integrity", bad_member is None and len(pngs) >= 5 and any("README_night-session.md" in n for n in names),
+                  f"bad_member={bad_member}; pngs={len(pngs)}; bytes={BUNDLE.stat().st_size}")
+
+    # --- Second-session continuation checks ---
+    registry = standards.get("officialRegistry", {})
+    registry_ok = all(
+        registry.get(key, "").startswith("https://protect.gost.ru/") or
+        registry.get(key, "").startswith("https://base.garant.ru/") or
+        registry.get(key, "").startswith("https://www.spds.ru/")
+        for key in ("spds2026", "spds2020Replaced", "appendixB", "changes2023", "changes2013Revoked", "formats")
+    )
+    check("official_standard_registry_links",
+          registry_ok and standards.get("checkedAtDate") == "2026-10-28" and
+          "officialEditionPdf" in standards.get("officialText", {}),
+          f"checkedAtDate={standards.get('checkedAtDate')}; links={len(registry)}; officialText=yes")
+
+    mapping_fields_ok = []
+    for xml_path in sorted((DELIVERY / "xml").glob("*.xml")):
+        root = ET.parse(xml_path).getroot()
+        fields = {a.attrib.get("field", "") for a in root.findall("./keyAttributes/attributeBinding")}
+        mapping_fields_ok.append({"sheet_no", "format"}.issubset(fields))
+    check("xml_key_attributes_sheet_and_format", all(mapping_fields_ok) and len(mapping_fields_ok) == 3,
+          f"files={len(mapping_fields_ok)}; ok={sum(mapping_fields_ok)}")
+
+    docx_path = DATA / "wo1_template.docx"
+    docx_ok = False
+    if docx_path.is_file():
+        with zipfile.ZipFile(docx_path) as zf:
+            docx_ok = "[Content_Types].xml" in zf.namelist() and zf.testzip() is None
+    check("wo1_docx_is_valid_package", docx_ok, f"path={docx_path.relative_to(ROOT)}")
+
+    wo1_rows = csv_rows(DATA / "wo1_template.csv") if (DATA / "wo1_template.csv").is_file() else []
+    wo2_rows = csv_rows(DATA / "wo2_template.csv") if (DATA / "wo2_template.csv").is_file() else []
+    check("wo_template_row_counts", len(wo1_rows) == 120 and len(wo2_rows) >= 6,
+          f"form1={len(wo1_rows)}; form2={len(wo2_rows)}")
+
+    completeness_md = (DELIVERY / "completeness_report.md").read_text(encoding="utf-8")
+    cm_lower = completeness_md.lower()
+    check("completeness_report_honest_counts",
+          "16" in cm_lower and ("4 группы дублей" in cm_lower or "4 групп дублей" in cm_lower)
+          and "нельзя утверждать" in cm_lower,
+          "16 incidents / 4 duplicate groups / no false 'all missing files' claim")
+
+    patch_src = (DELIVERY / "numbering_patch.py").read_text(encoding="utf-8")
+    try:
+        compile(patch_src, "delivery/numbering_patch.py", "exec")
+        patch_ok = "minimal_patch" in patch_src and "full_shift" in patch_src
+    except SyntaxError:
+        patch_ok = False
+    check("numbering_patch_script_valid", patch_ok, "minimal_patch + full_shift + Python syntax OK")
+
+    changes_md = (DELIVERY / "changes_table.md").read_text(encoding="utf-8")
+    check("changes_table_normative_and_operational_separated",
+          all(s in changes_md for s in ("Изм.", "№ докум.", "Номер листа", "Тип изменений", "не заменяет")),
+          "GOST 5-column table and non-GOST PM table are distinct")
+
+    next_md = (DELIVERY / "next_steps.md").read_text(encoding="utf-8")
+    check("next_steps_priorities", all(s in next_md for s in ("P0", "P1", "P2")), "P0/P1/P2 tasks present")
+
+    chart_meta = read_json(DATA / "completeness_chart.json")
+    check("completeness_chart_watermarked",
+          "nanoCAD НЕ запускался" in chart_meta.get("watermark", "") and chart_meta.get("nanoCADScreenshot") is False,
+          f"generatedBy={chart_meta.get('generatedBy')}")
+
+    check("screenshots_corner_watermark",
+          all(i.get("cornerWatermark") is True and "nanoCAD НЕ запускался" in i.get("persistentWatermark", "") for i in images),
+          "all images have persistent bottom-right watermark metadata")
+
+    check("session2_log_start_end",
+          "SESSION_2_START" in log_text and "SESSION_2_END" in log_text,
+          "logs/night-session.log contains second-session boundaries")
+
+    wf_path = ROOT / ".github/workflows/windows-build.yml"
+    wf_text = wf_path.read_text(encoding="utf-8") if wf_path.is_file() else ""
+    check("windows_vm_workflow_prepared",
+          "windows-latest" in wf_text and "workflow_dispatch" in wf_text and "NANOCAD_SDK_PATH" in wf_text,
+          "manual Windows build with optional SDK path")
+
+    labels = read_json(DATA / "pr_labels.json")["requestedLabels"]
+    check("pr_labels_requested", labels == ["good first issue", "night-session"], f"labels={labels}")
+
+    session2 = read_json(DATA / "session2_summary.json")
+    check("session2_summary_complete",
+          len(session2["tasks"]) == 11 and session2["nanoCADExecuted"] is False and
+          session2["requestedLabels"] == ["good first issue", "night-session"],
+          f"tasks={len(session2['tasks'])}; nanoCADExecuted={session2['nanoCADExecuted']}")
+
+    audit = read_json(DATA / "normative_audit.json")
+    norms = read_json(DATA / "norms_registry.json")
+    norm_fields_ok = all(all(k in n for k in ("norm", "edition", "date_force", "source")) for n in norms)
+    check("normative_audit_classifies_legacy",
+          audit["checkedAtDate"] == "2026-10-28" and len(audit.get("norms", [])) == 5 and
+          all(key in audit["oldReferenceOccurrences"] for key in ("GOST-R-21.101-2020", "GOST-2.503-2013")),
+          f"occurrences={audit['oldReferenceOccurrences']}; norms={len(norms)}")
+    check("norms_registry_required_fields", norm_fields_ok and len(norms) == 5,
+          f"entries={len(norms)}; fields=norm,edition,date_force,source")
+
+    # --- Session-3 checks ---
+    check("screenshot_count_session3", len(images) >= 15, f"count={len(images)}")
+    check("screenshots_palette_optimized",
+          all(i.get("paletteColors") == 128 and i.get("colorMode") == "P" for i in images),
+          "all images PNG-8/128 colors for <=3 MB bundle")
+    check("session3_log_start_end",
+          "SESSION_3_START" in log_text and "SESSION_3_END" in log_text,
+          "logs/night-session.log contains third-session boundaries")
+
+    official_md = (DOCS_ROOT / "official-text-extract.md").read_text(encoding="utf-8")
+    check("official_text_extract_present",
+          "Приложение Б" in official_md and "Раздел 7" in official_md and "ВЗАМЕН" in official_md,
+          "Appendix B + section 7 + replacement clause recorded")
+
+    s3_json_bad, s3_json_count = [], 0
+    for jp in sorted((DELIVERY / "session-3").rglob("*.json")):
+        s3_json_count += 1
+        try:
+            read_json(jp)
+        except Exception as exc:
+            s3_json_bad.append(f"{jp.name}: {exc}")
+    check("session3_json_documents_parse", not s3_json_bad,
+          f"parsed={s3_json_count}; errors={s3_json_bad[:3]}")
+
+    py_scripts = [
+        ROOT / "tools/pipeline.py", ROOT / "tools/sheetset_probe.py",
+        ROOT / "tools/make_demo_gif.py", ROOT / "tools/session3_runner.py",
+    ]
+    py_ok = True
+    for sp in py_scripts:
+        try:
+            compile(sp.read_text(encoding="utf-8"), str(sp), "exec")
+        except SyntaxError:
+            py_ok = False
+    check("session3_python_scripts_compile", py_ok, f"files={len(py_scripts)}")
+
+    win = read_json(DELIVERY / "session-3/p0_windows_stand.json")
+    check("windows_stand_external_dependency",
+          win["status"] == "EXTERNAL_DEPENDENCY" and win["nanoCAD26Installed"] is False and
+          win["nkHelloExecuted"] is False and win["sdkProbeExecuted"] is False,
+          "no fake nanoCAD installation or screenshots")
+
+    sheet = read_json(DELIVERY / "session-3/p1_sheetset_tables.json")
+    check("sheetset_api_hypotheses_retained",
+          sheet["getSheetSetsStatus"] == "HYPOTHESIS" and sheet["dstTouched"] is False and
+          sheet["printOrderConsistent"] is True,
+          f"getSheetSets={sheet['getSheetSetsStatus']}; dstTouched=False")
+
+    demo_meta = read_json(DELIVERY / "session-3/demo_metadata.json")
+    gif_path = DELIVERY / "session-3/demo.gif"
+    gif_ok = gif_path.stat().st_size <= 3_000_000 and demo_meta.get("withinLimit") is True
+    try:
+        from PIL import Image as PILImage
+        with PILImage.open(gif_path) as gif:
+            gif_ok = gif_ok and getattr(gif, "n_frames", 1) >= 5
+            frames = getattr(gif, "n_frames", 1)
+    except ImportError:
+        frames = "unknown"
+    check("demo_gif_valid_and_under_3mb", gif_ok,
+          f"bytes={gif_path.stat().st_size}; frames={frames}; watermark={demo_meta.get('watermark') is not None}")
+
+    review = read_json(DELIVERY / "session-3/p2_demo_review.json")
+    hyp = read_json(DELIVERY / "session-3/remaining_hypotheses.json")
+    check("remaining_hypotheses_retained",
+          review["hypothesesRemoved"] is False and hyp["totalMarkers"] > 0,
+          f"markers={hyp['totalMarkers']}; files={len(hyp['files'])}")
+
+    session3 = read_json(DATA / "session3_summary.json")
+    check("session3_summary_complete",
+          len(session3["tasks"]) == 5 and session3["nanoCADExecuted"] is False and
+          session3["expectedScreenshotCount"] == 15,
+          f"tasks={len(session3['tasks'])}; nanoCADExecuted=False")
+
+    next_md = (DELIVERY / "next_steps.md").read_text(encoding="utf-8")
+    check("session3_next_steps_refreshed",
+          ("2026-10-28" in next_md or "2026-10-29" in next_md) and "Windows-стенд" in next_md and "реальных DWG" in next_md,
+          "new 5-task P0-P2 plan present")
+
+    s3manifest = read_json(DELIVERY / "manifest.json")
+    bad_s3 = []
+    for rel, expected in s3manifest["files"].items():
+        fp = DELIVERY / rel
+        if not fp.is_file() or sha256_file(fp) != expected:
+            bad_s3.append(rel)
+    check("session3_manifest_hashes_match", not bad_s3,
+          f"files={s3manifest['fileCount']}; bad={bad_s3[:3]}")
+
+    required_failed = [c for c in checks if c["severity"] == "REQUIRED" and not c["ok"]]
+    return {
+        "format": "navigator-kit.verification-results/v1",
+        "sessionId": "night-session-20261028",
+        "status": "PASS" if not required_failed else "FAIL",
+        "requiredChecks": sum(1 for c in checks if c["severity"] == "REQUIRED"),
+        "optionalChecks": sum(1 for c in checks if c["severity"] == "OPTIONAL"),
+        "failedRequiredChecks": len(required_failed),
+        "warnings": warnings,
+        "checks": checks,
+    }
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--check-only", action="store_true", help="do not overwrite verification_results.json")
+    args = ap.parse_args()
+    manifest_exists = MANIFEST.is_file()
+    results = run_checks(require_bundle=manifest_exists)
+    if not args.check_only and not manifest_exists:
+        RESULTS.write_text(json.dumps(results, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({
+        "status": results["status"],
+        "requiredChecks": results["requiredChecks"],
+        "failedRequiredChecks": results["failedRequiredChecks"],
+        "warnings": results["warnings"],
+    }, ensure_ascii=False, indent=2))
+    return 0 if results["status"] == "PASS" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

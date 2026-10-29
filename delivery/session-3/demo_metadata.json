@@ -1,0 +1,23 @@
+{
+  "format": "navigator-kit.demo-gif/v1",
+  "sessionId": "night-session-20261028",
+  "generatedAt": "2026-10-29T06:57:29+00:00",
+  "path": "delivery/session-3/demo.gif",
+  "storyboard": "delivery/session-3/demo_storyboard.png",
+  "frameCount": 6,
+  "frameSize": [
+    960,
+    720
+  ],
+  "durationMsPerFrame": 900,
+  "loop": true,
+  "paletteColors": 64,
+  "bytes": 177476,
+  "maxBytes": 3000000,
+  "withinLimit": true,
+  "watermark": "nanoCAD НЕ запускался / не скриншот CAD",
+  "topBanner": true,
+  "bottomWatermark": true,
+  "nanoCADScreenshot": false,
+  "source": "locally generated diagnostic frames from delivery/data/*"
+}

@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup><Compile Remove="Tests/**/*.cs" /></ItemGroup>
+  <!-- No MultiCAD reference here: this is a portable parser, NOT a CAD plugin.
+       SDK 26 DLL names/TFM are ГИПОТЕЗА/ПРОВЕРИТЬ. Add real verified references
+       only to the host adapter project, never guess MultiCAD26.dll. -->
+</Project>
