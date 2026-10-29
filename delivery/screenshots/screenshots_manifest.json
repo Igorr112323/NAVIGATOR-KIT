@@ -1,7 +1,7 @@
 {
   "format": "navigator-kit.screenshots/v3",
   "sessionId": "night-session-20261028",
-  "generatedAt": "2026-10-29T06:13:10+00:00",
+  "generatedAt": "2026-10-29T06:57:33+00:00",
   "nanoCADExecuted": false,
   "persistentWatermark": "nanoCAD НЕ запускался / не скриншот CAD",
   "cornerWatermark": true,
@@ -146,7 +146,7 @@
       "colorMode": "P",
       "paletteColors": 128,
       "compression": "PNG-8 palette, optimize=True",
-      "sha256": "15d5e276a212481534db91ef0a79e796ca5c0ad33125d7a51372a41a30d78a39"
+      "sha256": "e3da9eae373fdba28470b728e27eb04da30e0315030349b28b62802365547958"
     },
     {
       "file": "delivery/screenshots/screenshot_10_change_table.png",

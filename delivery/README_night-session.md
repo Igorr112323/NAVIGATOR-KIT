@@ -1,5 +1,13 @@
 # Ночной отчет ИИ-куратора — 2026-10-28 (третья сессия)
 
+## Финальный Linux-этап — 2026-10-29
+
+См. `delivery/README_night-session-final.md`: аудит `geometry_audit.md/json`,
+обновлённая инструкция Windows, portable `src/CSharpAdapter/` с 28 xUnit cases,
+`docs/gif-demo-scenario.md` и `delivery/navigator-kit-final-session.zip`.
+12 демо-DXF проходят project-контракт; соответствие геометрии форм ГОСТ — NOT_ASSESSED.
+C# проверяется отдельным CI, не локальным отсутствующим dotnet. Это не CAD-плагин.
+
 ## Самостоятельный Test Runner
 
 `delivery/navigator-kit-test-runner.zip` — исходники, fixtures и результаты для повторения
@@ -130,7 +138,7 @@
 ## GitHub-действия
 
 - Ветка: `arena/ec9fddc1-navigator-kit` (создавать `night-session-YYYYMMDD` нельзя: имя ветки зафиксировано сессией Arena).
-- Коммит на момент генерации отчёта: `2f57aa65019baed1e4e9ea22433b315f83be5dda`.
+- Коммит на момент генерации отчёта: `115ebdb23c21dd4a980dfbdb02fc8aaf5893bf0f`.
 - PR: [https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1](https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1).
 - Push: `git push origin arena/ec9fddc1-navigator-kit`.
 - PR body: `delivery/PR_BODY.md`.

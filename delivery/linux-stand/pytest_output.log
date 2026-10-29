@@ -33,4 +33,4 @@ tests/test_navigator_kit.py::NavigatorKitTests::test_wo1_docx_is_valid_package P
 tests/test_navigator_kit.py::NavigatorKitTests::test_xml_examples_parse PASSED [ 96%]
 tests/test_navigator_kit.py::NavigatorKitTests::test_xml_key_attributes_for_sheet_and_format PASSED [100%]
 
-============================== 28 passed in 1.07s ==============================
+============================== 28 passed in 1.17s ==============================

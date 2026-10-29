@@ -1,0 +1,16 @@
+{
+  "status": "BUILD_AND_XUNIT_PASS",
+  "runUrl": "https://github.com/Igorr112323/NAVIGATOR-KIT/actions/runs/40832125855",
+  "headSha": "115ebdb23c21dd4a980dfbdb02fc8aaf5893bf0f",
+  "job": "parser-tests",
+  "conclusion": "success",
+  "expectedCases": 28,
+  "actualCases": null,
+  "note": "Build and dotnet test passed in Ubuntu CI. Local dotnet absent; raw TRX download blocked. Explicit count gate pending next run. No nanoCAD execution.",
+  "sourceHashes": {
+    "src/CSharpAdapter/DxfParser.cs": "8a1003d952ffd8719e3544a274909888a34d692e58a1b9709cd0b30e32c56471",
+    "src/CSharpAdapter/Tests/DxfParserTests.cs": "ab1599ab8bb295ead96d4b1eaea8584104fc8784849fd228008017d4e33237f7",
+    "src/CSharpAdapter/CSharpAdapter.csproj": "91c138ff7038a5aae4b9fed9bf4027e592740e159ee5fa1e7c023e7d297692a0",
+    "src/CSharpAdapter/Tests/CSharpAdapter.Tests.csproj": "02e47d05d1d65379b58f2bef93fe78e49fc26e3cc2a4490f36978b6eb5b60f65"
+  }
+}

@@ -52,6 +52,14 @@ def build_readme(summary: dict, verification: dict, commit: str, pr_url: str, br
     pr_text = f"[{pr_url}]({pr_url})" if pr_url.startswith("http") else "`PR будет создан после push`"
     return f"""# Ночной отчет ИИ-куратора — 2026-10-28 (третья сессия)
 
+## Финальный Linux-этап — 2026-10-29
+
+См. `delivery/README_night-session-final.md`: аудит `geometry_audit.md/json`,
+обновлённая инструкция Windows, portable `src/CSharpAdapter/` с 28 xUnit cases,
+`docs/gif-demo-scenario.md` и `delivery/navigator-kit-final-session.zip`.
+12 демо-DXF проходят project-контракт; соответствие геометрии форм ГОСТ — NOT_ASSESSED.
+C# проверяется отдельным CI, не локальным отсутствующим dotnet. Это не CAD-плагин.
+
 ## Самостоятельный Test Runner
 
 `delivery/navigator-kit-test-runner.zip` — исходники, fixtures и результаты для повторения
@@ -203,6 +211,20 @@ def build_pr_body(summary: dict, verification: dict) -> str:
 **Обновление 2026-10-27:** повторно проверен официальный реестр Росстандарта; добавлены именованные отчёты/шаблоны, XSD-маппинг с атрибутами листа/формата, Windows workflow и полупрозрачный watermark.
 
 **Обновление 2026-10-28:** выполнен P0–P2 проход. Добавлены `delivery/session-3/`, выписка из официального издания ГОСТ Р 21.101-2026 (Приложение Б + раздел 7), `norms_registry.json`, `tools/pipeline.py`, `tools/sheetset_probe.py`, `tools/make_demo_gif.py`, PowerShell-чек Windows-стенда, GIF-демо ≤3 МБ и senior-review чек-лист. Synthetic backend пересобрал 120 DXF; MultiCAD/DWG часть честно помечена внешней зависимостью. Метки PR: `good first issue`, `night-session`.
+
+### Финальный Linux-этап (2026-10-29)
+- `tools/geometry_audit.py` → 12 DXF, project-checks + reference paper sizes; нормы NOT_ASSESSED.
+- `docs/windows-stand-setup.md` — лицензия/VS/SDK, проверяемые NK_HELLO и NK_SDK_PROBE.
+- `src/CSharpAdapter/` — реальный portable parser и 28 xUnit cases; CI доказательства в `delivery/linux-stand/csharp_ci_validation.json`.
+- `docs/gif-demo-scenario.md` — сценарий будущей реальной съёмки, без выдуманных UI-команд.
+- `delivery/README_night-session-final.md`, `navigator-kit-final-session.zip` (≤3MB, без вложенных ZIP).
+
+Что сделать до следующего раза:
+1. P0 — официальные размеры форм/рамки, визуальная и размерная проверка в nanoCAD.
+2. P0 — реальный Windows/SDK/лицензия, выполнить NK_HELLO/NK_SDK_PROBE.
+3. P1 — host-адаптер DWG/атрибуты/транзакции/rollback/layouts/Tables.
+4. P1 — реальная съёмка по GIF-сценарию ≤3MB.
+5. P2 — senior review и конкурсная заявка человеком; без фиктивных актов внедрения.
 
 ### Test Runner (обновление после 2f57aa6)
 Пакет `delivery/navigator-kit-test-runner.zip` содержит исходники, все данные 28 тестов,

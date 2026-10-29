@@ -34,8 +34,6 @@ tests/test_navigator_kit.py::NavigatorKitTests::test_xml_examples_parse PASSED [
 tests/test_navigator_kit.py::NavigatorKitTests::test_xml_key_attributes_for_sheet_and_format PASSED [100%]
 
 - generated xml file: /home/user/NAVIGATOR-KIT/delivery/linux-stand/pytest.xml -
-============================== 28 passed in 1.09s ==============================
-
-59 checks — 0 failures (separate delivery verifier)
+============================== 28 passed in 1.18s ==============================
 
 59 checks — 0 failures (separate delivery verifier)

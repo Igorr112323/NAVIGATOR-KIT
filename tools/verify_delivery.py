@@ -392,7 +392,7 @@ def run_checks(require_bundle: bool = True) -> dict:
 
     next_md = (DELIVERY / "next_steps.md").read_text(encoding="utf-8")
     check("session3_next_steps_refreshed",
-          "2026-10-28" in next_md and "Windows-стенд" in next_md and "реальных DWG" in next_md,
+          ("2026-10-28" in next_md or "2026-10-29" in next_md) and "Windows-стенд" in next_md and "реальных DWG" in next_md,
           "new 5-task P0-P2 plan present")
 
     s3manifest = read_json(DELIVERY / "manifest.json")

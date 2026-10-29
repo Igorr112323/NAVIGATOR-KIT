@@ -21,4 +21,4 @@ tests/test_linux_stand.py::LinuxStandTests::test_numbering PASSED        [ 81%]
 tests/test_linux_stand.py::LinuxStandTests::test_required_field PASSED   [ 90%]
 tests/test_linux_stand.py::LinuxStandTests::test_stamp_roundtrip PASSED  [100%]
 
-============================== 11 passed in 0.89s ==============================
+============================== 11 passed in 0.96s ==============================

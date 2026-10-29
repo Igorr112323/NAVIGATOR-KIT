@@ -1,7 +1,7 @@
 {
   "format": "navigator-kit.normative-audit/v2",
   "sessionId": "night-session-20261028",
-  "generatedAt": "2026-10-29T06:13:04+00:00",
+  "generatedAt": "2026-10-29T06:57:27+00:00",
   "checkedAtDate": "2026-10-28",
   "officialRegistry": {
     "registry2026": "https://protect.gost.ru/gost/details/17bc12e8-6579-4145-b141-56855e772e7f",
@@ -19,8 +19,8 @@
     "formats": "GOST-2.301-68-Formats"
   },
   "oldReferenceOccurrences": {
-    "GOST-2.503-2013": 38,
-    "GOST-R-21.101-2020": 50,
+    "GOST-2.503-2013": 39,
+    "GOST-R-21.101-2020": 51,
     "GOST-R-21.1101-2013": 5
   },
   "classification": {
@@ -46,6 +46,7 @@
       "docs/official-text-extract.md",
       "docs/sources.md",
       "docs/standards-warning.md",
+      "logs/final-session.log",
       "night-log.md",
       "tools/finalize_delivery.py",
       "tools/navigator_kit.py",

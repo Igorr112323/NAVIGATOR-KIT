@@ -143,13 +143,13 @@
       "name": "csharp_tree_sitter_syntax",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "files=14; errors=[]"
+      "detail": "files=17; errors=[]"
     },
     {
       "name": "night_log_has_start_end",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "lines=310"
+      "detail": "lines=398"
     },
     {
       "name": "no_obvious_secrets",
@@ -185,7 +185,7 @@
       "name": "zip_integrity",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "bad_member=None; pngs=31; bytes=2837687"
+      "detail": "bad_member=None; pngs=31; bytes=2863746"
     },
     {
       "name": "official_standard_registry_links",
@@ -275,7 +275,7 @@
       "name": "normative_audit_classifies_legacy",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "occurrences={'GOST-2.503-2013': 38, 'GOST-R-21.101-2020': 50, 'GOST-R-21.1101-2013': 5}; norms=5"
+      "detail": "occurrences={'GOST-2.503-2013': 39, 'GOST-R-21.101-2020': 51, 'GOST-R-21.1101-2013': 5}; norms=5"
     },
     {
       "name": "norms_registry_required_fields",
@@ -335,13 +335,13 @@
       "name": "demo_gif_valid_and_under_3mb",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "bytes=177356; frames=6; watermark=True"
+      "detail": "bytes=177476; frames=6; watermark=True"
     },
     {
       "name": "remaining_hypotheses_retained",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "markers=243; files=59"
+      "detail": "markers=251; files=66"
     },
     {
       "name": "session3_summary_complete",
