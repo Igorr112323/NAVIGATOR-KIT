@@ -1,7 +1,7 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.11.2, pytest-8.4.2, pluggy-1.7.0 -- /home/user/.venv/bin/python
 cachedir: .pytest_cache
-rootdir: /tmp/navigator-runner-_lk89bb9
+rootdir: /tmp/navigator-runner-3uxz4zon
 collecting ... collected 28 items
 
 tests/test_linux_stand.py::LinuxStandTests::test_actual_render_dimensions PASSED [  3%]
@@ -33,4 +33,4 @@ tests/test_navigator_kit.py::NavigatorKitTests::test_wo1_docx_is_valid_package P
 tests/test_navigator_kit.py::NavigatorKitTests::test_xml_examples_parse PASSED [ 96%]
 tests/test_navigator_kit.py::NavigatorKitTests::test_xml_key_attributes_for_sheet_and_format PASSED [100%]
 
-============================== 28 passed in 1.17s ==============================
+============================== 28 passed in 1.21s ==============================

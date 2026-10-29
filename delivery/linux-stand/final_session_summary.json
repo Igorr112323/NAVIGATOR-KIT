@@ -5,20 +5,63 @@
   "demoMismatches": 0,
   "normativeGeometry": "NOT_ASSESSED",
   "csharp": {
-    "status": "BUILD_AND_XUNIT_PASS",
-    "runUrl": "https://github.com/Igorr112323/NAVIGATOR-KIT/actions/runs/40832125855",
-    "headSha": "115ebdb23c21dd4a980dfbdb02fc8aaf5893bf0f",
+    "status": "COMPILED_AND_28_XUNIT_PASS",
+    "runUrl": "https://github.com/Igorr112323/NAVIGATOR-KIT/actions/runs/40832412743",
+    "headSha": "82bc4db023f815c0f5c92b373fdfed541d751f40",
     "job": "parser-tests",
     "conclusion": "success",
     "expectedCases": 28,
-    "actualCases": null,
-    "note": "Build and dotnet test passed in Ubuntu CI. Local dotnet absent; raw TRX download blocked. Explicit count gate pending next run. No nanoCAD execution.",
+    "actualCases": 28,
+    "note": "GitHub API confirms build, dotnet test and explicit TRX count gate succeeded. Local dotnet absent. Raw TRX/log download blocked by outbound allowlist. No Windows/nanoCAD execution.",
     "sourceHashes": {
       "src/CSharpAdapter/DxfParser.cs": "8a1003d952ffd8719e3544a274909888a34d692e58a1b9709cd0b30e32c56471",
       "src/CSharpAdapter/Tests/DxfParserTests.cs": "ab1599ab8bb295ead96d4b1eaea8584104fc8784849fd228008017d4e33237f7",
       "src/CSharpAdapter/CSharpAdapter.csproj": "91c138ff7038a5aae4b9fed9bf4027e592740e159ee5fa1e7c023e7d297692a0",
       "src/CSharpAdapter/Tests/CSharpAdapter.Tests.csproj": "02e47d05d1d65379b58f2bef93fe78e49fc26e3cc2a4490f36978b6eb5b60f65"
-    }
+    },
+    "nanoCADExecuted": false,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run actions/checkout@v4",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run actions/setup-dotnet@v4",
+        "conclusion": "success"
+      },
+      {
+        "name": "Build portable parser (no CAD SDK)",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run 28 CSharp cases on shared DXF fixtures",
+        "conclusion": "success"
+      },
+      {
+        "name": "Assert exactly 28 passed cases from TRX",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run actions/upload-artifact@v4",
+        "conclusion": "success"
+      },
+      {
+        "name": "Post Run actions/setup-dotnet@v4",
+        "conclusion": "success"
+      },
+      {
+        "name": "Post Run actions/checkout@v4",
+        "conclusion": "success"
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success"
+      }
+    ]
   },
   "nanoCADExecuted": false,
   "nestedArchives": "Excluded to avoid recursive bundles; source/data of test runner included"

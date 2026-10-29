@@ -10,8 +10,9 @@
   portable build/test, настоящие имена NK_HELLO/NK_SDK_PROBE и формат вывода probe.
 - [CSharpAdapter](../src/CSharpAdapter/README.md): ParseFile/ParseText, ATTRIB,
   слои, границы первой LWPOLYLINE. 28 xUnit cases (12 общих DXF + 16 сценариев),
-  без выдуманных DLL. C# CI: **BUILD_AND_XUNIT_PASS**; доказательство:
+  без выдуманных DLL. C# CI: **COMPILED_AND_28_XUNIT_PASS**; доказательство:
   [csharp_ci_validation.json](linux-stand/csharp_ci_validation.json).
+  Подтверждено cases: **28** через CI/TRX gate.
   В локальном sandbox dotnet отсутствует, Windows/CAD не запускались.
 - [GIF-сценарий](../docs/gif-demo-scenario.md): gate перед съёмкой, тайминг,
   правдивые подписи, корректные palettegen/paletteuse. Реальный GIF ещё не снят.

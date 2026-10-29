@@ -1,4 +1,4 @@
-# Ночной отчет ИИ-куратора — 2026-10-28 (третья сессия)
+# Отчёт ИИ-куратора — 2026-10-29 (финальный Linux-этап)
 
 ## Финальный Linux-этап — 2026-10-29
 
@@ -138,7 +138,7 @@ C# проверяется отдельным CI, не локальным отс�
 ## GitHub-действия
 
 - Ветка: `arena/ec9fddc1-navigator-kit` (создавать `night-session-YYYYMMDD` нельзя: имя ветки зафиксировано сессией Arena).
-- Коммит на момент генерации отчёта: `115ebdb23c21dd4a980dfbdb02fc8aaf5893bf0f`.
+- Коммит на момент генерации отчёта: `82bc4db023f815c0f5c92b373fdfed541d751f40`.
 - PR: [https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1](https://github.com/Igorr112323/NAVIGATOR-KIT/pull/1).
 - Push: `git push origin arena/ec9fddc1-navigator-kit`.
 - PR body: `delivery/PR_BODY.md`.

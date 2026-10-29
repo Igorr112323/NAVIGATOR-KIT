@@ -14,6 +14,10 @@ def prepare():
     tests = json.loads((D/'linux-stand/test_report.json').read_text(encoding='utf-8'))
     ci_path = D/'linux-stand/csharp_ci_validation.json'
     ci = json.loads(ci_path.read_text(encoding='utf-8')) if ci_path.exists() else {'status':'NOT_VERIFIED', 'detail':'No local dotnet; consult GitHub Actions'}
+    import hashlib
+    for name, expected in ci.get('sourceHashes', {}).items():
+        if hashlib.sha256((ROOT/name).read_bytes()).hexdigest() != expected:
+            raise RuntimeError(f'CSharp CI proof stale for {name}')
     summary = {'date':'2026-10-29', 'pythonTests':tests['tests_passed'],
                'geometryFiles':len(audit['files']), 'demoMismatches':audit['demoMismatchCount'],
                'normativeGeometry':'NOT_ASSESSED', 'csharp':ci, 'nanoCADExecuted':False,
@@ -46,6 +50,7 @@ def prepare():
   слои, границы первой LWPOLYLINE. 28 xUnit cases (12 общих DXF + 16 сценариев),
   без выдуманных DLL. C# CI: **{ci.get('status')}**; доказательство:
   [csharp_ci_validation.json](linux-stand/csharp_ci_validation.json).
+  Подтверждено cases: **{ci.get('actualCases', 'не подтверждено')}** через CI/TRX gate.
   В локальном sandbox dotnet отсутствует, Windows/CAD не запускались.
 - [GIF-сценарий](../docs/gif-demo-scenario.md): gate перед съёмкой, тайминг,
   правдивые подписи, корректные palettegen/paletteuse. Реальный GIF ещё не снят.

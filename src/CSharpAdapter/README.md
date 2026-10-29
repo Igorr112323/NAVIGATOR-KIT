@@ -27,3 +27,12 @@ Consult actual CI logs/TRX before calling this compiled/tested. Windows/nanoCAD
 host execution is still ГИПОТЕЗА/ПРОВЕРИТЬ.
 SDK bindings belong in NavigatorKit.NanoCad after verifying SDK 26 TFM/DLL/API;
 do not add a guessed MultiCAD26.dll reference to this portable project.
+
+## Полученное доказательство CI
+
+Run https://github.com/Igorr112323/NAVIGATOR-KIT/actions/runs/40832412743:
+build + dotnet test + explicit TRX assertions **28 total / 28 passed / 0 failed**
+успешны на .NET 8 Ubuntu. GitHub API steps сохранены в
+`delivery/linux-stand/csharp_ci_validation.json` вместе с хешами исходников.
+Raw log/TRX в sandbox не скачан из-за outbound allowlist; локальная сборка
+и выполнение в Windows/nanoCAD по-прежнему НЕ заявляются.

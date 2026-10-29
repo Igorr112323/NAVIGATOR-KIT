@@ -185,7 +185,7 @@
       "name": "zip_integrity",
       "ok": true,
       "severity": "REQUIRED",
-      "detail": "bad_member=None; pngs=31; bytes=2863746"
+      "detail": "bad_member=None; pngs=31; bytes=2862582"
     },
     {
       "name": "official_standard_registry_links",
